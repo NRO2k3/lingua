@@ -1,6 +1,6 @@
 /* Chỉ style phần tự vẽ; màu sắc lấy từ token Ant Design qua biến CSS (xem TokenVars) */
 html, body { margin: 0; }
-body { background: var(--bg-layout, #f5f7fa); -webkit-tap-highlight-color: transparent; }
+body { background: var(--bg-layout, #f5f7fa); font-family: 'Be Vietnam Pro', system-ui, sans-serif; -webkit-tap-highlight-color: transparent; }
 a { -webkit-tap-highlight-color: transparent; }
 
 .app { min-height: 100vh; }
