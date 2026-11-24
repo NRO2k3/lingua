@@ -1,0 +1,170 @@
+import { useEffect, useState } from 'react';
+import { Breadcrumb, Button, Card, Flex, Grid, Progress, Result, Typography } from 'antd';
+import { CheckOutlined, CloseOutlined, HistoryOutlined, RetweetOutlined, RocketOutlined } from '@ant-design/icons';
+import { COURSES } from '../lib/courses.js';
+import { addXp, getProgress, srsDue, srsKeys, SRS_DAYS, update, useProgress, wordFromKey } from '../lib/store.js';
+import { speak } from '../lib/speech.js';
+import { dayStr, pct, shuffle, today } from '../lib/utils.js';
+import { Flashcard, LangTheme } from '../components/common.jsx';
+
+const { Title, Text } = Typography;
+
+// Bỏ các key không còn tìm thấy từ (dữ liệu bài học đã đổi), xoá luôn khỏi lịch ôn
+function clean(keys) {
+  const bad = keys.filter(k => !wordFromKey(k));
+  if (bad.length) update(d => { bad.forEach(k => { delete d.srs[k]; }); });
+  return keys.filter(k => wordFromKey(k));
+}
+
+const newSession = keys => ({ queue: keys, total: keys.length, done: 0, turn: 0, flipped: false });
+
+export default function Review({ lang }) {
+  const p = useProgress();
+  const c = COURSES[lang];
+  const screens = Grid.useBreakpoint();
+
+  // Hàng đợi tạo một lần khi mở trang
+  const [initKeys] = useState(() => shuffle(srsDue(getProgress(), lang)).slice(0, 20));
+  const [s, setS] = useState(() => newSession(initKeys.filter(k => wordFromKey(k))));
+  useEffect(() => { clean(initKeys); }, [initKeys]);
+
+  const key = s.queue[0];
+  const v = key && wordFromKey(key);
+
+  // Thẻ mới hiện ra: tự đọc từ
+  useEffect(() => {
+    if (v && !s.flipped) speak(v.w, c.tts);
+  }, [key, s.turn]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const flip = () => setS(x => ({ ...x, flipped: !x.flipped }));
+
+  const grade = ok => {
+    if (!key) return;
+    update(d => {
+      const r = d.srs[key];
+      if (!r) return;
+      if (ok) {
+        r.box = Math.min((r.box || 0) + 1, SRS_DAYS.length - 1);
+        r.due = dayStr(SRS_DAYS[r.box]);
+        addXp(d, 2);
+      } else {
+        r.box = 0;
+        r.due = today();
+      }
+    });
+    setS(x => {
+      const [first, ...rest] = x.queue;
+      return ok
+        ? { ...x, queue: rest, done: x.done + 1, turn: x.turn + 1, flipped: false }
+        : { ...x, queue: [...rest, first], turn: x.turn + 1, flipped: false };
+    });
+  };
+
+  // Phím tắt: Cách/Enter lật thẻ, 1 = Chưa nhớ, 2 = Nhớ rồi
+  useEffect(() => {
+    if (!v) return;
+    const onKey = e => {
+      const t = e.target;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      if (e.key === ' ' || e.key === 'Enter') {
+        // Để nút / thẻ đang được chọn tự xử lý phím của nó, tránh lật hai lần
+        if (t && t.closest && t.closest(e.key === ' ' ? 'button, a' : 'button, a, [role="button"]')) return;
+        e.preventDefault();
+        if (!s.flipped) flip();
+      } else if (s.flipped && e.key === '1') grade(false);
+      else if (s.flipped && e.key === '2') grade(true);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  });
+
+  const learned = srsKeys(p, lang).length;
+  const more = () => setS(newSession(clean(shuffle(srsKeys(getProgress(), lang)).slice(0, 10))));
+
+  const crumbs = (
+    <Breadcrumb items={[
+      { title: <a href="#/">Trang chủ</a> },
+      { title: <a href={`#/c/${lang}`}>{c.name}</a> },
+      { title: 'Ôn tập' }
+    ]} />
+  );
+
+  if (!v) {
+    const finished = s.done > 0;
+    return (
+      <LangTheme lang={lang}>
+        <Flex vertical gap={20}>
+          {crumbs}
+          <Card>
+            <Result
+              icon={<div style={{ fontSize: 72, lineHeight: 1 }}>{finished ? '✅' : '🧠'}</div>}
+              title={finished ? `Đã ôn xong ${s.done} từ!` : 'Hôm nay không có từ nào cần ôn'}
+              subTitle={learned > 0
+                ? `Bạn đã học ${learned} từ. Mỗi từ bạn nhớ sẽ tự quay lại để ôn sau ${SRS_DAYS.slice(0, -1).join(', ')} rồi ${SRS_DAYS[SRS_DAYS.length - 1]} ngày, đúng lúc bạn sắp quên. Từ nào chưa nhớ sẽ được ôn lại sớm.`
+                : 'Hoàn thành bài học đầu tiên để bắt đầu ôn tập.'}
+              extra={
+                <Flex wrap gap={12} justify="center">
+                  {learned > 0 && (
+                    <Button size="large" icon={<RetweetOutlined />} onClick={more}>Ôn thêm 10 từ ngẫu nhiên</Button>
+                  )}
+                  <Button type="primary" size="large" icon={<RocketOutlined />} href={`#/c/${lang}`}>Về lộ trình</Button>
+                </Flex>
+              }
+            />
+          </Card>
+        </Flex>
+      </LangTheme>
+    );
+  }
+
+  const btn = { flex: 1, height: 56, fontSize: 17 };
+
+  return (
+    <LangTheme lang={lang}>
+      <Flex vertical gap={20}>
+        {crumbs}
+
+        <Flex vertical gap={16} style={{ width: '100%', maxWidth: 560, margin: '0 auto' }}>
+          <div>
+            <Title level={3} style={{ margin: 0 }}><HistoryOutlined /> Ôn từ vựng</Title>
+            <Text type="secondary">Nhớ lại nghĩa của từ rồi lật thẻ để kiểm tra</Text>
+          </div>
+
+          <div>
+            <Flex justify="space-between">
+              <Text type="secondary">Đã ôn</Text>
+              <Text strong>{s.done} / {s.total} từ</Text>
+            </Flex>
+            <Progress percent={pct(s.done, s.total)} showInfo={false} />
+          </div>
+
+          <Flex justify="center">
+            <Flashcard v={v} lang={lang} flipped={s.flipped} onFlip={flip} />
+          </Flex>
+
+          {!s.flipped ? (
+            <Button type="primary" size="large" block style={{ height: 56, fontSize: 17 }} icon={<RetweetOutlined />} onClick={flip}>
+              Lật thẻ
+            </Button>
+          ) : (
+            <Flex gap={12}>
+              <Button danger size="large" style={btn} icon={<CloseOutlined />} onClick={() => grade(false)}>
+                Chưa nhớ
+              </Button>
+              <Button type="primary" size="large" style={btn} icon={<CheckOutlined />} onClick={() => grade(true)}>
+                Nhớ rồi
+              </Button>
+            </Flex>
+          )}
+
+          {screens.md && (
+            <Text type="secondary" style={{ textAlign: 'center', fontSize: 13 }}>
+              Mẹo: nhấn phím Cách hoặc Enter để lật thẻ · phím 1 = Chưa nhớ · phím 2 = Nhớ rồi
+            </Text>
+          )}
+        </Flex>
+      </Flex>
+    </LangTheme>
+  );
+}

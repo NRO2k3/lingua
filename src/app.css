@@ -1,0 +1,155 @@
+/* Chỉ style phần tự vẽ; màu sắc lấy từ token Ant Design qua biến CSS (xem TokenVars) */
+html, body { margin: 0; }
+body { background: var(--bg-layout, #f5f7fa); -webkit-tap-highlight-color: transparent; }
+a { -webkit-tap-highlight-color: transparent; }
+
+.app { min-height: 100vh; }
+.wrap { width: 100%; max-width: 1080px; margin: 0 auto; }
+.content { padding: 24px 16px 48px; }
+.footer { text-align: center; color: var(--text-3); font-size: 13px; }
+
+/* Thanh trên cùng */
+.header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border); }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; line-height: 1; color: var(--text) !important; }
+.header .stat { line-height: 1; }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; color: #fff; font-weight: 800;
+  background: linear-gradient(135deg, #1677ff, #722ed1 55%, #f5222d); text-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+}
+.block-badge { display: block !important; }
+.stat { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--text); white-space: nowrap; cursor: default; }
+@media (max-width: 480px) { .hide-xs { display: none; } }
+
+/* Trang chủ */
+.hero-card { height: 100%; }
+.hero-icon {
+  width: 72px; height: 72px; border-radius: 18px; display: grid; place-items: center; font-size: 38px;
+  background: var(--primary-bg); flex: none;
+}
+.cta { min-width: 140px; }
+@media (max-width: 575px) { .hero-card .cta { width: 100%; } .content { padding: 16px 12px 40px; } }
+.ring-text { display: inline-flex; flex-direction: column; line-height: 1.15; }
+.ring-text b { font-size: 20px; color: var(--text); }
+.ring-text small { font-size: 11px; color: var(--text-2); }
+.lang-card { border-top: 4px solid transparent; height: 100%; }
+.lang-flag { font-size: 40px; line-height: 1; }
+
+/* Lộ trình */
+.unit-card { height: 100%; transition: border-color .2s, box-shadow .2s; cursor: pointer; }
+.unit-card.locked { opacity: .55; }
+.unit-card.locked .unit-icon { filter: grayscale(1); }
+.unit-card.next { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-bg); }
+.unit-icon {
+  width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; font-size: 26px;
+  background: var(--fill); flex: none;
+}
+.unit-card.done .unit-icon { background: var(--success-bg); }
+.unit-title { line-height: 1.35; }
+
+/* Bài học */
+.lesson-icon {
+  width: 72px; height: 72px; border-radius: 18px; display: grid; place-items: center; font-size: 38px;
+  background: var(--primary-bg); flex: none;
+}
+.steps-card .ant-steps-item-title { font-size: 13px !important; }
+@media (max-width: 480px) {
+  .lesson-icon { width: 56px; height: 56px; font-size: 30px; }
+  .steps-card .ant-steps-item-title { font-size: 11px !important; }
+}
+
+.vocab-card { height: 100%; }
+.vocab-word { font-size: 20px; font-weight: 700; color: var(--text); }
+.vocab-mean { color: var(--primary); font-weight: 600; margin: 2px 0 6px; }
+.vocab-ex { font-size: 14px; color: var(--text); }
+.vocab-ex .ant-typography { display: block; }
+.pinyin { color: var(--primary); font-size: 13px; opacity: .85; }
+.grammar-p { font-size: 15.5px; line-height: 1.7; }
+.ex-text { font-size: 16px; font-weight: 500; }
+.blur { filter: blur(7px); user-select: none; }
+.blank {
+  display: inline-block; min-width: 64px; border-bottom: 3px solid var(--primary); margin: 0 4px; height: 1em;
+  vertical-align: baseline;
+}
+
+/* Thẻ lật */
+.flash { width: min(440px, 100%); height: 260px; perspective: 1200px; cursor: pointer; outline: none; }
+.flash-inner { position: relative; width: 100%; height: 100%; transition: transform .5s; transform-style: preserve-3d; }
+.flash.flipped .flash-inner { transform: rotateY(180deg); }
+.flash-face {
+  position: absolute; inset: 0; backface-visibility: hidden; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 8px; padding: 20px; text-align: center; border-radius: 20px;
+  background: var(--bg); border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.flash:focus-visible .flash-face { border-color: var(--primary); }
+.flash-back { transform: rotateY(180deg); }
+.flash-word { font-size: 34px; font-weight: 800; color: var(--text); }
+.flash-mean { font-size: 26px; font-weight: 700; color: var(--primary); }
+.flash-sub { color: var(--text-2); }
+.flash-ex { color: var(--text); }
+.flash-hint { color: var(--text-3); font-size: 13px; }
+
+/* Hội thoại */
+.chat { display: flex; flex-direction: column; gap: 14px; }
+.chat-line { display: flex; gap: 10px; align-items: flex-end; max-width: 88%; }
+.chat-line.right { align-self: flex-end; flex-direction: row-reverse; }
+.bubble { background: var(--fill); border: 1px solid transparent; border-radius: 18px 18px 18px 6px; padding: 10px 14px; color: var(--text); }
+.chat-line.right .bubble { background: var(--primary-bg); border-radius: 18px 18px 6px 18px; }
+.bubble.turn { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-bg); }
+.bubble-who { font-size: 12px; font-weight: 600; color: var(--text-2); }
+.bubble-text { font-size: 16px; }
+.bubble-vi { color: var(--text-2); font-size: 14px; font-style: italic; }
+@media (max-width: 480px) { .chat-line { max-width: 100%; } }
+
+/* Luyện nói */
+.speak-box { text-align: center; padding: 8px 0; }
+.speak-sentence { font-size: 26px; font-weight: 700; line-height: 1.45; color: var(--text); }
+.w-ok { color: var(--success); }
+.w-miss { color: var(--error); text-decoration: underline wavy; text-underline-offset: 6px; }
+.mic.ant-btn { width: 88px !important; height: 88px !important; font-size: 34px !important; margin-top: 6px; }
+.mic.on { animation: pulse 1.2s infinite; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--error-border); }
+  100% { box-shadow: 0 0 0 22px transparent; }
+}
+@media (max-width: 480px) { .speak-sentence { font-size: 21px; } }
+
+/* Kiểm tra */
+.quiz { max-width: 680px; margin: 0 auto; width: 100%; }
+.q-kind { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.q-text { font-size: 24px; font-weight: 700; margin: 8px 0 20px; color: var(--text); line-height: 1.4; }
+.q-text .pinyin { font-size: 16px; font-weight: 500; margin-top: 4px; }
+.q-hint { display: block; font-size: 14px; font-weight: 400; margin-top: 6px; }
+.opt {
+  display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 14px 16px; min-height: 56px;
+  border: 2px solid var(--border-strong); border-radius: 14px; background: var(--bg); color: var(--text);
+  font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; transition: border-color .15s, background .15s;
+}
+.opt:hover:not(:disabled) { border-color: var(--primary); background: var(--primary-bg); }
+.opt:disabled { cursor: default; }
+.opt-key {
+  width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; flex: none;
+  border: 1px solid var(--border-strong); color: var(--text-2); font-size: 13px; font-weight: 600;
+}
+.opt-text { flex: 1; }
+.opt-icon { font-size: 20px; }
+.opt.right { border-color: var(--success); background: var(--success-bg); }
+.opt.right .opt-icon { color: var(--success); }
+.opt.wrong { border-color: var(--error); background: var(--error-bg); }
+.opt.wrong .opt-icon { color: var(--error); }
+.opt.dim { opacity: .55; }
+.listen-btn.ant-btn { width: 96px !important; height: 96px !important; font-size: 38px !important; }
+.order-answer {
+  min-height: 64px; padding: 10px; border: 2px dashed var(--border-strong); border-radius: 14px; margin-bottom: 14px;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+}
+.order-answer.ok { border-color: var(--success); background: var(--success-bg); }
+.order-answer.no { border-color: var(--error); background: var(--error-bg); }
+.chip {
+  padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 12px; background: var(--bg); color: var(--text);
+  font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; box-shadow: 0 2px 0 var(--border-strong);
+}
+.chip:hover:not(:disabled) { border-color: var(--primary); }
+.chip:disabled { cursor: default; }
+.chip.used { visibility: hidden; }
+.kbd-hint { display: block; text-align: center; margin-top: 12px; font-size: 13px; }
+@media (max-width: 480px) { .kbd-hint { display: none; } .q-text { font-size: 20px; } }

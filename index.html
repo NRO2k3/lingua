@@ -3,28 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lingua Lộ Trình</title>
+  <meta name="theme-color" content="#1677ff">
+  <title>Lingua — Học ngoại ngữ theo lộ trình</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <a href="#/" class="brand"><span class="brand-mark">L</span> Lingua <small>lộ trình</small></a>
-    <nav class="stats" id="stats"></nav>
-    <button class="icon-btn" id="themeBtn" title="Đổi giao diện sáng/tối">◐</button>
-  </header>
-  <main id="app"></main>
-  <div id="toast" class="toast"></div>
-
-  <script src="data/registry.js"></script>
-  <script src="data/en-a.js"></script>
-  <script src="data/en-b.js"></script>
-  <script src="data/es-a.js"></script>
-  <script src="data/es-b.js"></script>
-  <script src="data/zh-a.js"></script>
-  <script src="data/zh-b.js"></script>
-  <script src="app.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
