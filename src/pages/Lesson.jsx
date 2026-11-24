@@ -10,6 +10,9 @@ import { speakAll, stopRec, stopSpeaking } from '../lib/speech.js';
 import { ChatLine, Flashcard, HanViet, LangTheme, Pinyin, SoundButton } from '../components/common.jsx';
 import SpeakStep from './SpeakStep.jsx';
 import QuizStep from './QuizStep.jsx';
+import { motion } from 'framer-motion';
+import { play } from '../lib/sfx.js';
+import { EASE, Item, Stagger } from '../components/motion.jsx';
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -36,10 +39,10 @@ function VocabStep({ u, lang }) {
         ]} />
       </Flex>
       {mode === 'list' ? (
-        <Row gutter={[12, 12]}>
+        <Stagger><Row gutter={[12, 12]}>
           {u.vocab.map(v => (
             <Col xs={24} md={12} key={v.w}>
-              <Card size="small" className="vocab-card">
+              <Item style={{ height: '100%' }}><Card size="small" className="vocab-card">
                 <Flex gap={12} align="start">
                   <SoundButton text={v.w} lang={lang} type="default" />
                   <div style={{ flex: 1, minWidth: 0 }}>
@@ -59,13 +62,16 @@ function VocabStep({ u, lang }) {
                     </div>
                   </div>
                 </Flex>
-              </Card>
+              </Card></Item>
             </Col>
           ))}
-        </Row>
+        </Row></Stagger>
       ) : (
         <Flex vertical align="center" gap={16}>
-          <Flashcard v={u.vocab[i]} lang={lang} flipped={flipped} onFlip={() => setFlipped(!flipped)} />
+          <motion.div key={i} initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.25, ease: EASE }} style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <Flashcard v={u.vocab[i]} lang={lang} flipped={flipped} onFlip={() => { play('flip'); setFlipped(!flipped); }} />
+          </motion.div>
           <Flex align="center" gap={16}>
             <Button shape="circle" size="large" icon={<LeftOutlined />} onClick={() => move(-1)} aria-label="Thẻ trước" />
             <Text>{i + 1} / {u.vocab.length}</Text>
@@ -127,6 +133,7 @@ function DialogueStep({ u, lang }) {
 export default function Lesson({ lang, uid }) {
   const p = useProgress();
   const [step, setStep] = useState(0);
+  const [dir, setDir] = useState(1);
   const { unit: u, idx } = findUnit(lang, uid);
   const c = COURSES[lang];
 
@@ -141,7 +148,7 @@ export default function Lesson({ lang, uid }) {
     );
   }
 
-  const go = s => { stopRec(); stopSpeaking(); setStep(s); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+  const go = s => { stopRec(); stopSpeaking(); setDir(s >= step ? 1 : -1); setStep(s); window.scrollTo({ top: 0, behavior: 'smooth' }); };
   const Body = [VocabStep, GrammarStep, DialogueStep, SpeakStep, QuizStep][step];
 
   return (
@@ -167,7 +174,10 @@ export default function Lesson({ lang, uid }) {
             items={STEPS.map(s => ({ title: s.title, icon: s.icon }))} />
         </Card>
 
-        <Body key={step} u={u} lang={lang} idx={idx} onGoStep={go} />
+        <motion.div key={step} initial={{ opacity: 0, x: 36 * dir }} animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, ease: EASE }}>
+          <Body u={u} lang={lang} idx={idx} onGoStep={go} />
+        </motion.div>
 
         {step < STEPS.length - 1 && (
           <Flex justify="space-between" gap={12}>

@@ -6,6 +6,10 @@ import { addXp, update, useProgress } from '../lib/store.js';
 import { SPEAK_PASS, bestMatch, finishRec, getSR, listen, speak, stopRec, stopSpeaking } from '../lib/speech.js';
 import { pct, splitUnits } from '../lib/utils.js';
 import { ChatLine, MarkedText, Pinyin } from '../components/common.jsx';
+import { motion } from 'framer-motion';
+import { play } from '../lib/sfx.js';
+import { sparkle } from '../lib/celebrate.js';
+import { EASE } from '../components/motion.jsx';
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -23,16 +27,21 @@ function verdict(score) {
 function SpeakFeedback({ r }) {
   const v = verdict(r.score);
   return (
+    <motion.div style={{ width: '100%' }} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, ease: EASE }}>
     <Alert type={v.type} showIcon style={{ width: '100%' }}
       message={<b>{r.score}% · {v.text}</b>}
       description={<>{r.heard ? <>Máy nghe được: “{r.heard}”</> : 'Không nghe được gì.'}{r.score < 100 && ' Những từ gạch đỏ là chỗ chưa rõ.'}</>} />
+    </motion.div>
   );
 }
 
 function MicButton({ listening, onClick }) {
   return (
-    <Button type="primary" danger={listening} shape="circle" className={'mic' + (listening ? ' on' : '')}
-      icon={<AudioOutlined />} onClick={onClick} disabled={!getSR()} aria-label={listening ? 'Dừng' : 'Bấm để nói'} />
+    <div className="mic-wrap">
+      {listening && [0, 1, 2].map(k => <span key={k} className="mic-ring" style={{ animationDelay: `${k * 0.5}s` }} />)}
+      <Button type="primary" danger={listening} shape="circle" className={'mic' + (listening ? ' on' : '')}
+        icon={<AudioOutlined />} onClick={onClick} disabled={!getSR()} aria-label={listening ? 'Dừng' : 'Bấm để nói'} />
+    </div>
   );
 }
 
@@ -48,7 +57,15 @@ function useMic(lang, onResult) {
     listen(COURSES[lang].tts, {
       onInterim: setInterim,
       onError: m => message.warning(m),
-      onDone: cands => { setListening(false); setInterim(''); onResult(bestMatch(target, cands)); }
+      onDone: cands => {
+        setListening(false); setInterim('');
+        const best = bestMatch(target, cands);
+        if (best) {
+          play(best.score >= SPEAK_PASS ? 'correct' : best.score >= 50 ? 'pop' : 'wrong');
+          if (best.score === 100) sparkle(0.5, 0.45);
+        }
+        onResult(best);
+      }
     });
   };
   const cancel = () => { stopRec(); setListening(false); setInterim(''); };

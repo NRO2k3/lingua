@@ -54,7 +54,8 @@ export function MarkedText({ text, result }) {
   return us.map((w, k) => (
     <span key={k}>
       {k > 0 && !CJK_RE.test(us[k - 1]) && !CJK_RE.test(w) ? ' ' : ''}
-      <span className={result ? (result.ok[k] ? 'w-ok' : 'w-miss') : undefined}>{w}</span>
+      <span className={result ? (result.ok[k] ? 'w-ok' : 'w-miss') : undefined}
+        style={result ? { animationDelay: `${k * 70}ms` } : undefined}>{w}</span>
     </span>
   ));
 }

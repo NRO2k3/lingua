@@ -6,6 +6,16 @@ import { addXp, getProgress, srsDue, srsKeys, SRS_DAYS, update, useProgress, wor
 import { speak } from '../lib/speech.js';
 import { dayStr, pct, shuffle, today } from '../lib/utils.js';
 import { Flashcard, LangTheme } from '../components/common.jsx';
+import { AnimatePresence, motion } from 'framer-motion';
+import { play } from '../lib/sfx.js';
+import { celebrate } from '../lib/celebrate.js';
+
+// Thẻ bay sang phải khi nhớ, sang trái khi chưa nhớ
+const cardMotion = {
+  enter: { opacity: 0, scale: 0.9, y: 16 },
+  center: { opacity: 1, scale: 1, y: 0, x: 0, rotate: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
+  exit: dir => ({ opacity: 0, x: dir * 340, rotate: dir * 14, transition: { duration: 0.3, ease: 'easeIn' } })
+};
 
 const { Title, Text } = Typography;
 
@@ -16,7 +26,7 @@ function clean(keys) {
   return keys.filter(k => wordFromKey(k));
 }
 
-const newSession = keys => ({ queue: keys, total: keys.length, done: 0, turn: 0, flipped: false });
+const newSession = keys => ({ queue: keys, total: keys.length, done: 0, turn: 0, flipped: false, dir: 1 });
 
 export default function Review({ lang }) {
   const p = useProgress();
@@ -36,10 +46,11 @@ export default function Review({ lang }) {
     if (v && !s.flipped) speak(v.w, c.tts);
   }, [key, s.turn]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const flip = () => setS(x => ({ ...x, flipped: !x.flipped }));
+  const flip = () => { play('flip'); setS(x => ({ ...x, flipped: !x.flipped })); };
 
   const grade = ok => {
     if (!key) return;
+    play(ok ? 'correct' : 'pop');
     update(d => {
       const r = d.srs[key];
       if (!r) return;
@@ -55,8 +66,8 @@ export default function Review({ lang }) {
     setS(x => {
       const [first, ...rest] = x.queue;
       return ok
-        ? { ...x, queue: rest, done: x.done + 1, turn: x.turn + 1, flipped: false }
-        : { ...x, queue: [...rest, first], turn: x.turn + 1, flipped: false };
+        ? { ...x, queue: rest, done: x.done + 1, turn: x.turn + 1, flipped: false, dir: 1 }
+        : { ...x, queue: [...rest, first], turn: x.turn + 1, flipped: false, dir: -1 };
     });
   };
 
@@ -80,6 +91,10 @@ export default function Review({ lang }) {
   });
 
   const learned = srsKeys(p, lang).length;
+
+  // Ôn xong cả phiên: ăn mừng
+  const finishedNow = !v && s.done > 0;
+  useEffect(() => { if (finishedNow) { play('complete'); celebrate(); } }, [finishedNow]);
   const more = () => setS(newSession(clean(shuffle(srsKeys(getProgress(), lang)).slice(0, 10))));
 
   const crumbs = (
@@ -139,8 +154,13 @@ export default function Review({ lang }) {
             <Progress percent={pct(s.done, s.total)} showInfo={false} />
           </div>
 
-          <Flex justify="center">
-            <Flashcard v={v} lang={lang} flipped={s.flipped} onFlip={flip} />
+          <Flex justify="center" style={{ minHeight: 260 }}>
+            <AnimatePresence mode="popLayout" custom={s.dir}>
+              <motion.div key={s.turn} custom={s.dir} variants={cardMotion} initial="enter" animate="center" exit="exit"
+                style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                <Flashcard v={v} lang={lang} flipped={s.flipped} onFlip={flip} />
+              </motion.div>
+            </AnimatePresence>
           </Flex>
 
           {!s.flipped ? (

@@ -6,6 +6,7 @@ import { COURSES, LANGS, LANG_UI, LEVEL_NAME, allUnits } from '../lib/courses.js
 import { DAILY_GOAL, dailyXp, langProgress, nextUnit, srsDue, srsKeys, streakNow, useProgress } from '../lib/store.js';
 import { pct } from '../lib/utils.js';
 import { LangTheme } from '../components/common.jsx';
+import { CountUp, Item, Stagger } from '../components/motion.jsx';
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -70,7 +71,7 @@ function TodayCard() {
     <Card title="Hôm nay" style={{ height: '100%' }}>
       <Flex align="center" gap={16}>
         <Progress type="circle" size={92} percent={pct(daily, DAILY_GOAL)}
-          format={() => <span className="ring-text"><b>{Math.min(daily, DAILY_GOAL)}</b><small>/{DAILY_GOAL} điểm</small></span>} />
+          format={() => <span className="ring-text"><b><CountUp value={Math.min(daily, DAILY_GOAL)} /></b><small>/{DAILY_GOAL} điểm</small></span>} />
         <Flex vertical gap={6}>
           <Text strong>{reached ? 'Đã đạt mục tiêu! 🎯' : 'Mục tiêu mỗi ngày'}</Text>
           <Text type="secondary"><FireFilled style={{ color: streak ? '#fa8c16' : undefined }} /> {streak ? `${streak} ngày liên tiếp` : 'Chưa có chuỗi ngày học'}</Text>
@@ -132,27 +133,29 @@ export default function Home() {
   const last = p.lastLang && COURSES[p.lastLang] ? p.lastLang : null;
   const anyStarted = Object.keys(p.units).length > 0 || srsKeys(p).length > 0;
   return (
-    <Flex vertical gap={28}>
-      <div>
-        <Title level={2} style={{ marginBottom: 4 }}>{greeting()} 👋</Title>
+    <Stagger className="stack" style={{ '--gap': '28px' }}>
+      <Item>
+        <Title level={2} style={{ marginBottom: 4 }}>{greeting()} <span className="wave">👋</span></Title>
         <Text type="secondary" style={{ fontSize: 16 }}>Mỗi ngày 15 phút, đều đặn là sẽ giỏi.</Text>
-      </div>
+      </Item>
 
-      <Row gutter={[16, 16]}>
+      <Item><Row gutter={[16, 16]}>
         <Col xs={24} lg={16}>{last && anyStarted ? <ContinueCard lang={last} /> : <WelcomeCard />}</Col>
         <Col xs={24} lg={8}><TodayCard /></Col>
-      </Row>
+      </Row></Item>
 
-      <div>
+      <Item>
         <Title level={4}>{anyStarted ? 'Ngôn ngữ của bạn' : 'Bạn muốn học ngôn ngữ nào?'}</Title>
         <Row gutter={[16, 16]}>
           {LANGS.map(l => <Col xs={24} md={8} key={l}><LangCard lang={l} /></Col>)}
         </Row>
-      </div>
+      </Item>
 
-      <Card title="Mỗi bài học gồm 5 bước">
-        <Steps current={-1} items={HOW.map(s => ({ ...s, status: 'process' }))} />
-      </Card>
-    </Flex>
+      <Item>
+        <Card title="Mỗi bài học gồm 5 bước">
+          <Steps current={-1} items={HOW.map(s => ({ ...s, status: 'process' }))} />
+        </Card>
+      </Item>
+    </Stagger>
   );
 }

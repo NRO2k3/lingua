@@ -4,6 +4,7 @@ import { COURSES, LEVEL_NAME } from '../lib/courses.js';
 import { isDone, isUnlocked, langProgress, nextUnit, srsDue, srsKeys, update, useProgress } from '../lib/store.js';
 import { pct } from '../lib/utils.js';
 import { LangTheme } from '../components/common.jsx';
+import { Item, Stagger } from '../components/motion.jsx';
 
 const { Title, Text } = Typography;
 
@@ -83,16 +84,18 @@ export default function Roadmap({ lang }) {
               </Flex>
               <Text type="secondary" style={{ display: 'block', margin: '4px 0 8px' }}>{level.desc}</Text>
               <Progress percent={pct(done, ids.length)} size="small" format={() => `${done}/${ids.length}`} style={{ maxWidth: 320 }} />
-              <Row gutter={[12, 12]} style={{ marginTop: 8 }}>
-                {level.units.map(u => {
-                  const i = idx++;
-                  return (
-                    <Col xs={24} sm={12} lg={8} key={u.id}>
-                      <UnitCard lang={lang} u={u} i={i} p={p} isNext={nx && nx.id === u.id} />
-                    </Col>
-                  );
-                })}
-              </Row>
+              <Stagger>
+                <Row gutter={[12, 12]} style={{ marginTop: 8 }}>
+                  {level.units.map(u => {
+                    const i = idx++;
+                    return (
+                      <Col xs={24} sm={12} lg={8} key={u.id}>
+                        <Item style={{ height: '100%' }}><UnitCard lang={lang} u={u} i={i} p={p} isNext={nx && nx.id === u.id} /></Item>
+                      </Col>
+                    );
+                  })}
+                </Row>
+              </Stagger>
             </section>
           );
         })}
