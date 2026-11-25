@@ -266,3 +266,60 @@ a { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 575px) { .steps-card .ant-steps-label-vertical .ant-steps-item-content { width: 0; } }
 
 .unit-card:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+
+/* Phát âm nền tảng */
+.pron-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.pron-tile {
+  display: flex; flex-direction: column; gap: 2px; width: 100%; min-width: 0; min-height: 64px; padding: 10px 12px; text-align: left;
+  border: 2px solid var(--border); border-radius: 14px; background: var(--bg); color: var(--text); font: inherit; cursor: pointer;
+  transition: border-color .15s, background .15s, box-shadow .15s; overflow-wrap: anywhere;
+}
+.pron-tile:hover { border-color: var(--primary); }
+.pron-tile:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.pron-tile.playing { border-color: var(--primary); background: var(--primary-bg); box-shadow: 0 0 0 3px var(--primary-bg); }
+.pron-tile-icon { color: var(--primary); font-size: 16px; opacity: .7; flex: none; }
+.pron-tile.playing .pron-tile-icon { opacity: 1; animation: pop .5s infinite; }
+.pron-label {
+  display: inline-grid; place-items: center; min-width: 30px; height: 26px; padding: 0 6px; border-radius: 8px;
+  background: var(--primary-bg); color: var(--primary); font-weight: 800; font-size: 15px;
+}
+.pron-word { font-size: 19px; font-weight: 700; line-height: 1.3; color: var(--text); }
+.pron-word.zh { font-size: 26px; font-weight: 600; }
+.pron-sub { font-size: 14px; color: var(--primary); font-weight: 500; }
+.pron-word .pron-sub { font-size: 15px; margin-inline-start: 4px; }
+.pron-vi { font-size: 13.5px; color: var(--text-2); }
+.pron-note { font-size: 12.5px; color: var(--text-3); line-height: 1.4; }
+.pron-group { display: block; margin-bottom: 8px; }
+.pron-pair-row { display: grid; gap: 8px; }
+.pron-pair-note { display: block; font-size: 13px; margin-top: 4px; }
+.pron-sec-icon { font-size: 26px; line-height: 1; flex: none; }
+.pron-sec-title { font-size: 16px; }
+.pron-collapse.ant-collapse { background: var(--bg); }
+.pron-collapse .ant-collapse-header { align-items: center !important; }
+.tone-card { height: 100%; gap: 8px; }
+.tone-svg { flex: none; background: var(--fill); border-radius: 10px; }
+.tone-grid { stroke: var(--border-strong); stroke-width: 1; stroke-dasharray: 2 3; }
+.tone-line { fill: none; stroke: var(--primary); stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; }
+.tone-dot { fill: var(--primary); }
+.tone-name { font-weight: 700; font-size: 15px; }
+.tone-mark { color: var(--primary); font-size: 20px; margin-inline-start: 4px; }
+.tone-vi { font-size: 13.5px; color: var(--text-2); }
+.try-mic { border: 1px dashed var(--border-strong); border-radius: 14px; padding: 14px; }
+.try-mic-open.ant-btn { align-self: flex-start; }
+.chip.chip-sm { padding: 5px 12px; font-size: 14px; box-shadow: none; }
+.chip.on { border-color: var(--primary); background: var(--primary-bg); color: var(--primary); font-weight: 700; }
+.unit-icon.ok { background: var(--success-bg); }
+.pron-opt-py { font-size: 19px; }
+.pron-start { border-color: var(--primary-border); background: linear-gradient(135deg, var(--primary-bg) 0%, var(--bg) 60%) !important; }
+/* Be Vietnam Pro không có ǎ ǐ ǒ ǔ ǚ: dùng phông có dấu ˇ hình chữ V, tránh nhầm với ă tiếng Việt */
+.pron-sub, .tone-mark, .pron-opt-py, .py-font {
+  font-family: 'Noto Sans', 'DejaVu Sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+}
+@media (max-width: 480px) {
+  .pron-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .pron-tile { padding: 8px 10px; }
+  .pron-word { font-size: 17px; }
+  .pron-collapse .ant-collapse-content-box { padding: 12px !important; }
+  .pron-collapse .ant-collapse-header { padding: 12px !important; }
+}
+@media (max-width: 575px) { .pron-start .cta { width: 100%; } }
