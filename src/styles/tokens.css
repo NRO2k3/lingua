@@ -1,0 +1,30 @@
+/* Quy chuẩn thiết kế dùng chung (tham chiếu Duolingo/Babbel): nút 3D, vùng chạm, focus, chuyển động.
+   Màu lấy từ token Ant Design qua biến CSS (TokenVars): --primary, --success, --error, --border… */
+:root {
+  --dur-fast: 120ms;      /* nhấn nút, đổi trạng thái nhỏ */
+  --dur-base: 220ms;      /* trượt panel, hiện phản hồi */
+  --dur-slow: 400ms;      /* thanh tiến độ, chuyển trang */
+  --ease-out: cubic-bezier(.2, 0, 0, 1);
+  --tap-min: 44px;        /* vùng chạm tối thiểu (WCAG 2.5.5) */
+  --content-narrow: 640px;/* chiều rộng màn bài học/kiểm tra */
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Nút 3D: viền đáy dày, bấm thì lún xuống. Dùng: <Button className="btn-3d" …> */
+.btn-3d.ant-btn {
+  height: 50px; padding-inline: 24px; border-radius: 14px; font-weight: 700; letter-spacing: .01em;
+  border-width: 2px 2px 4px; transition: transform var(--dur-fast) var(--ease-out), border-bottom-width var(--dur-fast), filter var(--dur-fast);
+}
+.btn-3d.ant-btn-primary:not(:disabled) { border-color: color-mix(in srgb, var(--primary) 70%, #000); }
+.btn-3d.ant-btn-default:not(:disabled) { border-color: var(--border-strong); }
+.btn-3d.ant-btn:not(:disabled):hover { filter: brightness(1.04); }
+.btn-3d.ant-btn:not(:disabled):active { transform: translateY(2px); border-bottom-width: 2px; }
+.btn-3d.ant-btn-lg { height: 54px; font-size: 17px; }
+.btn-3d.ant-btn:disabled { border-bottom-width: 2px; }
+
+/* Focus rõ ràng cho bàn phím */
+:where(a, button, [role="button"], [role="link"], [tabindex]):focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 1ms; --dur-base: 1ms; --dur-slow: 1ms; }
+}

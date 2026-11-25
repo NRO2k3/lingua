@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { animate, motion } from 'framer-motion';
 
 export const EASE = [0.22, 1, 0.36, 1];
+// Thời lượng chuẩn (giây), khớp với --dur-* trong styles/tokens.css
+export const DUR = { fast: 0.12, base: 0.22, slow: 0.4 };
+export const SPRING = { type: 'spring', stiffness: 500, damping: 32 };
 
 // Danh sách xuất hiện lần lượt
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.05, delayChildren: 0.04 } } };
