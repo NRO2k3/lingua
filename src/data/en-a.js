@@ -638,11 +638,11 @@ addLevels('en', [
           { w: 'ago', ipa: '/əˈɡoʊ/', vi: 'cách đây, trước đây', ex: 'I met him two days ago.', exVi: 'Tôi gặp anh ấy hai ngày trước.' },
           { w: 'visit', ipa: '/ˈvɪzɪt/', vi: 'thăm (visited)', ex: 'We visited our grandparents.', exVi: 'Chúng tôi đã đi thăm ông bà.' },
           { w: 'stay home', ipa: '/steɪ hoʊm/', vi: 'ở nhà (stayed)', ex: 'She stayed home and cooked dinner.', exVi: 'Cô ấy ở nhà và nấu bữa tối.' },
-          { w: 'went', ipa: '/wɛnt/', vi: 'đã đi (quá khứ của go)', ex: 'They went to the beach.', exVi: 'Họ đã đi biển.' },
-          { w: 'saw', ipa: '/sɔ/', vi: 'đã thấy, đã xem (quá khứ của see)', ex: 'I saw a great movie.', exVi: 'Tôi đã xem một bộ phim hay.' },
-          { w: 'ate', ipa: '/eɪt/', vi: 'đã ăn (quá khứ của eat)', ex: 'We ate seafood in Nha Trang.', exVi: 'Chúng tôi đã ăn hải sản ở Nha Trang.' },
-          { w: 'bought', ipa: '/bɔt/', vi: 'đã mua (quá khứ của buy)', ex: 'He bought a new phone.', exVi: 'Anh ấy đã mua một chiếc điện thoại mới.' },
-          { w: 'had', ipa: '/hæd/', vi: 'đã có, đã trải qua (quá khứ của have)', ex: 'We had a great time.', exVi: 'Chúng tôi đã có khoảng thời gian tuyệt vời.' }
+          { w: 'trip', ipa: '/trɪp/', vi: 'chuyến đi', ex: 'We went on a trip to Hue last month.', exVi: 'Tháng trước chúng tôi đã đi một chuyến đến Huế.' },
+          { w: 'beach', ipa: '/bitʃ/', vi: 'bãi biển', ex: 'They went to the beach on Saturday.', exVi: 'Thứ Bảy họ đã đi biển.' },
+          { w: 'concert', ipa: '/ˈkɑnsɚt/', vi: 'buổi hoà nhạc, buổi biểu diễn ca nhạc', ex: 'I saw a great concert in the park.', exVi: 'Tôi đã xem một buổi hoà nhạc tuyệt vời trong công viên.' },
+          { w: 'last night', ipa: '/læst naɪt/', vi: 'tối qua, đêm qua', ex: 'What did you eat last night?', exVi: 'Tối qua bạn ăn gì?' },
+          { w: 'have fun', ipa: '/hæv fʌn/', vi: 'vui chơi, chơi vui (quá khứ: had fun)', ex: 'We had a lot of fun at the party.', exVi: 'Chúng tôi đã chơi rất vui ở bữa tiệc.' }
         ],
         grammar: {
           title: 'Thì quá khứ đơn (Past Simple)',

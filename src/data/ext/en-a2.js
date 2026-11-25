@@ -2,12 +2,12 @@ export default {
   'en-a2-1': {
     vocab: [
       { w: 'calendar', ipa: '/ˈkæləndər/', vi: 'lịch (treo tường, để bàn)', ex: 'I write all my appointments on the calendar.', exVi: 'Tôi ghi tất cả các cuộc hẹn lên lịch.' },
-      { w: 'schedule', ipa: '/ˈskedʒuːl/', vi: 'lịch trình, thời gian biểu', ex: 'My schedule is very busy on Monday.', exVi: 'Lịch trình của tôi rất bận vào thứ Hai.' },
+      { w: 'schedule', ipa: '/ˈskɛdʒul/', vi: 'lịch trình, thời gian biểu', ex: 'My schedule is very busy on Monday.', exVi: 'Lịch trình của tôi rất bận vào thứ Hai.' },
       { w: 'midnight', ipa: '/ˈmɪdnaɪt/', vi: 'nửa đêm (12 giờ đêm)', ex: 'The party ends at midnight.', exVi: 'Bữa tiệc kết thúc lúc nửa đêm.' },
-      { w: 'noon', ipa: '/nuːn/', vi: 'buổi trưa (12 giờ trưa)', ex: 'Let\'s meet at noon in front of the bank.', exVi: 'Mình gặp nhau lúc 12 giờ trưa trước ngân hàng nhé.' },
+      { w: 'noon', ipa: '/nun/', vi: 'buổi trưa (12 giờ trưa)', ex: 'Let\'s meet at noon in front of the bank.', exVi: 'Mình gặp nhau lúc 12 giờ trưa trước ngân hàng nhé.' },
       { w: 'lunchtime', ipa: '/ˈlʌntʃtaɪm/', vi: 'giờ ăn trưa', ex: 'I usually call my mom at lunchtime.', exVi: 'Tôi thường gọi cho mẹ vào giờ ăn trưa.' },
-      { w: 'weekday', ipa: '/ˈwiːkdeɪ/', vi: 'ngày thường (thứ Hai – thứ Sáu)', ex: 'The shop opens at 8 a.m. on weekdays.', exVi: 'Cửa hàng mở cửa lúc 8 giờ sáng vào các ngày thường.' },
-      { w: 'alarm clock', ipa: '/əˈlɑːrm klɑːk/', vi: 'đồng hồ báo thức', ex: 'My alarm clock rings at six o\'clock.', exVi: 'Đồng hồ báo thức của tôi reo lúc sáu giờ.' },
+      { w: 'weekday', ipa: '/ˈwikdeɪ/', vi: 'ngày thường (thứ Hai – thứ Sáu)', ex: 'The shop opens at 8 a.m. on weekdays.', exVi: 'Cửa hàng mở cửa lúc 8 giờ sáng vào các ngày thường.' },
+      { w: 'alarm clock', ipa: '/əˈlɑrm klɑk/', vi: 'đồng hồ báo thức', ex: 'My alarm clock rings at six o\'clock.', exVi: 'Đồng hồ báo thức của tôi reo lúc sáu giờ.' },
       { w: 'timetable', ipa: '/ˈtaɪmteɪbəl/', vi: 'bảng giờ (tàu, xe); thời khoá biểu', ex: 'Let\'s check the bus timetable first.', exVi: 'Hãy xem bảng giờ xe buýt trước đã.' },
       { w: 'daily', ipa: '/ˈdeɪli/', vi: 'hằng ngày', ex: 'Walking is part of my daily routine.', exVi: 'Đi bộ là một phần trong thói quen hằng ngày của tôi.' },
       { w: 'twice', ipa: '/twaɪs/', vi: 'hai lần', ex: 'I go to the gym twice a week.', exVi: 'Tôi đi tập gym hai lần một tuần.' }
@@ -46,16 +46,16 @@ export default {
 
   'en-a2-2': {
     vocab: [
-      { w: 'receipt', ipa: '/rɪˈsiːt/', vi: 'hoá đơn, biên lai', ex: 'Could I have the receipt, please?', exVi: 'Cho tôi xin hoá đơn được không?' },
-      { w: 'bargain', ipa: '/ˈbɑːrɡən/', vi: 'món hời, mua được giá rẻ', ex: 'This jacket was only ten dollars. What a bargain!', exVi: 'Cái áo khoác này chỉ có mười đô. Đúng là món hời!' },
+      { w: 'receipt', ipa: '/rɪˈsit/', vi: 'hoá đơn, biên lai', ex: 'Could I have the receipt, please?', exVi: 'Cho tôi xin hoá đơn được không?' },
+      { w: 'bargain', ipa: '/ˈbɑrɡən/', vi: 'món hời, mua được giá rẻ', ex: 'This jacket was only ten dollars. What a bargain!', exVi: 'Cái áo khoác này chỉ có mười đô. Đúng là món hời!' },
       { w: 'customer', ipa: '/ˈkʌstəmər/', vi: 'khách hàng', ex: 'There are many customers in the store today.', exVi: 'Hôm nay có nhiều khách hàng trong cửa hàng.' },
-      { w: 'wallet', ipa: '/ˈwɑːlɪt/', vi: 'ví (đựng tiền)', ex: 'I can\'t find my wallet. Can I pay by phone?', exVi: 'Tôi không tìm thấy ví. Tôi trả bằng điện thoại được không?' },
-      { w: 'mall', ipa: '/mɔːl/', vi: 'trung tâm thương mại', ex: 'We often go shopping at the mall on Sunday.', exVi: 'Chúng tôi thường đi mua sắm ở trung tâm thương mại vào Chủ nhật.' },
-      { w: 'shop assistant', ipa: '/ˈʃɑːp əˌsɪstənt/', vi: 'nhân viên bán hàng', ex: 'The shop assistant helped me find a bigger size.', exVi: 'Nhân viên bán hàng đã giúp tôi tìm cỡ lớn hơn.' },
-      { w: 'sweater', ipa: '/ˈswetər/', vi: 'áo len', ex: 'How much is this red sweater?', exVi: 'Cái áo len đỏ này bao nhiêu tiền?' },
-      { w: 'scarf', ipa: '/skɑːrf/', vi: 'khăn quàng cổ', ex: 'She bought a warm scarf for the winter.', exVi: 'Cô ấy đã mua một chiếc khăn quàng ấm cho mùa đông.' },
+      { w: 'wallet', ipa: '/ˈwɑlɪt/', vi: 'ví (đựng tiền)', ex: 'I can\'t find my wallet. Can I pay by phone?', exVi: 'Tôi không tìm thấy ví. Tôi trả bằng điện thoại được không?' },
+      { w: 'mall', ipa: '/mɔl/', vi: 'trung tâm thương mại', ex: 'We often go shopping at the mall on Sunday.', exVi: 'Chúng tôi thường đi mua sắm ở trung tâm thương mại vào Chủ nhật.' },
+      { w: 'shop assistant', ipa: '/ˈʃɑp əˌsɪstənt/', vi: 'nhân viên bán hàng', ex: 'The shop assistant helped me find a bigger size.', exVi: 'Nhân viên bán hàng đã giúp tôi tìm cỡ lớn hơn.' },
+      { w: 'sweater', ipa: '/ˈswɛtər/', vi: 'áo len', ex: 'How much is this red sweater?', exVi: 'Cái áo len đỏ này bao nhiêu tiền?' },
+      { w: 'scarf', ipa: '/skɑrf/', vi: 'khăn quàng cổ', ex: 'She bought a warm scarf for the winter.', exVi: 'Cô ấy đã mua một chiếc khăn quàng ấm cho mùa đông.' },
       { w: 'coin', ipa: '/kɔɪn/', vi: 'đồng xu', ex: 'I only have some coins in my pocket.', exVi: 'Tôi chỉ có vài đồng xu trong túi.' },
-      { w: 'cost', ipa: '/kɔːst/', vi: 'có giá, tốn (tiền)', ex: 'These shoes cost fifty dollars.', exVi: 'Đôi giày này có giá năm mươi đô.' }
+      { w: 'cost', ipa: '/kɔst/', vi: 'có giá, tốn (tiền)', ex: 'These shoes cost fifty dollars.', exVi: 'Đôi giày này có giá năm mươi đô.' }
     ],
     exercises: [
       { type: 'mc', q: '___ does this scarf cost?', options: ['How many', 'How much', 'What much'], answer: 1, explain: 'Hỏi giá dùng How much: How much does it cost?' },
@@ -91,16 +91,16 @@ export default {
 
   'en-a2-3': {
     vocab: [
-      { w: 'apartment', ipa: '/əˈpɑːrtmənt/', vi: 'căn hộ', ex: 'There are two bedrooms in our apartment.', exVi: 'Căn hộ của chúng tôi có hai phòng ngủ.' },
+      { w: 'apartment', ipa: '/əˈpɑrtmənt/', vi: 'căn hộ', ex: 'There are two bedrooms in our apartment.', exVi: 'Căn hộ của chúng tôi có hai phòng ngủ.' },
       { w: 'balcony', ipa: '/ˈbælkəni/', vi: 'ban công', ex: 'There are some flowers on the balcony.', exVi: 'Có vài chậu hoa ngoài ban công.' },
-      { w: 'armchair', ipa: '/ˈɑːrmtʃer/', vi: 'ghế bành', ex: 'My grandfather is sitting in the armchair.', exVi: 'Ông tôi đang ngồi trên ghế bành.' },
+      { w: 'armchair', ipa: '/ˈɑrmtʃɛr/', vi: 'ghế bành', ex: 'My grandfather is sitting in the armchair.', exVi: 'Ông tôi đang ngồi trên ghế bành.' },
       { w: 'cupboard', ipa: '/ˈkʌbərd/', vi: 'tủ (bát đĩa, đồ dùng)', ex: 'The plates are in the cupboard.', exVi: 'Bát đĩa ở trong tủ.' },
-      { w: 'furniture', ipa: '/ˈfɜːrnɪtʃər/', vi: 'đồ đạc, đồ nội thất', ex: 'There isn\'t much furniture in my room.', exVi: 'Trong phòng tôi không có nhiều đồ đạc.' },
-      { w: 'upstairs', ipa: '/ˌʌpˈsterz/', vi: 'ở tầng trên, lên tầng', ex: 'The bathroom is upstairs.', exVi: 'Phòng tắm ở tầng trên.' },
-      { w: 'downstairs', ipa: '/ˌdaʊnˈsterz/', vi: 'ở tầng dưới, xuống tầng', ex: 'Is there a kitchen downstairs?', exVi: 'Ở tầng dưới có bếp không?' },
-      { w: 'opposite', ipa: '/ˈɑːpəzɪt/', vi: 'đối diện; trái ngược', ex: 'The bank is opposite the post office.', exVi: 'Ngân hàng ở đối diện bưu điện.' },
+      { w: 'furniture', ipa: '/ˈfɜrnɪtʃər/', vi: 'đồ đạc, đồ nội thất', ex: 'There isn\'t much furniture in my room.', exVi: 'Trong phòng tôi không có nhiều đồ đạc.' },
+      { w: 'upstairs', ipa: '/ˌʌpˈstɛrz/', vi: 'ở tầng trên, lên tầng', ex: 'The bathroom is upstairs.', exVi: 'Phòng tắm ở tầng trên.' },
+      { w: 'downstairs', ipa: '/ˌdaʊnˈstɛrz/', vi: 'ở tầng dưới, xuống tầng', ex: 'Is there a kitchen downstairs?', exVi: 'Ở tầng dưới có bếp không?' },
+      { w: 'opposite', ipa: '/ˈɑpəzɪt/', vi: 'đối diện; trái ngược', ex: 'The bank is opposite the post office.', exVi: 'Ngân hàng ở đối diện bưu điện.' },
       { w: 'traffic light', ipa: '/ˈtræfɪk laɪt/', vi: 'đèn giao thông', ex: 'Turn right at the traffic light.', exVi: 'Rẽ phải ở chỗ đèn giao thông.' },
-      { w: 'entrance', ipa: '/ˈentrəns/', vi: 'lối vào, cổng vào', ex: 'The entrance is next to the café.', exVi: 'Lối vào ở bên cạnh quán cà phê.' }
+      { w: 'entrance', ipa: '/ˈɛntrəns/', vi: 'lối vào, cổng vào', ex: 'The entrance is next to the café.', exVi: 'Lối vào ở bên cạnh quán cà phê.' }
     ],
     exercises: [
       { type: 'mc', q: 'There ___ a lot of furniture in the living room.', options: ['is', 'are', 'be'], answer: 0, explain: 'furniture là danh từ không đếm được → There is.' },
@@ -136,16 +136,16 @@ export default {
 
   'en-a2-4': {
     vocab: [
-      { w: 'barbecue', ipa: '/ˈbɑːrbɪkjuː/', vi: 'tiệc nướng ngoài trời; nướng', ex: 'We had a barbecue in the garden on Sunday.', exVi: 'Chúng tôi đã tổ chức tiệc nướng trong vườn vào Chủ nhật.' },
-      { w: 'museum', ipa: '/mjuˈziːəm/', vi: 'bảo tàng', ex: 'We visited the history museum last weekend.', exVi: 'Chúng tôi đã tham quan bảo tàng lịch sử vào cuối tuần trước.' },
-      { w: 'exhibition', ipa: '/ˌeksɪˈbɪʃən/', vi: 'cuộc triển lãm', ex: 'I saw a great photo exhibition yesterday.', exVi: 'Hôm qua tôi đã xem một cuộc triển lãm ảnh rất hay.' },
+      { w: 'barbecue', ipa: '/ˈbɑrbɪkju/', vi: 'tiệc nướng ngoài trời; nướng', ex: 'We had a barbecue in the garden on Sunday.', exVi: 'Chúng tôi đã tổ chức tiệc nướng trong vườn vào Chủ nhật.' },
+      { w: 'museum', ipa: '/mjuˈziəm/', vi: 'bảo tàng', ex: 'We visited the history museum last weekend.', exVi: 'Chúng tôi đã tham quan bảo tàng lịch sử vào cuối tuần trước.' },
+      { w: 'exhibition', ipa: '/ˌɛksɪˈbɪʃən/', vi: 'cuộc triển lãm', ex: 'I saw a great photo exhibition yesterday.', exVi: 'Hôm qua tôi đã xem một cuộc triển lãm ảnh rất hay.' },
       { w: 'camping', ipa: '/ˈkæmpɪŋ/', vi: 'cắm trại', ex: 'They went camping in the mountains.', exVi: 'Họ đã đi cắm trại trên núi.' },
       { w: 'countryside', ipa: '/ˈkʌntrisaɪd/', vi: 'vùng nông thôn, miền quê', ex: 'My grandparents live in the countryside.', exVi: 'Ông bà tôi sống ở miền quê.' },
-      { w: 'seaside', ipa: '/ˈsiːsaɪd/', vi: 'bờ biển, vùng ven biển', ex: 'We spent two days at the seaside.', exVi: 'Chúng tôi đã ở bờ biển hai ngày.' },
+      { w: 'seaside', ipa: '/ˈsisaɪd/', vi: 'bờ biển, vùng ven biển', ex: 'We spent two days at the seaside.', exVi: 'Chúng tôi đã ở bờ biển hai ngày.' },
       { w: 'relax', ipa: '/rɪˈlæks/', vi: 'thư giãn, nghỉ ngơi', ex: 'I stayed home and relaxed on Saturday.', exVi: 'Thứ Bảy tôi ở nhà và nghỉ ngơi.' },
-      { w: 'wedding', ipa: '/ˈwedɪŋ/', vi: 'đám cưới', ex: 'My cousin\'s wedding was on Sunday.', exVi: 'Đám cưới của anh họ tôi diễn ra vào Chủ nhật.' },
+      { w: 'wedding', ipa: '/ˈwɛdɪŋ/', vi: 'đám cưới', ex: 'My cousin\'s wedding was on Sunday.', exVi: 'Đám cưới của anh họ tôi diễn ra vào Chủ nhật.' },
       { w: 'invite', ipa: '/ɪnˈvaɪt/', vi: 'mời', ex: 'Nam invited me to his birthday party.', exVi: 'Nam đã mời tôi đến tiệc sinh nhật của cậu ấy.' },
-      { w: 'bored', ipa: '/bɔːrd/', vi: 'chán, buồn chán', ex: 'I was bored because it rained all day.', exVi: 'Tôi thấy chán vì trời mưa cả ngày.' }
+      { w: 'bored', ipa: '/bɔrd/', vi: 'chán, buồn chán', ex: 'I was bored because it rained all day.', exVi: 'Tôi thấy chán vì trời mưa cả ngày.' }
     ],
     exercises: [
       { type: 'mc', q: 'Last Saturday, my friends ___ me to a barbecue.', options: ['invite', 'invited', 'inviting'], answer: 1, explain: 'Last Saturday → quá khứ đơn; invite tận cùng e chỉ thêm -d: invited.' },
@@ -182,15 +182,15 @@ export default {
   'en-a2-5': {
     vocab: [
       { w: 'badminton', ipa: '/ˈbædmɪntən/', vi: 'cầu lông', ex: 'I often play badminton after work.', exVi: 'Tôi thường chơi cầu lông sau giờ làm.' },
-      { w: 'chess', ipa: '/tʃes/', vi: 'cờ vua', ex: 'My grandfather loves playing chess.', exVi: 'Ông tôi rất thích chơi cờ vua.' },
+      { w: 'chess', ipa: '/tʃɛs/', vi: 'cờ vua', ex: 'My grandfather loves playing chess.', exVi: 'Ông tôi rất thích chơi cờ vua.' },
       { w: 'cycling', ipa: '/ˈsaɪklɪŋ/', vi: 'đạp xe', ex: 'We go cycling around the lake on Sundays.', exVi: 'Chúng tôi đạp xe quanh hồ vào các ngày Chủ nhật.' },
       { w: 'hiking', ipa: '/ˈhaɪkɪŋ/', vi: 'đi bộ đường dài, leo núi', ex: 'She enjoys hiking in the mountains.', exVi: 'Cô ấy thích đi bộ đường dài trên núi.' },
-      { w: 'table tennis', ipa: '/ˈteɪbəl ˌtenɪs/', vi: 'bóng bàn', ex: 'Do you want to play table tennis with me?', exVi: 'Bạn có muốn chơi bóng bàn với tôi không?' },
-      { w: 'photography', ipa: '/fəˈtɑːɡrəfi/', vi: 'nhiếp ảnh, chụp ảnh', ex: 'Photography is my favorite hobby.', exVi: 'Nhiếp ảnh là sở thích yêu thích của tôi.' },
-      { w: 'board game', ipa: '/ˈbɔːrd ɡeɪm/', vi: 'trò chơi cờ bàn (board game)', ex: 'We sometimes play board games on rainy days.', exVi: 'Thỉnh thoảng chúng tôi chơi board game vào những ngày mưa.' },
+      { w: 'table tennis', ipa: '/ˈteɪbəl ˌtɛnɪs/', vi: 'bóng bàn', ex: 'Do you want to play table tennis with me?', exVi: 'Bạn có muốn chơi bóng bàn với tôi không?' },
+      { w: 'photography', ipa: '/fəˈtɑɡrəfi/', vi: 'nhiếp ảnh, chụp ảnh', ex: 'Photography is my favorite hobby.', exVi: 'Nhiếp ảnh là sở thích yêu thích của tôi.' },
+      { w: 'board game', ipa: '/ˈbɔrd ɡeɪm/', vi: 'trò chơi cờ bàn (board game)', ex: 'We sometimes play board games on rainy days.', exVi: 'Thỉnh thoảng chúng tôi chơi board game vào những ngày mưa.' },
       { w: 'video game', ipa: '/ˈvɪdioʊ ɡeɪm/', vi: 'trò chơi điện tử', ex: 'My brother never stops playing video games.', exVi: 'Em trai tôi chơi trò chơi điện tử không ngừng.' },
-      { w: 'competition', ipa: '/ˌkɑːmpəˈtɪʃən/', vi: 'cuộc thi', ex: 'He won a swimming competition last year.', exVi: 'Năm ngoái anh ấy đã thắng một cuộc thi bơi.' },
-      { w: 'athlete', ipa: '/ˈæθliːt/', vi: 'vận động viên', ex: 'Athletes usually train every day.', exVi: 'Các vận động viên thường tập luyện mỗi ngày.' }
+      { w: 'competition', ipa: '/ˌkɑmpəˈtɪʃən/', vi: 'cuộc thi', ex: 'He won a swimming competition last year.', exVi: 'Năm ngoái anh ấy đã thắng một cuộc thi bơi.' },
+      { w: 'athlete', ipa: '/ˈæθlit/', vi: 'vận động viên', ex: 'Athletes usually train every day.', exVi: 'Các vận động viên thường tập luyện mỗi ngày.' }
     ],
     exercises: [
       { type: 'mc', q: 'My dad enjoys ___ chess with me.', options: ['play', 'playing', 'to playing'], answer: 1, explain: 'Sau enjoy dùng V-ing: playing.' },
@@ -200,7 +200,7 @@ export default {
       { type: 'mc', q: 'She ___ plays video games. She thinks they are boring.', options: ['always', 'usually', 'never'], answer: 2, explain: 'Cô ấy thấy chán → không bao giờ chơi: never.' },
       { type: 'mc', q: 'How often ___ you play badminton? — Twice a week.', options: ['do', 'are', 'does'], answer: 0, explain: 'Hỏi tần suất: How often do you + V?' },
       { type: 'order', vi: 'Anh ấy thường tham gia các cuộc thi.', words: ['takes', 'He', 'competitions', 'part', 'often', 'in'], answer: 'He often takes part in competitions' },
-      { type: 'order', vi: 'Tôi thích chụp ảnh vào thời gian rảnh.', words: ['love', 'free', 'I', 'photography', 'doing', 'my', 'in', 'time'], answer: 'I love doing photography in my free time' }
+      { type: 'order', vi: 'Tôi thích chụp ảnh vào thời gian rảnh.', words: ['love', 'free', 'I', 'photos', 'taking', 'my', 'in', 'time'], answer: 'I love taking photos in my free time' }
     ],
     reading: {
       title: 'My Free Time',
@@ -226,13 +226,13 @@ export default {
 
   'en-a2-6': {
     vocab: [
-      { w: 'suitcase', ipa: '/ˈsuːtkeɪs/', vi: 'va li', ex: 'I\'m going to buy a new suitcase for my trip.', exVi: 'Tôi định mua một chiếc va li mới cho chuyến đi.' },
+      { w: 'suitcase', ipa: '/ˈsutkeɪs/', vi: 'va li', ex: 'I\'m going to buy a new suitcase for my trip.', exVi: 'Tôi định mua một chiếc va li mới cho chuyến đi.' },
       { w: 'flight', ipa: '/flaɪt/', vi: 'chuyến bay', ex: 'Our flight leaves at 7 a.m. tomorrow.', exVi: 'Chuyến bay của chúng tôi khởi hành lúc 7 giờ sáng mai.' },
       { w: 'guidebook', ipa: '/ˈɡaɪdbʊk/', vi: 'sách hướng dẫn du lịch', ex: 'She is reading a guidebook about Japan.', exVi: 'Cô ấy đang đọc sách hướng dẫn du lịch về Nhật Bản.' },
       { w: 'tour', ipa: '/tʊr/', vi: 'chuyến tham quan, tour', ex: 'We\'re going to take a boat tour of Ha Long Bay.', exVi: 'Chúng tôi sẽ đi tour thuyền tham quan vịnh Hạ Long.' },
       { w: 'tourist', ipa: '/ˈtʊrɪst/', vi: 'khách du lịch', ex: 'Hoi An is full of tourists in the summer.', exVi: 'Hội An đông khách du lịch vào mùa hè.' },
-      { w: 'journey', ipa: '/ˈdʒɜːrni/', vi: 'hành trình, chuyến đi', ex: 'The journey from Hanoi to Hue takes about twelve hours by train.', exVi: 'Hành trình từ Hà Nội đến Huế mất khoảng mười hai tiếng bằng tàu hoả.' },
-      { w: 'adventure', ipa: '/ədˈventʃər/', vi: 'cuộc phiêu lưu, trải nghiệm mới lạ', ex: 'Traveling alone will be a big adventure.', exVi: 'Đi du lịch một mình sẽ là một cuộc phiêu lưu lớn.' },
+      { w: 'journey', ipa: '/ˈdʒɜrni/', vi: 'hành trình, chuyến đi', ex: 'The journey from Hanoi to Hue takes about twelve hours by train.', exVi: 'Hành trình từ Hà Nội đến Huế mất khoảng mười hai tiếng bằng tàu hoả.' },
+      { w: 'adventure', ipa: '/ədˈvɛntʃər/', vi: 'cuộc phiêu lưu, trải nghiệm mới lạ', ex: 'Traveling alone will be a big adventure.', exVi: 'Đi du lịch một mình sẽ là một cuộc phiêu lưu lớn.' },
       { w: 'pack', ipa: '/pæk/', vi: 'đóng gói, xếp đồ (vào va li)', ex: 'I\'ll pack my bag tonight.', exVi: 'Tối nay tôi sẽ xếp đồ vào túi.' },
       { w: 'someday', ipa: '/ˈsʌmdeɪ/', vi: 'một ngày nào đó', ex: 'Someday I will visit Paris.', exVi: 'Một ngày nào đó tôi sẽ đến thăm Paris.' },
       { w: 'perhaps', ipa: '/pərˈhæps/', vi: 'có lẽ, có thể', ex: 'Perhaps we will go to the beach on Sunday.', exVi: 'Có lẽ Chủ nhật chúng tôi sẽ đi biển.' }
@@ -241,7 +241,7 @@ export default {
       { type: 'mc', q: 'I bought the tickets yesterday. We ___ fly to Bangkok next Friday.', options: ['will', 'are going to', 'going to'], answer: 1, explain: 'Kế hoạch đã quyết định từ trước (đã mua vé) → be going to.' },
       { type: 'mc', q: '"This suitcase is very heavy." — "Don\'t worry. I ___ carry it for you."', options: ['\'ll', '\'m going to', 'am'], answer: 0, explain: 'Đề nghị giúp đỡ, quyết định ngay lúc nói → will (I\'ll).' },
       { type: 'fill', q: 'She is going ___ pack her suitcase tonight.', answer: ['to'], hint: 'be going ___ + V', explain: 'Cấu trúc: be going to + động từ nguyên mẫu.' },
-      { type: 'fill', q: 'Look at the storm! Our flight ___ leave on time. (will not, viết tắt)', answer: ['won\'t', 'won’t'], hint: 'will not viết tắt', explain: 'will not viết tắt là won\'t: Our flight won\'t leave on time.' },
+      { type: 'fill', q: 'Look at the storm! Our flight ___ leave on time. (be going to, phủ định)', answer: ['isn\'t going to', 'isn’t going to', 'is not going to'], hint: 'be going to – phủ định', explain: 'Dự đoán dựa trên dấu hiệu đang thấy trước mắt (cơn bão) → dùng be going to: Our flight isn\'t going to leave on time.' },
       { type: 'mc', q: '___ you going to take a tour of the old town?', options: ['Will', 'Are', 'Do'], answer: 1, explain: 'Câu hỏi với be going to: Are you going to…?' },
       { type: 'mc', q: 'I think the journey ___ long, but it will be fun.', options: ['is going', 'will be', 'be'], answer: 1, explain: 'Dự đoán theo ý kiến cá nhân (I think…) → will be.' },
       { type: 'order', vi: 'Có lẽ chúng tôi sẽ mua một cuốn sách hướng dẫn du lịch.', words: ['will', 'Perhaps', 'a', 'we', 'guidebook', 'buy'], answer: 'Perhaps we will buy a guidebook' },
