@@ -2,7 +2,7 @@ import { shuffle, norm, noAccent, tidy } from './utils.js';
 
 const KIND = { mc: 'Chọn đáp án đúng', fill: 'Điền vào chỗ trống', order: 'Sắp xếp thành câu' };
 
-// 12 câu: 4 câu từ vựng sinh tự động + 8 bài tập của bài học, trộn ngẫu nhiên
+// 4 câu từ vựng sinh tự động + tối đa 12 bài tập lấy ngẫu nhiên, trộn lẫn
 export function buildQuiz(u, zh) {
   const vs = shuffle(u.vocab);
   const label = x => zh ? `${x.w} · ${x.ipa}` : x.w;
@@ -14,7 +14,7 @@ export function buildQuiz(u, zh) {
   });
   { const v = vs[2], o = four(v); vq.push({ type: 'mc', kind: 'Chọn từ đúng', q: v.vi, options: o.map(label), answer: o.indexOf(v) }); }
   { const v = vs[3], o = four(v); vq.push({ type: 'listen', kind: 'Nghe và chọn từ bạn nghe được', say: v.w, options: o.map(label), answer: o.indexOf(v) }); }
-  const ex = u.exercises.map(e => ({ ...e, kind: KIND[e.type] }));
+  const ex = shuffle(u.exercises).slice(0, 12).map(e => ({ ...e, kind: KIND[e.type] }));
   return shuffle([...vq, ...ex]).map(q => q.type === 'order' ? { ...q, words: shuffle(q.words) } : q);
 }
 

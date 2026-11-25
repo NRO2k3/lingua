@@ -15,6 +15,7 @@ import Home from './pages/Home.jsx';
 import Roadmap from './pages/Roadmap.jsx';
 import Lesson from './pages/Lesson.jsx';
 import Review from './pages/Review.jsx';
+import WordBank from './pages/WordBank.jsx';
 
 const FONT = "'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', "
   + "'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif";
@@ -126,6 +127,7 @@ function Page({ route }) {
   if (c !== 'c' || !COURSES[lang]) return <Home />;
   if (kind === 'u' && uid) return <Lesson key={uid} lang={lang} uid={uid} />;
   if (kind === 'review') return <Review key={lang} lang={lang} />;
+  if (kind === 'words') return <WordBank key={lang} lang={lang} />;
   return <Roadmap lang={lang} />;
 }
 

@@ -3,3 +3,5 @@ dist/
 .claude/
 *.swp
 .DS_Store
+sources/raw/
+sources/work/

@@ -1,5 +1,5 @@
 import { App, Badge, Breadcrumb, Button, Card, Col, Divider, Flex, Progress, Row, Switch, Tag, Typography } from 'antd';
-import { CaretRightFilled, CheckCircleFilled, HistoryOutlined, LockOutlined, PlayCircleFilled } from '@ant-design/icons';
+import { BookOutlined, CaretRightFilled, CheckCircleFilled, HistoryOutlined, LockOutlined, PlayCircleFilled } from '@ant-design/icons';
 import { COURSES, LEVEL_NAME } from '../lib/courses.js';
 import { isDone, isUnlocked, langProgress, nextUnit, srsDue, srsKeys, update, useProgress } from '../lib/store.js';
 import { pct } from '../lib/utils.js';
@@ -64,6 +64,7 @@ export default function Roadmap({ lang }) {
               <Badge count={due}>
                 <Button size="large" icon={<HistoryOutlined />} href={`#/c/${lang}/review`}>Ôn từ vựng</Button>
               </Badge>
+              <Button size="large" icon={<BookOutlined />} href={`#/c/${lang}/words`}>Kho từ vựng</Button>
             </Flex>
           </Flex>
           <Divider style={{ margin: '16px 0 12px' }} />

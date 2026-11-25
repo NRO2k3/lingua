@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Alert, Breadcrumb, Button, Card, Col, Flex, List, Result, Row, Segmented, Space, Steps, Switch, Table, Tag, Typography } from 'antd';
 import {
   ArrowLeftOutlined, ArrowRightOutlined, AudioOutlined, BookOutlined, BulbFilled, BulbOutlined, CreditCardOutlined,
-  LeftOutlined, LockOutlined, MessageOutlined, PlayCircleOutlined, RightOutlined, TrophyOutlined, UnorderedListOutlined
+  LeftOutlined, LockOutlined, MessageOutlined, PlayCircleOutlined, ReadOutlined, RightOutlined, TrophyOutlined, UnorderedListOutlined
 } from '@ant-design/icons';
 import { COURSES, LEVEL_NAME, findUnit } from '../lib/courses.js';
 import { isUnlocked, useProgress } from '../lib/store.js';
@@ -10,19 +10,22 @@ import { speakAll, stopRec, stopSpeaking } from '../lib/speech.js';
 import { ChatLine, Flashcard, HanViet, LangTheme, Pinyin, SoundButton } from '../components/common.jsx';
 import SpeakStep from './SpeakStep.jsx';
 import QuizStep from './QuizStep.jsx';
+import ReadingStep from './ReadingStep.jsx';
 import { motion } from 'framer-motion';
 import { play } from '../lib/sfx.js';
 import { EASE, Item, Stagger } from '../components/motion.jsx';
 
 const { Title, Text, Paragraph } = Typography;
 
-const STEPS = [
-  { title: 'Từ vựng', icon: <BookOutlined /> },
-  { title: 'Ngữ pháp', icon: <BulbOutlined /> },
-  { title: 'Hội thoại', icon: <MessageOutlined /> },
-  { title: 'Luyện nói', icon: <AudioOutlined /> },
-  { title: 'Kiểm tra', icon: <TrophyOutlined /> }
-];
+// Các bước của một bài; bước Đọc hiểu chỉ có khi bài có bài đọc
+const stepsFor = u => [
+  { title: 'Từ vựng', icon: <BookOutlined />, Body: VocabStep },
+  { title: 'Ngữ pháp', icon: <BulbOutlined />, Body: GrammarStep },
+  { title: 'Hội thoại', icon: <MessageOutlined />, Body: DialogueStep },
+  u.reading && { title: 'Đọc hiểu', icon: <ReadOutlined />, Body: ReadingStep },
+  { title: 'Luyện nói', icon: <AudioOutlined />, Body: SpeakStep },
+  { title: 'Kiểm tra', icon: <TrophyOutlined />, Body: QuizStep }
+].filter(Boolean);
 
 function VocabStep({ u, lang }) {
   const [mode, setMode] = useState('list');
@@ -40,7 +43,7 @@ function VocabStep({ u, lang }) {
       </Flex>
       {mode === 'list' ? (
         <Stagger><Row gutter={[12, 12]}>
-          {u.vocab.map(v => (
+          {u.vocab.map((v, k) => (
             <Col xs={24} md={12} key={v.w}>
               <Item style={{ height: '100%' }}><Card size="small" className="vocab-card">
                 <Flex gap={12} align="start">
@@ -50,6 +53,7 @@ function VocabStep({ u, lang }) {
                       <span className="vocab-word">{v.w}</span>
                       <Text type="secondary">{v.ipa}</Text>
                       <HanViet text={v.hv} />
+                      {u.coreCount > 0 && k >= u.coreCount && <Tag bordered={false} color="purple" style={{ marginInlineEnd: 0 }}>Mở rộng</Tag>}
                     </Flex>
                     <div className="vocab-mean">{v.vi}</div>
                     <div className="vocab-ex">
@@ -149,7 +153,8 @@ export default function Lesson({ lang, uid }) {
   }
 
   const go = s => { stopRec(); stopSpeaking(); setDir(s >= step ? 1 : -1); setStep(s); window.scrollTo({ top: 0, behavior: 'smooth' }); };
-  const Body = [VocabStep, GrammarStep, DialogueStep, SpeakStep, QuizStep][step];
+  const STEPS = stepsFor(u);
+  const Body = STEPS[step].Body;
 
   return (
     <LangTheme lang={lang}>

@@ -8,6 +8,17 @@ import '../data/zh-a.js';
 import '../data/zh-b.js';
 
 export const COURSES = window.COURSES;
+
+// Phần bổ sung (src/data/ext/*.js): thêm từ, bài tập, bài đọc cho từng unit
+const EXT = Object.assign({}, ...Object.values(import.meta.glob('../data/ext/*.js', { eager: true, import: 'default' })));
+for (const c of Object.values(COURSES)) for (const level of c.levels) for (const u of level.units) {
+  const x = EXT[u.id];
+  if (!x) continue;
+  u.coreCount = u.vocab.length;
+  u.vocab = [...u.vocab, ...(x.vocab || [])];
+  u.exercises = [...u.exercises, ...(x.exercises || [])];
+  if (x.reading) u.reading = x.reading;
+}
 export const LANGS = Object.keys(COURSES);
 
 // Màu nhận diện từng ngôn ngữ (theo bảng màu preset của Ant Design)

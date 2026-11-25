@@ -82,3 +82,29 @@ Lưu ý:
   (người học có thể không có bộ gõ tiếng Trung). `hint` nên có pinyin hoặc nghĩa.
 - `order`: `words` là các TỪ (không phải từng chữ), `answer` là các từ nối bằng dấu cách theo đúng thứ tự,
   vd `words: ['叫', '我', '大卫']`, `answer: '我 叫 大卫'`. Dấu `？` gắn vào từ cuối: `'吗？'`.
+
+## Phần bổ sung bài học (`src/data/ext/<lang>-<level>.js`)
+
+Mỗi file `export default` một object, khoá là id unit. Nội dung được nối vào unit gốc khi chạy:
+
+```js
+export default {
+  'en-a1-1': {
+    vocab: [ /* đúng 10 từ mới, cùng định dạng vocab ở trên, KHÔNG trùng từ đã có */ ],
+    exercises: [ /* đúng 8 bài mc/fill/order, ưu tiên dùng từ mới + ngữ pháp của unit */ ],
+    reading: {
+      title: 'Tiêu đề bằng ngôn ngữ đích',
+      titleVi: 'Tiêu đề tiếng Việt',
+      text: ['Đoạn 1…', 'Đoạn 2…'],        // ngôn ngữ đích
+      py: ['pinyin đoạn 1', '…'],          // chỉ tiếng Trung, cùng số đoạn với text
+      vi: ['Dịch đoạn 1…', '…'],           // cùng số đoạn với text
+      questions: [                         // đúng 4 câu đọc hiểu, hỏi bằng tiếng Việt
+        { q: 'Câu hỏi?', options: ['…', '…', '…', '…'], answer: 0, explain: 'Vì sao đúng' }
+      ]
+    }
+  }
+};
+```
+
+Độ dài bài đọc: A1 60–90 từ, A2 90–140, B1 150–220, B2 220–300 (tiếng Trung tính theo chữ:
+HSK1 60–100, HSK2 100–160, HSK3 180–260, HSK4 260–360).

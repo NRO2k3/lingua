@@ -238,3 +238,21 @@ a { -webkit-tap-highlight-color: transparent; }
 }
 @keyframes ring { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(1.7); opacity: 0; } }
 .mic.on { animation: none; }
+
+/* Đọc hiểu */
+.reading-body { margin-top: 18px; display: flex; flex-direction: column; gap: 14px; }
+.reading-text { font-size: 17px; line-height: 1.75; margin-bottom: 2px !important; color: var(--text); }
+.reading-p .pinyin { font-size: 14px; margin-bottom: 4px; }
+.rq-title { display: block; font-size: 16px; margin-bottom: 10px; }
+.rq-explain { display: block; margin-top: 8px; }
+.opt.opt-sm { min-height: 46px; padding: 10px 14px; font-size: 15px; }
+
+/* Kho từ vựng */
+.bank-list .ant-list-item { padding: 12px 4px; }
+.bank-word { font-size: 18px; font-weight: 700; color: var(--text); }
+.bank-mean { color: var(--text); margin-top: 2px; }
+.level-stat { cursor: pointer; transition: border-color .2s, transform .25s cubic-bezier(.22, 1, .36, 1); }
+.level-stat:hover { transform: translateY(-2px); }
+.level-stat.active { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-bg); }
+.bank-source { font-size: 13px; }
+@media (max-width: 575px) { .bank-list .ant-list-item { flex-wrap: wrap; } .bank-list .ant-list-item-action { margin-inline-start: 52px !important; margin-top: 6px; } }

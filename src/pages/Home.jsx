@@ -1,6 +1,6 @@
-import { Badge, Button, Card, Col, Flex, Progress, Row, Steps, Tag, Typography } from 'antd';
+import { Badge, Button, Card, Col, Flex, Progress, Row, Steps, Tag, Tooltip, Typography } from 'antd';
 import {
-  AudioOutlined, BookOutlined, BulbOutlined, FireFilled, HistoryOutlined, MessageOutlined, PlayCircleFilled, TrophyOutlined
+  AudioOutlined, BookOutlined, BulbOutlined, FireFilled, HistoryOutlined, MessageOutlined, PlayCircleFilled, ReadOutlined, TrophyOutlined
 } from '@ant-design/icons';
 import { COURSES, LANGS, LANG_UI, LEVEL_NAME, allUnits } from '../lib/courses.js';
 import { DAILY_GOAL, dailyXp, langProgress, nextUnit, srsDue, srsKeys, streakNow, useProgress } from '../lib/store.js';
@@ -111,9 +111,14 @@ function LangCard({ lang }) {
               : <Text strong>🎉 Đã hoàn thành</Text>}
           </Flex>
           <Progress percent={pr.pct} size="small" format={() => `${pr.done}/${pr.total}`} />
-          <Button type={started ? 'primary' : 'default'} block size="large" href={`#/c/${lang}`} onClick={e => e.stopPropagation()}>
-            {started ? 'Xem lộ trình' : 'Bắt đầu học'}
-          </Button>
+          <Flex gap={8}>
+            <Button type={started ? 'primary' : 'default'} size="large" style={{ flex: 1 }} href={`#/c/${lang}`} onClick={e => e.stopPropagation()}>
+              {started ? 'Xem lộ trình' : 'Bắt đầu học'}
+            </Button>
+            <Tooltip title="Kho từ vựng theo cấp độ">
+              <Button size="large" icon={<BookOutlined />} href={`#/c/${lang}/words`} onClick={e => e.stopPropagation()} aria-label="Kho từ vựng" />
+            </Tooltip>
+          </Flex>
         </Flex>
       </Card>
     </LangTheme>
@@ -124,6 +129,7 @@ const HOW = [
   { title: 'Từ vựng', description: '10 từ, có phát âm', icon: <BookOutlined /> },
   { title: 'Ngữ pháp', description: 'Giải thích dễ hiểu', icon: <BulbOutlined /> },
   { title: 'Hội thoại', description: 'Nghe tình huống thật', icon: <MessageOutlined /> },
+  { title: 'Đọc hiểu', description: 'Bài đọc + câu hỏi', icon: <ReadOutlined /> },
   { title: 'Luyện nói', description: 'Nói và được chấm điểm', icon: <AudioOutlined /> },
   { title: 'Kiểm tra', description: 'Đạt 70% để qua bài', icon: <TrophyOutlined /> }
 ];
@@ -152,7 +158,7 @@ export default function Home() {
       </Item>
 
       <Item>
-        <Card title="Mỗi bài học gồm 5 bước">
+        <Card title="Mỗi bài học gồm 6 bước">
           <Steps current={-1} items={HOW.map(s => ({ ...s, status: 'process' }))} />
         </Card>
       </Item>

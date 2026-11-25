@@ -58,8 +58,11 @@ export function langProgress(p, lang) {
 export const srsKeys = (p, lang) => Object.keys(p.srs).filter(k => !lang || k.startsWith(lang + '|'));
 export const srsDue = (p, lang) => srsKeys(p, lang).filter(k => p.srs[k].due <= today());
 
+// Khoá ôn tập: 'lang|unitId|index' (từ trong bài) hoặc 'lang|bank|từ' (từ thêm từ Kho từ vựng, lưu kèm dữ liệu từ)
+export const bankKey = (lang, w) => `${lang}|bank|${w}`;
 export function wordFromKey(key) {
   const [lang, uid, i] = key.split('|');
+  if (uid === 'bank') return P.srs[key]?.w;
   const u = allUnits(lang).find(x => x.id === uid);
   return u && u.vocab[+i];
 }
