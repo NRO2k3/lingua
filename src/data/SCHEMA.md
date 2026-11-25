@@ -110,3 +110,38 @@ export default {
 
 Độ dài bài đọc: A1 60–90 từ, A2 90–140, B1 150–220, B2 220–300 (tiếng Trung tính theo chữ:
 HSK1 60–100, HSK2 100–160, HSK3 180–260, HSK4 260–360).
+
+## Phát âm nền tảng (`src/data/pron/<lang>.js`)
+
+Trang `#/c/<lang>/pron`. Mỗi file `export default` một object (đăng ký trong `src/data/pron/index.js`):
+
+```js
+export default {
+  intro: 'Đoạn giới thiệu ngắn',
+  sections: [                              // mỗi phần là một mục mở/đóng
+    {
+      id: 'final', icon: '🎯', title: 'Âm cuối', summary: 'Một dòng tóm tắt',
+      explain: ['Đoạn giải thích tiếng Việt…'],
+      // các khối tuỳ chọn, hiện theo thứ tự dưới đây:
+      tones: [{ n: 1, name: 'Thanh 1', mark: 'ā', chao: [5, 5], vi: 'So sánh với dấu tiếng Việt', ex: { t: '妈', sub: 'mā', vi: 'mẹ' } }],
+      table: [['Tiêu đề', '…'], ['hàng', '…']],
+      groups: [{ label: 'Nhóm', items: [/* thẻ nghe */] }],
+      pairs: [{ w: [/* 2–3 thẻ nghe */], note: 'Khác nhau ở đâu' }],
+      examples: [/* thẻ nghe */],
+      tip: 'Mẹo cho người Việt'
+    }
+  ],
+  drills: [                                // bài luyện nghe trắc nghiệm
+    {
+      id: 'pairs', icon: '👂', title: 'Tên bài', desc: 'Mô tả', round: 20,   // số câu mỗi lượt (lấy ngẫu nhiên từ pool)
+      fixed: false,                        // true: giữ nguyên thứ tự phương án (vd Thanh 1–4)
+      pool: [
+        { say: '妈', options: ['…'], answer: 0, show: 'Hiện sau khi trả lời', explain: '…' },
+        { options: ['ship', 'sheep'] }     // không có say/answer: máy đọc ngẫu nhiên một phương án, phương án đó là đáp án
+      ]
+    }
+  ]
+};
+```
+
+Thẻ nghe: `{ t: 'chữ hiển thị', sub: 'pinyin/IPA', vi: 'nghĩa', note: 'mẹo ngắn', label: 'chữ cái/âm', say: 'câu máy đọc (mặc định = t)', mic: 'từ dùng khi nói thử (mặc định = t)' }`.

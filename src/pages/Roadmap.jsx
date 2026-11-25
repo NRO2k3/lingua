@@ -1,9 +1,10 @@
 import { Badge, Breadcrumb, Button, Card, Col, Divider, Flex, Progress, Row, Segmented, Tag, Typography } from 'antd';
-import { BookOutlined, CaretRightFilled, CheckCircleFilled, HistoryOutlined, PlayCircleFilled } from '@ant-design/icons';
+import { BookOutlined, CaretRightFilled, CheckCircleFilled, HistoryOutlined, PlayCircleFilled, SoundOutlined } from '@ant-design/icons';
 import { COURSES, LEVEL_NAME } from '../lib/courses.js';
 import { isDone, langProgress, nextUnit, srsDue, srsKeys, update, useProgress } from '../lib/store.js';
 import { pct } from '../lib/utils.js';
 import { LangTheme } from '../components/common.jsx';
+import { PRON_PITCH } from '../data/pron/index.js';
 import { Item, Stagger } from '../components/motion.jsx';
 
 const { Title, Text } = Typography;
@@ -66,6 +67,7 @@ export default function Roadmap({ lang }) {
                 <Button size="large" icon={<HistoryOutlined />} href={`#/c/${lang}/review`}>Ôn từ vựng</Button>
               </Badge>
               <Button size="large" icon={<BookOutlined />} href={`#/c/${lang}/words`}>Kho từ vựng</Button>
+              <Button size="large" icon={<SoundOutlined />} href={`#/c/${lang}/pron`}>Phát âm</Button>
             </Flex>
           </Flex>
           <Divider style={{ margin: '16px 0 12px' }} />
@@ -76,6 +78,19 @@ export default function Roadmap({ lang }) {
             <Text type="secondary" style={{ fontSize: 13 }}>Bạn có thể mở bất kỳ bài nào. Trình độ chọn ở đây quyết định nút “Học tiếp” đưa bạn tới đâu.</Text>
           </Flex>
         </Card>
+
+        {pr.done === 0 && (
+          <Card className="pron-start">
+            <Flex gap={16} align="center" wrap>
+              <div className="hero-icon">🗣️</div>
+              <Flex vertical gap={4} style={{ flex: '1 1 220px', minWidth: 0 }}>
+                <Title level={4} style={{ margin: 0 }}>Bắt đầu với phát âm</Title>
+                <Text type="secondary">{PRON_PITCH[lang]}</Text>
+              </Flex>
+              <Button type="primary" size="large" icon={<SoundOutlined />} href={`#/c/${lang}/pron`} className="cta">Học phát âm</Button>
+            </Flex>
+          </Card>
+        )}
 
         {c.levels.map(level => {
           const ids = level.units.map(u => u.id), done = ids.filter(id => isDone(p, id)).length;
