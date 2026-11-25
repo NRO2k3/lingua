@@ -1,7 +1,7 @@
-import { App, Badge, Breadcrumb, Button, Card, Col, Divider, Flex, Progress, Row, Switch, Tag, Typography } from 'antd';
-import { BookOutlined, CaretRightFilled, CheckCircleFilled, HistoryOutlined, LockOutlined, PlayCircleFilled } from '@ant-design/icons';
+import { Badge, Breadcrumb, Button, Card, Col, Divider, Flex, Progress, Row, Segmented, Tag, Typography } from 'antd';
+import { BookOutlined, CaretRightFilled, CheckCircleFilled, HistoryOutlined, PlayCircleFilled } from '@ant-design/icons';
 import { COURSES, LEVEL_NAME } from '../lib/courses.js';
-import { isDone, isUnlocked, langProgress, nextUnit, srsDue, srsKeys, update, useProgress } from '../lib/store.js';
+import { isDone, langProgress, nextUnit, srsDue, srsKeys, update, useProgress } from '../lib/store.js';
 import { pct } from '../lib/utils.js';
 import { LangTheme } from '../components/common.jsx';
 import { Item, Stagger } from '../components/motion.jsx';
@@ -9,22 +9,18 @@ import { Item, Stagger } from '../components/motion.jsx';
 const { Title, Text } = Typography;
 
 function UnitCard({ lang, u, i, p, isNext }) {
-  const { message } = App.useApp();
-  const open = isUnlocked(p, lang, i), done = isDone(p, u.id), best = p.units[u.id]?.best;
+  const done = isDone(p, u.id), best = p.units[u.id]?.best;
+  const open = () => { location.hash = `#/c/${lang}/u/${u.id}`; };
   let status;
   if (done) status = <Tag icon={<CheckCircleFilled />} color="success" bordered={false}>Đã xong · {best}%</Tag>;
-  else if (!open) status = <Text type="secondary" style={{ fontSize: 13 }}><LockOutlined /> Xong bài trước để mở</Text>;
   else if (best != null) status = <Tag color="warning" bordered={false}>Chưa đạt · {best}%</Tag>;
   else if (isNext) status = <Tag color="processing" bordered={false}>Bài tiếp theo</Tag>;
   else status = <Text type="secondary" style={{ fontSize: 13 }}>Chưa học</Text>;
 
-  const go = () => open
-    ? (location.hash = `#/c/${lang}/u/${u.id}`)
-    : message.info('Hoàn thành bài trước (đạt từ 70%) để mở bài này nhé.');
-
   return (
-    <Card size="small" hoverable={open} onClick={go}
-      className={'unit-card' + (done ? ' done' : '') + (!open ? ' locked' : '') + (isNext ? ' next' : '')}>
+    <Card size="small" hoverable onClick={open} role="link" tabIndex={0} aria-label={`Bài ${i + 1}: ${u.title}`}
+      onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } }}
+      className={'unit-card' + (done ? ' done' : '') + (isNext ? ' next' : '')}>
       <Flex gap={12} align="center">
         <div className="unit-icon">{u.icon || '📘'}</div>
         <Flex vertical gap={2} style={{ flex: 1, minWidth: 0 }}>
@@ -32,7 +28,7 @@ function UnitCard({ lang, u, i, p, isNext }) {
           <Text strong className="unit-title">{u.title}</Text>
           <div>{status}</div>
         </Flex>
-        {isNext && <Button type="primary" shape="circle" size="large" icon={<CaretRightFilled />} aria-label="Bắt đầu" />}
+        {isNext && <Button type="primary" shape="circle" size="large" icon={<CaretRightFilled />} tabIndex={-1} aria-hidden="true" />}
       </Flex>
     </Card>
   );
@@ -42,6 +38,11 @@ export default function Roadmap({ lang }) {
   const p = useProgress();
   const c = COURSES[lang];
   const pr = langProgress(p, lang), nx = nextUnit(p, lang), due = srsDue(p, lang).length;
+  const level = p.level?.[lang];
+  const pickLevel = id => {
+    update(d => { d.level = { ...(d.level || {}), [lang]: id }; });
+    setTimeout(() => document.getElementById('lv-' + id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+  };
   let idx = 0;
   return (
     <LangTheme lang={lang}>
@@ -68,16 +69,18 @@ export default function Roadmap({ lang }) {
             </Flex>
           </Flex>
           <Divider style={{ margin: '16px 0 12px' }} />
-          <Flex align="center" gap={10}>
-            <Switch size="small" checked={!!p.free[lang]} onChange={v => update(d => { d.free[lang] = v; })} />
-            <Text type="secondary">Mở tất cả bài, nếu bạn đã biết trước một phần kiến thức</Text>
+          <Flex vertical gap={8}>
+            <Text strong>{level ? 'Trình độ của bạn' : 'Bạn đang ở trình độ nào? Chọn để bắt đầu đúng chỗ'}</Text>
+            <Segmented block className="level-pick" value={level || null} onChange={pickLevel}
+              options={c.levels.map(l => ({ value: l.id, label: <div className="level-opt"><b>{l.id}</b><span>{LEVEL_NAME[l.id]}</span></div> }))} />
+            <Text type="secondary" style={{ fontSize: 13 }}>Bạn có thể mở bất kỳ bài nào. Trình độ chọn ở đây quyết định nút “Học tiếp” đưa bạn tới đâu.</Text>
           </Flex>
         </Card>
 
         {c.levels.map(level => {
           const ids = level.units.map(u => u.id), done = ids.filter(id => isDone(p, id)).length;
           return (
-            <section key={level.id}>
+            <section key={level.id} id={'lv-' + level.id} className="level-section">
               <Flex align="center" gap={8} wrap>
                 <Title level={4} style={{ margin: 0 }}>{LEVEL_NAME[level.id]}</Title>
                 <Tag bordered={false}>{level.id}</Tag>

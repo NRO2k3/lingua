@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
-import { App as AntApp, Button, ConfigProvider, Flex, Layout, Progress, Tooltip, theme } from 'antd';
+import { Component, useEffect, useRef, useState } from 'react';
+import { App as AntApp, Button, ConfigProvider, Flex, Layout, Progress, Result, Tooltip, theme } from 'antd';
 import { FireFilled, MoonOutlined, MutedOutlined, SoundOutlined, StarFilled, SunOutlined } from '@ant-design/icons';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import viVN from 'antd/locale/vi_VN';
 import { COURSES } from './lib/courses.js';
-import { DAILY_GOAL, dailyXp, streakNow, update, useProgress } from './lib/store.js';
+import { DAILY_GOAL, backfillSrs, dailyXp, streakNow, update, useProgress } from './lib/store.js';
 import { stopRec, stopSpeaking } from './lib/speech.js';
 import { pct } from './lib/utils.js';
 import { TokenVars } from './components/common.jsx';
@@ -122,9 +122,32 @@ function Header({ dark, onToggleTheme }) {
   );
 }
 
+// Lỗi bất ngờ trong một trang: hiện thông báo thay vì trắng màn hình
+class ErrorBoundary extends Component {
+  state = { error: null };
+  static getDerivedStateFromError(error) { return { error }; }
+  componentDidCatch(error) { console.error(error); }
+  render() {
+    if (!this.state.error) return this.props.children;
+    return (
+      <Result status="warning" title="Có lỗi khi hiển thị trang này"
+        subTitle="Bạn thử quay về trang chủ. Nếu lỗi lặp lại, có thể dữ liệu tiến độ trong trình duyệt bị hỏng."
+        extra={[
+          <Button key="home" type="primary" href="#/" onClick={() => this.setState({ error: null })}>Về trang chủ</Button>,
+          <Button key="reset" danger onClick={() => {
+            if (window.confirm('Xoá toàn bộ tiến độ học trên trình duyệt này? Không thể hoàn tác.')) {
+              try { localStorage.removeItem('lingua-progress-v1'); } catch { /* bỏ qua */ }
+              location.hash = '#/'; location.reload();
+            }
+          }}>Xoá dữ liệu tiến độ</Button>
+        ]} />
+    );
+  }
+}
+
 function Page({ route }) {
   const [c, lang, kind, uid] = route;
-  if (c !== 'c' || !COURSES[lang]) return <Home />;
+  if (c !== 'c' || !Object.hasOwn(COURSES, lang)) return <Home />;
   if (kind === 'u' && uid) return <Lesson key={uid} lang={lang} uid={uid} />;
   if (kind === 'review') return <Review key={lang} lang={lang} />;
   if (kind === 'words') return <WordBank key={lang} lang={lang} />;
@@ -144,6 +167,7 @@ export default function App() {
   }, [route.join('/')]);
 
   useEffect(() => { document.documentElement.style.colorScheme = dark ? 'dark' : 'light'; }, [dark]);
+  useEffect(() => { backfillSrs(); }, []);
 
   return (
     <ConfigProvider
@@ -165,7 +189,7 @@ export default function App() {
             <Layout.Content className="wrap content">
               <motion.div key={route.join('/')} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, ease: EASE }}>
-                <Page route={route} />
+                <ErrorBoundary key={route.join('/')}><Page route={route} /></ErrorBoundary>
               </motion.div>
             </Layout.Content>
             <Layout.Footer className="footer">Lingua · Mỗi ngày một chút, đều đặn là giỏi</Layout.Footer>

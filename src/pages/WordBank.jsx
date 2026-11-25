@@ -1,11 +1,11 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
 import {
-  App, Breadcrumb, Button, Card, Col, Empty, Flex, Input, List, Progress, Row, Segmented, Skeleton, Tag, Tooltip, Typography
+  App, Breadcrumb, Button, Card, Col, Empty, Flex, Input, List, Progress, Result, Row, Segmented, Skeleton, Tag, Tooltip, Typography
 } from 'antd';
 import { BookOutlined, CheckOutlined, CreditCardOutlined, PlusOutlined, UnorderedListOutlined } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 import { COURSES, LEVEL_NAME } from '../lib/courses.js';
-import { bankKey, update, useProgress } from '../lib/store.js';
+import { bankKey, getProgress, update, useProgress } from '../lib/store.js';
 import { play } from '../lib/sfx.js';
 import { dayStr, noAccent, pct, shuffle } from '../lib/utils.js';
 import { Flashcard, HanViet, LangTheme, SoundButton } from '../components/common.jsx';
@@ -61,14 +61,16 @@ function WordList({ lang, words, srs, onAdd }) {
 }
 
 // Học thẻ: lướt qua các từ chưa có trong ôn tập
-function CardStudy({ lang, pool, onKnow, onLearn }) {
-  const [deck, setDeck] = useState(() => shuffle(pool).slice(0, 20));
+// Học thẻ: lướt qua các từ (theo cấp đang chọn) chưa có trong ôn tập; mỗi bộ thẻ lấy lại theo tiến độ mới nhất
+function CardStudy({ lang, candidates, onKnow, onLearn }) {
+  const makeDeck = () => shuffle(candidates.filter(v => !getProgress().srs[bankKey(lang, v.w)])).slice(0, 20);
+  const [deck, setDeck] = useState(makeDeck);
   const [i, setI] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [stats, setStats] = useState({ know: 0, learn: 0 });
-  useEffect(() => { setDeck(shuffle(pool).slice(0, 20)); setI(0); setFlipped(false); setStats({ know: 0, learn: 0 }); }, [pool]);
+  useEffect(() => { setDeck(makeDeck()); setI(0); setFlipped(false); setStats({ know: 0, learn: 0 }); }, [candidates]);
 
-  if (!pool.length) return <Empty description="Bạn đã thêm hết từ của cấp này vào ôn tập 🎉" />;
+  if (!deck.length) return <Empty description="Bạn đã thêm hết từ của cấp này vào ôn tập 🎉" />;
   if (i >= deck.length) {
     return (
       <Card>
@@ -76,7 +78,7 @@ function CardStudy({ lang, pool, onKnow, onLearn }) {
           <div style={{ fontSize: 48 }}>✅</div>
           <Title level={4} style={{ margin: 0 }}>Xong {deck.length} thẻ!</Title>
           <Text type="secondary">Đã biết {stats.know} từ · Thêm {stats.learn} từ vào danh sách ôn tập</Text>
-          <Button type="primary" size="large" onClick={() => { setDeck(shuffle(pool).slice(0, 20)); setI(0); setStats({ know: 0, learn: 0 }); }}>Học 20 thẻ tiếp theo</Button>
+          <Button type="primary" size="large" onClick={() => { setDeck(makeDeck()); setI(0); setStats({ know: 0, learn: 0 }); }}>Học thẻ tiếp theo</Button>
         </Flex>
       </Card>
     );
@@ -115,6 +117,8 @@ export default function WordBank({ lang }) {
   const { message } = App.useApp();
   const c = COURSES[lang];
   const [all, setAll] = useState(null);
+  const [loadError, setLoadError] = useState(false);
+  const [attempt, setAttempt] = useState(0);
   const [level, setLevel] = useState('all');
   const [mode, setMode] = useState('list');
   const [q, setQ] = useState('');
@@ -122,9 +126,12 @@ export default function WordBank({ lang }) {
 
   useEffect(() => {
     let alive = true;
-    import(`../data/bank/${lang}.json`).then(m => alive && setAll(m.default.map(r => toWord(lang, r))));
+    setLoadError(false);
+    import(`../data/bank/${lang}.json`)
+      .then(m => alive && setAll(m.default.map(r => toWord(lang, r))))
+      .catch(() => alive && setLoadError(true));
     return () => { alive = false; };
-  }, [lang]);
+  }, [lang, attempt]);
 
   const filtered = useMemo(() => {
     if (!all) return [];
@@ -133,7 +140,7 @@ export default function WordBank({ lang }) {
       && (!s || noAccent(v.w.toLowerCase()).includes(s) || noAccent(v.vi.toLowerCase()).includes(s) || noAccent((v.ipa || '').toLowerCase()).replace(/\s/g, '').includes(s.replace(/\s/g, ''))));
   }, [all, level, query]);
 
-  const pool = useMemo(() => filtered.filter(v => !p.srs[bankKey(lang, v.w)]), [filtered, mode === 'cards' ? null : p.srs]);
+  const byLevel = useMemo(() => (all || []).filter(v => level === 'all' || v.level === level), [all, level]);
 
   const addSrs = (v, box, days) => update(d => {
     const key = bankKey(lang, v.w);
@@ -159,7 +166,12 @@ export default function WordBank({ lang }) {
           </Text>
         </div>
 
-        {!all ? <Card><Skeleton active paragraph={{ rows: 6 }} /></Card> : (
+        {loadError ? (
+          <Result status="warning" title="Chưa tải được kho từ vựng"
+            subTitle="Kiểm tra kết nối mạng rồi thử lại. Nếu trang vừa được cập nhật, hãy tải lại trang."
+            extra={[<Button key="retry" type="primary" onClick={() => setAttempt(a => a + 1)}>Thử lại</Button>,
+              <Button key="reload" onClick={() => location.reload()}>Tải lại trang</Button>]} />
+        ) : !all ? <Card><Skeleton active paragraph={{ rows: 6 }} /></Card> : (
           <>
             <Row gutter={[12, 12]}>
               {LEVELS[lang].map(l => {
@@ -196,7 +208,7 @@ export default function WordBank({ lang }) {
                 <WordList lang={lang} words={filtered} srs={p.srs} onAdd={onAdd} />
               </Card>
             ) : (
-              <CardStudy lang={lang} pool={pool} onKnow={v => addSrs(v, 3, 7)} onLearn={v => addSrs(v, 0, 1)} />
+              <CardStudy lang={lang} candidates={byLevel} onKnow={v => addSrs(v, 3, 7)} onLearn={v => addSrs(v, 0, 1)} />
             )}
 
             <Paragraph type="secondary" className="bank-source">Nguồn: {SOURCES[lang]}</Paragraph>

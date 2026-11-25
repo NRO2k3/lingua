@@ -16,7 +16,7 @@ export default {
     ],
     exercises: [
       { type: 'mc', q: '过___的时候，要拿出护照。', options: ['海关', '景色', '美食'], answer: 0, explain: '过海关 = qua hải quan; lúc đó phải xuất trình hộ chiếu.' },
-      { type: 'fill', q: '这里的___太美了，我们拍了很多照片。', answer: ['景色', 'jǐngsè', 'jingse'], hint: 'phong cảnh (jǐngsè)', explain: '景色 (cảnh sắc) = phong cảnh.' },
+      { type: 'fill', q: '这里的___太美了，我们拍了很多照片。', answer: ['景色', 'jǐngsè', 'jingse', '风景', 'fēngjǐng', 'fengjing'], hint: 'phong cảnh (jǐngsè)', explain: '景色 (cảnh sắc) = phong cảnh; 风景 cũng đúng.' },
       { type: 'order', vi: 'Tôi đã từng ăn món ngon của địa phương.', words: ['当地的', '我', '美食', '吃过'], answer: '我 吃过 当地的 美食' },
       { type: 'mc', q: '"提前" nghĩa là:', options: ['trước (thời hạn), sớm hơn', 'sau đó', 'đúng giờ'], answer: 0, explain: '提前 (đề tiền) = làm trước, sớm hơn thời gian dự định: 提前订票 = đặt vé trước.' },
       { type: 'mc', q: '我的行李还没收拾好___。', options: ['了', '呢', '过'], answer: 1, explain: 'Mẫu 还没…呢 = vẫn chưa…; câu phủ định không dùng 了.' },
@@ -178,7 +178,7 @@ export default {
     ],
     exercises: [
       { type: 'mc', q: '我等了很久，他___来了。', options: ['终于', '从前', '连忙'], answer: 0, explain: '终于 = cuối cùng (sau thời gian chờ đợi).' },
-      { type: 'fill', q: '我把房间___好了。', answer: ['整理', 'zhěnglǐ', 'zhengli'], hint: 'dọn dẹp (zhěnglǐ)', explain: 'Câu 把: 把房间整理好了 = dọn phòng gọn gàng rồi.' },
+      { type: 'fill', q: '我把房间___好了。', answer: ['整理', 'zhěnglǐ', 'zhengli', '收拾', 'shōushi', 'shoushi'], hint: 'dọn dẹp (zhěnglǐ)', explain: 'Câu 把: 把房间整理好了 (hoặc 收拾好了) = dọn phòng gọn gàng rồi.' },
       { type: 'order', vi: 'Tôi đã đọc xong câu chuyện truyền thuyết này.', words: ['这个传说', '我', '看完了', '把'], answer: '我 把 这个传说 看完了' },
       { type: 'mc', q: '"连忙" nghĩa là:', options: ['vội vàng', 'chậm rãi', 'cuối cùng'], answer: 0, explain: '连忙 (liên mang) = vội vàng làm ngay.' },
       { type: 'mc', q: '电影已经___了，我们回家吧。', options: ['结束', '害怕', '奇怪'], answer: 0, explain: '结束 = kết thúc: phim đã kết thúc rồi.' },
@@ -285,12 +285,12 @@ export default {
       { w: '及时', ipa: 'jíshí', hv: 'cập thời', vi: 'kịp thời', ex: '因为大夫来得很及时，所以孩子没事。', exPy: 'Yīnwèi dàifu lái de hěn jíshí, suǒyǐ háizi méi shì.', exVi: 'Vì bác sĩ đến rất kịp thời nên đứa bé không sao.' }
     ],
     exercises: [
-      { type: 'mc', q: '公共汽车一直不来，我___走路回家。', options: ['只好', '只有', '如果'], answer: 0, explain: '只好 = đành phải (không còn cách nào khác).' },
+      { type: 'mc', q: '公共汽车一直不来，我___走路回家。', options: ['只好', '只要', '如果'], answer: 0, explain: '只好 = đành phải (không còn cách nào khác); 只要 = chỉ cần, 如果 = nếu.' },
       { type: 'fill', q: '如果遇到___，就给我打电话。', answer: ['困难', 'kùnnan', 'kunnan'], hint: 'khó khăn (kùnnan)', explain: '遇到困难 = gặp khó khăn; mẫu 如果…就….' },
       { type: 'mc', q: '___多练习，才能说好汉语。', options: ['只有', '虽然', '所以'], answer: 0, explain: '只有…才… = chỉ khi … thì mới ….' },
-      { type: 'order', vi: 'Vì mưa to nên chúng tôi buộc phải huỷ trận đấu.', words: ['取消比赛', '因为', '我们', '下大雨，', '不得不'], answer: '因为 下大雨， 我们 不得不 取消比赛' },
+      { type: 'order', vi: 'Vì mưa to nên chúng tôi buộc phải huỷ trận đấu.', words: ['取消比赛', '因为', '我们', '下大雨，', '不得不'], answer: '因为 下大雨， 我们 不得不 取消比赛', alt: ['我们 因为 下大雨， 不得不 取消比赛'] },
       { type: 'mc', q: '"后果" nghĩa là:', options: ['hậu quả', 'lý do', 'thành công'], answer: 0, explain: '后果 (hậu quả) = kết quả xấu do việc gì gây ra.' },
-      { type: 'fill', q: '你迟到的___是什么？', answer: ['理由', 'lǐyóu', 'liyou'], hint: 'lý do (lǐyóu)', explain: '理由 = lý do.' },
+      { type: 'fill', q: '你迟到的___是什么？', answer: ['理由', 'lǐyóu', 'liyou', '原因', 'yuányīn', 'yuanyin'], hint: 'lý do (lǐyóu)', explain: '理由 = lý do; 原因 (nguyên nhân) cũng đúng.' },
       { type: 'order', vi: 'Vì bác sĩ đến kịp thời nên đứa bé không sao.', words: ['所以', '因为', '孩子没事', '大夫来得', '很及时，'], answer: '因为 大夫来得 很及时， 所以 孩子没事' },
       { type: 'mc', q: '这个问题太复杂了，我们得想办法___。', options: ['解决', '造成', '成功'], answer: 0, explain: '解决问题 = giải quyết vấn đề.' }
     ],

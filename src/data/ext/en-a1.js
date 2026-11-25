@@ -198,7 +198,7 @@ export default {
       { type: 'fill', q: 'That chair is not brown. It is ___.', answer: ['white'], hint: 'màu trắng',
         explain: 'white = màu trắng.' },
       { type: 'order', vi: 'Đây là những cái ghế màu vàng.', words: ['chairs', 'are', 'These', 'yellow'],
-        answer: 'These are yellow chairs' },
+        answer: 'These are yellow chairs', alt: ['These chairs are yellow'] },
       { type: 'order', vi: 'Cái đồng hồ kia màu nâu.', words: ['brown', 'clock', 'That', 'is'],
         answer: 'That clock is brown' }
     ],
@@ -257,7 +257,7 @@ export default {
       { type: 'order', vi: 'Tôi ăn trưa lúc mười hai giờ.', words: ['lunch', 'at', 'I', 'twelve', 'have'],
         answer: 'I have lunch at twelve' },
       { type: 'order', vi: 'Mẹ tôi rất bận vào buổi sáng.', words: ['busy', 'in', 'My', 'very', 'morning', 'is', 'mother', 'the'],
-        answer: 'My mother is very busy in the morning' }
+        answer: 'My mother is very busy in the morning', alt: ['in the morning My mother is very busy'] }
     ],
     reading: {
       title: "Mai's Day",

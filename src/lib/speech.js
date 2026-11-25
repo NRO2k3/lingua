@@ -88,39 +88,69 @@ const NUMS = { thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty:
 NUMS.veintiun = 21;
 [...'零一二三四五六七八九十'].forEach((c, i) => { NUMS[c] = i; });
 NUMS['两'] = 2;
+Object.assign(NUMS, { thousand: 1000, mil: 1000, ciento: 100 });
+Object.assign(NUMS, { doscientos: 200, trescientos: 300, cuatrocientos: 400, quinientos: 500, seiscientos: 600,
+  setecientos: 700, ochocientos: 800, novecientos: 900 });
+const NUM_GLUE = new Set(['and', 'y']); // "one hundred and five", "treinta y dos"
+
 
 // 22 → "20 2" để khớp cả "twenty-two" lẫn "22"
 const splitNum = t => /^\d+$/.test(t) && +t > 20 && +t < 100 && +t % 10 ? [String(+t - +t % 10), String(+t % 10)] : [t];
 
-// 二十一 → 21, 一百 → 100
+// 二十一 → 21, 一百 → 100, 两千 → 2000, 三万 → 30000
 function zhToNum(s) {
   const d = { 零: 0, 一: 1, 二: 2, 两: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9 };
-  let total = 0, cur = 0;
+  const unit = { 十: 10, 百: 100, 千: 1000 };
+  let total = 0, section = 0, cur = 0;
   for (const c of s) {
-    if (c === '十' || c === '百') { total += (cur || 1) * (c === '十' ? 10 : 100); cur = 0; }
+    if (unit[c]) { section += (cur || 1) * unit[c]; cur = 0; }
+    else if (c === '万') { total += ((section + cur) || 1) * 10000; section = 0; cur = 0; }
     else cur = d[c];
   }
-  return total + cur;
+  return total + section + cur;
+}
+
+// Gộp các token số liền nhau thành một số: "one hundred" → 100, "ciento veinte" → 120, "twenty two" → 22
+function mergeNums(list, get = x => x, make = (n, first) => String(n)) {
+  const out = [];
+  for (let i = 0; i < list.length;) {
+    if (!/^\d+$/.test(get(list[i]))) { out.push(list[i]); i++; continue; }
+    const first = list[i];
+    let total = 0, cur = 0;
+    while (i < list.length) {
+      const t = get(list[i]);
+      if (NUM_GLUE.has(t) && i + 1 < list.length && /^\d+$/.test(get(list[i + 1])) && i > 0) { i++; continue; }
+      if (!/^\d+$/.test(t)) break;
+      const n = +t;
+      if (n === 100 && cur < 100) cur = (cur || 1) * 100;
+      else if (n === 1000) { total += (cur || 1) * 1000; cur = 0; }
+      else cur += n;
+      i++;
+    }
+    out.push(make(total + cur, first));
+  }
+  return out;
 }
 
 // Một từ viết → các token so sánh (bỏ dấu câu/dấu thanh, tách từ viết tắt, số → chữ số)
 function spTokens(word) {
-  word = word.replace(/[零一二三四五六七八九十两百]{2,}|[十百]/g, m => ` ${zhToNum(m)} `);
+  word = word.replace(/[零一二三四五六七八九十两百千万]{2,}|[十百千万]/g, m => ` ${zhToNum(m)} `);
   const w = noAccent(word.toLowerCase().replace(/[’`]/g, "'")).replace(/-/g, ' ')
     .replace(/[^a-z0-9'㐀-鿿 ]/g, '').replace(/([㐀-鿿])/g, ' $1 ').trim();
   return w.split(/\s+/).filter(Boolean)
     .flatMap(t => (Object.hasOwn(CONTRACT, t) ? CONTRACT[t] : t).split(' '))
     .map(t => Object.hasOwn(NUMS, t) ? String(NUMS[t]) : t.replace(/'/g, ''))
-    .flatMap(splitNum)
     .filter(Boolean);
 }
 
 // So khớp câu mẫu với câu nghe được (dãy con chung dài nhất), đánh dấu từng từ của câu mẫu
 export function compareSpeech(target, heard) {
   const words = splitUnits(target);
-  const T = [];
-  words.forEach((w, wi) => spTokens(w).forEach(t => T.push({ t, wi })));
-  const H = heard.split(/\s+/).flatMap(spTokens);
+  const T0 = [];
+  words.forEach((w, wi) => spTokens(w).forEach(t => T0.push({ t, wi })));
+  const T = mergeNums(T0, x => x.t, (n, first) => ({ t: String(n), wi: first.wi }))
+    .flatMap(x => splitNum(x.t).map(t => ({ t, wi: x.wi })));
+  const H = mergeNums(heard.split(/\s+/).flatMap(spTokens)).flatMap(splitNum);
   const n = T.length, m = H.length;
   const dp = Array.from({ length: n + 1 }, () => new Array(m + 1).fill(0));
   for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--)

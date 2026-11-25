@@ -138,7 +138,7 @@ addLevels('en', [
           { type: 'order', vi: 'Bạn đã làm việc ở đây bao lâu rồi?', words: ['here?', 'have', 'How', 'worked', 'long', 'you'],
             answer: 'How long have you worked here?' },
           { type: 'order', vi: 'Cô ấy đã được thăng chức năm ngoái.', words: ['a', 'last', 'She', 'promotion', 'got', 'year'],
-            answer: 'She got a promotion last year' }
+            answer: 'She got a promotion last year', alt: ['last year She got a promotion'] }
         ]
       },
       // ───────────────────────── B1-3 ─────────────────────────
@@ -263,8 +263,8 @@ addLevels('en', [
         exercises: [
           { type: 'mc', q: 'I ___ a shower when the phone rang.', options: ['took', 'was taking', 'were taking', 'am taking'], answer: 1,
             explain: 'Hành động đang diễn ra (I → was + V-ing) thì có việc khác xen vào.' },
-          { type: 'mc', q: '___ they were playing football, it started to rain.', options: ['When', 'While', 'During', 'Since'], answer: 1,
-            explain: 'While đứng trước hành động kéo dài (were playing).' },
+          { type: 'mc', q: '___ they were playing football, it started to rain.', options: ['Despite', 'While', 'During', 'Since'], answer: 1,
+            explain: 'While đứng trước hành động kéo dài (were playing). Despite / During đi với danh từ, không đi với mệnh đề.' },
           { type: 'mc', q: 'Which word means "đột nhiên"?', options: ['strange', 'suddenly', 'scared', 'notice'], answer: 1,
             explain: 'Suddenly = đột nhiên.' },
           { type: 'fill', q: 'We were sleeping when the storm ___. (begin)', answer: ['began'], hint: 'quá khứ đơn',
@@ -403,8 +403,8 @@ addLevels('en', [
             explain: 'Không dùng will trong mệnh đề if: If it rains…' },
           { type: 'mc', q: "You'll be late ___ you leave now.", options: ['if', 'unless', 'when', 'as soon as'], answer: 1,
             explain: 'Unless = if not: bạn sẽ trễ nếu không đi ngay.' },
-          { type: 'fill', q: 'If you study hard, you ___ pass the exam.', answer: ['will', "'ll"], hint: 'loại 1',
-            explain: 'Loại 1: mệnh đề chính dùng will + V.' },
+          { type: 'fill', q: 'If you study hard, you ___ pass the exam.', answer: ['will', "'ll", 'can'], hint: 'loại 1',
+            explain: 'Loại 1: mệnh đề chính dùng will + V (cũng có thể dùng can + V).' },
           { type: 'fill', q: 'Water ___ at 0 degrees Celsius. (freeze)', answer: ['freezes'], hint: 'sự thật hiển nhiên',
             explain: 'Sự thật khoa học → hiện tại đơn: freezes.' },
           { type: 'fill', q: "I'll call you as soon as I ___ at the hotel. (arrive)", answer: ['arrive'], hint: 'sau as soon as',
@@ -479,8 +479,8 @@ addLevels('en', [
             explain: 'Loại 3: If + had V3, would have + V3.' },
           { type: 'mc', q: 'I wish I ___ more free time. I am always busy.', options: ['have', 'had', 'will have', 'am having'], answer: 1,
             explain: 'Ước trái với hiện tại → wish + quá khứ đơn.' },
-          { type: 'fill', q: 'If I had enough money, I ___ buy a new laptop.', answer: ['would', "'d"], hint: 'loại 2',
-            explain: 'Loại 2: mệnh đề chính dùng would + V.' },
+          { type: 'fill', q: 'If I had enough money, I ___ buy a new laptop.', answer: ['would', "'d", 'could', 'might'], hint: 'loại 2',
+            explain: 'Loại 2: mệnh đề chính dùng would + V (could / might + V cũng đúng).' },
           { type: 'fill', q: "I wish I ___ said that to him. Now he's angry.", answer: ["hadn't", 'had not'], hint: 'tiếc điều đã làm',
             explain: 'Tiếc nuối quá khứ → wish + had (not) + V3.' },
           { type: 'fill', q: "If we had left earlier, we wouldn't ___ missed the train.", answer: ['have'], hint: 'loại 3',

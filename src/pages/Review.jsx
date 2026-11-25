@@ -26,17 +26,22 @@ function clean(keys) {
   return keys.filter(k => wordFromKey(k));
 }
 
-const newSession = keys => ({ queue: keys, total: keys.length, done: 0, turn: 0, flipped: false, dir: 1 });
+// practice = luyện thêm từ chưa đến hạn: không đổi lịch ôn, không cộng điểm
+const newSession = (keys, practice = false) => ({ queue: keys, total: keys.length, done: 0, turn: 0, flipped: false, dir: 1, practice });
+
+// Phiên ôn: tối đa 20 từ đến hạn, từ quá hạn lâu nhất trước
+function dueQueue(lang) {
+  const p = getProgress();
+  return clean(shuffle(srsDue(p, lang)).sort((a, b) => p.srs[a].due.localeCompare(p.srs[b].due)).slice(0, 20));
+}
 
 export default function Review({ lang }) {
   const p = useProgress();
   const c = COURSES[lang];
   const screens = Grid.useBreakpoint();
 
-  // Hàng đợi tạo một lần khi mở trang
-  const [initKeys] = useState(() => shuffle(srsDue(getProgress(), lang)).slice(0, 20));
-  const [s, setS] = useState(() => newSession(initKeys.filter(k => wordFromKey(k))));
-  useEffect(() => { clean(initKeys); }, [initKeys]);
+  // Hàng đợi tạo khi mở trang
+  const [s, setS] = useState(() => newSession(dueQueue(lang)));
 
   const key = s.queue[0];
   const v = key && wordFromKey(key);
@@ -51,7 +56,7 @@ export default function Review({ lang }) {
   const grade = ok => {
     if (!key) return;
     play(ok ? 'correct' : 'pop');
-    update(d => {
+    if (!s.practice) update(d => {
       const r = d.srs[key];
       if (!r) return;
       if (ok) {
@@ -95,7 +100,9 @@ export default function Review({ lang }) {
   // Ôn xong cả phiên: ăn mừng
   const finishedNow = !v && s.done > 0;
   useEffect(() => { if (finishedNow) { play('complete'); celebrate(); } }, [finishedNow]);
-  const more = () => setS(newSession(clean(shuffle(srsKeys(getProgress(), lang)).slice(0, 10))));
+  const dueLeft = srsDue(p, lang).length;
+  const more = () => setS(newSession(clean(shuffle(srsKeys(getProgress(), lang)).slice(0, 10)), true));
+  const nextDue = () => setS(newSession(dueQueue(lang)));
 
   const crumbs = (
     <Breadcrumb items={[
@@ -114,16 +121,19 @@ export default function Review({ lang }) {
           <Card>
             <Result
               icon={<div style={{ fontSize: 72, lineHeight: 1 }}>{finished ? '✅' : '🧠'}</div>}
-              title={finished ? `Đã ôn xong ${s.done} từ!` : 'Hôm nay không có từ nào cần ôn'}
+              title={finished ? `Đã ${s.practice ? 'luyện' : 'ôn'} xong ${s.done} từ!` : (dueLeft ? `Còn ${dueLeft} từ cần ôn` : 'Hôm nay không có từ nào cần ôn')}
               subTitle={learned > 0
                 ? `Bạn đã học ${learned} từ. Mỗi từ bạn nhớ sẽ tự quay lại để ôn sau ${SRS_DAYS.slice(0, -1).join(', ')} rồi ${SRS_DAYS[SRS_DAYS.length - 1]} ngày, đúng lúc bạn sắp quên. Từ nào chưa nhớ sẽ được ôn lại sớm.`
                 : 'Hoàn thành bài học đầu tiên để bắt đầu ôn tập.'}
               extra={
                 <Flex wrap gap={12} justify="center">
-                  {learned > 0 && (
-                    <Button size="large" icon={<RetweetOutlined />} onClick={more}>Ôn thêm 10 từ ngẫu nhiên</Button>
+                  {dueLeft > 0 && (
+                    <Button type="primary" size="large" icon={<HistoryOutlined />} onClick={nextDue}>Ôn tiếp {Math.min(dueLeft, 20)} từ đến hạn</Button>
                   )}
-                  <Button type="primary" size="large" icon={<RocketOutlined />} href={`#/c/${lang}`}>Về lộ trình</Button>
+                  {dueLeft === 0 && learned > 0 && (
+                    <Button size="large" icon={<RetweetOutlined />} onClick={more}>Luyện thêm 10 từ (không tính vào lịch ôn)</Button>
+                  )}
+                  <Button type={dueLeft ? 'default' : 'primary'} size="large" icon={<RocketOutlined />} href={`#/c/${lang}`}>Về lộ trình</Button>
                 </Flex>
               }
             />

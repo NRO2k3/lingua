@@ -21,7 +21,7 @@ export default {
       { type: 'order', vi: 'Tôi rất mong chờ cuộc sống đại học.', words: ['大学生活', '很', '我', '期待'], answer: '我 很 期待 大学生活' },
       { type: 'mc', q: '"说不定" gần nghĩa nhất với:', options: ['一定', '也许', '从来不'], answer: 1, explain: '说不定 = không chừng, biết đâu — gần nghĩa 也许 / 可能.' },
       { type: 'fill', q: '年轻人应该勇敢地___自己的梦想。', answer: ['追求', 'zhuīqiú', 'zhuiqiu'], hint: 'theo đuổi (zhuīqiú)', explain: '追求梦想 = theo đuổi ước mơ.' },
-      { type: 'order', vi: 'Dù có thất bại, tôi cũng không hối hận.', words: ['也', '哪怕', '不后悔', '失败了，', '我'], answer: '哪怕 失败了， 我 也 不后悔' },
+      { type: 'order', vi: 'Dù có thất bại, tôi cũng không hối hận.', words: ['也', '哪怕', '不后悔', '失败了，', '我'], answer: '哪怕 失败了， 我 也 不后悔', alt: ['我 哪怕 失败了， 也 不后悔'] },
       { type: 'mc', q: '我无法___十年以后的自己是什么样子。', options: ['奋斗', '想象', '期待'], answer: 1, explain: '想象 = tưởng tượng; 奋斗 = phấn đấu; 期待 = mong chờ.' }
     ],
     reading: {
@@ -85,13 +85,13 @@ export default {
         '昨天晚上九点左右，市中心一家饭店的厨房突然着火了。当时饭店里有三十多位客人正在吃饭。服务员发现以后，马上打电话通知了警察和消防队，并且让客人们迅速离开饭店。',
         '十分钟以后，消防车赶到了现场。火很快就被扑灭了，没有人受伤，但是厨房被烧得很严重，附近几家商店的窗户也被破坏了。不少居民被吵醒了，纷纷走出家门，有的人还用手机拍下了照片和视频。',
         '据记者了解，这次事故是由于厨师离开厨房时忘了关火导致的。记者采访了饭店的经理。经理说：“这次的事故让我们受到了很大的教训。以后我们一定会更加注意安全。”',
-        '这条新闻在网上引起了很多人的讨论。有网友认为，饭店应该经常检查厨房的设备；也有网友说，服务员的反应很快，保护了客人的安全。政府有关部门表示，下个月会对全市的饭店进行一次安全检查，阻止类似的事故再次发生。'
+        '这条新闻在网上引起了很多人的讨论。有网友认为，饭店应该经常检查厨房的设备；也有网友说，服务员的反应很快，保护了客人的安全。政府有关部门表示，下个月会对全市的饭店进行一次安全检查，防止类似的事故再次发生。'
       ],
       py: [
         'Zuótiān wǎnshang jiǔ diǎn zuǒyòu, shì zhōngxīn yì jiā fàndiàn de chúfáng tūrán zháohuǒ le. Dāngshí fàndiàn li yǒu sānshí duō wèi kèrén zhèngzài chīfàn. Fúwùyuán fāxiàn yǐhòu, mǎshàng dǎ diànhuà tōngzhīle jǐngchá hé xiāofángduì, bìngqiě ràng kèrénmen xùnsù líkāi fàndiàn.',
         'Shí fēnzhōng yǐhòu, xiāofángchē gǎndàole xiànchǎng. Huǒ hěn kuài jiù bèi pūmiè le, méiyǒu rén shòushāng, dànshì chúfáng bèi shāo de hěn yánzhòng, fùjìn jǐ jiā shāngdiàn de chuānghu yě bèi pòhuài le. Bù shǎo jūmín bèi chǎoxǐng le, fēnfēn zǒuchū jiāmén, yǒu de rén hái yòng shǒujī pāixiàle zhàopiàn hé shìpín.',
         'Jù jìzhě liǎojiě, zhè cì shìgù shì yóuyú chúshī líkāi chúfáng shí wàngle guān huǒ dǎozhì de. Jìzhě cǎifǎngle fàndiàn de jīnglǐ. Jīnglǐ shuō: “Zhè cì de shìgù ràng wǒmen shòudàole hěn dà de jiàoxùn. Yǐhòu wǒmen yídìng huì gèngjiā zhùyì ānquán.”',
-        'Zhè tiáo xīnwén zài wǎng shang yǐnqǐle hěn duō rén de tǎolùn. Yǒu wǎngyǒu rènwéi, fàndiàn yīnggāi jīngcháng jiǎnchá chúfáng de shèbèi; yě yǒu wǎngyǒu shuō, fúwùyuán de fǎnyìng hěn kuài, bǎohùle kèrén de ānquán. Zhèngfǔ yǒuguān bùmén biǎoshì, xià ge yuè huì duì quán shì de fàndiàn jìnxíng yí cì ānquán jiǎnchá, zǔzhǐ lèisì de shìgù zàicì fāshēng.'
+        'Zhè tiáo xīnwén zài wǎng shang yǐnqǐle hěn duō rén de tǎolùn. Yǒu wǎngyǒu rènwéi, fàndiàn yīnggāi jīngcháng jiǎnchá chúfáng de shèbèi; yě yǒu wǎngyǒu shuō, fúwùyuán de fǎnyìng hěn kuài, bǎohùle kèrén de ānquán. Zhèngfǔ yǒuguān bùmén biǎoshì, xià ge yuè huì duì quán shì de fàndiàn jìnxíng yí cì ānquán jiǎnchá, fángzhǐ lèisì de shìgù zàicì fāshēng.'
       ],
       vi: [
         'Khoảng 9 giờ tối qua, bếp của một nhà hàng ở trung tâm thành phố bất ngờ bốc cháy. Lúc đó trong nhà hàng có hơn ba mươi thực khách đang dùng bữa. Phát hiện ra, nhân viên phục vụ lập tức gọi điện báo cảnh sát và đội cứu hoả, đồng thời hướng dẫn khách nhanh chóng rời khỏi nhà hàng.',
@@ -103,7 +103,7 @@ export default {
         { q: 'Đám cháy bắt đầu ở đâu?', options: ['Trong một cửa hàng gần nhà hàng', 'Trong bếp của một nhà hàng ở trung tâm thành phố', 'Trong nhà của một cư dân', 'Ở bãi đỗ xe của nhà hàng'], answer: 1, explain: 'Đoạn 1: 市中心一家饭店的厨房突然着火了。' },
         { q: 'Nguyên nhân dẫn đến vụ cháy là gì?', options: ['Đầu bếp rời bếp mà quên tắt lửa', 'Có khách hút thuốc trong nhà hàng', 'Thiết bị điện bị hỏng', 'Có người cố ý phóng hoả'], answer: 0, explain: 'Đoạn 3: 是由于厨师离开厨房时忘了关火导致的。' },
         { q: 'Câu nào ĐÚNG theo bài đọc?', options: ['Có hai thực khách bị thương', 'Xe cứu hoả đến sau một tiếng', 'Không ai bị thương nhưng gian bếp bị cháy nặng', 'Nhà hàng bị chính quyền đóng cửa'], answer: 2, explain: 'Đoạn 2: 没有人受伤，但是厨房被烧得很严重。' },
-        { q: 'Có thể suy ra đợt kiểm tra vào tháng sau nhằm mục đích gì?', options: ['Phạt nhà hàng bị cháy', 'Chọn ra nhà hàng ngon nhất thành phố', 'Kiểm tra giấy tờ của phóng viên', 'Phòng ngừa những vụ cháy tương tự ở các nhà hàng khác'], answer: 3, explain: 'Đoạn 4: 对全市的饭店进行一次安全检查，阻止类似的事故再次发生。' }
+        { q: 'Có thể suy ra đợt kiểm tra vào tháng sau nhằm mục đích gì?', options: ['Phạt nhà hàng bị cháy', 'Chọn ra nhà hàng ngon nhất thành phố', 'Kiểm tra giấy tờ của phóng viên', 'Phòng ngừa những vụ cháy tương tự ở các nhà hàng khác'], answer: 3, explain: 'Đoạn 4: 对全市的饭店进行一次安全检查，防止类似的事故再次发生。' }
       ]
     }
   },
@@ -180,7 +180,7 @@ export default {
       { type: 'mc', q: '用塑料袋___污染环境，___浪费资源。', options: ['虽然…但是…', '不但…而且…', '如果…就…'], answer: 1, explain: '不但 A 而且 B = không những A mà còn B (hai ý cùng chiều, ý sau tăng tiến).' },
       { type: 'fill', q: '水是非常宝贵的___，我们要节约用水。', answer: ['资源', 'zīyuán', 'ziyuan'], hint: 'tài nguyên (zīyuán)', explain: '资源 (tư nguyên) = tài nguyên.' },
       { type: 'mc', q: '"逐渐" gần nghĩa nhất với:', options: ['突然', '马上', '慢慢地'], answer: 2, explain: '逐渐 = dần dần, từng bước — gần nghĩa 慢慢地 / 渐渐.' },
-      { type: 'order', vi: 'Đối với doanh nghiệp mà nói, bảo vệ môi trường rất quan trọng.', words: ['来说，', '对', '企业', '很重要', '保护环境'], answer: '对 企业 来说， 保护环境 很重要' },
+      { type: 'order', vi: 'Đối với doanh nghiệp mà nói, bảo vệ môi trường rất quan trọng.', words: ['来说，', '对', '企业', '很重要', '保护环境'], answer: '对 企业 来说， 保护环境 很重要', alt: ['保护环境 对 企业 来说， 很重要'] },
       { type: 'mc', q: '政府采取了很多___来改善空气质量。', options: ['措施', '趋势', '植物'], answer: 0, explain: '采取措施 = áp dụng biện pháp.' },
       { type: 'fill', q: '工厂关门以后，很多工人都___了。', answer: ['失业', 'shīyè', 'shiye'], hint: 'mất việc (shīyè)', explain: '失业 (thất nghiệp) = mất việc làm.' },
       { type: 'order', vi: 'Người dùng túi ni-lông ngày càng ít.', words: ['越来越少', '用', '的人', '塑料袋'], answer: '用 塑料袋 的人 越来越少' },
@@ -237,7 +237,7 @@ export default {
       { type: 'order', vi: 'Phần mềm này thao tác rất đơn giản.', words: ['操作起来', '这个软件', '简单', '很'], answer: '这个软件 操作起来 很 简单' },
       { type: 'mc', q: '"耳机" là:', options: ['cục sạc', 'màn hình', 'tai nghe'], answer: 2, explain: '耳机 (nhĩ cơ) = tai nghe; 充电器 = cục sạc; 屏幕 = màn hình.' },
       { type: 'fill', q: '我忘带___了，手机快没电了。', answer: ['充电器', 'chōngdiànqì', 'chongdianqi'], hint: 'cục sạc (chōngdiànqì)', explain: '充电器 = bộ sạc; 充电 = sạc điện.' },
-      { type: 'order', vi: 'Bạn có thể đổi ngôn ngữ trong phần cài đặt.', words: ['可以', '在设置里', '你', '改语言'], answer: '你 可以 在设置里 改语言' },
+      { type: 'order', vi: 'Bạn có thể đổi ngôn ngữ trong phần cài đặt.', words: ['可以', '在设置里', '你', '改语言'], answer: '你 可以 在设置里 改语言', alt: ['在设置里 你 可以 改语言'] },
       { type: 'mc', q: 'Chọn câu đúng cho "Chữ nhỏ quá, tôi nhìn không rõ."', options: ['字太小了，我看不清楚。', '字太小了，我不看清楚。', '字太小了，我看清楚不。'], answer: 0, explain: 'Bổ ngữ khả năng: 看得清楚 / 看不清楚 = nhìn rõ được / không nhìn rõ được.' }
     ],
     reading: {
@@ -288,7 +288,7 @@ export default {
       { type: 'mc', q: '请问您___方便参加明天的会议？', options: ['多么', '竟然', '是否'], answer: 2, explain: '是否 = có… hay không, dùng trong văn viết, email trang trọng (tương đương 是不是 trong khẩu ngữ).' },
       { type: 'fill', q: '由于天气原因，会议___到下周一。', answer: ['推迟', 'tuīchí', 'tuichi'], hint: 'lùi lại, hoãn (tuīchí)', explain: '推迟到 + thời gian = lùi đến….' },
       { type: 'mc', q: '"出席" thường dùng trong hoàn cảnh nào?', options: ['Tham dự cuộc họp, buổi lễ trang trọng', 'Ra ngoài đi dạo', 'Đi học muộn'], answer: 0, explain: '出席会议 / 出席婚礼 = tham dự cuộc họp / lễ cưới.' },
-      { type: 'order', vi: 'Mong anh/chị gửi tài liệu cho tôi sớm nhất có thể.', words: ['把资料', '尽快', '请您', '发给我'], answer: '请您 尽快 把资料 发给我' },
+      { type: 'order', vi: 'Mong anh/chị gửi tài liệu cho tôi sớm nhất có thể.', words: ['把资料', '尽快', '请您', '发给我'], answer: '请您 尽快 把资料 发给我', alt: ['请您 把资料 尽快 发给我'] },
       { type: 'fill', q: '收到邮件后，请回复___。', answer: ['确认', 'quèrèn', 'queren'], hint: 'xác nhận (quèrèn)', explain: '回复确认 = trả lời để xác nhận.' },
       { type: 'mc', q: '我明天要向经理___上个月的工作。', options: ['召开', '汇报', '申请'], answer: 1, explain: '向 + cấp trên + 汇报 = báo cáo với cấp trên.' },
       { type: 'order', vi: 'Công ty sẽ tổ chức cuộc họp vào thứ Tư tuần sau.', words: ['召开', '公司', '下周三', '会议', '将于'], answer: '公司 将于 下周三 召开 会议' },

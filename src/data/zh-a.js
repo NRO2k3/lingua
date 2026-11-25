@@ -132,7 +132,7 @@ addLevels('zh', [
           { type: 'mc', q: 'Câu nào đúng với nghĩa "Tôi 20 tuổi"?', options: ['我是二十岁。', '我二十岁。', '我岁二十。'], answer: 1, explain: 'Nói tuổi không cần 是: Chủ ngữ + số + 岁.' },
           { type: 'fill', q: '我今年十八___。（Năm nay tôi 18 tuổi.）', answer: ['岁', 'suì', 'sui'], hint: 'suì – tuổi', explain: '岁 (tuế) = tuổi, đứng sau con số.' },
           { type: 'mc', q: '九十 là số mấy?', options: ['19', '90', '9'], answer: 1, explain: '九十 = chín mươi; còn 十九 mới là 19.' },
-          { type: 'order', vi: 'Năm nay bạn bao nhiêu tuổi?', words: ['多大？', '今年', '你'], answer: '你 今年 多大？' }
+          { type: 'order', vi: 'Năm nay bạn bao nhiêu tuổi?', words: ['多大？', '今年', '你'], answer: '你 今年 多大？', alt: ['今年 你 多大？'] }
         ]
       },
 
@@ -457,7 +457,7 @@ addLevels('zh', [
           { type: 'mc', q: '八点半 là:', options: ['8 giờ 30', '8 giờ 15', '7 giờ 30'], answer: 0, explain: '半 = rưỡi, tức 30 phút.' },
           { type: 'fill', q: '吃饭的___，他喜欢看手机。（Lúc ăn cơm, anh ấy thích xem điện thoại.）', answer: ['时候', 'shíhou', 'shihou'], hint: 'shíhou – lúc, khi', explain: '…的时候 = lúc…, khi….' },
           { type: 'mc', q: '星期三 là thứ mấy?', options: ['thứ Ba', 'thứ Tư', 'thứ Năm'], answer: 1, explain: 'Số sau 星期 cộng thêm 1 là thứ trong tiếng Việt: 3 + 1 = thứ Tư.' },
-          { type: 'order', vi: 'Khi nào bạn có thời gian?', words: ['时间？', '你', '有', '什么时候'], answer: '你 什么时候 有 时间？' }
+          { type: 'order', vi: 'Khi nào bạn có thời gian?', words: ['时间？', '你', '有', '什么时候'], answer: '你 什么时候 有 时间？', alt: ['什么时候 你 有 时间？'] }
         ]
       },
 
@@ -706,7 +706,7 @@ addLevels('zh', [
           { type: 'mc', q: 'Câu nào đúng?', options: ['他说汉语得很好。', '他说汉语说得很好。', '他说得汉语很好。'], answer: 1, explain: 'Có tân ngữ thì lặp lại động từ trước 得.' },
           { type: 'fill', q: '我感冒了，今天不___去跑步。（Tôi bị cảm, hôm nay không đi chạy được.）', answer: ['能', 'néng', 'neng'], hint: 'néng – có thể (hoàn cảnh cho phép)', explain: 'Vì hoàn cảnh (bị cảm) nên dùng 不能.' },
           { type: 'mc', q: '踢足球 là:', options: ['chơi bóng rổ', 'đá bóng', 'bơi lội'], answer: 1, explain: '踢 tī = đá, 足球 zúqiú (túc cầu) = bóng đá.' },
-          { type: 'order', vi: 'Anh ấy chơi bóng rổ rất giỏi.', words: ['很好', '他', '打得', '篮球'], answer: '他 篮球 打得 很好' }
+          { type: 'order', vi: 'Anh ấy chơi bóng rổ rất giỏi.', words: ['很好', '他', '打得', '篮球'], answer: '他 篮球 打得 很好', alt: ['篮球 他 打得 很好'] }
         ]
       },
 

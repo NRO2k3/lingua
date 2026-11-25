@@ -123,7 +123,7 @@ export default {
       { type: 'order', vi: 'Nhà bạn ở đâu?', words: ['住', '你', '哪儿？', '家', '在'], answer: '你 家 住 在 哪儿？' },
       { type: 'fill', q: '我___爸爸妈妈。（Tôi yêu bố mẹ.）', answer: ['爱', 'ài', 'ai'], hint: 'ài – yêu', explain: '爱 (ái) = yêu, thương.' },
       { type: 'mc', q: '你有几个孩子？ hỏi điều gì?', options: ['Bạn có mấy anh chị em?', 'Bạn có mấy đứa con?', 'Nhà bạn có mấy người?'], answer: 1, explain: '孩子 = đứa trẻ, con cái; 几个孩子 = mấy đứa con.' },
-      { type: 'order', vi: 'Bà nội tôi năm nay tám mươi tuổi.', words: ['八十', '奶奶', '今年', '我', '岁'], answer: '我 奶奶 今年 八十 岁' },
+      { type: 'order', vi: 'Bà nội tôi năm nay tám mươi tuổi.', words: ['八十', '奶奶', '今年', '我', '岁'], answer: '我 奶奶 今年 八十 岁', alt: ['今年 我 奶奶 八十 岁'] },
       { type: 'mc', q: '儿子 nghĩa là gì?', options: ['Con trai', 'Con gái', 'Em trai'], answer: 0, explain: '儿子 érzi = con trai; em trai là 弟弟.' }
     ],
     reading: {
@@ -224,7 +224,7 @@ export default {
       { type: 'order', vi: 'Tôi thường đọc sách ở nhà.', words: ['在', '常常', '我', '看', '书', '家'], answer: '我 常常 在 家 看 书' },
       { type: 'mc', q: '下课 nghĩa là gì?', options: ['Vào học', 'Tan học', 'Tan làm'], answer: 1, explain: '上课 = vào học, 下课 = tan học; 下班 mới là tan làm.' },
       { type: 'fill', q: '我___在图书馆看书。（Tôi thường đọc sách ở thư viện.）', answer: ['常常', 'chángcháng', 'changchang'], hint: 'chángcháng – thường xuyên', explain: '常常 đứng sau chủ ngữ, trước 在 + nơi chốn.' },
-      { type: 'order', vi: 'Bạn ăn sáng chưa?', words: ['早饭', '你', '了', '吃', '吗？'], answer: '你 吃 早饭 了 吗？' },
+      { type: 'order', vi: 'Bạn ăn sáng chưa?', words: ['早饭', '你', '了', '吃', '吗？'], answer: '你 吃 早饭 了 吗？', alt: ['你 吃 了 早饭 吗？'] },
       { type: 'mc', q: '有时候 nghĩa là gì?', options: ['Luôn luôn', 'Đôi khi', 'Bây giờ'], answer: 1, explain: '有时候 yǒu shíhou = có khi, đôi khi.' },
       { type: 'mc', q: '他晚上六点___。（Anh ấy về nhà lúc sáu giờ tối.）', options: ['回家', '上课', '上班'], answer: 0, explain: '回家 huí jiā = về nhà.' }
     ],

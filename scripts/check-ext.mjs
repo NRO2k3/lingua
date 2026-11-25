@@ -31,6 +31,7 @@ for (const u of level.units) {
     if (e.type === 'mc' && new Set(e.options).size !== e.options.length) errs.push(`${u.id}: mc trùng phương án: ${e.q}`);
     if (e.type === 'fill' && (e.q.split('___').length !== 2 || !Array.isArray(e.answer) || !e.answer.length)) errs.push(`${u.id}: fill lỗi: ${e.q}`);
     if (e.type === 'order' && [...e.words].sort().join(' ') !== e.answer.split(' ').sort().join(' ')) errs.push(`${u.id}: order lỗi: ${e.answer}`);
+    if (e.type === 'order') for (const a of e.alt || []) if ([...e.words].sort().join(' ') !== a.split(' ').sort().join(' ')) errs.push(`${u.id}: order alt không dùng đúng bộ từ: ${a}`);
     if (!['mc', 'fill', 'order'].includes(e.type)) errs.push(`${u.id}: type lạ ${e.type}`);
   }
   const r = x.reading;

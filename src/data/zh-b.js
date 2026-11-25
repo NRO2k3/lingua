@@ -59,7 +59,7 @@ addLevels('zh', [
           { type: 'mc', q: '我以前去___两次长城。', options: ['过', '着', '呢'], answer: 0, explain: 'Có 以前 và số lần 两次 → nói kinh nghiệm đã từng, dùng 过.' },
           { type: 'mc', q: 'Câu phủ định đúng của "我吃过烤鸭。" là:', options: ['我不吃过烤鸭。', '我没吃过烤鸭。', '我没吃过了烤鸭。'], answer: 1, explain: 'Phủ định của V + 过 là 没 + V + 过, không dùng 不 và không thêm 了.' },
           { type: 'fill', q: '我还没吃饭___。', answer: ['呢', 'ne'], hint: 'trợ từ cuối câu (ne)', explain: 'Mẫu 还没…呢 = vẫn chưa….' },
-          { type: 'order', vi: 'Tôi đã từng đến Bắc Kinh hai lần.', words: ['两次', '我', '北京', '去过'], answer: '我 去过 两次 北京' },
+          { type: 'order', vi: 'Tôi đã từng đến Bắc Kinh hai lần.', words: ['两次', '我', '北京', '去过'], answer: '我 去过 两次 北京', alt: ['我 去过 北京 两次'] },
           { type: 'mc', q: '飞机___起飞了。', options: ['还', '已经', '没'], answer: 1, explain: '已经…了 = đã … rồi.' },
           { type: 'fill', q: '你去___中国吗？', answer: ['过', 'guo', 'guò'], hint: 'đã từng (guo)', explain: 'Hỏi kinh nghiệm: V + 过 + …吗？' },
           { type: 'order', vi: 'Anh ấy vẫn chưa đến.', words: ['呢', '他', '来', '还没'], answer: '他 还没 来 呢' },
@@ -184,7 +184,7 @@ addLevels('zh', [
           { type: 'order', vi: 'Bạn nên nghỉ ngơi nhiều.', words: ['多', '你', '休息', '应该'], answer: '你 应该 多 休息' },
           { type: 'mc', q: '"感冒" nghĩa là:', options: ['đau đầu', 'cảm cúm', 'phát sốt'], answer: 1, explain: '感冒 (cảm mạo) = bị cảm.' },
           { type: 'mc', q: '天冷了，你___多穿点儿衣服。', options: ['应该', '不用', '一边'], answer: 0, explain: 'Lời khuyên: 应该 = nên.' },
-          { type: 'fill', q: '我头___，不想吃饭。', answer: ['疼', 'téng', 'teng'], hint: 'đau (téng)', explain: '头疼 = đau đầu.' },
+          { type: 'fill', q: '我头___，不想吃饭。', answer: ['疼', 'téng', 'teng', '痛', 'tòng', 'tong'], hint: 'đau (téng)', explain: '头疼 / 头痛 = đau đầu.' },
           { type: 'order', vi: 'Anh ấy vừa ăn cơm vừa xem TV.', words: ['一边', '看电视', '他', '吃饭', '一边'], answer: '他 一边 吃饭 一边 看电视' }
         ]
       },
@@ -241,7 +241,7 @@ addLevels('zh', [
         ],
         exercises: [
           { type: 'mc', q: '我找了很久，终于找___了。', options: ['完', '到', '懂'], answer: 1, explain: '找到 = tìm thấy (đạt được mục đích).' },
-          { type: 'mc', q: 'Câu nào đúng?', options: ['我把饭吃。', '我把饭吃完了。', '我把一碗饭吃完了。'], answer: 1, explain: 'Câu 把 cần có kết quả sau động từ và tân ngữ phải xác định.' },
+          { type: 'mc', q: 'Câu nào đúng?', options: ['我把饭吃。', '我把饭吃完了。', '我吃完了把饭。'], answer: 1, explain: 'Câu 把: 把 + tân ngữ đứng trước động từ, và sau động từ phải có thành phần khác (kết quả, 了…): 我把饭吃完了.' },
           { type: 'fill', q: '老师的话我没听___。', answer: ['懂', 'dǒng', 'dong'], hint: 'hiểu (dǒng)', explain: '听懂 = nghe hiểu; phủ định: 没听懂.' },
           { type: 'order', vi: 'Tôi đã đọc xong cuốn sách này.', words: ['这本书', '我', '看完了', '把'], answer: '我 把 这本书 看完了' },
           { type: 'mc', q: 'Phủ định đúng của "我听懂了。" là:', options: ['我不听懂。', '我没听懂。', '我没听懂了。'], answer: 1, explain: 'Bổ ngữ kết quả phủ định bằng 没, bỏ 了.' },
@@ -362,9 +362,9 @@ addLevels('zh', [
           { type: 'mc', q: '___明天不下雨，我们就去公园。', options: ['虽然', '如果', '因为'], answer: 1, explain: 'Vế sau có 就 → điều kiện 如果…就….' },
           { type: 'mc', q: '虽然他很忙，___每天都锻炼。', options: ['所以', '但是', '就'], answer: 1, explain: '虽然…但是… = tuy… nhưng….' },
           { type: 'fill', q: '因为下大雨，___比赛取消了。', answer: ['所以', 'suǒyǐ', 'suoyi'], hint: 'vì vậy (suǒyǐ)', explain: '因为…所以… = vì… nên….' },
-          { type: 'order', vi: 'Nếu bạn có thời gian thì chúng ta cùng đi.', words: ['我们', '如果', '一起去', '你', '就', '有时间，'], answer: '如果 你 有时间， 我们 就 一起去' },
+          { type: 'order', vi: 'Nếu bạn có thời gian thì chúng ta cùng đi.', words: ['我们', '如果', '一起去', '你', '就', '有时间，'], answer: '如果 你 有时间， 我们 就 一起去', alt: ['你 如果 有时间， 我们 就 一起去'] },
           { type: 'mc', q: 'Câu nào đúng?', options: ['如果你去，就我去。', '如果你去，我就去。', '如果你去，我去就。'], answer: 1, explain: '就 đứng sau chủ ngữ, trước động từ.' },
-          { type: 'order', vi: 'Vì cậu ấy bị ốm nên không đến lớp.', words: ['所以', '因为', '他', '生病了，', '没来上课'], answer: '因为 他 生病了， 所以 没来上课' },
+          { type: 'order', vi: 'Vì cậu ấy bị ốm nên không đến lớp.', words: ['所以', '因为', '他', '生病了，', '没来上课'], answer: '因为 他 生病了， 所以 没来上课', alt: ['他 因为 生病了， 所以 没来上课'] },
           { type: 'mc', q: '"担心" nghĩa là:', options: ['quyết định', 'lo lắng', 'cố gắng'], answer: 1, explain: '担心 (đảm tâm) = lo lắng.' },
           { type: 'mc', q: '他___是中国人，但是汉语说得不太好。', options: ['虽然', '如果', '所以'], answer: 0, explain: 'Vế sau có 但是 → dùng 虽然; 虽然 có thể đứng sau chủ ngữ.' }
         ]
@@ -432,9 +432,9 @@ addLevels('zh', [
           { type: 'fill', q: '___我是你，我就不会放弃。', answer: ['假如', 'jiǎrú', 'jiaru', '要是', 'yàoshi', 'yaoshi', '如果', 'rúguǒ', 'ruguo'], hint: 'giả sử (jiǎrú)', explain: '假如 / 要是 / 如果 … 就 … đều dùng cho giả định.' },
           { type: 'order', vi: 'Tôi hy vọng bạn có thể đến.', words: ['你', '我', '能来', '希望'], answer: '我 希望 你 能来' },
           { type: 'mc', q: 'Khác biệt giữa 即使 và 虽然 là:', options: ['即使 nói giả định, 虽然 nói sự thật đã có', 'Hai từ hoàn toàn giống nhau', '虽然 nói giả định, 即使 nói sự thật đã có'], answer: 0, explain: '即使下雨 = kể cả nếu mưa; 虽然下雨了 = trời đã mưa thật.' },
-          { type: 'order', vi: 'Cho dù rất mệt, anh ấy vẫn kiên trì chạy bộ.', words: ['也', '即使', '坚持跑步', '很累，', '他'], answer: '即使 很累， 他 也 坚持跑步' },
+          { type: 'order', vi: 'Cho dù rất mệt, anh ấy vẫn kiên trì chạy bộ.', words: ['也', '即使', '坚持跑步', '很累，', '他'], answer: '即使 很累， 他 也 坚持跑步', alt: ['他 即使 很累， 也 坚持跑步'] },
           { type: 'mc', q: '"放弃" nghĩa là:', options: ['kiên trì', 'từ bỏ', 'hối hận'], answer: 1, explain: '放弃 (phóng khí) = buông bỏ, từ bỏ.' },
-          { type: 'fill', q: '我的___是当一名老师。', answer: ['梦想', 'mèngxiǎng', 'mengxiang'], hint: 'ước mơ (mèngxiǎng)', explain: '梦想 (mộng tưởng) = ước mơ.' }
+          { type: 'fill', q: '我的___是当一名老师。', answer: ['梦想', 'mèngxiǎng', 'mengxiang', '理想', 'lǐxiǎng', 'lixiang'], hint: 'ước mơ (mèngxiǎng)', explain: '梦想 (mộng tưởng) = ước mơ; dùng 理想 ở đây cũng đúng.' }
         ]
       },
       // ───────────────────────── HSK4-2 ─────────────────────────
@@ -671,9 +671,9 @@ addLevels('zh', [
           { type: 'mc', q: '黑板上的字太小了，我看___清楚。', options: ['不', '没', '得不'], answer: 0, explain: 'Bổ ngữ khả năng phủ định: V + 不 + bổ ngữ → 看不清楚.' },
           { type: 'mc', q: '"Tôi nghe không rõ." nói thế nào?', options: ['我不听清。', '我听不清。', '我没听得清。'], answer: 1, explain: '听不清 = nghe không rõ (không thể nghe rõ).' },
           { type: 'fill', q: '这个软件很简单，连孩子___会用。', answer: ['都', 'dōu', 'dou', '也', 'yě', 'ye'], hint: 'cũng (dōu)', explain: '连…都 / 也… = ngay cả… cũng….' },
-          { type: 'order', vi: 'Bạn đọc hiểu được cuốn sách này không?', words: ['这本书', '看得懂', '你', '吗？'], answer: '你 看得懂 这本书 吗？' },
+          { type: 'order', vi: 'Bạn đọc hiểu được cuốn sách này không?', words: ['这本书', '看得懂', '你', '吗？'], answer: '你 看得懂 这本书 吗？', alt: ['这本书 你 看得懂 吗？'] },
           { type: 'mc', q: '作业太多了，今天晚上我做___完。', options: ['得', '不', '没'], answer: 1, explain: '做不完 = làm không xong (không thể làm xong).' },
-          { type: 'order', vi: 'Tôi quên cả mật khẩu của chính mình rồi.', words: ['都', '我', '忘了', '自己的密码', '连'], answer: '我 连 自己的密码 都 忘了' },
+          { type: 'order', vi: 'Tôi quên cả mật khẩu của chính mình rồi.', words: ['都', '我', '忘了', '自己的密码', '连'], answer: '我 连 自己的密码 都 忘了', alt: ['连 自己的密码 我 都 忘了'] },
           { type: 'mc', q: '"下载" nghĩa là:', options: ['tải xuống', 'sạc pin', 'tín hiệu'], answer: 0, explain: '下载 (hạ tải) = tải xuống.' },
           { type: 'fill', q: '手机没电了，我得___电。', answer: ['充', 'chōng', 'chong'], hint: 'sạc (chōng)', explain: '充电 (sung điện) = sạc pin.' }
         ]

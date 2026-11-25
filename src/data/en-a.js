@@ -73,7 +73,7 @@ addLevels('en', [
             explain: '"How are you?" hỏi thăm sức khoẻ, nên trả lời "I\'m fine, thank you." (Tôi khoẻ, cảm ơn).' },
           { type: 'fill', q: 'He ___ not a teacher.', answer: ['is'], hint: 'to be (phủ định)',
             explain: 'Phủ định: he + is + not. Viết tắt: He isn\'t a teacher.' },
-          { type: 'order', vi: 'Tên tôi là Lan.', words: ['Lan', 'is', 'name', 'My'], answer: 'My name is Lan' },
+          { type: 'order', vi: 'Tên tôi là Lan.', words: ['Lan', 'is', 'name', 'My'], answer: 'My name is Lan', alt: ['Lan is My name'] },
           { type: 'order', vi: 'Rất vui được gặp bạn.', words: ['you', 'meet', 'Nice', 'to'], answer: 'Nice to meet you' }
         ]
       },
@@ -212,7 +212,7 @@ addLevels('en', [
           { type: 'fill', q: 'My mother and father are my ___.', answer: ['parents'], hint: 'bố mẹ',
             explain: 'parents = bố mẹ.' },
           { type: 'order', vi: 'Đây là anh trai của tôi.', words: ['my', 'This', 'brother', 'is'], answer: 'This is my brother' },
-          { type: 'order', vi: 'Tên chị gái của Anna là Kate.', words: ["Anna's", 'is', 'name', 'Kate', "sister's"], answer: "Anna's sister's name is Kate" }
+          { type: 'order', vi: 'Tên chị gái của Anna là Kate.', words: ["Anna's", 'is', 'name', 'Kate', "sister's"], answer: "Anna's sister's name is Kate", alt: ["Kate is Anna's sister's name"] }
         ]
       },
       // ---------------------------------------------------------------
@@ -275,7 +275,7 @@ addLevels('en', [
             explain: 'Tính từ màu sắc đứng trước danh từ, sau a/an: a red bag.' },
           { type: 'fill', q: 'It is ___ orange.', answer: ['an'], hint: 'a hay an?',
             explain: 'orange bắt đầu bằng nguyên âm /ɔ/ nên dùng an.' },
-          { type: 'order', vi: 'Những cây bút kia màu đen.', words: ['black', 'pens', 'Those', 'are'], answer: 'Those pens are black' },
+          { type: 'order', vi: 'Những cây bút kia màu đen.', words: ['black', 'pens', 'Those', 'are'], answer: 'Those pens are black', alt: ['Those are black pens'] },
           { type: 'order', vi: 'Đây có phải điện thoại của bạn không?', words: ['phone?', 'this', 'your', 'Is'], answer: 'Is this your phone?' }
         ]
       },
@@ -400,8 +400,8 @@ addLevels('en', [
             explain: 'water không đếm được nên không dùng a/an; khi xin thứ gì đó dùng some.' },
           { type: 'mc', q: "We don't have ___ bread.", options: ['some', 'any', 'a'], answer: 1,
             explain: 'Câu phủ định dùng any.' },
-          { type: 'fill', q: "I'd ___ a cup of tea, please.", answer: ['like'], hint: 'I would ...',
-            explain: "I'd like = I would like (tôi muốn — lịch sự)." },
+          { type: 'fill', q: "I'd ___ a cup of tea, please.", answer: ['like', 'love'], hint: 'I would ...',
+            explain: "I'd like = I would like (tôi muốn — lịch sự); I'd love… cũng đúng." },
           { type: 'mc', q: 'Từ nào KHÔNG đếm được?', options: ['apple', 'egg', 'rice'], answer: 2,
             explain: 'rice (cơm, gạo) không đếm được; apple và egg đếm được.' },
           { type: 'fill', q: 'Do you have ___ eggs?', answer: ['any'], hint: 'câu hỏi',
@@ -486,7 +486,7 @@ addLevels('en', [
           { type: 'fill', q: "It's a quarter ___ nine. (8:45)", answer: ['to'], hint: 'kém',
             explain: '8:45 = chín giờ kém mười lăm = a quarter to nine.' },
           { type: 'order', vi: 'Mấy giờ rồi?', words: ['it?', 'is', 'What', 'time'], answer: 'What time is it?' },
-          { type: 'order', vi: 'Tôi có hẹn lúc ba giờ vào thứ Sáu.', words: ["o'clock", 'appointment', 'on', 'I', 'three', 'Friday', 'have', 'at', 'an'], answer: "I have an appointment at three o'clock on Friday" }
+          { type: 'order', vi: 'Tôi có hẹn lúc ba giờ vào thứ Sáu.', words: ["o'clock", 'appointment', 'on', 'I', 'three', 'Friday', 'have', 'at', 'an'], answer: "I have an appointment at three o'clock on Friday", alt: ["I have an appointment on Friday at three o'clock"] }
         ]
       },
       // ---------------------------------------------------------------
@@ -759,7 +759,7 @@ addLevels('en', [
             explain: 'Trạng từ tần suất đứng trước động từ thường: usually play.' },
           { type: 'fill', q: 'My sister hates ___ up early. (get)', answer: ['getting'], hint: 'hate + V-ing',
             explain: 'get → getting (một nguyên âm + một phụ âm: gấp đôi t).' },
-          { type: 'order', vi: 'Tôi thỉnh thoảng nấu ăn vào cuối tuần.', words: ['cook', 'weekend', 'sometimes', 'the', 'I', 'on'], answer: 'I sometimes cook on the weekend' },
+          { type: 'order', vi: 'Tôi thỉnh thoảng nấu ăn vào cuối tuần.', words: ['cook', 'weekend', 'sometimes', 'the', 'I', 'on'], answer: 'I sometimes cook on the weekend', alt: ['sometimes I cook on the weekend', 'I cook on the weekend sometimes'] },
           { type: 'order', vi: 'Sở thích của bạn là gì?', words: ['your', 'are', 'What', 'hobbies?'], answer: 'What are your hobbies?' }
         ]
       },

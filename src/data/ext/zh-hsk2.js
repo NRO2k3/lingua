@@ -18,10 +18,10 @@ export default {
       { type: 'mc', q: '"9 giờ 15" nói thế nào?', options: ['九点一刻', '九点半', '一刻九点'], answer: 0, explain: '一刻 = 15 phút, đứng sau 点: 九点一刻. 九点半 là 9 giờ 30.' },
       { type: 'fill', q: '从这儿到机场要四十___。（Từ đây đến sân bay mất bốn mươi phút.）', answer: ['分钟', 'fēnzhōng', 'fenzhong'], hint: 'fēnzhōng – phút (khoảng thời gian)', explain: '分钟 chỉ khoảng thời gian kéo dài bao lâu; 分 dùng khi nói giờ: 八点十分.' },
       { type: 'mc', q: '"Tuần sau" là:', options: ['上周', '下周', '周末'], answer: 1, explain: '上 = trước, 下 = sau: 上周 là tuần trước, 下周 là tuần sau.' },
-      { type: 'order', vi: 'Chiều thứ Bảy bạn có rảnh không?', words: ['有空儿', '星期六', '吗？', '你', '下午'], answer: '你 星期六 下午 有空儿 吗？' },
+      { type: 'order', vi: 'Chiều thứ Bảy bạn có rảnh không?', words: ['有空儿', '星期六', '吗？', '你', '下午'], answer: '你 星期六 下午 有空儿 吗？', alt: ['星期六 下午 你 有空儿 吗？'] },
       { type: 'mc', q: '前年 nghĩa là:', options: ['năm ngoái', 'năm kia', 'năm sau'], answer: 1, explain: '前年 = năm kia. Năm ngoái là 去年, năm sau là 明年.' },
       { type: 'fill', q: '___你说什么？我没听见。（Vừa nãy bạn nói gì? Tôi không nghe thấy.）', answer: ['刚才', 'gāngcái', 'gangcai'], hint: 'gāngcái – vừa nãy', explain: '刚才 = vừa nãy, lúc nãy; đứng đầu câu hoặc ngay sau chủ ngữ.' },
-      { type: 'order', vi: 'Lúc ngủ, tôi không xem điện thoại.', words: ['的时候', '手机', '我', '睡觉', '看', '不'], answer: '睡觉 的时候 我 不 看 手机' },
+      { type: 'order', vi: 'Lúc ngủ, tôi không xem điện thoại.', words: ['的时候', '手机', '我', '睡觉', '看', '不'], answer: '睡觉 的时候 我 不 看 手机', alt: ['我 睡觉 的时候 不 看 手机'] },
       { type: 'mc', q: '"8 giờ kém 15" là:', options: ['差一刻八点', '八点一刻', '七点半'], answer: 0, explain: '差 = kém: 差一刻八点 = còn 15 phút nữa là 8 giờ.' }
     ],
     reading: {
@@ -123,7 +123,7 @@ export default {
       { type: 'mc', q: '近 trái nghĩa với từ nào?', options: ['远', '快', '大'], answer: 0, explain: '近 jìn = gần, 远 yuǎn = xa.' },
       { type: 'fill', q: '我家离学校两___，走路二十分钟。（Nhà tôi cách trường hai cây số, đi bộ hai mươi phút.）', answer: ['公里', 'gōnglǐ', 'gongli'], hint: 'gōnglǐ – ki-lô-mét', explain: 'A 离 B + khoảng cách: 我家离学校两公里. Trước lượng từ/đơn vị đo, số 2 đọc là 两.' },
       { type: 'mc', q: '"Trong sân" nói thế nào?', options: ['院子里', '里院子', '在里院子'], answer: 0, explain: 'Phương vị từ 里 đứng SAU danh từ: 院子里, ngược với tiếng Việt "trong sân".' },
-      { type: 'order', vi: 'Đi sân bay là hướng này phải không?', words: ['这个', '去', '是', '机场', '方向', '吗？'], answer: '去 机场 是 这个 方向 吗？' },
+      { type: 'order', vi: 'Đi sân bay là hướng này phải không?', words: ['这个', '去', '是', '机场', '方向', '吗？'], answer: '去 机场 是 这个 方向 吗？', alt: ['这个 方向 是 去 机场 吗？'] },
       { type: 'mc', q: 'Bạn bị lạc và muốn "hỏi đường". Từ nào đúng?', options: ['问路', '走路', '路口'], answer: 0, explain: '问 = hỏi, 路 = đường: 问路 = hỏi đường; 走路 = đi bộ; 路口 = ngã tư, đầu đường.' }
     ],
     reading: {
@@ -172,7 +172,7 @@ export default {
       { type: 'fill', q: '昨天我们___了长城。（Hôm qua chúng tôi đã tham quan Vạn Lý Trường Thành.）', answer: ['参观', 'cānguān', 'canguan'], hint: 'cānguān – tham quan', explain: '参观 = tham quan (nơi chốn, trường học, bảo tàng…); 了 sau động từ chỉ việc đã xong.' },
       { type: 'order', vi: 'Bạn đã từng đi biển chưa?', words: ['去过', '海边', '你', '吗？'], answer: '你 去过 海边 吗？' },
       { type: 'mc', q: '那个电影很___，我看了两次。（Bộ phim đó rất hay, tôi đã xem hai lần.）', options: ['有意思', '开心', '请客'], answer: 0, explain: '有意思 = hay, thú vị (phim, sách, việc…); 开心 nói về cảm xúc vui vẻ của người.' },
-      { type: 'fill', q: '我们在公园里照了很多___。（Chúng tôi đã chụp rất nhiều ảnh ở công viên.）', answer: ['相', 'xiàng', 'xiang'], hint: 'xiàng – (照相) chụp ảnh', explain: '照相 là động từ li hợp: 了 và tân ngữ chen vào giữa: 照了很多相.' },
+      { type: 'fill', q: '我们在公园里照了很多___。（Chúng tôi đã chụp rất nhiều ảnh ở công viên.）', answer: ['相', 'xiàng', 'xiang', '照片', 'zhàopiàn', 'zhaopian'], hint: 'xiàng – (照相) chụp ảnh', explain: '照相 là động từ li hợp: 了 và tân ngữ chen vào giữa: 照了很多相. Nói 照了很多照片 cũng đúng.' },
       { type: 'mc', q: '"Hôm qua tôi không nấu cơm." là:', options: ['昨天我没做饭。', '昨天我不做饭了。', '昨天我没做饭了。'], answer: 0, explain: 'Phủ định việc trong quá khứ dùng 没 và bỏ 了.' },
       { type: 'order', vi: 'Mọi người đều rất vui.', words: ['都', '大家', '开心', '很'], answer: '大家 都 很 开心' },
       { type: 'mc', q: '请客 nghĩa là:', options: ['mời ăn uống, đãi khách', 'xin lỗi khách', 'khách mời'], answer: 0, explain: '请客 = mời (ăn uống), trả tiền đãi người khác: 今天我请客！= Hôm nay tôi mời!' }
@@ -219,7 +219,7 @@ export default {
       { w: '小说', ipa: 'xiǎoshuō', hv: 'tiểu thuyết', vi: 'tiểu thuyết', ex: '周末我喜欢在家看小说。', exPy: 'Zhōumò wǒ xǐhuan zài jiā kàn xiǎoshuō.', exVi: 'Cuối tuần tôi thích ở nhà đọc tiểu thuyết.' }
     ],
     exercises: [
-      { type: 'mc', q: '"Bạn biết chơi quần vợt không?" là:', options: ['你会打网球吗？', '你会踢网球吗？', '你会骑网球吗？'], answer: 0, explain: 'Các môn bóng dùng tay như 网球, 排球, 篮球 đi với 打; bóng đá đi với 踢.' },
+      { type: 'mc', q: '"Bạn biết chơi quần vợt không?" là:', options: ['你会打网球吗？', '你会踢网球吗？', '你会骑网球吗？'], answer: 0, explain: 'Các môn bóng đánh bằng tay hoặc bằng vợt như 网球, 排球, 篮球 đi với 打; bóng đá đi với 踢.' },
       { type: 'fill', q: '我每天___自行车去学校。（Ngày nào tôi cũng đạp xe đạp đến trường.）', answer: ['骑', 'qí', 'qi'], hint: 'qí – cưỡi, đạp (xe)', explain: '骑 dùng cho xe đạp, xe máy, ngựa — những thứ ngồi dạng chân lên.' },
       { type: 'order', vi: 'Em gái tôi vẽ rất đẹp.', words: ['画', '妹妹', '得', '很好', '我'], answer: '我 妹妹 画 得 很好' },
       { type: 'mc', q: 'Câu nào đúng: "Cô ấy chơi bóng chuyền rất giỏi."?', options: ['她排球打得很好。', '她打排球很好得。', '她排球得打很好。'], answer: 0, explain: 'Có tân ngữ thì đưa tân ngữ lên trước: (打)排球 + 打得 + nhận xét → 她排球打得很好.' },

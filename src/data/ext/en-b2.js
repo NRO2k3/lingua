@@ -73,7 +73,7 @@ export default {
       { w: 'prosecute', ipa: '/ˈprɑsɪˌkjut/', vi: 'truy tố, khởi tố', ex: 'Anyone who breaks this law will be prosecuted.', exVi: 'Bất kỳ ai vi phạm luật này sẽ bị truy tố.' }
     ],
     exercises: [
-      { type: 'mc', q: 'Hundreds of people ___ before the storm hit the coast yesterday.', options: ['evacuated', 'were evacuated', 'have evacuated', 'are evacuating'], answer: 1,
+      { type: 'mc', q: 'Hundreds of people ___ before the storm hit the coast yesterday.', options: ['evacuating', 'were evacuated', 'have evacuated', 'are evacuating'], answer: 1,
         explain: 'Người dân được (người khác) sơ tán, có yesterday → bị động quá khứ đơn: were + V3.' },
       { type: 'fill', q: 'An outbreak of flu ___ been reported in two schools this week.', answer: ['has'], hint: 'bị động hiện tại hoàn thành',
         explain: 'Chủ ngữ số ít an outbreak → has been + V3.' },
@@ -315,8 +315,8 @@ export default {
         explain: 'Bị động hiện tại hoàn thành: has been + V3 (postponed).' },
       { type: 'mc', q: 'Which sentence is the most formal way to thank someone for a quick reply?', options: ['Thanks for getting back so fast!', 'Thank you for replying so promptly.', 'Cool, you answered quickly.', 'Wow, that was quick!'], answer: 1,
         explain: 'Email trang trọng dùng câu đầy đủ, lịch sự: Thank you for replying so promptly.' },
-      { type: 'fill', q: 'Our costs have increased. ___, prices will rise from May.', answer: ['Accordingly', 'Therefore', 'Consequently'], hint: 'do đó (trang trọng)',
-        explain: 'Accordingly / Therefore = do đó, chỉ kết quả; đứng đầu câu và có dấu phẩy sau.' },
+      { type: 'fill', q: 'Our costs have increased. ___, prices will rise from May.', answer: ['Accordingly', 'Therefore', 'Consequently', 'Thus', 'Hence', 'As a result'], hint: 'do đó (trang trọng)',
+        explain: 'Accordingly / Therefore / Consequently / As a result = do đó, chỉ kết quả; đứng đầu câu và có dấu phẩy sau.' },
       { type: 'mc', q: 'We would appreciate any ___ on our new website.', options: ['feedback', 'applicant', 'client', 'correspondence'], answer: 0,
         explain: 'Feedback on something = ý kiến phản hồi về điều gì.' },
       { type: 'fill', q: 'Please ___ your manager before booking any business trips.', answer: ['consult'], hint: 'hỏi ý kiến',
@@ -324,7 +324,7 @@ export default {
       { type: 'order', vi: 'Ngoài ra, tôi đã đính kèm một bản sao hợp đồng.', words: ['a', 'have', 'Additionally,', 'contract', 'attached', 'of', 'I', 'the', 'copy'],
         answer: 'Additionally, I have attached a copy of the contract' },
       { type: 'order', vi: 'Chúng tôi sẽ nhanh chóng liên hệ với tất cả ứng viên.', words: ['all', 'will', 'promptly', 'We', 'applicants', 'contact'],
-        answer: 'We will contact all applicants promptly' }
+        answer: 'We will promptly contact all applicants', alt: ['We will contact all applicants promptly'] }
     ],
     reading: {
       title: 'Postponement of the Product Launch',

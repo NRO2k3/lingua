@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Alert, Button, Card, Flex, Space, Switch, Tag, Typography } from 'antd';
 import { CheckCircleFilled, CloseCircleFilled, PlayCircleOutlined, ReadOutlined, ReloadOutlined } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 import { COURSES } from '../lib/courses.js';
 import { speakAll } from '../lib/speech.js';
 import { play } from '../lib/sfx.js';
+import { shuffleOptions } from '../lib/quiz.js';
 import { Pinyin, SoundButton } from '../components/common.jsx';
 import { EASE } from '../components/motion.jsx';
 
@@ -38,7 +39,9 @@ function Question({ q, k, chosen, onChoose }) {
 }
 
 export default function ReadingStep({ u, lang }) {
-  const r = u.reading;
+  const r0 = u.reading;
+  // Xáo phương án một lần khi mở bài đọc
+  const r = useMemo(() => ({ ...r0, questions: r0.questions.map(shuffleOptions) }), [r0]);
   const tts = COURSES[lang].tts;
   const [showVi, setShowVi] = useState(false);
   const [answers, setAnswers] = useState({});

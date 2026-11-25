@@ -385,10 +385,10 @@ addLevels('es', [
           { type: 'fill', q: '¿___ gusta el café?', answer: ['te'], hint: 'đại từ cho tú', explain: 'Hỏi "bạn" (tú) → te gusta.' },
           { type: 'mc', q: 'Nos ___ comer pescado.', options: ['gusta', 'gustan', 'gustamos'], answer: 0, explain: 'Sau gustar là động từ nguyên mẫu (comer) → dùng gusta.' },
           { type: 'fill', q: 'A ella ___ gusta la carne.', answer: ['le'], hint: 'đại từ cho ella', explain: 'Ella → le gusta.' },
-          { type: 'order', vi: 'Làm ơn cho tôi một cà phê.', words: ['favor', 'un', 'Quisiera', 'café,', 'por'], answer: 'Quisiera un café, por favor' },
+          { type: 'order', vi: 'Làm ơn cho tôi một cà phê.', words: ['favor', 'un', 'Quisiera', 'café,', 'por'], answer: 'Quisiera un café, por favor', alt: ['por favor Quisiera un café,'] },
           { type: 'mc', q: 'Muốn tính tiền ở nhà hàng, bạn nói:', options: ['La cuenta, por favor.', 'El agua, por favor.', 'Buenos días.'], answer: 0, explain: 'La cuenta = hoá đơn.' },
           { type: 'fill', q: 'Quisiera un vaso de ___.', answer: ['agua'], hint: 'nước', explain: 'Un vaso de agua = một cốc nước.' },
-          { type: 'order', vi: 'Tôi không thích bia.', words: ['gusta', 'No', 'cerveza', 'me', 'la'], answer: 'No me gusta la cerveza' }
+          { type: 'order', vi: 'Tôi không thích bia.', words: ['gusta', 'No', 'cerveza', 'me', 'la'], answer: 'No me gusta la cerveza', alt: ['la cerveza No me gusta'] }
         ]
       }
     ]
@@ -459,7 +459,7 @@ addLevels('es', [
           { type: 'order', vi: 'Mấy giờ rồi?', words: ['es?', 'hora', '¿Qué'], answer: '¿Qué hora es?' },
           { type: 'mc', q: 'Ngày sau viernes (thứ Sáu) là:', options: ['jueves', 'sábado', 'domingo'], answer: 1, explain: 'viernes → sábado (thứ Bảy).' },
           { type: 'fill', q: 'Tengo una ___ con el médico a las diez.', answer: ['cita'], hint: 'cuộc hẹn', explain: 'La cita = cuộc hẹn.' },
-          { type: 'order', vi: 'Lớp học lúc tám giờ sáng.', words: ['de', 'ocho', 'La', 'a', 'mañana', 'clase', 'las', 'es', 'la'], answer: 'La clase es a las ocho de la mañana' }
+          { type: 'order', vi: 'Lớp học lúc tám giờ sáng.', words: ['de', 'ocho', 'La', 'a', 'mañana', 'clase', 'las', 'es', 'la'], answer: 'La clase es a las ocho de la mañana', alt: ['a las ocho de la mañana es La clase'] }
         ]
       },
 
@@ -592,7 +592,7 @@ addLevels('es', [
           { type: 'order', vi: 'Nhà vệ sinh ở đâu?', words: ['baño?', 'el', '¿Dónde', 'está'], answer: '¿Dónde está el baño?' },
           { type: 'mc', q: 'Mệnh lệnh của "cruzar" với tú là:', options: ['cruzas', 'cruza', 'cruzo'], answer: 1, explain: 'Dạng él hiện tại: cruza.' },
           { type: 'fill', q: 'Sigue todo recto y gira a la ___.', answer: ['izquierda'], hint: 'bên trái', explain: 'A la izquierda = bên trái.' },
-          { type: 'order', vi: 'Có một ngân hàng gần nhà tôi.', words: ['cerca', 'casa', 'un', 'Hay', 'mi', 'banco', 'de'], answer: 'Hay un banco cerca de mi casa' }
+          { type: 'order', vi: 'Có một ngân hàng gần nhà tôi.', words: ['cerca', 'casa', 'un', 'Hay', 'mi', 'banco', 'de'], answer: 'Hay un banco cerca de mi casa', alt: ['cerca de mi casa Hay un banco'] }
         ]
       },
 
@@ -654,7 +654,7 @@ addLevels('es', [
           { type: 'fill', q: 'El sábado pasado nosotros ___ a la playa.', answer: ['fuimos'], hint: 'ir, quá khứ', explain: 'Ir quá khứ, nosotros → fuimos.' },
           { type: 'mc', q: '¿Qué ___ tú el fin de semana?', options: ['hiciste', 'hizo', 'haces'], answer: 0, explain: 'Hacer quá khứ, ngôi tú → hiciste.' },
           { type: 'fill', q: 'Anoche Marta ___ con sus amigos.', answer: ['salió'], hint: 'salir, quá khứ', explain: 'Salir quá khứ, ngôi ella → salió.' },
-          { type: 'order', vi: 'Hôm qua tôi ăn ở nhà hàng.', words: ['restaurante', 'comí', 'Ayer', 'un', 'en'], answer: 'Ayer comí en un restaurante' },
+          { type: 'order', vi: 'Hôm qua tôi ăn ở nhà hàng.', words: ['restaurante', 'comí', 'Ayer', 'un', 'en'], answer: 'Ayer comí en un restaurante', alt: ['comí en un restaurante Ayer'] },
           { type: 'fill', q: 'Ellos ___ mucho trabajo la semana pasada.', answer: ['tuvieron'], hint: 'tener, quá khứ', explain: 'Tener quá khứ, ellos → tuvieron.' },
           { type: 'mc', q: 'La película ___ muy divertida.', options: ['fue', 'fui', 'fueron'], answer: 0, explain: 'Ser quá khứ, ngôi ella (la película) → fue.' },
           { type: 'order', vi: 'Tối qua bạn đã làm gì?', words: ['anoche?', 'hiciste', '¿Qué'], answer: '¿Qué hiciste anoche?' }
@@ -719,7 +719,7 @@ addLevels('es', [
           { type: 'mc', q: 'Me ___ los deportes.', options: ['encanta', 'encantan', 'encanto'], answer: 1, explain: 'Los deportes số nhiều → encantan.' },
           { type: 'fill', q: 'A mi hermana ___ gusta el tenis.', answer: ['le'], hint: 'một người (ella)', explain: 'Mi hermana = ella → le.' },
           { type: 'fill', q: '¿A vosotros ___ gusta correr?', answer: ['os'], hint: 'vosotros', explain: 'Vosotros → os.' },
-          { type: 'order', vi: 'Tôi luôn chạy bộ vào buổi sáng.', words: ['mañana', 'corro', 'la', 'Siempre', 'por'], answer: 'Siempre corro por la mañana' },
+          { type: 'order', vi: 'Tôi luôn chạy bộ vào buổi sáng.', words: ['mañana', 'corro', 'la', 'Siempre', 'por'], answer: 'Siempre corro por la mañana', alt: ['por la mañana Siempre corro', 'corro Siempre por la mañana'] },
           { type: 'mc', q: '"Không bao giờ" là:', options: ['siempre', 'a menudo', 'nunca'], answer: 2, explain: 'nunca = không bao giờ.' },
           { type: 'fill', q: 'Juego ___ fútbol los sábados.', answer: ['al'], hint: 'a + el', explain: 'Jugar a + el fútbol → al fútbol.' },
           { type: 'order', vi: 'Anh trai tôi mê bóng rổ.', words: ['encanta', 'el', 'A', 'hermano', 'baloncesto', 'mi', 'le'], answer: 'A mi hermano le encanta el baloncesto' }
@@ -788,7 +788,7 @@ addLevels('es', [
           { type: 'order', vi: 'Hè này bạn định làm gì?', words: ['verano?', 'a', '¿Qué', 'este', 'vas', 'hacer'], answer: '¿Qué vas a hacer este verano?' },
           { type: 'mc', q: 'Futuro của "tener" ở ngôi yo là:', options: ['teneré', 'tendré', 'tuve'], answer: 1, explain: 'Tener bất quy tắc: tendré. (tuve là quá khứ.)' },
           { type: 'fill', q: 'En Valencia ellos ___ paella.', answer: ['comerán'], hint: 'comer, futuro', explain: 'Nguyên mẫu + -án: comerán.' },
-          { type: 'order', vi: 'Tuần sau tôi sẽ đặt vé.', words: ['billetes', 'voy', 'La', 'reservar', 'semana', 'los', 'próxima', 'a'], answer: 'La próxima semana voy a reservar los billetes' }
+          { type: 'order', vi: 'Tuần sau tôi sẽ đặt vé.', words: ['billetes', 'voy', 'La', 'reservar', 'semana', 'los', 'próxima', 'a'], answer: 'La próxima semana voy a reservar los billetes', alt: ['voy a reservar los billetes La próxima semana'] }
         ]
       }
     ]

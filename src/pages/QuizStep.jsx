@@ -22,8 +22,9 @@ function QuizResult({ u, lang, idx, summary, correct, total, wrongs, onRetry, on
   const [ring, setRing] = useState(0);
   useEffect(() => {
     const t = setTimeout(() => setRing(score), 150);
-    if (passed) { play('complete'); setTimeout(celebrate, 250); } else play('pop');
-    return () => clearTimeout(t);
+    const c = passed ? setTimeout(celebrate, 250) : null;
+    play(passed ? 'complete' : 'pop');
+    return () => { clearTimeout(t); clearTimeout(c); };
   }, []);
   return (
     <Flex vertical gap={16}>
@@ -38,12 +39,13 @@ function QuizResult({ u, lang, idx, summary, correct, total, wrongs, onRetry, on
               <div style={{ marginTop: 8 }}>
                 {passed
                   ? (firstPass ? `${u.vocab.length} từ mới đã được thêm vào danh sách ôn tập.` : 'Bạn đã nắm vững bài này.')
-                  : `Cần đúng từ ${PASS * 100}% để mở bài tiếp theo. Xem lại bài rồi thử lại nhé.`}
+                  : `Cần đúng từ ${PASS * 100}% để hoàn thành bài này. Nên xem lại bài rồi làm lại trước khi học tiếp.`}
               </div>
             </>}
             extra={[
               passed && nx && <Button key="next" type="primary" size="large" href={`#/c/${lang}/u/${nx.id}`}>Học bài tiếp theo <ArrowRightOutlined /></Button>,
               !passed && <Button key="review" type="primary" size="large" icon={<BookOutlined />} onClick={() => onGoStep(0)}>Xem lại từ vựng</Button>,
+              !passed && nx && <Button key="skip" size="large" href={`#/c/${lang}/u/${nx.id}`}>Sang bài tiếp theo</Button>,
               <Button key="retry" size="large" icon={<ReloadOutlined />} onClick={onRetry}>Làm lại</Button>,
               <Button key="road" size="large" href={`#/c/${lang}`}>Về lộ trình</Button>
             ].filter(Boolean)} />
@@ -111,6 +113,8 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
   const [picked, setPicked] = useState([]);
   const [summary, setSummary] = useState(null);
   const nextBtn = useRef(null);
+  const sayTimer = useRef(null);
+  useEffect(() => () => clearTimeout(sayTimer.current), []);
   const q = qs[i];
 
   const restart = () => {
@@ -123,7 +127,7 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
     setAns({ ok, ...extra });
     play(ok ? 'correct' : 'wrong');
     if (ok) { setCorrect(c => c + 1); setCombo(c => c + 1); } else { setWrongs(w => [...w, q]); setCombo(0); }
-    if (q.say) setTimeout(() => speak(q.say, tag), 350);
+    if (q.say) sayTimer.current = setTimeout(() => speak(q.say, tag), 350);
   };
 
   const finish = () => {
@@ -144,12 +148,13 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
   };
 
   const next = () => {
+    clearTimeout(sayTimer.current);
     if (i + 1 >= qs.length) return finish();
     setI(i + 1); setAns(null); setFill(''); setPicked([]);
   };
 
   const check = () => {
-    if (q.type === 'fill') { if (fill.trim()) { const r = checkFill(q, fill); answer(r.ok, { note: r.note }); } }
+    if (q.type === 'fill') { if (fill.trim()) { const r = checkFill(q, fill, zh); answer(r.ok, { note: r.note }); } }
     else if (q.type === 'order') { if (picked.length) answer(checkOrder(q, picked)); }
   };
 
@@ -160,7 +165,11 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
     return () => clearTimeout(t);
   }, [i, summary]);
 
-  useEffect(() => { if (ans) nextBtn.current?.focus(); }, [ans]);
+  useEffect(() => {
+    if (!ans) return;
+    const t = setTimeout(() => nextBtn.current?.focus(), 60);
+    return () => clearTimeout(t);
+  }, [ans]);
 
   // Phím tắt: 1–4 chọn đáp án, Enter để kiểm tra / tiếp tục
   useEffect(() => {
@@ -168,7 +177,10 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
       if (summary || e.target.tagName === 'INPUT') return;
       const isMc = q.type === 'mc' || q.type === 'listen';
       if (isMc && !ans && /^[1-4]$/.test(e.key) && +e.key <= q.options.length) answer(+e.key - 1 === q.answer, { choice: +e.key - 1 });
-      else if (e.key === 'Enter' && document.activeElement?.tagName !== 'BUTTON') { if (ans) next(); else check(); }
+      else if (e.key === 'Enter' && !e.repeat && !e.isComposing && document.activeElement?.tagName !== 'BUTTON') {
+        e.preventDefault();
+        if (ans) next(); else check();
+      }
     };
     window.addEventListener('keydown', h);
     return () => window.removeEventListener('keydown', h);
@@ -239,7 +251,7 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
             {q.type === 'fill' && (
               <div className={ans && !ans.ok ? 'shake' : ''}>
                 <Input size="large" autoFocus value={fill} disabled={!!ans} status={ans && !ans.ok ? 'error' : ''}
-                  onChange={e => setFill(e.target.value)} onPressEnter={check} autoComplete="off" spellCheck={false}
+                  onChange={e => setFill(e.target.value)} onPressEnter={e => { if (e.nativeEvent.isComposing || e.repeat) return; e.preventDefault(); check(); }} autoComplete="off" spellCheck={false}
                   placeholder={zh ? 'Gõ chữ Hán hoặc pinyin (không dấu cũng được)' : 'Gõ đáp án của bạn'} />
               </div>
             )}

@@ -63,7 +63,7 @@ addLevels('es', [
           { type: 'fill', q: '¿___ estado alguna vez en México? (tú)', answer: ['has'], hint: 'haber, ngôi tú', explain: 'Tú đi với has: ¿Has estado...?' },
           { type: 'fill', q: 'Todavía no he ___ la reserva. (hacer)', answer: ['hecho'], hint: 'participio bất quy tắc', explain: 'Hacer → hecho.' },
           { type: 'mc', q: 'Chọn câu có nghĩa "Tôi vẫn chưa ký gửi hành lý."', options: ['Ya he facturado el equipaje.', 'Todavía no he facturado el equipaje.', 'No he todavía facturado el equipaje.'], answer: 1, explain: 'Todavía no đứng trước haber; không chen vào giữa haber và participio.' },
-          { type: 'order', vi: 'Bạn đã bao giờ đến Sevilla chưa?', words: ['alguna', '¿Has', 'Sevilla?', 'estado', 'en', 'vez'], answer: '¿Has estado alguna vez en Sevilla?' },
+          { type: 'order', vi: 'Bạn đã bao giờ đến Sevilla chưa?', words: ['alguna', '¿Has', 'Sevilla?', 'estado', 'en', 'vez'], answer: '¿Has estado alguna vez en Sevilla?', alt: ['¿Has estado en Sevilla? alguna vez'] },
           { type: 'order', vi: 'Chúng tôi đã đi khắp trung tâm thành phố.', words: ['el', 'ciudad', 'recorrido', 'de', 'Hemos', 'la', 'centro'], answer: 'Hemos recorrido el centro de la ciudad' },
           { type: 'fill', q: 'Ellos ___ vuelto del viaje hoy.', answer: ['han'], hint: 'haber, ngôi ellos', explain: 'Ellos đi với han; volver → vuelto.' }
         ]
@@ -120,8 +120,8 @@ addLevels('es', [
           { type: 'fill', q: 'El año pasado la empresa ___ a cinco personas. (contratar)', answer: ['contrató'], hint: 'indefinido, ngôi él', explain: 'El año pasado → indefinido; ngôi 3 số ít đuôi -ó: contrató.' },
           { type: 'fill', q: 'Todavía no ___ enviado el currículum. (yo)', answer: ['he'], hint: 'haber', explain: 'Todavía no đi với pretérito perfecto: he enviado.' },
           { type: 'mc', q: 'Cụm từ nào đi với pretérito indefinido?', options: ['esta semana', 'hace dos años', 'todavía no'], answer: 1, explain: 'Hace dos años chỉ thời điểm đã kết thúc → indefinido.' },
-          { type: 'order', vi: 'Tôi đã làm việc ở một công ty Đức vào năm 2019.', words: ['empresa', 'en', 'Trabajé', '2019', 'una', 'alemana', 'en'], answer: 'Trabajé en una empresa alemana en 2019' },
-          { type: 'order', vi: 'Hôm nay sếp đã khen tôi.', words: ['me', 'felicitado', 'Hoy', 'jefe', 'ha', 'mi'], answer: 'Hoy mi jefe me ha felicitado' },
+          { type: 'order', vi: 'Tôi đã làm việc ở một công ty Đức vào năm 2019.', words: ['empresa', 'en', 'Trabajé', '2019', 'una', 'alemana', 'en'], answer: 'Trabajé en una empresa alemana en 2019', alt: ['en 2019 Trabajé en una empresa alemana'] },
+          { type: 'order', vi: 'Hôm nay sếp đã khen tôi.', words: ['me', 'felicitado', 'Hoy', 'jefe', 'ha', 'mi'], answer: 'Hoy mi jefe me ha felicitado', alt: ['mi jefe me ha felicitado Hoy', 'Hoy me ha felicitado mi jefe'] },
           { type: 'mc', q: 'El plazo ___ el viernes pasado.', options: ['ha terminado', 'terminó', 'termina'], answer: 1, explain: 'El viernes pasado đã kết thúc → indefinido: terminó.' }
         ]
       },
@@ -239,8 +239,8 @@ addLevels('es', [
           { type: 'fill', q: 'De niña, ___ ir a la playa todos los veranos. (yo, soler)', answer: ['solía'], hint: 'imperfecto', explain: 'Thói quen trong quá khứ → imperfecto của soler: solía.' },
           { type: 'fill', q: 'Ayer ___ un ruido extraño en la cocina. (nosotros, oír)', answer: ['oímos'], hint: 'indefinido', explain: 'Sự kiện cụ thể hôm qua → indefinido: oímos.' },
           { type: 'mc', q: 'Câu nào miêu tả bối cảnh?', options: ['Hacía frío y llovía.', 'De repente, llegó la policía.', 'Al final, encontramos las llaves.'], answer: 0, explain: 'Thời tiết là bối cảnh → imperfecto: hacía, llovía.' },
-          { type: 'order', vi: 'Khi còn nhỏ, tôi sống ở một ngôi làng.', words: ['pueblo', 'vivía', 'Cuando', 'un', 'niño,', 'era', 'en'], answer: 'Cuando era niño, vivía en un pueblo' },
-          { type: 'order', vi: 'Đột nhiên, đèn tắt hết.', words: ['las', 'repente,', 'apagaron', 'De', 'luces', 'se'], answer: 'De repente, se apagaron las luces' },
+          { type: 'order', vi: 'Khi còn nhỏ, tôi sống ở một ngôi làng.', words: ['pueblo', 'vivía', 'Cuando', 'un', 'niño,', 'era', 'en'], answer: 'Cuando era niño, vivía en un pueblo', alt: ['vivía en un pueblo Cuando era niño,'] },
+          { type: 'order', vi: 'Đột nhiên, đèn tắt hết.', words: ['las', 'repente,', 'apagaron', 'De', 'luces', 'se'], answer: 'De repente, se apagaron las luces', alt: ['De repente, las luces se apagaron'] },
           { type: 'mc', q: '¿Qué ___ aquella noche?', options: ['ocurría', 'ocurrió', 'ocurre'], answer: 1, explain: 'Hỏi về một sự kiện cụ thể đã xảy ra → indefinido: ocurrió.' }
         ]
       },
@@ -301,7 +301,7 @@ addLevels('es', [
           { type: 'fill', q: 'Madrid es la ciudad más grande ___ España.', answer: ['de'], hint: 'giới từ', explain: 'So sánh nhất: el/la más + tính từ + de.' },
           { type: 'mc', q: 'Chọn câu đúng: "Tôi thấy là nó đắt quá."', options: ['Me parece que es demasiado caro.', 'Me parezco que es demasiado caro.', 'Parece me que es demasiado caro.'], answer: 0, explain: 'Cấu trúc cố định: Me parece que + mệnh đề.' },
           { type: 'order', vi: 'Tôi nghĩ là nông thôn yên tĩnh hơn.', words: ['tranquilo', 'que', 'campo', 'Creo', 'más', 'el', 'es'], answer: 'Creo que el campo es más tranquilo' },
-          { type: 'order', vi: 'Đây là chiếc sofa thoải mái nhất cửa hàng.', words: ['cómodo', 'de', 'sofá', 'Este', 'tienda', 'el', 'más', 'la', 'es'], answer: 'Este es el sofá más cómodo de la tienda' },
+          { type: 'order', vi: 'Đây là chiếc sofa thoải mái nhất cửa hàng.', words: ['cómodo', 'de', 'sofá', 'Este', 'tienda', 'el', 'más', 'la', 'es'], answer: 'Este es el sofá más cómodo de la tienda', alt: ['el sofá más cómodo de la tienda es Este'] },
           { type: 'mc', q: 'Hoy el tráfico está ___ que ayer. (tệ hơn)', options: ['más malo', 'peor', 'menos'], answer: 1, explain: 'Malo → peor.' }
         ]
       },
@@ -360,8 +360,8 @@ addLevels('es', [
           { type: 'fill', q: '¿El libro? Te ___ devuelvo mañana.', answer: ['lo'], hint: 'tân ngữ trực tiếp, giống đực số ít', explain: 'El libro → lo: Te lo devuelvo.' },
           { type: 'fill', q: 'Si ___ tiempo, te ayudo. (yo, tener)', answer: ['tengo'], hint: 'presente', explain: 'Sau si dùng presente: tengo.' },
           { type: 'mc', q: '¿Me prestas el paraguas? — Sí, ___ presto.', options: ['te lo', 'te la', 'se lo'], answer: 0, explain: 'Cho bạn (te) + el paraguas (lo) → te lo.' },
-          { type: 'order', vi: 'Nếu bạn đến muộn, hãy báo cho tôi.', words: ['avísame', 'tarde,', 'Si', 'llegas'], answer: 'Si llegas tarde, avísame' },
-          { type: 'order', vi: 'Hôm nay tôi gửi nó cho anh ấy.', words: ['hoy', 'envío', 'Se', 'lo'], answer: 'Se lo envío hoy' },
+          { type: 'order', vi: 'Nếu bạn đến muộn, hãy báo cho tôi.', words: ['avísame', 'tarde,', 'Si', 'llegas'], answer: 'Si llegas tarde, avísame', alt: ['avísame Si llegas tarde,'] },
+          { type: 'order', vi: 'Hôm nay tôi gửi nó cho anh ấy.', words: ['hoy', 'envío', 'Se', 'lo'], answer: 'Se lo envío hoy', alt: ['hoy Se lo envío'] },
           { type: 'mc', q: '"Quiero comprar la camisa." → "Quiero ___."', options: ['comprarla', 'comprarlo', 'comprarle'], answer: 0, explain: 'La camisa (giống cái) → la, gắn vào sau động từ nguyên mẫu: comprarla.' }
         ]
       }
@@ -430,7 +430,7 @@ addLevels('es', [
           { type: 'fill', q: 'Ojalá ___ buen tiempo el fin de semana. (hacer)', answer: ['haga'], hint: 'subjuntivo', explain: 'Ojalá + subjuntivo; hago → haga.' },
           { type: 'fill', q: 'Me alegro de que ___ mejor. (tú, estar)', answer: ['estés'], hint: 'subjuntivo, ngôi tú', explain: 'Cảm xúc + que + subjuntivo; estar → estés.' },
           { type: 'mc', q: 'Mis padres quieren que yo ___ medicina.', options: ['estudio', 'estudie', 'estudiar'], answer: 1, explain: 'Hai chủ ngữ khác nhau (mis padres / yo) → subjuntivo: estudie.' },
-          { type: 'order', vi: 'Mình mong là bạn thích món quà.', words: ['guste', 'regalo', 'que', 'Espero', 'el', 'te'], answer: 'Espero que te guste el regalo' },
+          { type: 'order', vi: 'Mình mong là bạn thích món quà.', words: ['guste', 'regalo', 'que', 'Espero', 'el', 'te'], answer: 'Espero que te guste el regalo', alt: ['Espero que el regalo te guste'] },
           { type: 'order', vi: 'Ước gì chúng ta sớm gặp lại nhau.', words: ['pronto', 'veamos', 'Ojalá', 'nos'], answer: 'Ojalá nos veamos pronto' },
           { type: 'fill', q: 'Me molesta que la gente ___ en el cine. (hablar)', answer: ['hable'], hint: 'subjuntivo, ngôi 3 số ít', explain: 'Me molesta que + subjuntivo; hablar → hable.' }
         ]
@@ -491,8 +491,8 @@ addLevels('es', [
           { type: 'fill', q: 'Si ___ rico, compraría una isla. (yo, ser)', answer: ['fuera', 'fuese'], hint: 'imperfecto de subjuntivo', explain: 'Ser → fueron → fuera (hoặc fuese).' },
           { type: 'fill', q: 'Yo, en tu lugar, ___ la oferta. (aceptar)', answer: ['aceptaría'], hint: 'condicional', explain: 'Lời khuyên với "en tu lugar" dùng condicional: aceptaría.' },
           { type: 'mc', q: 'Chọn câu đúng:', options: ['Si tendría dinero, viajaría.', 'Si tuviera dinero, viajaría.', 'Si tengo dinero, viajaría.'], answer: 1, explain: 'Si + imperfecto de subjuntivo, condicional.' },
-          { type: 'order', vi: 'Bạn sẽ làm gì nếu trúng xổ số?', words: ['tocara', 'si', '¿Qué', 'lotería?', 'harías', 'la', 'te'], answer: '¿Qué harías si te tocara la lotería?' },
-          { type: 'order', vi: 'Nếu tiết kiệm nhiều hơn, tôi có thể mua một căn hộ.', words: ['podría', 'piso', 'más,', 'Si', 'un', 'ahorrara', 'comprar'], answer: 'Si ahorrara más, podría comprar un piso' },
+          { type: 'order', vi: 'Bạn sẽ làm gì nếu trúng xổ số?', words: ['tocara', 'si', '¿Qué', 'lotería?', 'harías', 'la', 'te'], answer: '¿Qué harías si te tocara la lotería?', alt: ['si te tocara la lotería? ¿Qué harías'] },
+          { type: 'order', vi: 'Nếu tiết kiệm nhiều hơn, tôi có thể mua một căn hộ.', words: ['podría', 'piso', 'más,', 'Si', 'un', 'ahorrara', 'comprar'], answer: 'Si ahorrara más, podría comprar un piso', alt: ['podría comprar un piso Si ahorrara más,'] },
           { type: 'fill', q: 'Si mis padres ___ aquí, estarían orgullosos. (estar)', answer: ['estuvieran', 'estuviesen'], hint: 'imperfecto de subjuntivo, ngôi ellos', explain: 'Estar → estuvieron → estuvieran (hoặc estuviesen).' }
         ]
       },
@@ -549,7 +549,7 @@ addLevels('es', [
           { type: 'fill', q: 'Los ladrones fueron ___ por la policía. (detener)', answer: ['detenidos'], hint: 'participio, giống đực số nhiều', explain: 'Los ladrones → detenidos.' },
           { type: 'fill', q: 'En España ___ cena muy tarde.', answer: ['se'], hint: 'người ta', explain: 'Se impersonal: se cena = người ta ăn tối.' },
           { type: 'mc', q: 'Câu nào là bị động với "ser"?', options: ['Se construyó un puente.', 'El puente fue construido en 1990.', 'Construyeron un puente.'], answer: 1, explain: 'Ser (fue) + participio (construido).' },
-          { type: 'order', vi: 'Bệnh viện mới được khánh thành hôm thứ Hai.', words: ['lunes', 'fue', 'El', 'inaugurado', 'hospital', 'el', 'nuevo'], answer: 'El nuevo hospital fue inaugurado el lunes' },
+          { type: 'order', vi: 'Bệnh viện mới được khánh thành hôm thứ Hai.', words: ['lunes', 'fue', 'El', 'inaugurado', 'hospital', 'el', 'nuevo'], answer: 'El nuevo hospital fue inaugurado el lunes', alt: ['El hospital nuevo fue inaugurado el lunes', 'el lunes fue inaugurado El nuevo hospital'] },
           { type: 'order', vi: 'Người ta tin rằng đó là một sự cố điện.', words: ['eléctrico', 'que', 'Se', 'problema', 'fue', 'cree', 'un'], answer: 'Se cree que fue un problema eléctrico' },
           { type: 'fill', q: 'El incendio ___ controlado en pocas horas. (ser, indefinido)', answer: ['fue'], hint: 'ser, ngôi 3 số ít', explain: 'Bị động ở quá khứ: fue + participio.' }
         ]
@@ -669,11 +669,11 @@ addLevels('es', [
         exercises: [
           { type: 'mc', q: 'Este es el pueblo ___ nací.', options: ['que', 'donde', 'cuyo'], answer: 1, explain: 'Nơi chốn → donde.' },
           { type: 'mc', q: 'Es una escritora ___ libros se venden en todo el mundo.', options: ['cuyos', 'cuyas', 'que'], answer: 0, explain: 'Cuyo hợp với libros (giống đực, số nhiều) → cuyos.' },
-          { type: 'fill', q: 'La chica con ___ hablé ayer es voluntaria.', answer: ['quien', 'la que'], hint: 'người, sau giới từ', explain: 'Sau giới từ, chỉ người → quien (hoặc la que).' },
+          { type: 'fill', q: 'La chica con ___ hablé ayer es voluntaria.', answer: ['quien', 'la que', 'la cual'], hint: 'người, sau giới từ', explain: 'Sau giới từ, chỉ người → quien (hoặc la que / la cual).' },
           { type: 'fill', q: 'Los residuos ___ producimos terminan en el mar.', answer: ['que'], hint: 'đại từ quan hệ phổ biến nhất', explain: 'Không có giới từ, chỉ vật → que.' },
           { type: 'mc', q: 'La empresa para ___ trabajo usa energía renovable.', options: ['la que', 'que', 'cuya'], answer: 0, explain: 'Sau giới từ para, la empresa giống cái → la que.' },
-          { type: 'order', vi: 'Ô nhiễm là vấn đề khiến chúng tôi lo lắng nhất.', words: ['preocupa', 'el', 'La', 'más', 'problema', 'contaminación', 'nos', 'que', 'es'], answer: 'La contaminación es el problema que más nos preocupa' },
-          { type: 'order', vi: 'Điều chúng tôi cần là thêm tình nguyện viên.', words: ['voluntarios', 'que', 'Lo', 'más', 'necesitamos', 'son'], answer: 'Lo que necesitamos son más voluntarios' },
+          { type: 'order', vi: 'Ô nhiễm là vấn đề khiến chúng tôi lo lắng nhất.', words: ['preocupa', 'el', 'La', 'más', 'problema', 'contaminación', 'nos', 'que', 'es'], answer: 'La contaminación es el problema que más nos preocupa', alt: ['el problema que más nos preocupa es La contaminación', 'La contaminación es el problema que nos preocupa más', 'el problema que nos preocupa más es La contaminación'] },
+          { type: 'order', vi: 'Điều chúng tôi cần là có thêm nhiều tình nguyện viên hơn.', words: ['voluntarios', 'que', 'Lo', 'más', 'necesitamos', 'son'], answer: 'Lo que necesitamos son más voluntarios' },
           { type: 'mc', q: 'Es un país ___ ciudades sufren mucha contaminación.', options: ['cuyo', 'cuyas', 'cuya'], answer: 1, explain: 'Cuyo hợp với ciudades (giống cái, số nhiều) → cuyas.' }
         ]
       },

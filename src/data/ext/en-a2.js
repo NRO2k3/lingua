@@ -61,7 +61,7 @@ export default {
       { type: 'mc', q: '___ does this scarf cost?', options: ['How many', 'How much', 'What much'], answer: 1, explain: 'Hỏi giá dùng How much: How much does it cost?' },
       { type: 'mc', q: 'How ___ coins do you have?', options: ['much', 'many', 'often'], answer: 1, explain: 'coins là danh từ đếm được số nhiều → How many.' },
       { type: 'fill', q: 'How much ___ these sweaters? — They\'re 30 dollars.', answer: ['are'], hint: 'is hay are?', explain: 'these sweaters là số nhiều → How much are…?' },
-      { type: 'fill', q: '___ you give me the receipt, please?', answer: ['Could', 'Can'], hint: 'nhờ lịch sự', explain: 'Nhờ ai làm gì lịch sự: Could you…? (Can you…? cũng được nhưng kém lịch sự hơn).' },
+      { type: 'fill', q: '___ you give me the receipt, please?', answer: ['Could', 'Can', 'Would', 'Will'], hint: 'nhờ lịch sự', explain: 'Nhờ ai làm gì lịch sự: Could you…? / Would you…? (Can you…? / Will you…? cũng được nhưng kém lịch sự hơn).' },
       { type: 'mc', q: 'This sweater is only $5. It\'s a real ___!', options: ['bargain', 'receipt', 'wallet'], answer: 0, explain: 'Mua được giá rất rẻ → a bargain (món hời).' },
       { type: 'mc', q: 'The ___ helped me find my size.', options: ['customer', 'shop assistant', 'mall'], answer: 1, explain: 'Người giúp khách trong cửa hàng là nhân viên bán hàng: shop assistant.' },
       { type: 'order', vi: 'Chiếc khăn quàng này bao nhiêu tiền?', words: ['scarf?', 'How', 'this', 'is', 'much'], answer: 'How much is this scarf?' },
@@ -98,7 +98,7 @@ export default {
       { w: 'furniture', ipa: '/ˈfɜːrnɪtʃər/', vi: 'đồ đạc, đồ nội thất', ex: 'There isn\'t much furniture in my room.', exVi: 'Trong phòng tôi không có nhiều đồ đạc.' },
       { w: 'upstairs', ipa: '/ˌʌpˈsterz/', vi: 'ở tầng trên, lên tầng', ex: 'The bathroom is upstairs.', exVi: 'Phòng tắm ở tầng trên.' },
       { w: 'downstairs', ipa: '/ˌdaʊnˈsterz/', vi: 'ở tầng dưới, xuống tầng', ex: 'Is there a kitchen downstairs?', exVi: 'Ở tầng dưới có bếp không?' },
-      { w: 'opposite', ipa: '/ˈɑːpəzɪt/', vi: 'đối diện', ex: 'The bank is opposite the post office.', exVi: 'Ngân hàng ở đối diện bưu điện.' },
+      { w: 'opposite', ipa: '/ˈɑːpəzɪt/', vi: 'đối diện; trái ngược', ex: 'The bank is opposite the post office.', exVi: 'Ngân hàng ở đối diện bưu điện.' },
       { w: 'traffic light', ipa: '/ˈtræfɪk laɪt/', vi: 'đèn giao thông', ex: 'Turn right at the traffic light.', exVi: 'Rẽ phải ở chỗ đèn giao thông.' },
       { w: 'entrance', ipa: '/ˈentrəns/', vi: 'lối vào, cổng vào', ex: 'The entrance is next to the café.', exVi: 'Lối vào ở bên cạnh quán cà phê.' }
     ],
@@ -109,7 +109,7 @@ export default {
       { type: 'fill', q: 'Go straight and turn left ___ the traffic light.', answer: ['at'], hint: 'giới từ, chỉ một điểm', explain: 'Rẽ ở một điểm cụ thể dùng at: at the traffic light.' },
       { type: 'mc', q: 'The bank is ___ the school, on the other side of the street.', options: ['opposite', 'upstairs', 'under'], answer: 0, explain: 'Ở phía bên kia đường, đối diện → opposite.' },
       { type: 'mc', q: 'We keep cups and plates in the kitchen ___.', options: ['balcony', 'cupboard', 'entrance'], answer: 1, explain: 'Cốc, đĩa cất trong tủ: cupboard.' },
-      { type: 'order', vi: 'Có một ban công nhỏ ở tầng trên.', words: ['a', 'balcony', 'There', 'upstairs', 'small', 'is'], answer: 'There is a small balcony upstairs' },
+      { type: 'order', vi: 'Có một ban công nhỏ ở tầng trên.', words: ['a', 'balcony', 'There', 'upstairs', 'small', 'is'], answer: 'There is a small balcony upstairs', alt: ['upstairs There is a small balcony'] },
       { type: 'order', vi: 'Lối vào ở đối diện công viên.', words: ['opposite', 'entrance', 'The', 'park', 'is', 'the'], answer: 'The entrance is opposite the park' }
     ],
     reading: {
@@ -200,7 +200,7 @@ export default {
       { type: 'mc', q: 'She ___ plays video games. She thinks they are boring.', options: ['always', 'usually', 'never'], answer: 2, explain: 'Cô ấy thấy chán → không bao giờ chơi: never.' },
       { type: 'mc', q: 'How often ___ you play badminton? — Twice a week.', options: ['do', 'are', 'does'], answer: 0, explain: 'Hỏi tần suất: How often do you + V?' },
       { type: 'order', vi: 'Anh ấy thường tham gia các cuộc thi.', words: ['takes', 'He', 'competitions', 'part', 'often', 'in'], answer: 'He often takes part in competitions' },
-      { type: 'order', vi: 'Tôi thích chụp ảnh vào thời gian rảnh.', words: ['love', 'free', 'I', 'photography', 'my', 'in', 'time'], answer: 'I love photography in my free time' }
+      { type: 'order', vi: 'Tôi thích chụp ảnh vào thời gian rảnh.', words: ['love', 'free', 'I', 'photography', 'doing', 'my', 'in', 'time'], answer: 'I love doing photography in my free time' }
     ],
     reading: {
       title: 'My Free Time',

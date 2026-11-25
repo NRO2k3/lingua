@@ -54,8 +54,8 @@ function WelcomeCard() {
       <Title level={3} style={{ marginTop: 0 }}>Bắt đầu hành trình của bạn 🚀</Title>
       <Paragraph type="secondary" style={{ marginBottom: 0 }}>
         Chọn một ngôn ngữ bên dưới. Mỗi bài học mất khoảng 15–20 phút: học từ mới, hiểu ngữ pháp,
-        nghe hội thoại, tập nói và làm bài kiểm tra ngắn. Xong bài này mới mở bài tiếp theo, nên bạn
-        luôn biết mình cần học gì.
+        nghe hội thoại, đọc hiểu, tập nói và làm bài kiểm tra ngắn. Bạn tự chọn trình độ của mình
+        và có thể học bất kỳ bài nào.
       </Paragraph>
     </Card>
   );
@@ -131,7 +131,7 @@ const HOW = [
   { title: 'Hội thoại', description: 'Nghe tình huống thật', icon: <MessageOutlined /> },
   { title: 'Đọc hiểu', description: 'Bài đọc + câu hỏi', icon: <ReadOutlined /> },
   { title: 'Luyện nói', description: 'Nói và được chấm điểm', icon: <AudioOutlined /> },
-  { title: 'Kiểm tra', description: 'Đạt 70% để qua bài', icon: <TrophyOutlined /> }
+  { title: 'Kiểm tra', description: 'Đạt 70% là hoàn thành', icon: <TrophyOutlined /> }
 ];
 
 export default function Home() {

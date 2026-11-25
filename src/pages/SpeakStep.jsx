@@ -112,8 +112,8 @@ function SentenceMode({ u, lang }) {
           <Pinyin text={it.py} blur={hidden} />
           <Text type="secondary">{it.vi}</Text>
           <Space wrap style={{ justifyContent: 'center' }}>
-            <Button icon={<SoundOutlined />} onClick={() => speak(it.t, tag)}>Nghe mẫu</Button>
-            <Button icon={<SoundOutlined />} onClick={() => speak(it.t, tag, { rate: 0.6 })}>Nghe chậm</Button>
+            <Button icon={<SoundOutlined />} onClick={() => { mic.cancel(); speak(it.t, tag); }}>Nghe mẫu</Button>
+            <Button icon={<SoundOutlined />} onClick={() => { mic.cancel(); speak(it.t, tag, { rate: 0.6 }); }}>Nghe chậm</Button>
           </Space>
           <MicButton listening={mic.listening} onClick={() => { at.current = i; setRes(s => { const n = { ...s }; delete n[i]; return n; }); mic.start(it.t); }} />
           <Text type="secondary">{mic.listening ? 'Đang nghe… đọc to câu trên rồi dừng lại' : 'Bấm micro rồi đọc to câu trên'}</Text>
@@ -230,9 +230,9 @@ function RolePlay({ u, lang }) {
             {mic.interim && <Text italic>“{mic.interim}”</Text>}
             {r && <SpeakFeedback r={r} />}
             <Space wrap style={{ justifyContent: 'center' }}>
-              <Button icon={<SoundOutlined />} onClick={() => speak(cur.t, tag, { rate: 0.8 })}>Nghe gợi ý</Button>
+              <Button icon={<SoundOutlined />} onClick={() => { mic.cancel(); speak(cur.t, tag, { rate: 0.8 }); }}>Nghe gợi ý</Button>
               {r
-                ? <Button type="primary" onClick={() => setI(i + 1)}>Tiếp tục <RightOutlined /></Button>
+                ? <Button type="primary" onClick={() => { mic.cancel(); setI(i + 1); }}>Tiếp tục <RightOutlined /></Button>
                 : <Button onClick={() => { mic.cancel(); setRes(s => ({ ...s, [i]: { heard: '', score: 0, skipped: true, ok: splitUnits(cur.t).map(() => false) } })); setI(i + 1); }}>Bỏ qua</Button>}
             </Space>
           </Flex>

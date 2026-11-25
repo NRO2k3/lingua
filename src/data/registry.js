@@ -18,5 +18,7 @@ window.COURSES = {
 };
 
 window.addLevels = function (lang, levels) {
-  window.COURSES[lang].levels.push(...levels);
+  const list = window.COURSES[lang].levels;
+  // Bỏ qua cấp đã có (tránh nạp trùng khi file dữ liệu được nạp lại lúc phát triển)
+  levels.forEach(l => { if (!list.some(x => x.id === l.id)) list.push(l); });
 };

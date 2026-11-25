@@ -75,7 +75,7 @@ export default {
         explain: '10 + 5 = 15 → quince.' },
       { type: 'mc', q: 'Emma es de Londres. Ella es ___.', options: ['inglés', 'inglesa', 'ingleses'], answer: 1,
         explain: 'Emma là nữ nên dùng dạng giống cái: inglesa.' },
-      { type: 'order', vi: 'Bạn đến từ đâu?', words: ['dónde', '¿De', 'eres?'], answer: '¿De dónde eres?' },
+      { type: 'order', vi: 'Cô giáo của bạn đến từ đâu?', words: ['profesora?', 'es', '¿De', 'tu', 'dónde'], answer: '¿De dónde es tu profesora?' },
       { type: 'fill', q: '¿Qué ___ tiene tu padre?', answer: ['edad'], hint: 'tuổi',
         explain: '¿Qué edad tiene…? = … bao nhiêu tuổi?' },
       { type: 'mc', q: 'Số 30 trong tiếng Tây Ban Nha là:', options: ['trece', 'treinta', 'tres'], answer: 1,
@@ -185,7 +185,7 @@ export default {
         explain: 'Grande không đổi giống, số nhiều thêm -s: grandes.' },
       { type: 'mc', q: 'Chọn cụm từ đúng:', options: ['una puerta verda', 'una puerta verde', 'un puerta verde'], answer: 1,
         explain: 'Puerta giống cái → una; verde tận cùng -e nên không đổi giống.' },
-      { type: 'order', vi: 'Đây là cái gì?', words: ['es', '¿Qué', 'esto?'], answer: '¿Qué es esto?' },
+      { type: 'order', vi: 'Ba lô của bạn màu gì?', words: ['color', 'mochila?', '¿De', 'es', 'tu', 'qué'], answer: '¿De qué color es tu mochila?' },
       { type: 'fill', q: 'Tengo ___ ordenador nuevo.', answer: ['un'], hint: 'một',
         explain: 'Ordenador giống đực, nhắc lần đầu → un.' },
       { type: 'mc', q: '¿De qué ___ es el coche?', options: ['color', 'grande', 'teléfono'], answer: 0,
@@ -214,7 +214,7 @@ export default {
           explain: 'Un teléfono rojo = một điện thoại màu đỏ.' },
         { q: 'Trên bàn có mấy quyển vở?', options: ['Một', 'Hai', 'Ba', 'Bốn'], answer: 1,
           explain: 'Dos cuadernos amarillos = hai quyển vở màu vàng.' },
-        { q: 'Vì sao ba lô của người viết màu xanh lá?', options: ['Vì là quà của bà', 'Vì xanh lá là màu người viết thích nhất', 'Vì em trai thích màu xanh lá'], answer: 1,
+        { q: 'Vì sao ba lô của người viết màu xanh lá?', options: ['Vì là quà của bà', 'Vì xanh lá là màu người viết thích nhất', 'Vì em trai thích màu xanh lá', 'Vì ba lô màu xanh lá rẻ hơn'], answer: 1,
           explain: 'Mi color favorito es el verde, por eso mi mochila es verde.' }
       ]
     }
@@ -245,7 +245,7 @@ export default {
         explain: 'Nosotros + -ar → -amos: cocinamos.' },
       { type: 'mc', q: 'Mis padres ___ un café después de comer.', options: ['toman', 'tomamos', 'toma'], answer: 0,
         explain: 'Mis padres = ellos → -an: toman.' },
-      { type: 'order', vi: 'Anh ấy tắm vào buổi sáng.', words: ['ducha', 'Él', 'por', 'se', 'mañana', 'la'], answer: 'Él se ducha por la mañana' },
+      { type: 'order', vi: 'Anh ấy tắm vào buổi sáng.', words: ['ducha', 'Él', 'por', 'se', 'mañana', 'la'], answer: 'Él se ducha por la mañana', alt: ['por la mañana Él se ducha'] },
       { type: 'fill', q: 'Vosotros ___ en el cuaderno.', answer: ['escribís'], hint: 'escribir',
         explain: 'Vosotros + -ir → -ís: escribís (khác -er: coméis).' }
     ],
@@ -269,7 +269,7 @@ export default {
           explain: 'Toma un café con leche y pan.' },
         { q: 'Buổi chiều Carlos làm gì?', options: ['Nấu ăn', 'Ngủ', 'Học tiếng Anh', 'Đọc sách'], answer: 2,
           explain: 'Por la tarde, estudia inglés.' },
-        { q: 'Carlos ngủ mấy tiếng?', options: ['Sáu', 'Bảy', 'Tám'], answer: 1,
+        { q: 'Carlos ngủ mấy tiếng?', options: ['Sáu', 'Bảy', 'Tám', 'Chín'], answer: 1,
           explain: 'Duerme siete horas.' }
       ]
     }
@@ -295,12 +295,12 @@ export default {
         explain: 'Gọi món lịch sự: Quisiera…' },
       { type: 'mc', q: 'A mi padre ___ gusta el vino.', options: ['me', 'le', 'te'], answer: 1,
         explain: 'A mi padre = anh ấy (él) → đại từ le.' },
-      { type: 'order', vi: 'Tôi không thích trà.', words: ['me', 'el', 'No', 'té', 'gusta'], answer: 'No me gusta el té' },
+      { type: 'order', vi: 'Tôi không thích trà.', words: ['me', 'el', 'No', 'té', 'gusta'], answer: 'No me gusta el té', alt: ['el té No me gusta'] },
       { type: 'fill', q: '¿Os ___ la sopa?', answer: ['gusta'], hint: 'gustar',
         explain: 'La sopa là số ít → gusta.' },
       { type: 'mc', q: '"Para mí, una ___, por favor." – Bạn muốn gọi món sa lát:', options: ['sopa', 'ensalada', 'queso', 'huevo'], answer: 1,
         explain: 'La ensalada = món sa lát.' },
-      { type: 'order', vi: 'Chúng tôi thích cơm gà.', words: ['gusta', 'Nos', 'pollo', 'el', 'con', 'arroz'], answer: 'Nos gusta el pollo con arroz' },
+      { type: 'order', vi: 'Chúng tôi thích cơm gà.', words: ['gusta', 'Nos', 'pollo', 'el', 'con', 'arroz'], answer: 'Nos gusta el pollo con arroz', alt: ['el pollo con arroz Nos gusta'] },
       { type: 'fill', q: 'A ellos ___ gustan las ensaladas.', answer: ['les'], hint: 'đại từ cho ellos',
         explain: 'A ellos → les.' }
     ],

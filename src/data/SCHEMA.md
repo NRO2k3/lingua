@@ -69,6 +69,8 @@ Lưu ý:
 - Không có dấu phẩy thừa gây lỗi; file phải chạy được bằng `node -e`.
 - Câu hỏi `fill` phải có đúng một chỗ `___`.
 - Trong `order`, `words` khi ghép theo thứ tự đúng bằng đúng `answer` (tách theo dấu cách). Dấu câu như `?` gắn liền với từ: `'you?'`.
+- `order` có thể thêm `alt: ['…', '…']`: các trật tự khác cũng đúng ngữ pháp và cùng nghĩa (dùng đúng các từ trong `words`);
+  khi chấm, câu ghép khớp `answer` hoặc bất kỳ câu nào trong `alt` đều tính là đúng.
 
 ## Riêng tiếng Trung (`zh`)
 

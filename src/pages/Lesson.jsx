@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Alert, Breadcrumb, Button, Card, Col, Flex, List, Result, Row, Segmented, Space, Steps, Switch, Table, Tag, Typography } from 'antd';
+import { Alert, Breadcrumb, Button, Card, Col, Flex, Grid, List, Result, Row, Segmented, Space, Steps, Switch, Table, Tag, Typography } from 'antd';
 import {
   ArrowLeftOutlined, ArrowRightOutlined, AudioOutlined, BookOutlined, BulbFilled, BulbOutlined, CreditCardOutlined,
-  LeftOutlined, LockOutlined, MessageOutlined, PlayCircleOutlined, ReadOutlined, RightOutlined, TrophyOutlined, UnorderedListOutlined
+  LeftOutlined, MessageOutlined, PlayCircleOutlined, ReadOutlined, RightOutlined, TrophyOutlined, UnorderedListOutlined
 } from '@ant-design/icons';
 import { COURSES, LEVEL_NAME, findUnit } from '../lib/courses.js';
-import { isUnlocked, useProgress } from '../lib/store.js';
+import { useProgress } from '../lib/store.js';
 import { speakAll, stopRec, stopSpeaking } from '../lib/speech.js';
 import { ChatLine, Flashcard, HanViet, LangTheme, Pinyin, SoundButton } from '../components/common.jsx';
 import SpeakStep from './SpeakStep.jsx';
@@ -138,18 +138,12 @@ export default function Lesson({ lang, uid }) {
   const p = useProgress();
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState(1);
+  const screens = Grid.useBreakpoint();
   const { unit: u, idx } = findUnit(lang, uid);
   const c = COURSES[lang];
 
   if (!u) {
     return <Result status="404" title="Không tìm thấy bài học" extra={<Button type="primary" href={`#/c/${lang}`}>Về lộ trình</Button>} />;
-  }
-  if (!isUnlocked(p, lang, idx)) {
-    return (
-      <Result icon={<LockOutlined />} title="Bài này chưa mở"
-        subTitle="Hoàn thành bài trước (đạt từ 70% bài kiểm tra) để mở khoá bài này."
-        extra={<Button type="primary" href={`#/c/${lang}`}>Về lộ trình</Button>} />
-    );
   }
 
   const go = s => { stopRec(); stopSpeaking(); setDir(s >= step ? 1 : -1); setStep(s); window.scrollTo({ top: 0, behavior: 'smooth' }); };
@@ -175,8 +169,10 @@ export default function Lesson({ lang, uid }) {
         </Flex>
 
         <Card size="small" className="steps-card">
+          {/* Điện thoại: chỉ hiện biểu tượng + tên bước hiện tại, tránh tràn ngang */}
           <Steps current={step} onChange={go} size="small" responsive={false} labelPlacement="vertical"
-            items={STEPS.map(s => ({ title: s.title, icon: s.icon }))} />
+            items={STEPS.map(s => ({ title: screens.sm ? s.title : '', icon: s.icon, 'aria-label': s.title }))} />
+          {!screens.sm && <Text strong className="step-caption">Bước {step + 1}/{STEPS.length} · {STEPS[step].title}</Text>}
         </Card>
 
         <motion.div key={step} initial={{ opacity: 0, x: 36 * dir }} animate={{ opacity: 1, x: 0 }}
