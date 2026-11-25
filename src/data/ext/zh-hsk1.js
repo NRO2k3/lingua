@@ -8,7 +8,7 @@ export default {
       { w: '高兴', ipa: 'gāoxìng', hv: 'cao hứng', vi: 'vui, vui mừng', ex: '认识你，我很高兴。', exPy: 'Rènshi nǐ, wǒ hěn gāoxìng.', exVi: 'Được quen bạn, tôi rất vui.' },
       { w: '同学', ipa: 'tóngxué', hv: 'đồng học', vi: 'bạn học, bạn cùng lớp', ex: '他是我的同学。', exPy: 'Tā shì wǒ de tóngxué.', exVi: 'Anh ấy là bạn cùng lớp của tôi.' },
       { w: '先生', ipa: 'xiānsheng', hv: 'tiên sinh', vi: 'ông, anh, ngài (gọi nam giới lịch sự)', ex: '王先生，你好！', exPy: 'Wáng xiānsheng, nǐ hǎo!', exVi: 'Chào ông Vương!' },
-      { w: '小姐', ipa: 'xiǎojiě', hv: 'tiểu thư', vi: 'cô (gọi phụ nữ trẻ lịch sự)', ex: '李小姐是老师吗？', exPy: 'Lǐ xiǎojiě shì lǎoshī ma?', exVi: 'Cô Lý là giáo viên à?' },
+      { w: '小姐', ipa: 'xiǎojiě', hv: 'tiểu thư', vi: 'cô (họ + 小姐; gọi trống dễ bị hiểu sai)', ex: '李小姐是老师吗？', exPy: 'Lǐ xiǎojiě shì lǎoshī ma?', exVi: 'Cô Lý là giáo viên à?' },
       { w: '不客气', ipa: 'bú kèqi', hv: 'bất khách khí', vi: 'không có gì (đáp lại lời cảm ơn)', ex: '——谢谢！——不客气！', exPy: '— Xièxie! — Bú kèqi!', exVi: '— Cảm ơn! — Không có gì!' },
       { w: '对不起', ipa: 'duìbuqǐ', hv: 'đối bất khởi', vi: 'xin lỗi', ex: '对不起，我不是王老师。', exPy: 'Duìbuqǐ, wǒ bú shì Wáng lǎoshī.', exVi: 'Xin lỗi, tôi không phải thầy Vương.' },
       { w: '没关系', ipa: 'méi guānxi', hv: 'một quan hệ', vi: 'không sao, không có gì (đáp lại lời xin lỗi)', ex: '——对不起！——没关系。', exPy: '— Duìbuqǐ! — Méi guānxi.', exVi: '— Xin lỗi! — Không sao.' },
@@ -19,34 +19,34 @@ export default {
       { type: 'mc', q: '——对不起！——___', options: ['不客气。', '没关系。', '再见。'], answer: 1, explain: '没关系 (không sao) dùng để đáp lại lời xin lỗi.' },
       { type: 'fill', q: '___，你是李老师吗？（Xin hỏi, cô có phải cô giáo Lý không?）', answer: ['请问', 'qǐngwèn', 'qingwen'], hint: 'qǐngwèn – xin hỏi', explain: '请问 đặt ở đầu câu để hỏi một cách lịch sự.' },
       { type: 'order', vi: 'Xin hỏi, ông có phải là ông Vương không?', words: ['王先生', '你', '请问，', '是', '吗？'], answer: '请问， 你 是 王先生 吗？' },
-      { type: 'mc', q: 'Muốn gọi lịch sự một người đàn ông họ Vương, ta nói:', options: ['王小姐', '王先生', '王同学'], answer: 1, explain: '先生 dùng cho nam giới, 小姐 dùng cho phụ nữ trẻ; họ đứng trước: 王先生.' },
+      { type: 'mc', q: 'Muốn gọi lịch sự một người đàn ông họ Vương, ta nói:', options: ['王小姐', '王先生', '王同学'], answer: 1, explain: '先生 dùng cho nam giới; họ đứng trước: 王先生. Với phụ nữ, cách gọi trang trọng an toàn nhất là 女士 nǚshì (王女士), còn 小姐 nên đi kèm họ (王小姐).' },
       { type: 'fill', q: '我___一下，这是我的同学李华。（Tôi giới thiệu một chút, đây là bạn học của tôi, Lý Hoa.）', answer: ['介绍', 'jièshào', 'jieshao'], hint: 'jièshào – giới thiệu', explain: '介绍一下 = giới thiệu một chút.' },
       { type: 'order', vi: 'Cô ấy là bạn học của bạn à?', words: ['同学', '她', '你的', '是', '吗？'], answer: '她 是 你的 同学 吗？' },
-      { type: 'mc', q: '小姐 dùng để gọi ai?', options: ['Người phụ nữ trẻ (lịch sự)', 'Người đàn ông lớn tuổi', 'Bạn cùng lớp'], answer: 0, explain: '小姐 xiǎojiě: cách gọi lịch sự phụ nữ trẻ, vd 李小姐 (cô Lý).' }
+      { type: 'mc', q: 'Ở nhà hàng tại Trung Quốc đại lục, muốn gọi nhân viên (nữ) một cách lịch sự, nên nói:', options: ['小姐！', '服务员！', '女士们！'], answer: 1, explain: 'Gọi trống 小姐！ ở đại lục ngày nay dễ bị hiểu theo nghĩa xấu (gái làm nghề nhạy cảm), nên ở nhà hàng, cửa hàng hãy gọi 服务员 fúwùyuán (nhân viên phục vụ). Với phụ nữ không quen trong hoàn cảnh trang trọng, dùng 女士 nǚshì (王女士 = bà/chị Vương). 小姐 chỉ an toàn khi đi kèm họ (李小姐) hoặc ở Đài Loan, Hồng Kông.' }
     ],
     reading: {
       title: '新同学',
       titleVi: 'Bạn học mới',
       text: [
-        '今天我们班有一个新同学。老师说：“我介绍一下，她叫阮兰，是越南人。”',
-        '阮兰说：“你们好！认识你们很高兴。”我说：“你好，我叫王明。请坐！”阮兰说：“谢谢！”我说：“不客气。”',
-        '下课了，阮兰问我：“请问，李老师是你们的汉语老师吗？”我说：“对，她是我们的老师。”'
+        '今天我们班有一个新同学。老师说：“她叫阮兰，是越南人。”',
+        '阮兰说：“认识你们很高兴！”我说：“请坐！”她说：“谢谢！”我说：“不客气。”',
+        '阮兰问我：“请问，李老师是汉语老师吗？”我说：“对。”'
       ],
       py: [
-        'Jīntiān wǒmen bān yǒu yí gè xīn tóngxué. Lǎoshī shuō: “Wǒ jièshào yíxià, tā jiào Ruǎn Lán, shì Yuènánrén.”',
-        'Ruǎn Lán shuō: “Nǐmen hǎo! Rènshi nǐmen hěn gāoxìng.” Wǒ shuō: “Nǐ hǎo, wǒ jiào Wáng Míng. Qǐng zuò!” Ruǎn Lán shuō: “Xièxie!” Wǒ shuō: “Bú kèqi.”',
-        'Xiàkè le, Ruǎn Lán wèn wǒ: “Qǐngwèn, Lǐ lǎoshī shì nǐmen de Hànyǔ lǎoshī ma?” Wǒ shuō: “Duì, tā shì wǒmen de lǎoshī.”'
+        'Jīntiān wǒmen bān yǒu yí gè xīn tóngxué. Lǎoshī shuō: “Tā jiào Ruǎn Lán, shì Yuènánrén.”',
+        'Ruǎn Lán shuō: “Rènshi nǐmen hěn gāoxìng!” Wǒ shuō: “Qǐng zuò!” Tā shuō: “Xièxie!” Wǒ shuō: “Bú kèqi.”',
+        'Ruǎn Lán wèn wǒ: “Qǐngwèn, Lǐ lǎoshī shì Hànyǔ lǎoshī ma?” Wǒ shuō: “Duì.”'
       ],
       vi: [
-        'Hôm nay lớp chúng tôi có một bạn học mới. Cô giáo nói: “Cô giới thiệu một chút, bạn ấy tên là Nguyễn Lan, là người Việt Nam.”',
-        'Nguyễn Lan nói: “Chào các bạn! Rất vui được làm quen với các bạn.” Tôi nói: “Chào bạn, mình tên là Vương Minh. Mời bạn ngồi!” Nguyễn Lan nói: “Cảm ơn!” Tôi nói: “Không có gì.”',
-        'Tan học, Nguyễn Lan hỏi tôi: “Cho mình hỏi, cô Lý là giáo viên tiếng Trung của các bạn à?” Tôi nói: “Đúng rồi, cô ấy là cô giáo của bọn mình.”'
+        'Hôm nay lớp chúng tôi có một bạn học mới. Cô giáo nói: “Bạn ấy tên là Nguyễn Lan, là người Việt Nam.”',
+        'Nguyễn Lan nói: “Rất vui được làm quen với các bạn!” Tôi nói: “Mời bạn ngồi!” Bạn ấy nói: “Cảm ơn!” Tôi nói: “Không có gì.”',
+        'Nguyễn Lan hỏi tôi: “Cho mình hỏi, cô Lý là giáo viên tiếng Trung à?” Tôi nói: “Đúng rồi.”'
       ],
       questions: [
         { q: 'Bạn học mới tên là gì?', options: ['Lý Hoa', 'Nguyễn Lan', 'Vương Minh', 'Cô Lý'], answer: 1, explain: 'Cô giáo giới thiệu: 她叫阮兰 (bạn ấy tên là Nguyễn Lan).' },
         { q: 'Bạn học mới là người nước nào?', options: ['Trung Quốc', 'Mỹ', 'Việt Nam'], answer: 2, explain: '是越南人 – là người Việt Nam.' },
-        { q: 'Khi Nguyễn Lan nói "谢谢", Vương Minh đáp lại thế nào?', options: ['不客气', '没关系', '对不起', '再见'], answer: 0, explain: 'Vương Minh nói 不客气 (không có gì) để đáp lời cảm ơn.' },
-        { q: 'Cô Lý dạy môn gì?', options: ['Tiếng Anh', 'Tiếng Trung', 'Tiếng Việt'], answer: 1, explain: 'Lan hỏi cô Lý có phải 汉语老师 (giáo viên tiếng Trung) không, và Minh trả lời 对 (đúng).' }
+        { q: 'Khi Nguyễn Lan nói "谢谢", người kể chuyện ("tôi") đáp lại thế nào?', options: ['不客气', '没关系', '对不起', '再见'], answer: 0, explain: '"Tôi" nói 不客气 (không có gì) để đáp lời cảm ơn.' },
+        { q: 'Cô Lý dạy môn gì?', options: ['Tiếng Anh', 'Tiếng Trung', 'Tiếng Việt'], answer: 1, explain: 'Lan hỏi cô Lý có phải 汉语老师 (giáo viên tiếng Trung) không, và "tôi" trả lời 对 (đúng).' }
       ]
     }
   },

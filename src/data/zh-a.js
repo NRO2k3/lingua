@@ -17,7 +17,7 @@ addLevels('zh', [
         title: 'Chào hỏi & giới thiệu',
         goal: 'Chào hỏi, nói tên mình, hỏi tên người khác, hỏi "có phải…không" với 吗 và hỏi lại với 呢.',
         vocab: [
-          { w: '你好', ipa: 'nǐ hǎo', hv: 'nhĩ hảo', vi: 'xin chào', ex: '你好！我叫王明。', exPy: 'Nǐ hǎo! Wǒ jiào Wáng Míng.', exVi: 'Xin chào! Tôi tên là Vương Minh.' },
+          { w: '你好', ipa: 'nǐ hǎo', hv: 'nễ hảo', vi: 'xin chào', ex: '你好！我叫王明。', exPy: 'Nǐ hǎo! Wǒ jiào Wáng Míng.', exVi: 'Xin chào! Tôi tên là Vương Minh.' },
           { w: '是', ipa: 'shì', hv: 'thị', vi: 'là', ex: '她是李华。', exPy: 'Tā shì Lǐ Huá.', exVi: 'Cô ấy là Lý Hoa.' },
           { w: '叫', ipa: 'jiào', hv: 'khiếu', vi: 'gọi; tên là', ex: '我叫阮兰。', exPy: 'Wǒ jiào Ruǎn Lán.', exVi: 'Tôi tên là Nguyễn Lan.' },
           { w: '什么', ipa: 'shénme', hv: 'thập ma', vi: 'gì, cái gì', ex: '你叫什么名字？', exPy: 'Nǐ jiào shénme míngzi?', exVi: 'Bạn tên là gì?' },
@@ -602,7 +602,7 @@ addLevels('zh', [
           { w: '一起', ipa: 'yìqǐ', hv: 'nhất khởi', vi: 'cùng nhau', ex: '我们一起去吃饭吧。', exPy: 'Wǒmen yìqǐ qù chīfàn ba.', exVi: 'Chúng mình cùng đi ăn cơm nhé.' },
           { w: '朋友', ipa: 'péngyou', hv: 'bằng hữu', vi: 'bạn, bạn bè', ex: '周末我和朋友去爬山了。', exPy: 'Zhōumò wǒ hé péngyou qù páshān le.', exVi: 'Cuối tuần tôi đã đi leo núi với bạn.' },
           { w: '旅游', ipa: 'lǚyóu', hv: 'lữ du', vi: 'du lịch', ex: '你去中国旅游过吗？', exPy: 'Nǐ qù Zhōngguó lǚyóu guo ma?', exVi: 'Bạn đã từng đi du lịch Trung Quốc chưa?' },
-          { w: '爬山', ipa: 'páshān', hv: 'ba sơn', vi: 'leo núi', ex: '我没爬过山。', exPy: 'Wǒ méi pá guo shān.', exVi: 'Tôi chưa từng leo núi.' },
+          { w: '爬山', ipa: 'páshān', hv: 'bà sơn', vi: 'leo núi', ex: '我没爬过山。', exPy: 'Wǒ méi pá guo shān.', exVi: 'Tôi chưa từng leo núi.' },
           { w: '已经', ipa: 'yǐjīng', hv: 'dĩ kinh', vi: 'đã (rồi)', ex: '我已经吃饭了。', exPy: 'Wǒ yǐjīng chīfàn le.', exVi: 'Tôi đã ăn cơm rồi.' }
         ],
         grammar: {
@@ -657,7 +657,7 @@ addLevels('zh', [
         vocab: [
           { w: '会', ipa: 'huì', hv: 'hội', vi: 'biết (làm gì, nhờ học)', ex: '我会说一点儿汉语。', exPy: 'Wǒ huì shuō yìdiǎnr Hànyǔ.', exVi: 'Tôi biết nói một chút tiếng Trung.' },
           { w: '能', ipa: 'néng', hv: 'năng', vi: 'có thể (đủ khả năng / điều kiện cho phép)', ex: '我今天很忙，不能去跑步。', exPy: 'Wǒ jīntiān hěn máng, bù néng qù pǎobù.', exVi: 'Hôm nay tôi rất bận, không đi chạy bộ được.' },
-          { w: '跑步', ipa: 'pǎobù', hv: 'bão bộ', vi: 'chạy bộ', ex: '他每天早上跑步。', exPy: 'Tā měitiān zǎoshang pǎobù.', exVi: 'Sáng nào anh ấy cũng chạy bộ.' },
+          { w: '跑步', ipa: 'pǎobù', hv: 'bào bộ', vi: 'chạy bộ', ex: '他每天早上跑步。', exPy: 'Tā měitiān zǎoshang pǎobù.', exVi: 'Sáng nào anh ấy cũng chạy bộ.' },
           { w: '游泳', ipa: 'yóuyǒng', hv: 'du vịnh', vi: 'bơi', ex: '你会游泳吗？', exPy: 'Nǐ huì yóuyǒng ma?', exVi: 'Bạn biết bơi không?' },
           { w: '踢足球', ipa: 'tī zúqiú', hv: 'thích túc cầu', vi: 'đá bóng', ex: '我喜欢踢足球。', exPy: 'Wǒ xǐhuan tī zúqiú.', exVi: 'Tôi thích đá bóng.' },
           { w: '打篮球', ipa: 'dǎ lánqiú', hv: 'đả lam cầu', vi: 'chơi bóng rổ', ex: '王明篮球打得很好。', exPy: 'Wáng Míng lánqiú dǎ de hěn hǎo.', exVi: 'Vương Minh chơi bóng rổ rất giỏi.' },
@@ -718,8 +718,8 @@ addLevels('zh', [
         goal: 'Nói về dự định và kế hoạch sắp tới, dự đoán việc sẽ xảy ra và nói "sắp… rồi".',
         vocab: [
           { w: '打算', ipa: 'dǎsuàn', hv: 'đả toán', vi: 'dự định; kế hoạch', ex: '明年我打算去中国留学。', exPy: 'Míngnián wǒ dǎsuàn qù Zhōngguó liúxué.', exVi: 'Sang năm tôi dự định đi du học Trung Quốc.' },
-          { w: '要', ipa: 'yào', hv: 'yếu', vi: 'sẽ, sắp (kế hoạch chắc chắn)', ex: '下个月我要去上海。', exPy: 'Xià gè yuè wǒ yào qù Shànghǎi.', exVi: 'Tháng sau tôi sẽ đi Thượng Hải.' },
-          { w: '会', ipa: 'huì', hv: 'hội', vi: 'sẽ (dự đoán)', ex: '明天会下雨吗？', exPy: 'Míngtiān huì xià yǔ ma?', exVi: 'Ngày mai có mưa không?' },
+          { w: '放假', ipa: 'fàngjià', hv: 'phóng giả', vi: 'được nghỉ (lễ, hè, Tết)', ex: '快要放假了，你要回家吗？', exPy: 'Kuàiyào fàngjià le, nǐ yào huí jiā ma?', exVi: 'Sắp được nghỉ rồi, bạn có về nhà không?' },
+          { w: '打工', ipa: 'dǎgōng', hv: 'đả công', vi: 'làm thêm, làm thuê', ex: '这个暑假我打算去打工。', exPy: 'Zhège shǔjià wǒ dǎsuàn qù dǎgōng.', exVi: 'Kỳ nghỉ hè này tôi định đi làm thêm.' },
           { w: '快要…了', ipa: 'kuàiyào…le', hv: 'khoái yếu … liễu', vi: 'sắp… rồi', ex: '快要考试了。', exPy: 'Kuàiyào kǎoshì le.', exVi: 'Sắp thi rồi.' },
           { w: '明年', ipa: 'míngnián', hv: 'minh niên', vi: 'năm sau, sang năm', ex: '明年我会更忙。', exPy: 'Míngnián wǒ huì gèng máng.', exVi: 'Sang năm tôi sẽ bận hơn.' },
           { w: '以后', ipa: 'yǐhòu', hv: 'dĩ hậu', vi: 'sau này; sau khi', ex: '以后我想当老师。', exPy: 'Yǐhòu wǒ xiǎng dāng lǎoshī.', exVi: 'Sau này tôi muốn làm giáo viên.' },
