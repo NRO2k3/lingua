@@ -6,6 +6,13 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '../src/data') + '
 globalThis.window = globalThis;
 await import(pathToFileURL(root + 'registry.js'));
 for (const f of ['en-a', 'en-b', 'es-a', 'es-b', 'zh-a', 'zh-b']) await import(pathToFileURL(root + f + '.js'));
+const MORE_IDS = new Set();
+for (const f of readdirSync(root + 'more')) for (const { after, unit } of (await import(pathToFileURL(root + 'more/' + f))).default) {
+  let placed = false;
+  for (const c of Object.values(COURSES)) for (const l of c.levels) { const k = l.units.findIndex(u => u.id === after); if (k >= 0) { l.units.splice(k + 1, 0, unit); placed = true; } }
+  if (!placed) console.log(`[LỖI] ${f}: không tìm thấy bài after="${after}" cho ${unit.id}`);
+  MORE_IDS.add(unit.id);
+}
 const EXT = {};
 for (const f of readdirSync(root + 'ext')) Object.assign(EXT, (await import(pathToFileURL(root + 'ext/' + f))).default);
 const norm = s => String(s).toLowerCase().replace(/[’`]/g, "'").replace(/(?<!\d),|,(?!\d)/g, ' ').replace(/[.!?¡¿;:"，。？！、：；“”()（）]/g, '').replace(/\s+/g, ' ').trim();
@@ -52,8 +59,15 @@ for (const [lang, c] of Object.entries(COURSES)) for (const l of c.levels) for (
   if (speakers.size < 2) add('LỖI', u0.id, `hội thoại chỉ có ${speakers.size} nhân vật – nhập vai không dùng được`);
   if (speakers.size > 2) add('NÊN XEM', u0.id, `hội thoại có ${speakers.size} nhân vật – nhập vai chia trái/phải xen kẽ`);
   for (const d of u0.dialogue) if (lang === 'zh' && !d.py) add('LỖI', u0.id, `hội thoại thiếu pinyin: ${d.t}`);
+  // Bài mới: đủ nội dung như bài đã bổ sung
+  if (MORE_IDS.has(u0.id)) {
+    if (vocab.length < 15) add('LỖI', u0.id, `bài mới chỉ có ${vocab.length} từ (cần 15–20)`);
+    if (ex.length < 12) add('LỖI', u0.id, `bài mới chỉ có ${ex.length} bài tập (cần 12–16)`);
+    if (!u0.reading) add('LỖI', u0.id, 'bài mới thiếu reading');
+    for (const k of ['title', 'goal', 'grammar', 'dialogue']) if (!u0[k]) add('LỖI', u0.id, `bài mới thiếu ${k}`);
+  }
   // Đọc hiểu
-  const r = x.reading;
+  const r = x.reading || u0.reading;
   if (r) {
     for (const q of r.questions) { posCount.read[q.answer]++; if (new Set(q.options.map(norm)).size !== q.options.length) add('LỖI', u0.id, `câu hỏi đọc trùng phương án: ${q.q}`); }
     if (new Set(r.questions.map(q => q.answer)).size === 1) add('NÊN XEM', u0.id, `4 câu đọc hiểu cùng đáp án vị trí ${r.questions[0].answer}`);

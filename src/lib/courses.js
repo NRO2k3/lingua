@@ -9,6 +9,16 @@ import '../data/zh-b.js';
 
 export const COURSES = window.COURSES;
 
+// Bài mới (src/data/more/*.js): mỗi file export default [{ after: 'id bài đứng trước', unit: {...} }, ...]
+// Bài được chèn vào đúng cấp, ngay sau bài `after` (theo thứ tự trong file)
+const MORE = Object.values(import.meta.glob('../data/more/*.js', { eager: true, import: 'default' })).flat();
+for (const { after, unit } of MORE) {
+  for (const c of Object.values(COURSES)) for (const level of c.levels) {
+    const k = level.units.findIndex(u => u.id === after);
+    if (k >= 0 && !level.units.some(u => u.id === unit.id)) level.units.splice(k + 1, 0, unit);
+  }
+}
+
 // Phần bổ sung (src/data/ext/*.js): thêm từ, bài tập, bài đọc cho từng unit
 const EXT = Object.assign({}, ...Object.values(import.meta.glob('../data/ext/*.js', { eager: true, import: 'default' })));
 for (const c of Object.values(COURSES)) for (const level of c.levels) for (const u of level.units) {

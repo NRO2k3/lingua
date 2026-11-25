@@ -53,7 +53,7 @@ function WelcomeCard() {
     <Card className="hero-card">
       <Title level={3} style={{ marginTop: 0 }}>Bắt đầu hành trình của bạn 🚀</Title>
       <Paragraph type="secondary" style={{ marginBottom: 0 }}>
-        Chọn một ngôn ngữ bên dưới. Mỗi bài học mất khoảng 15–20 phút: học từ mới, hiểu ngữ pháp,
+        Chọn một ngôn ngữ bên dưới. Mỗi bài học mất khoảng 30 phút, chia thành 6 bước ngắn có thể học dần: học từ mới, hiểu ngữ pháp,
         nghe hội thoại, đọc hiểu, tập nói và làm bài kiểm tra ngắn. Bạn tự chọn trình độ của mình
         và có thể học bất kỳ bài nào.
       </Paragraph>
@@ -126,7 +126,7 @@ function LangCard({ lang }) {
 }
 
 const HOW = [
-  { title: 'Từ vựng', description: '10 từ, có phát âm', icon: <BookOutlined /> },
+  { title: 'Từ vựng', description: '20 từ, có phát âm', icon: <BookOutlined /> },
   { title: 'Ngữ pháp', description: 'Giải thích dễ hiểu', icon: <BulbOutlined /> },
   { title: 'Hội thoại', description: 'Nghe tình huống thật', icon: <MessageOutlined /> },
   { title: 'Đọc hiểu', description: 'Bài đọc + câu hỏi', icon: <ReadOutlined /> },

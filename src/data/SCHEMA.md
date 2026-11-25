@@ -110,3 +110,24 @@ export default {
 
 Độ dài bài đọc: A1 60–90 từ, A2 90–140, B1 150–220, B2 220–300 (tiếng Trung tính theo chữ:
 HSK1 60–100, HSK2 100–160, HSK3 180–260, HSK4 260–360).
+
+## Bài mới chèn vào lộ trình (`src/data/more/<lang>-<level>.js`)
+
+Dùng để thêm bài phủ chủ điểm còn thiếu mà không sửa file gốc. Mỗi file `export default` một mảng:
+
+```js
+export default [
+  {
+    after: 'en-a1-2',            // id bài đứng ngay trước (bài gốc hoặc bài mới khác cùng cấp)
+    unit: {
+      id: 'en-a1-2b',            // id mới, duy nhất: <id bài after> + chữ cái b, c…
+      icon: '🏃', title: '…', goal: '…',
+      vocab: [ /* 20 từ */ ], grammar: { /* như bài gốc */ }, dialogue: [ /* 6–10 lượt */ ],
+      exercises: [ /* 16 bài mc/fill/order, order có thể kèm alt */ ],
+      reading: { /* như phần bổ sung, 4 câu hỏi */ }
+    }
+  }
+];
+```
+
+Các bài mới cùng `after` được chèn theo thứ tự trong mảng. Kiểm tra bằng `node scripts/check-data.mjs`.

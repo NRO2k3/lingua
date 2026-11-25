@@ -134,7 +134,9 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
     const score = pct(correct, qs.length), passed = score >= PASS * 100;
     const before = getProgress().units[u.id] || {};
     const firstPass = passed && !before.done;
-    const gained = correct * 10 + (firstPass ? 50 : 0);
+    // Làm lại: chỉ cộng điểm cho phần vượt kết quả tốt nhất trước đó (tránh cày điểm)
+    const prevCorrect = Math.round((before.best || 0) / 100 * qs.length);
+    const gained = Math.max(0, correct - prevCorrect) * 10 + (firstPass ? 50 : 0);
     update(d => {
       d.units[u.id] = { done: !!before.done || passed, best: Math.max(before.best || 0, score), date: today() };
       addXp(d, gained);
