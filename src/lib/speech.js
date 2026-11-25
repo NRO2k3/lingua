@@ -2,31 +2,64 @@ import { noAccent, splitUnits } from './utils.js';
 
 // ---------- Đọc to (máy nói) ----------
 const hasTTS = () => typeof window !== 'undefined' && 'speechSynthesis' in window;
-if (hasTTS()) speechSynthesis.getVoices();
 
-function pickVoice(tag) {
-  const voices = speechSynthesis.getVoices(), t = tag.toLowerCase();
-  return voices.find(v => v.lang.toLowerCase().replace('_', '-') === t)
-    || voices.find(v => v.lang.toLowerCase().startsWith(t.slice(0, 2)));
+// Báo cho giao diện khi trình duyệt không đọc được (không hỗ trợ / không có giọng cho ngôn ngữ)
+export const ttsEvents = typeof EventTarget !== 'undefined' ? new EventTarget() : null;
+const problem = (kind, tag) => ttsEvents?.dispatchEvent(new CustomEvent('problem', { detail: { kind, tag } }));
+
+// Danh sách giọng nạp không đồng bộ; quá 2,5 giây vẫn rỗng nghĩa là trình duyệt không có giọng đọc
+let voicesKnown = false;
+if (hasTTS()) {
+  const mark = () => { if (speechSynthesis.getVoices().length) voicesKnown = true; };
+  mark();
+  speechSynthesis.addEventListener?.('voiceschanged', mark);
+  setTimeout(() => { voicesKnown = true; }, 2500);
 }
+
+// Giọng chất lượng cao (trực tuyến/neural) đọc tự nhiên hơn espeak
+const quality = v => (/natural|neural|online/i.test(v.name) ? 3 : 0) + (/google|microsoft|apple|siri/i.test(v.name) ? 2 : 0)
+  - (/espeak/i.test(v.name + v.voiceURI) ? 2 : 0) + (v.localService ? 0 : 1);
+function pickVoice(tag) {
+  const t = tag.toLowerCase(), base = t.slice(0, 2);
+  const same = v => v.lang.toLowerCase().replace('_', '-');
+  const all = speechSynthesis.getVoices();
+  const exact = all.filter(v => same(v) === t);
+  const close = exact.length ? exact : all.filter(v => same(v).startsWith(base) || (base === 'zh' && same(v).startsWith('cmn')));
+  // Ưu tiên đúng vùng (es-ES), rồi giọng chung không ghi vùng ('es'), rồi chất lượng; tránh giọng Mỹ Latinh cho khoá chuẩn Tây Ban Nha
+  const region = v => (same(v) === t ? 4 : same(v) === base ? 2 : 0) + (base === 'es' && /latin|mexic|america/i.test(v.name) ? -1 : 0) + (base === 'zh' && /latin|english|pinyin/i.test(v.name) ? -1 : 0);
+  return close.sort((a, b) => (region(b) + quality(b)) - (region(a) + quality(a)))[0];
+}
+export function ttsAvailable(tag) {
+  if (!hasTTS()) return false;
+  return !voicesKnown || !!pickVoice(tag);
+}
+
+let current = null; // giữ tham chiếu: Chrome có thể bỏ dở câu nói nếu đối tượng bị dọn bộ nhớ
 function utter(text, tag, { pitch = 1, rate = 0.9 } = {}) {
   const u = new SpeechSynthesisUtterance(text);
   u.lang = tag; u.rate = rate; u.pitch = pitch;
   const v = pickVoice(tag); if (v) u.voice = v;
   return u;
 }
-export function speak(text, tag, { rate = 0.9, onend } = {}) {
-  if (!hasTTS()) return onend && onend();
+function play(utts) {
+  const busy = speechSynthesis.speaking || speechSynthesis.pending;
   speechSynthesis.cancel();
+  const go = () => { speechSynthesis.resume(); utts.forEach(u => { current = u; speechSynthesis.speak(u); }); };
+  // Chrome bỏ qua lệnh đọc gọi ngay sau cancel(): đợi một nhịp
+  busy ? setTimeout(go, 80) : go();
+}
+export function speak(text, tag, { rate = 0.9, onend } = {}) {
+  if (!hasTTS()) { problem('unsupported', tag); return onend && onend(); }
+  if (voicesKnown && !pickVoice(tag)) { problem(speechSynthesis.getVoices().length ? 'nolang' : 'novoice', tag); return onend && onend(); }
   const u = utter(text, tag, { rate });
   if (onend) u.onend = u.onerror = onend;
-  speechSynthesis.speak(u);
+  play([u]);
 }
 export function speakAll(lines, tag) {
-  if (!hasTTS()) return;
-  speechSynthesis.cancel();
+  if (!hasTTS()) return problem('unsupported', tag);
+  if (voicesKnown && !pickVoice(tag)) return problem(speechSynthesis.getVoices().length ? 'nolang' : 'novoice', tag);
   const who = [...new Set(lines.map(l => l.s))];
-  lines.forEach(l => speechSynthesis.speak(utter(l.t, tag, { pitch: who.indexOf(l.s) % 2 ? 0.8 : 1.1 })));
+  play(lines.map(l => utter(l.t, tag, { pitch: who.indexOf(l.s) % 2 ? 0.8 : 1.1 })));
 }
 export const stopSpeaking = () => hasTTS() && speechSynthesis.cancel();
 

@@ -5,7 +5,7 @@ import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import viVN from 'antd/locale/vi_VN';
 import { COURSES } from './lib/courses.js';
 import { DAILY_GOAL, backfillSrs, dailyXp, streakNow, update, useProgress } from './lib/store.js';
-import { stopRec, stopSpeaking } from './lib/speech.js';
+import { stopRec, stopSpeaking, ttsEvents } from './lib/speech.js';
 import { pct } from './lib/utils.js';
 import { TokenVars } from './components/common.jsx';
 import { CountUp, EASE } from './components/motion.jsx';
@@ -128,6 +128,34 @@ function Header({ dark, onToggleTheme }) {
   );
 }
 
+// Trình duyệt không đọc được: báo một lần mỗi loại lỗi, kèm cách khắc phục
+const LANG_NAME = { en: 'tiếng Anh', es: 'tiếng Tây Ban Nha', zh: 'tiếng Trung' };
+function TtsNotice() {
+  const { notification } = AntApp.useApp();
+  useEffect(() => {
+    if (!ttsEvents) return;
+    const shown = new Set();
+    const onProblem = e => {
+      const { kind, tag } = e.detail, key = kind + (kind === 'nolang' ? tag : '');
+      if (shown.has(key)) return;
+      shown.add(key);
+      const lang = LANG_NAME[String(tag).slice(0, 2)] || 'ngôn ngữ này';
+      const fix = 'Cách khắc phục nhanh nhất: mở trang bằng Google Chrome hoặc Microsoft Edge — hai trình duyệt này có sẵn giọng đọc chất lượng cao cho cả 3 ngôn ngữ (và cũng cần cho phần luyện nói).';
+      const linux = /Linux/.test(navigator.userAgent) && !/Android/.test(navigator.userAgent)
+        ? ' Nếu bạn dùng Brave hoặc Chromium trên Linux: mở trình duyệt với tuỳ chọn --enable-speech-dispatcher.' : '';
+      const text = {
+        unsupported: ['Trình duyệt này không hỗ trợ đọc to', fix],
+        novoice: ['Không phát được âm thanh: trình duyệt chưa có giọng đọc nào', fix + linux],
+        nolang: [`Máy chưa có giọng đọc ${lang}`, `Trình duyệt có giọng đọc nhưng chưa có ${lang}. ` + fix]
+      }[kind];
+      notification.warning({ message: text[0], description: text[1], duration: 12, placement: 'bottomRight', key });
+    };
+    ttsEvents.addEventListener('problem', onProblem);
+    return () => ttsEvents.removeEventListener('problem', onProblem);
+  }, []);
+  return null;
+}
+
 // Lỗi bất ngờ trong một trang: hiện thông báo thay vì trắng màn hình
 class ErrorBoundary extends Component {
   state = { error: null };
@@ -195,6 +223,7 @@ export default function App() {
       <AntApp>
         <TokenVars>
           <Layout className="app">
+            <TtsNotice />
             <Header dark={dark} onToggleTheme={() => update(d => { d.theme = dark ? 'light' : 'dark'; })} />
             <Layout.Content className="wrap content">
               <motion.div key={route.join('/')} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
