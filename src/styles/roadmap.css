@@ -13,7 +13,6 @@
 .rm-aside-in { position: sticky; top: 76px; }
 
 .rm-card.ant-card { border-radius: 18px; border-width: 2px; border-color: var(--border); }
-.rm-crumb { margin-bottom: -4px; }
 
 /* ---------- Đầu trang ---------- */
 .rm-head .ant-card-body { padding: 20px; display: flex; flex-direction: column; gap: 16px; }
@@ -27,13 +26,6 @@
 .rm-sub { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .rm-go.ant-btn { min-width: 168px; flex: none; }
-.rm-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-.rm-act.ant-btn { height: 50px; border-radius: 14px; border-width: 2px 2px 4px; border-color: var(--border-strong); font-weight: 600;
-  transition: transform var(--dur-fast) var(--ease-out), border-bottom-width var(--dur-fast); }
-.rm-act.ant-btn:active { transform: translateY(2px); border-bottom-width: 2px; }
-.rm-actions > .rm-badge { display: block; width: 100%; }
-.rm-act.ant-btn { width: 100%; padding-inline: 10px; }
-.rm-act.ant-btn > span:not(.ant-btn-icon) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .rm-level { display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 1px solid var(--border); }
 .rm-level-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
@@ -43,11 +35,7 @@
   .rm-head .ant-card-body { padding: 16px; gap: 14px; }
   .rm-title.ant-typography { font-size: 22px; }
   .rm-sub { font-size: 13px; }
-  .rm-actions { gap: 8px; }
   .rm-go.ant-btn { width: 100%; }
-  .rm-act.ant-btn { height: 62px; padding: 6px 4px; flex-direction: column; gap: 2px; font-size: 13px; line-height: 1.2; }
-  .rm-act.ant-btn .ant-btn-icon { font-size: 18px; margin: 0 !important; }
-  .rm-act.ant-btn > span:not(.ant-btn-icon) { max-width: 100%; }
 }
 
 /* Thẻ phát âm cho người mới */
@@ -202,16 +190,7 @@
 .pn-pop-best .ok { color: var(--success); }
 
 /* ---------- Cột phải ---------- */
-.today .ant-card-body { display: flex; flex-direction: column; gap: 14px; padding: 18px; }
 .today-title { font-size: 17px; font-weight: 800; color: var(--text); }
-.today-strong { font-weight: 700; color: var(--text); }
-.today-ring { display: inline-flex; align-items: baseline; justify-content: center; color: var(--text); }
-.today-ring b { font-size: 20px; }
-.today-ring small { font-size: 12px; color: var(--text-2); }
-.today-streak { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 12px; background: var(--fill); color: var(--text-2); font-size: 14px; }
-.today-streak .anticon { font-size: 22px; color: var(--text-3); }
-.today-streak.on .anticon { color: #fa8c16; }
-.today-streak.on b { color: var(--text); font-size: 16px; }
 .today-levels .ant-card-body { display: flex; flex-direction: column; gap: 4px; padding: 14px; }
 .today-levels .today-title { margin: 0 4px 6px; font-size: 15px; }
 .tl-row { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px; border: 0; border-radius: 10px; background: transparent;

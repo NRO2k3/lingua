@@ -286,8 +286,6 @@ function Overview({ lang, data }) {
   const goDrills = () => document.getElementById('pron-drills')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   return (
     <Flex vertical gap={20}>
-      <Breadcrumb items={[{ title: <a href="#/">Trang chủ</a> }, { title: <a href={`#/c/${lang}`}>{c.name}</a> }, { title: 'Phát âm' }]} />
-
       <Card>
         <Flex gap={16} align="center" wrap>
           <div className="lesson-icon">🗣️</div>

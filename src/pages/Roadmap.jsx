@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Badge, Breadcrumb, Button, Card, Flex, Popover, Progress, Segmented, Tag, Tooltip, Typography } from 'antd';
+import { Button, Card, Flex, Popover, Progress, Segmented, Tag, Tooltip, Typography } from 'antd';
 import {
-  ArrowDownOutlined, ArrowUpOutlined, BookOutlined, CaretRightFilled, CheckCircleFilled, CheckOutlined, CompassOutlined,
-  DownOutlined, FireFilled, HistoryOutlined, NodeIndexOutlined, PlayCircleFilled, SoundOutlined, TrophyFilled,
+  ArrowDownOutlined, ArrowUpOutlined, CaretRightFilled, CheckCircleFilled, CheckOutlined, CompassOutlined,
+  DownOutlined, NodeIndexOutlined, PlayCircleFilled, SoundOutlined, TrophyFilled,
   TrophyOutlined, UnorderedListOutlined
 } from '@ant-design/icons';
 import { AnimatePresence, motion } from 'framer-motion';
 import { COURSES, LEVEL_NAME } from '../lib/courses.js';
-import { DAILY_GOAL, dailyXp, isDone, langProgress, nextUnit, srsDue, srsKeys, streakNow, update, useProgress } from '../lib/store.js';
+import { isDone, langProgress, nextUnit, srsKeys, update, useProgress } from '../lib/store.js';
 import { pct } from '../lib/utils.js';
 import { LangTheme, TokenVars } from '../components/common.jsx';
 import { PRON_PITCH } from '../data/pron/index.js';
@@ -260,31 +260,11 @@ function LevelBlock({ lang, level, p, isCurrent, open, onToggle, collapsible, ch
 }
 
 /* ------------------------------------------------------------------ */
-/* Thẻ "Hôm nay" (cột phải trên màn rộng)                              */
+/* Danh sách cấp độ (cột phải trên màn rộng; điểm/chuỗi ngày đã ở thanh bên) */
 /* ------------------------------------------------------------------ */
-function TodayCard({ lang, p, c, due, onJump, currentLevel }) {
-  const daily = dailyXp(p), streak = streakNow(p);
-  const left = Math.max(0, DAILY_GOAL - daily);
+function TodayCard({ lang, p, c, onJump, currentLevel }) {
   return (
     <Flex vertical gap={16}>
-      <Card className="rm-card today">
-        <div className="today-title">Hôm nay</div>
-        <Flex gap={14} align="center">
-          <Progress type="circle" size={76} strokeWidth={10} percent={pct(daily, DAILY_GOAL)}
-            format={() => <span className="today-ring"><b>{Math.min(daily, DAILY_GOAL)}</b><small>/{DAILY_GOAL}</small></span>} />
-          <div style={{ minWidth: 0 }}>
-            <div className="today-strong">Mục tiêu ngày</div>
-            <Text type="secondary" style={{ fontSize: 13 }}>{left ? `Còn ${left} điểm nữa là đạt` : 'Đã đạt mục tiêu 🎯'}</Text>
-          </div>
-        </Flex>
-        <div className={'today-streak' + (streak ? ' on' : '')}>
-          <FireFilled />
-          <span>{streak ? <><b>{streak}</b> ngày liên tiếp</> : 'Học hôm nay để bắt đầu chuỗi ngày'}</span>
-        </div>
-        <Button block size="large" className="btn-3d" type={due ? 'primary' : 'default'} icon={<HistoryOutlined />} href={`#/c/${lang}/review`}>
-          {due ? `Ôn ${due} từ đến hạn` : 'Ôn từ vựng'}
-        </Button>
-      </Card>
       <Card className="rm-card today-levels" size="small">
         <div className="today-title">Các cấp độ</div>
         {c.levels.map(l => {
@@ -334,7 +314,7 @@ function useScrolled(min) {
 export default function Roadmap({ lang }) {
   const p = useProgress();
   const c = COURSES[lang];
-  const pr = langProgress(p, lang), nx = nextUnit(p, lang), due = srsDue(p, lang).length;
+  const pr = langProgress(p, lang), nx = nextUnit(p, lang);
   const level = p.level?.[lang];
   const curLevel = nx?.level.id || level || c.levels[0].id;
   const [view, setView] = useState(readView);
@@ -377,8 +357,6 @@ export default function Roadmap({ lang }) {
       <div className="rm">
         <div className="rm-grid">
           <div className="rm-main">
-            <Breadcrumb className="rm-crumb" items={[{ title: <a href="#/">Trang chủ</a> }, { title: c.name }]} />
-
             {/* Đầu trang */}
             <Card className="rm-card rm-head">
               <div className="rm-top">
@@ -397,13 +375,6 @@ export default function Roadmap({ lang }) {
                     {pr.done ? 'Học tiếp' : 'Bắt đầu bài 1'}
                   </Button>
                 )}
-              </div>
-              <div className="rm-actions">
-                <Badge count={due} className="rm-badge" offset={[-6, 4]}>
-                  <Button size="large" className="rm-act" icon={<HistoryOutlined />} href={`#/c/${lang}/review`}>Ôn từ vựng</Button>
-                </Badge>
-                <Button size="large" className="rm-act" icon={<BookOutlined />} href={`#/c/${lang}/words`}>Kho từ vựng</Button>
-                <Button size="large" className="rm-act" icon={<SoundOutlined />} href={`#/c/${lang}/pron`}>Phát âm</Button>
               </div>
               <div className="rm-level">
                 <div className="rm-level-top">
@@ -477,9 +448,9 @@ export default function Roadmap({ lang }) {
             </div>
           </div>
 
-          <aside className="rm-aside" aria-label="Hôm nay">
+          <aside className="rm-aside" aria-label="Các cấp độ">
             <div className="rm-aside-in">
-              <TodayCard lang={lang} p={p} c={c} due={due} onJump={jumpLevel} currentLevel={curLevel} />
+              <TodayCard lang={lang} p={p} c={c} onJump={jumpLevel} currentLevel={curLevel} />
             </div>
           </aside>
         </div>

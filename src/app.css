@@ -6,7 +6,6 @@ a { -webkit-tap-highlight-color: transparent; }
 .app { min-height: 100vh; }
 .wrap { width: 100%; max-width: 1080px; margin: 0 auto; }
 .content { padding: 24px 16px 48px; }
-.footer { text-align: center; color: var(--text-3); font-size: 13px; }
 
 /* Thanh trên cùng */
 .header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border); }

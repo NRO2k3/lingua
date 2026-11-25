@@ -8,13 +8,16 @@ import { LinguaMark } from './common.jsx';
 import { createContext, useContext, useEffect, useState } from 'react';
 import { Dropdown, Layout, Tooltip } from 'antd';
 import {
-  AudioFilled, AudioOutlined, BarChartOutlined, BookFilled, BookOutlined, CheckOutlined, DownOutlined,
-  HomeFilled, HomeOutlined, ProfileFilled, ProfileOutlined, ThunderboltFilled, ThunderboltOutlined
+  AudioFilled, AudioOutlined, BarChartOutlined, BookFilled, BookOutlined, CheckOutlined, DownOutlined, FireFilled,
+  MoonOutlined, MutedOutlined, ProfileFilled, ProfileOutlined, SoundOutlined, StarFilled, SunOutlined,
+  ThunderboltFilled, ThunderboltOutlined
 } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 import { COURSES, LANGS } from '../lib/courses.js';
-import { srsDue, update, useProgress } from '../lib/store.js';
-import { EASE } from './motion.jsx';
+import { DAILY_GOAL, dailyXp, srsDue, streakNow, update, useProgress } from '../lib/store.js';
+import { useMuted } from '../lib/sfx.js';
+import { pct } from '../lib/utils.js';
+import { CountUp, EASE } from './motion.jsx';
 import '../styles/shell.css';
 
 export const DEFAULT_LANG = 'en';
@@ -26,11 +29,11 @@ export function isFocusRoute(route) {
   return (kind === 'u' && !!id) || kind === 'placement' || (kind === 'level' && !!id) || (kind === 'pron' && !!id);
 }
 
-// Mục điều hướng đang mở
+// Mục điều hướng đang mở (trang chủ thuộc mục Học; logo dẫn về trang chủ)
 function activeKey(route) {
   const [c, lang, kind] = route;
   if (c === 'stats') return 'stats';
-  if (c !== 'c' || !Object.hasOwn(COURSES, lang)) return 'home';
+  if (c !== 'c' || !Object.hasOwn(COURSES, lang)) return 'learn';
   if (kind === 'review' || kind === 'words' || kind === 'pron') return kind;
   return 'learn';
 }
@@ -50,15 +53,15 @@ function useMedia(query) {
   return ok;
 }
 
+// Mỗi mục một màu riêng để dễ nhận ra bằng mắt
 function navItems(lang, due) {
   return [
-    { key: 'learn', label: 'Học', href: `#/c/${lang}`, icon: BookOutlined, iconOn: BookFilled },
-    { key: 'review', label: 'Ôn tập', href: `#/c/${lang}/review`, icon: ThunderboltOutlined, iconOn: ThunderboltFilled, badge: due,
+    { key: 'learn', label: 'Học', href: `#/c/${lang}`, icon: BookOutlined, iconOn: BookFilled, tint: '#1899d6' },
+    { key: 'review', label: 'Ôn tập', href: `#/c/${lang}/review`, icon: ThunderboltOutlined, iconOn: ThunderboltFilled, tint: '#f08a00', badge: due,
       aria: due ? `Ôn tập, ${due} từ đến hạn` : 'Ôn tập' },
-    { key: 'words', label: 'Kho từ', href: `#/c/${lang}/words`, icon: ProfileOutlined, iconOn: ProfileFilled },
-    { key: 'pron', label: 'Phát âm', href: `#/c/${lang}/pron`, icon: AudioOutlined, iconOn: AudioFilled },
-    { key: 'stats', label: 'Thống kê', href: '#/stats', icon: BarChartOutlined, iconOn: BarChartOutlined },
-    { key: 'home', label: 'Trang chủ', href: '#/', icon: HomeOutlined, iconOn: HomeFilled, sideOnly: true }
+    { key: 'words', label: 'Kho từ', href: `#/c/${lang}/words`, icon: ProfileOutlined, iconOn: ProfileFilled, tint: '#46a302' },
+    { key: 'pron', label: 'Phát âm', href: `#/c/${lang}/pron`, icon: AudioOutlined, iconOn: AudioFilled, tint: '#a560e8' },
+    { key: 'stats', label: 'Thống kê', href: '#/stats', icon: BarChartOutlined, iconOn: BarChartOutlined, tint: '#e5484d' }
   ];
 }
 
@@ -107,7 +110,7 @@ function NavLink({ item, active, collapsed, layoutId }) {
   const Icon = on ? item.iconOn : item.icon;
   const link = (
     <a href={item.href} className={'snav-item' + (on ? ' is-active' : '')} aria-current={on ? 'page' : undefined}
-      aria-label={item.aria || item.label}>
+      aria-label={item.aria || item.label} style={{ '--tint': item.tint }}>
       {on && <motion.span layoutId={layoutId} className="snav-hl" transition={{ duration: 0.2, ease: EASE }} />}
       <span className="snav-icon" aria-hidden><Icon /></span>
       <span className="snav-label" aria-hidden>{item.label}</span>
@@ -117,7 +120,39 @@ function NavLink({ item, active, collapsed, layoutId }) {
   return collapsed ? <Tooltip title={item.aria || item.label} placement="right">{link}</Tooltip> : link;
 }
 
-function SideNav({ items, active }) {
+// Chuỗi ngày, mục tiêu hôm nay, tổng điểm + nút âm thanh/nền ở cuối thanh bên (thay cho thanh trên trên máy tính)
+function SideStatus({ collapsed, dark, onToggleTheme }) {
+  const p = useProgress();
+  const [muted, setMuted] = useMuted();
+  const streak = streakNow(p), daily = Math.min(dailyXp(p), DAILY_GOAL), reached = daily >= DAILY_GOAL;
+  const tip = (title, el) => <Tooltip title={title} placement={collapsed ? 'right' : 'top'}>{el}</Tooltip>;
+  return (
+    <div className="snav-status">
+      <div className="snav-card">
+        {tip(streak ? `Bạn đã học ${streak} ngày liên tiếp` : 'Học hôm nay để bắt đầu chuỗi ngày',
+          <div className={'snav-stat fire' + (streak ? ' on' : '')}><FireFilled /><b>{streak}</b>{!collapsed && <span>ngày</span>}</div>)}
+        {tip('Tổng điểm của bạn',
+          <div className="snav-stat star"><StarFilled /><b><CountUp value={p.xp} /></b>{!collapsed && <span>điểm</span>}</div>)}
+        {tip(`Mục tiêu hôm nay: ${daily}/${DAILY_GOAL} điểm`,
+          <div className={'snav-goal' + (reached ? ' reached' : '')}>
+            {!collapsed && <div className="snav-goal-top"><span>Hôm nay</span><b>{daily}/{DAILY_GOAL}</b></div>}
+            <div className="snav-goal-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct(daily, DAILY_GOAL)}
+              aria-label="Mục tiêu hôm nay"><i style={{ width: `${pct(daily, DAILY_GOAL)}%` }} /></div>
+          </div>)}
+      </div>
+      <div className="snav-tools">
+        {tip(muted ? 'Bật âm thanh hiệu ứng' : 'Tắt âm thanh hiệu ứng',
+          <button type="button" className="snav-tool" onClick={() => setMuted(!muted)} aria-label="Bật/tắt âm thanh">
+            {muted ? <MutedOutlined /> : <SoundOutlined />}</button>)}
+        {tip(dark ? 'Chuyển sang nền sáng' : 'Chuyển sang nền tối',
+          <button type="button" className="snav-tool" onClick={onToggleTheme} aria-label="Đổi nền sáng/tối">
+            {dark ? <SunOutlined /> : <MoonOutlined />}</button>)}
+      </div>
+    </div>
+  );
+}
+
+function SideNav({ items, active, dark, onToggleTheme }) {
   const collapsed = useMedia('(min-width: 768px) and (max-width: 1099.98px)');
   return (
     <nav className="snav" aria-label="Điều hướng chính">
@@ -130,6 +165,7 @@ function SideNav({ items, active }) {
           <li key={it.key}><NavLink item={it} active={active} collapsed={collapsed} layoutId="snav-hl" /></li>
         ))}
       </ul>
+      <SideStatus collapsed={collapsed} dark={dark} onToggleTheme={onToggleTheme} />
     </nav>
   );
 }
@@ -137,12 +173,12 @@ function SideNav({ items, active }) {
 function TabBar({ items, active }) {
   return (
     <nav className="tabbar" aria-label="Điều hướng chính">
-      {items.filter(it => !it.sideOnly).map(it => {
+      {items.map(it => {
         const on = it.key === active;
         const Icon = on ? it.iconOn : it.icon;
         return (
           <a key={it.key} href={it.href} className={'tab-item' + (on ? ' is-active' : '')}
-            aria-current={on ? 'page' : undefined} aria-label={it.aria || it.label}>
+            aria-current={on ? 'page' : undefined} aria-label={it.aria || it.label} style={{ '--tint': it.tint }}>
             <span className="tab-icon" aria-hidden>
               {on && <motion.span layoutId="tab-hl" className="tab-hl" transition={{ duration: 0.2, ease: EASE }} />}
               <Icon />
@@ -157,7 +193,7 @@ function TabBar({ items, active }) {
 }
 
 // header: phần tử Header (vẫn được gắn trong chế độ tập trung để giữ hiệu ứng điểm/âm thanh, chỉ bị ẩn bằng CSS)
-export default function Shell({ route, header, children }) {
+export default function Shell({ route, header, dark, onToggleTheme, children }) {
   const p = useProgress();
   const focus = isFocusRoute(route);
   const routeLang = route[0] === 'c' && Object.hasOwn(COURSES, route[1]) ? route[1] : null;
@@ -168,7 +204,7 @@ export default function Shell({ route, header, children }) {
   return (
     <ShellContext.Provider value={{ focus, lang, active }}>
       <div className={'shell' + (focus ? ' shell-focus' : '')} data-focus={focus ? '' : undefined}>
-        {!focus && <SideNav items={items} active={active} />}
+        {!focus && <SideNav items={items} active={active} dark={dark} onToggleTheme={onToggleTheme} />}
         <Layout className="app shell-main">
           {header}
           {children}

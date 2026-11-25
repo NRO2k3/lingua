@@ -1,6 +1,6 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
 import {
-  App, Breadcrumb, Button, Card, Col, Empty, Flex, Input, List, Progress, Result, Row, Segmented, Skeleton, Tag, Tooltip, Typography
+  App, Button, Card, Col, Empty, Flex, Input, List, Progress, Result, Row, Segmented, Skeleton, Tag, Tooltip, Typography
 } from 'antd';
 import { BookOutlined, CheckOutlined, CreditCardOutlined, PlusOutlined, UnorderedListOutlined } from '@ant-design/icons';
 import { motion } from 'framer-motion';
@@ -157,7 +157,6 @@ export default function WordBank({ lang }) {
   return (
     <LangTheme lang={lang}>
       <Flex vertical gap={20}>
-        <Breadcrumb items={[{ title: <a href="#/">Trang chủ</a> }, { title: <a href={`#/c/${lang}`}>{c.name}</a> }, { title: 'Kho từ vựng' }]} />
         <div>
           <Title level={2} style={{ marginBottom: 4 }}><BookOutlined /> Kho từ vựng {c.name}</Title>
           <Text type="secondary">

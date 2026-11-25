@@ -208,6 +208,7 @@ export default function App() {
   useEffect(() => { document.documentElement.style.colorScheme = dark ? 'dark' : 'light'; }, [dark]);
   useEffect(() => { backfillSrs(); }, []);
 
+  const toggleTheme = () => update(d => { d.theme = dark ? 'light' : 'dark'; });
   return (
     <ConfigProvider
       locale={viVN}
@@ -215,7 +216,7 @@ export default function App() {
         algorithm: dark ? theme.darkAlgorithm : theme.defaultAlgorithm,
         token: { colorPrimary: '#1677ff', borderRadius: 10, fontSize: 15, fontFamily: FONT },
         components: {
-          Layout: { headerBg: dark ? '#141414' : '#ffffff', headerHeight: 60, headerPadding: '0 16px', bodyBg: dark ? '#000' : '#f5f7fa' },
+          Layout: { headerBg: dark ? '#141414' : '#ffffff', headerHeight: 60, headerPadding: '0 16px', bodyBg: dark ? '#0c0c0d' : '#f5f7fa' },
           Card: { headerFontSize: 17 }
         }
       }}
@@ -224,15 +225,14 @@ export default function App() {
       <AntApp>
         <TokenVars>
           <TtsNotice />
-          <Shell route={route}
-            header={<Header dark={dark} onToggleTheme={() => update(d => { d.theme = dark ? 'light' : 'dark'; })} />}>
+          <Shell route={route} dark={dark} onToggleTheme={toggleTheme}
+            header={<Header dark={dark} onToggleTheme={toggleTheme} />}>
             <Layout.Content className="wrap content">
               <motion.div key={route.join('/')} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2, ease: EASE }}>
                 <ErrorBoundary key={route.join('/')}><Page route={route} /></ErrorBoundary>
               </motion.div>
             </Layout.Content>
-            <Layout.Footer className="footer">Lingua · Mỗi ngày một chút, đều đặn là giỏi</Layout.Footer>
           </Shell>
         </TokenVars>
       </AntApp>

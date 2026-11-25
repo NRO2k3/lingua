@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Breadcrumb, Button, Card, Col, Empty, Flex, List, Progress, Row, Segmented, Statistic, Tag, Tooltip, Typography, theme } from 'antd';
+import { Button, Card, Col, Empty, Flex, List, Progress, Row, Segmented, Statistic, Tag, Tooltip, Typography, theme } from 'antd';
 import {
   CheckCircleOutlined, FireFilled, HistoryOutlined, PlayCircleFilled, StarFilled, TrophyFilled
 } from '@ant-design/icons';
@@ -256,8 +256,7 @@ export default function Stats() {
   return (
     <Stagger className="stack">
       <Item>
-        <Breadcrumb items={[{ title: <a href="#/">Trang chủ</a> }, { title: 'Thống kê' }]} />
-        <Title level={2} style={{ margin: '8px 0 4px' }}>Tiến bộ của bạn 📈</Title>
+        <Title level={2} style={{ margin: '0 0 4px' }}>Tiến bộ của bạn 📈</Title>
         <Text type="secondary">Nhìn lại chặng đường đã đi để biết nên luyện gì tiếp.</Text>
       </Item>
 

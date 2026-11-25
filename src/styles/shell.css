@@ -12,21 +12,55 @@
 .snav-brand { padding: 4px 10px 14px; font-size: 22px; letter-spacing: -.01em; text-decoration: none; }
 .snav-brand .brand-mark { flex: none; }
 
-.snav-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.snav-list { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 .snav-item {
-  position: relative; display: flex; align-items: center; gap: 14px; min-height: 50px; padding: 0 14px;
+  --tint: var(--primary);
+  position: relative; display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 10px;
   border-radius: 14px; border: 2px solid transparent; color: var(--text-2) !important; font-weight: 700; font-size: 15px;
-  letter-spacing: .02em; text-decoration: none; isolation: isolate;
+  text-decoration: none; isolation: isolate;
   transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
 }
 .snav-item:hover { background: var(--fill); color: var(--text) !important; }
-.snav-item.is-active { color: var(--primary) !important; }
+.snav-item.is-active { color: var(--text) !important; }
 .snav-item.is-active:hover { background: transparent; }
 .snav-hl {
   position: absolute; inset: -2px; z-index: -1; border-radius: 14px;
-  background: var(--primary-bg); border: 2px solid var(--primary-border);
+  background: color-mix(in srgb, var(--tint) 10%, var(--bg)); border: 2px solid color-mix(in srgb, var(--tint) 45%, transparent);
 }
-.snav-icon { font-size: 22px; display: inline-flex; flex: none; width: 26px; justify-content: center; }
+/* Ô icon tô màu riêng của từng mục */
+.snav-icon {
+  font-size: 19px; display: grid; place-items: center; flex: none; width: 36px; height: 36px; border-radius: 11px;
+  color: var(--tint); background: color-mix(in srgb, var(--tint) 13%, transparent);
+  transition: transform var(--dur-base) var(--ease-out), background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.snav-item:hover .snav-icon { transform: scale(1.06) rotate(-4deg); }
+.snav-item.is-active .snav-icon { color: #fff; background: var(--tint); box-shadow: 0 3px 0 color-mix(in srgb, var(--tint) 70%, #000); }
+
+/* Cuối thanh bên: chuỗi ngày, điểm, mục tiêu + nút tiện ích */
+.snav-status { margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+.snav-card {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px 8px; padding: 12px;
+  border: 2px solid var(--border); border-radius: 16px; background: var(--bg);
+}
+.snav-stat { display: flex; align-items: center; gap: 6px; font-size: 15px; color: var(--text-3); min-width: 0; }
+.snav-stat b { color: var(--text); font-weight: 800; }
+.snav-stat span { font-size: 12px; font-weight: 600; }
+.snav-stat .anticon { font-size: 18px; }
+.snav-stat.fire.on .anticon { color: #ff9600; }
+.snav-stat.star .anticon { color: #ffc800; }
+.snav-goal { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; }
+.snav-goal-top { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: var(--text-2); }
+.snav-goal-top b { color: var(--text); font-weight: 800; }
+.snav-goal-bar { height: 10px; border-radius: 99px; background: var(--fill-2); overflow: hidden; }
+.snav-goal-bar i { display: block; height: 100%; border-radius: inherit; background: #58cc02; transition: width var(--dur-slow) var(--ease-out); }
+.snav-goal.reached .snav-goal-bar i { background: #ffc800; }
+.snav-tools { display: flex; gap: 6px; }
+.snav-tool {
+  flex: 1; height: 40px; border: 0; border-radius: 12px; background: transparent; color: var(--text-2); font-size: 18px; cursor: pointer;
+  display: grid; place-items: center; transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.snav-tool:hover { background: var(--fill); color: var(--text); }
+.snav-tool:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 .snav-label { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .snav-badge {
   flex: none; min-width: 22px; height: 22px; padding: 0 7px; border-radius: 99px; display: inline-grid; place-items: center;
@@ -65,9 +99,10 @@
   gap: 2px; color: var(--text-2) !important; text-decoration: none; font-weight: 700;
   transition: color var(--dur-fast) var(--ease-out);
 }
-.tab-item.is-active { color: var(--primary) !important; }
+.tab-item { --tint: var(--primary); }
+.tab-item.is-active { color: var(--tint) !important; }
 .tab-icon { position: relative; display: grid; place-items: center; width: 52px; height: 30px; font-size: 21px; isolation: isolate; }
-.tab-hl { position: absolute; inset: 0; z-index: -1; border-radius: 99px; background: var(--primary-bg); border: 1.5px solid var(--primary-border); }
+.tab-hl { position: absolute; inset: 0; z-index: -1; border-radius: 99px; background: color-mix(in srgb, var(--tint) 14%, var(--bg)); border: 1.5px solid color-mix(in srgb, var(--tint) 40%, transparent); }
 .tab-label { font-size: 11px; line-height: 1.2; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
 .tab-badge {
   position: absolute; top: -4px; left: 30px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px;
@@ -87,17 +122,22 @@
   .snav-brand-name, .snav-label { display: none; }
   .snav-list { width: 100%; align-items: center; }
   .snav-list li { width: 100%; display: flex; justify-content: center; }
-  .snav-item { width: 52px; min-height: 52px; padding: 0; justify-content: center; }
-  .snav-icon { font-size: 24px; }
+  .snav-item { width: 56px; min-height: 56px; padding: 0; justify-content: center; }
+  .snav-icon { font-size: 21px; width: 40px; height: 40px; }
+  .snav-status { width: 100%; align-items: center; }
+  .snav-card { grid-template-columns: 1fr; padding: 10px 6px; width: 60px; justify-items: center; }
+  .snav-stat { flex-direction: column; gap: 2px; font-size: 13px; }
+  .snav-goal-bar { width: 40px; height: 8px; }
+  .snav-tools { flex-direction: column; }
+  .snav-tool { width: 44px; }
   .snav-badge { position: absolute; top: -2px; right: -6px; min-width: 20px; height: 20px; padding: 0 5px; font-size: 11px; box-shadow: 0 0 0 2px var(--bg); }
 }
 @media (min-width: 768px) {
   .shell:not(.shell-focus) .snav { display: flex; }
   .shell:not(.shell-focus) .shell-main { margin-left: var(--shell-side); }
-  /* Thanh bên đã có logo + chọn ngôn ngữ */
-  .shell:not(.shell-focus) .header .brand,
-  .shell:not(.shell-focus) .header .lang-pick { display: none; }
-  .shell:not(.shell-focus) .header .wrap { justify-content: flex-end !important; }
+  /* Thanh bên đã có logo, chọn ngôn ngữ, điểm và nút tiện ích: bỏ thanh trên */
+  .shell:not(.shell-focus) .header { display: none; }
+  .shell:not(.shell-focus) .content { padding-top: 32px; }
   /* Thanh phản hồi cố định của trang con không đè lên thanh bên */
   .shell:not(.shell-focus) .sheet { left: var(--shell-side); }
 }
@@ -112,10 +152,10 @@
 }
 
 /* ---------- Chế độ tập trung ---------- */
-.shell-focus .header, .shell-focus .footer { display: none; }
+.shell-focus .header { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
-  .snav-item, .lang-pick, .tab-item, .tab-icon { transition: none; }
+  .snav-item, .snav-icon, .snav-tool, .snav-goal-bar i, .lang-pick, .tab-item, .tab-icon { transition: none; }
   /* Quy tắc chung `* { transition-duration: .01ms !important }` (app.css) làm rc-trigger không căn được vị trí:
      tooltip/dropdown của antd nằm ở toạ độ -12800px (vô hình). Trả popup về 0s để hiện đúng chỗ. */
   .ant-tooltip, .ant-dropdown, .ant-popover, .ant-select-dropdown, .ant-picker-dropdown,

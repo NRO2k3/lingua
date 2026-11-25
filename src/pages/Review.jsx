@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Breadcrumb, Button, Card, Flex, Grid, Progress, Result, Typography } from 'antd';
+import { Button, Card, Flex, Grid, Progress, Result, Typography } from 'antd';
 import { CheckOutlined, CloseOutlined, HistoryOutlined, RetweetOutlined, RocketOutlined } from '@ant-design/icons';
 import { COURSES } from '../lib/courses.js';
 import { addXp, getProgress, srsDue, srsKeys, SRS_DAYS, update, useProgress, wordFromKey } from '../lib/store.js';
@@ -104,20 +104,12 @@ export default function Review({ lang }) {
   const more = () => setS(newSession(clean(shuffle(srsKeys(getProgress(), lang)).slice(0, 10)), true));
   const nextDue = () => setS(newSession(dueQueue(lang)));
 
-  const crumbs = (
-    <Breadcrumb items={[
-      { title: <a href="#/">Trang chủ</a> },
-      { title: <a href={`#/c/${lang}`}>{c.name}</a> },
-      { title: 'Ôn tập' }
-    ]} />
-  );
 
   if (!v) {
     const finished = s.done > 0;
     return (
       <LangTheme lang={lang}>
         <Flex vertical gap={20}>
-          {crumbs}
           <Card>
             <Result
               icon={<div style={{ fontSize: 72, lineHeight: 1 }}>{finished ? '✅' : '🧠'}</div>}
@@ -148,7 +140,6 @@ export default function Review({ lang }) {
   return (
     <LangTheme lang={lang}>
       <Flex vertical gap={20}>
-        {crumbs}
 
         <Flex vertical gap={16} style={{ width: '100%', maxWidth: 560, margin: '0 auto' }}>
           <div>
