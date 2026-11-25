@@ -5,20 +5,20 @@ export default {
       { w: 'dilemma', ipa: '/dɪˈlɛmə/', vi: 'tình thế khó xử, thế tiến thoái lưỡng nan', ex: 'I am in a real dilemma: if I took the job, I would have to leave my family.', exVi: 'Tôi đang ở thế khó xử thật sự: nếu nhận công việc đó, tôi sẽ phải xa gia đình.' },
       { w: 'circumstance', ipa: '/ˈsɜrkəmˌstæns/', vi: 'hoàn cảnh, tình huống', ex: 'Under different circumstances, I would have accepted their offer.', exVi: 'Trong hoàn cảnh khác, tôi đã nhận lời đề nghị của họ rồi.' },
       { w: 'outcome', ipa: '/ˈaʊtˌkʌm/', vi: 'kết quả, kết cục', ex: 'If we had prepared better, the outcome would have been different.', exVi: 'Nếu chúng tôi chuẩn bị kỹ hơn thì kết quả đã khác.' },
-      { w: 'fate', ipa: '/feɪt/', vi: 'số phận, định mệnh', ex: 'She believes that fate brought them together.', exVi: 'Cô ấy tin rằng số phận đã đưa họ đến với nhau.' },
+      { w: 'alternative', ipa: '/ɔlˈtɜrnətɪv/', vi: 'phương án khác, lựa chọn thay thế', ex: "If I had had an alternative, I wouldn't have taken that job.", exVi: 'Nếu khi đó tôi có lựa chọn khác, tôi đã không nhận công việc ấy.' },
       { w: 'temptation', ipa: '/tɛmpˈteɪʃən/', vi: 'sự cám dỗ', ex: 'I wish I could resist the temptation to check my phone every five minutes.', exVi: 'Ước gì tôi cưỡng lại được sự cám dỗ xem điện thoại năm phút một lần.' },
       { w: 'impulsive', ipa: '/ɪmˈpʌlsɪv/', vi: 'bốc đồng, hành động theo cảm hứng', ex: "If I hadn't been so impulsive, I wouldn't have spent all my savings.", exVi: 'Nếu tôi không bốc đồng như thế thì đã không tiêu hết tiền tiết kiệm.' },
       { w: 'reconsider', ipa: '/ˌrikənˈsɪdər/', vi: 'xem xét lại, cân nhắc lại', ex: 'I wish you would reconsider your decision.', exVi: 'Tôi mong bạn sẽ cân nhắc lại quyết định của mình.' },
       { w: 'setback', ipa: '/ˈsɛtˌbæk/', vi: 'trở ngại, bước lùi tạm thời', ex: "Losing that job was a setback, but it wasn't the end of the world.", exVi: 'Mất công việc đó là một bước lùi, nhưng đâu phải tận thế.' },
       { w: 'foresee', ipa: '/fɔrˈsi/', vi: 'thấy trước, lường trước', ex: 'If we had foreseen the problem, we would have changed our plans.', exVi: 'Nếu lường trước được vấn đề, chúng tôi đã thay đổi kế hoạch.' },
-      { w: 'misfortune', ipa: '/mɪsˈfɔrtʃən/', vi: 'sự không may, vận rủi', ex: 'He had the misfortune to lose his wallet on the first day of the trip.', exVi: 'Anh ấy không may bị mất ví ngay ngày đầu của chuyến đi.' }
+      { w: 'impact', ipa: '/ˈɪmpækt/', vi: 'tác động, ảnh hưởng (lớn)', ex: 'That decision had a huge impact on my career.', exVi: 'Quyết định đó có ảnh hưởng rất lớn đến sự nghiệp của tôi.' }
     ],
     exercises: [
       { type: 'mc', q: 'If I ___ the problem, I would have changed my plans.', options: ['foresaw', 'had foreseen', 'would foresee', 'have foreseen'], answer: 1,
         explain: 'Điều kiện loại 3 (không có thật ở quá khứ): If + had + V3, … would have + V3.' },
       { type: 'fill', q: 'I wish you ___ reconsider your decision. Please think again.', answer: ['would'], hint: 'wish + ai đó + ___ + V nguyên mẫu',
         explain: 'Wish + somebody + would + V dùng khi mong người khác thay đổi hành động hoặc thái độ.' },
-      { type: 'mc', q: 'A situation in which you must choose between two difficult options is a ___.', options: ['setback', 'dilemma', 'fate', 'temptation'], answer: 1,
+      { type: 'mc', q: 'A situation in which you must choose between two difficult options is a ___.', options: ['setback', 'dilemma', 'alternative', 'temptation'], answer: 1,
         explain: 'Dilemma là tình thế phải chọn giữa hai phương án đều khó.' },
       { type: 'fill', q: "If he ___ so impulsive, he wouldn't have bought that expensive car. (not be)", answer: ["hadn't been", 'had not been'], hint: 'had + V3, dạng phủ định',
         explain: "Vế sau là wouldn't have + V3 nên đây là điều kiện loại 3: If + hadn't been." },
@@ -36,14 +36,14 @@ export default {
       titleVi: 'Lá thư gửi chính mình thời trẻ',
       text: [
         'Dear twenty-year-old Minh, I am writing to you from the future. I am thirty-five now, and I have learned a few lessons that I wish someone had taught me earlier. Do you remember the dilemma you faced after university? You had to choose between a safe job at a bank and a risky position at a small travel company.',
-        'You chose the bank because your parents wanted you to. If you had followed your heart, you would have spent your twenties travelling and writing. I sometimes wonder what the outcome would have been. Maybe I would be a famous writer now, or maybe I would be poor and unhappy. Nobody can foresee the future, and I do not really believe in fate.',
-        'Here is my first piece of advice: do not be so impulsive with money. If you had not given in to the temptation to buy that expensive motorbike, you could have saved enough to study abroad. And when you lost your first business, it felt like a terrible misfortune. In fact, it was only a setback. It taught you more than any success.',
+        'You chose the bank because your parents wanted you to. If you had followed your heart, you would have spent your twenties travelling and writing. I sometimes wonder what the outcome would have been. Maybe I would be a famous writer now, or maybe I would be poor and unhappy. Nobody can foresee the future, so there is no point in worrying about every alternative you did not choose.',
+        'Here is my first piece of advice: do not be so impulsive with money. If you had not given in to the temptation to buy that expensive motorbike, you could have saved enough to study abroad. And when you lost your first business, it felt like a disaster. In fact, it was only a setback, and its impact on your life was mostly positive. It taught you more than any success.',
         'Finally, I wish you were kinder to yourself. Under different circumstances, you might have made better choices, but you did your best with what you knew. If I were you, I would reconsider one thing: call Grandma more often. Time goes faster than you think. With love, your older self.'
       ],
       vi: [
         'Minh hai mươi tuổi thân mến, tôi viết thư này cho bạn từ tương lai. Giờ tôi đã ba mươi lăm tuổi và đã học được vài bài học mà tôi ước gì có ai dạy mình sớm hơn. Bạn còn nhớ tình thế khó xử sau khi tốt nghiệp đại học không? Bạn phải chọn giữa một công việc ổn định ở ngân hàng và một vị trí nhiều rủi ro ở một công ty du lịch nhỏ.',
-        'Bạn đã chọn ngân hàng vì bố mẹ muốn thế. Nếu bạn làm theo trái tim mình, có lẽ bạn đã dành những năm hai mươi để đi du lịch và viết lách. Đôi khi tôi tự hỏi kết cục sẽ ra sao. Có thể giờ tôi đã là một nhà văn nổi tiếng, hoặc cũng có thể tôi nghèo và không hạnh phúc. Không ai lường trước được tương lai, và tôi cũng không thật sự tin vào số phận.',
-        'Đây là lời khuyên đầu tiên của tôi: đừng bốc đồng như thế với tiền bạc. Nếu bạn không chiều theo cám dỗ mua chiếc xe máy đắt tiền ấy, bạn đã có thể để dành đủ tiền đi du học. Còn khi bạn thất bại trong lần kinh doanh đầu tiên, bạn tưởng đó là một vận rủi khủng khiếp. Thật ra nó chỉ là một bước lùi tạm thời. Nó dạy bạn nhiều hơn bất kỳ thành công nào.',
+        'Bạn đã chọn ngân hàng vì bố mẹ muốn thế. Nếu bạn làm theo trái tim mình, có lẽ bạn đã dành những năm hai mươi để đi du lịch và viết lách. Đôi khi tôi tự hỏi kết cục sẽ ra sao. Có thể giờ tôi đã là một nhà văn nổi tiếng, hoặc cũng có thể tôi nghèo và không hạnh phúc. Không ai lường trước được tương lai, nên cũng chẳng ích gì khi day dứt về mọi lựa chọn mà bạn đã không chọn.',
+        'Đây là lời khuyên đầu tiên của tôi: đừng bốc đồng như thế với tiền bạc. Nếu bạn không chiều theo cám dỗ mua chiếc xe máy đắt tiền ấy, bạn đã có thể để dành đủ tiền đi du học. Còn khi bạn thất bại trong lần kinh doanh đầu tiên, bạn tưởng đó là một thảm hoạ. Thật ra nó chỉ là một bước lùi tạm thời, và ảnh hưởng của nó tới cuộc đời bạn phần lớn là tích cực. Nó dạy bạn nhiều hơn bất kỳ thành công nào.',
         'Cuối cùng, tôi ước bạn tử tế với bản thân hơn. Trong hoàn cảnh khác, có lẽ bạn đã có những lựa chọn tốt hơn, nhưng bạn đã làm hết sức với những gì mình biết. Nếu tôi là bạn, tôi sẽ cân nhắc lại một điều: hãy gọi cho bà thường xuyên hơn. Thời gian trôi nhanh hơn bạn nghĩ. Thương mến, chính bạn của sau này.'
       ],
       questions: [
@@ -51,7 +51,7 @@ export default {
           explain: 'Người viết (Minh 35 tuổi) gửi thư cho chính mình lúc 20 tuổi để chia sẻ những bài học và lời khuyên.' },
         { q: 'Sau khi tốt nghiệp, Minh đã chọn công việc nào?', options: ['Làm ở một công ty du lịch nhỏ', 'Trở thành nhà văn', 'Làm ở ngân hàng', 'Kinh doanh xe máy'], answer: 2,
           explain: '“You chose the bank because your parents wanted you to.”' },
-        { q: 'Theo người viết, lần kinh doanh thất bại đầu tiên thật ra là gì?', options: ['Một vận rủi khủng khiếp không thể vượt qua', 'Một bước lùi tạm thời giúp Minh học được nhiều điều', 'Lỗi của bố mẹ Minh', 'Lý do khiến Minh mua xe máy'], answer: 1,
+        { q: 'Theo người viết, lần kinh doanh thất bại đầu tiên thật ra là gì?', options: ['Một thảm hoạ không thể vượt qua', 'Một bước lùi tạm thời giúp Minh học được nhiều điều', 'Lỗi của bố mẹ Minh', 'Lý do khiến Minh mua xe máy'], answer: 1,
           explain: '“In fact, it was only a setback. It taught you more than any success.”' },
         { q: 'Lời khuyên “call Grandma more often” ngụ ý điều gì?', options: ['Người viết muốn bà cho thêm tiền', 'Người viết có lẽ tiếc vì đã không dành đủ thời gian cho bà', 'Bà của Minh đang sống ở nước ngoài', 'Minh đã gọi cho bà quá nhiều'], answer: 1,
           explain: 'Câu “Time goes faster than you think” cho thấy người viết tiếc nuối vì thời gian bên bà không còn nhiều hoặc đã qua.' }
@@ -61,32 +61,32 @@ export default {
 
   'en-b2-2': {
     vocab: [
-      { w: 'tabloid', ipa: '/ˈtæbˌlɔɪd/', vi: 'báo lá cải', ex: 'The story was first published in a tabloid, so many people did not believe it.', exVi: 'Câu chuyện được đăng đầu tiên trên một tờ báo lá cải nên nhiều người không tin.' },
+      { w: 'issue', ipa: '/ˈɪʃu/', vi: 'vấn đề (đang được bàn luận)', ex: 'Housing prices are a major issue that is often discussed in the news.', exVi: 'Giá nhà là một vấn đề lớn thường được bàn trên báo đài.' },
       { w: 'scandal', ipa: '/ˈskændəl/', vi: 'vụ bê bối', ex: 'The minister resigned after the scandal was revealed.', exVi: 'Vị bộ trưởng đã từ chức sau khi vụ bê bối bị phanh phui.' },
       { w: 'broadcaster', ipa: '/ˈbrɔdˌkæstər/', vi: 'đài phát thanh/truyền hình; phát thanh viên', ex: 'The final will be shown live by the national broadcaster.', exVi: 'Trận chung kết sẽ được đài truyền hình quốc gia phát trực tiếp.' },
       { w: 'editorial', ipa: '/ˌɛdɪˈtɔriəl/', vi: 'bài xã luận', ex: 'An editorial about air pollution was written by the chief editor.', exVi: 'Một bài xã luận về ô nhiễm không khí đã được tổng biên tập viết.' },
-      { w: 'correspondent', ipa: '/ˌkɔrəˈspɑndənt/', vi: 'phóng viên (thường trú, chuyên mảng)', ex: 'Our correspondent in Tokyo has been sent to the scene.', exVi: 'Phóng viên thường trú của chúng tôi ở Tokyo đã được cử đến hiện trường.' },
+      { w: 'source', ipa: '/sɔrs/', vi: 'nguồn (tin)', ex: 'The news was confirmed by a source close to the government.', exVi: 'Tin này đã được một nguồn tin thân cận với chính phủ xác nhận.' },
       { w: 'allegation', ipa: '/ˌæləˈɡeɪʃən/', vi: 'lời cáo buộc (chưa được chứng minh)', ex: 'The allegations are being investigated by the police.', exVi: 'Những lời cáo buộc đang được cảnh sát điều tra.' },
       { w: 'evacuate', ipa: '/ɪˈvækjuˌeɪt/', vi: 'sơ tán', ex: 'Hundreds of families were evacuated before the storm hit.', exVi: 'Hàng trăm gia đình đã được sơ tán trước khi bão đổ bộ.' },
       { w: 'outbreak', ipa: '/ˈaʊtˌbreɪk/', vi: 'sự bùng phát (dịch bệnh, chiến tranh)', ex: 'An outbreak of flu has been reported in two schools.', exVi: 'Một đợt bùng phát cúm đã được ghi nhận ở hai trường học.' },
-      { w: 'spokesman', ipa: '/ˈspoʊksmən/', vi: 'người phát ngôn', ex: 'A spokesman for the company said that nobody had been injured.', exVi: 'Người phát ngôn của công ty cho biết không ai bị thương.' },
-      { w: 'prosecute', ipa: '/ˈprɑsɪˌkjut/', vi: 'truy tố, khởi tố', ex: 'Anyone who breaks this law will be prosecuted.', exVi: 'Bất kỳ ai vi phạm luật này sẽ bị truy tố.' }
+      { w: 'statement', ipa: '/ˈsteɪtmənt/', vi: 'lời tuyên bố, thông cáo chính thức', ex: 'In a statement, the company said that nobody had been injured.', exVi: 'Trong một thông cáo, công ty cho biết không ai bị thương.' },
+      { w: 'charge', ipa: '/tʃɑrdʒ/', vi: 'buộc tội (chính thức); lời buộc tội', ex: 'The driver has been charged with dangerous driving.', exVi: 'Người lái xe đã bị buộc tội lái xe nguy hiểm.' }
     ],
     exercises: [
       { type: 'mc', q: 'Hundreds of people ___ before the storm hit the coast yesterday.', options: ['evacuating', 'were evacuated', 'have evacuated', 'are evacuating'], answer: 1,
         explain: 'Người dân được (người khác) sơ tán, có yesterday → bị động quá khứ đơn: were + V3.' },
       { type: 'fill', q: 'An outbreak of flu ___ been reported in two schools this week.', answer: ['has'], hint: 'bị động hiện tại hoàn thành',
         explain: 'Chủ ngữ số ít an outbreak → has been + V3.' },
-      { type: 'mc', q: 'A newspaper that prints shocking stories about famous people is a ___.', options: ['broadcaster', 'tabloid', 'editorial', 'correspondent'], answer: 1,
-        explain: 'Tabloid = báo lá cải, chuyên tin giật gân về người nổi tiếng.' },
+      { type: 'mc', q: 'An official announcement made by a company or the government is a ___.', options: ['broadcaster', 'statement', 'editorial', 'source'], answer: 1,
+        explain: 'Statement = lời tuyên bố, thông cáo chính thức.' },
       { type: 'fill', q: 'The allegations are being ___ by the police. (investigate)', answer: ['investigated'], hint: 'V3',
         explain: 'Bị động hiện tại tiếp diễn: are being + V3.' },
-      { type: 'mc', q: 'Anyone who breaks the law will ___.', options: ['prosecute', 'be prosecuted', 'been prosecuted', 'prosecuted'], answer: 1,
-        explain: 'Bị động với will: will be + V3.' },
+      { type: 'mc', q: 'Anyone who breaks this law will ___ with a crime.', options: ['charge', 'be charged', 'been charged', 'charged'], answer: 1,
+        explain: 'Bị động với will: will be + V3. Be charged with = bị buộc tội.' },
       { type: 'fill', q: 'The minister resigned after the ___ was revealed by a journalist.', answer: ['scandal'], hint: 'vụ bê bối',
         explain: 'Scandal = vụ bê bối; was revealed là bị động quá khứ đơn.' },
-      { type: 'order', vi: 'Một phóng viên đã được cử đến hiện trường.', words: ['been', 'scene', 'A', 'sent', 'has', 'the', 'correspondent', 'to'],
-        answer: 'A correspondent has been sent to the scene' },
+      { type: 'order', vi: 'Một thông cáo đã được cảnh sát đưa ra.', words: ['been', 'police', 'A', 'released', 'has', 'the', 'statement', 'by'],
+        answer: 'A statement has been released by the police' },
       { type: 'order', vi: 'Bài xã luận được tổng biên tập viết.', words: ['by', 'written', 'The', 'chief', 'was', 'editorial', 'the', 'editor'],
         answer: 'The editorial was written by the chief editor' }
     ],
@@ -94,21 +94,21 @@ export default {
       title: 'A Busy Night in the Newsroom',
       titleVi: 'Một đêm bận rộn ở toà soạn',
       text: [
-        'At 9 p.m. last Friday, the newsroom of a national broadcaster in Hanoi was unusually quiet. Then two big stories arrived at the same time. First, a dam in the central region was damaged by heavy rain, and thousands of people had to be evacuated. Second, a scandal involving a famous businessman was revealed by a popular tabloid.',
-        "The editors had to decide quickly which story should be covered first. A correspondent was sent to the flooded area, while a team of journalists was asked to check the allegations against the businessman. According to the tabloid, money had been taken from a children's charity and spent on luxury cars.",
+        'At 9 p.m. last Friday, the newsroom of a national broadcaster in Hanoi was unusually quiet. Then two big stories arrived at the same time. First, a dam in the central region was damaged by heavy rain, and thousands of people had to be evacuated. Second, a scandal involving a famous businessman was revealed by a popular online newspaper.',
+        "The editors had to decide quickly which story should be covered first. A reporter was sent to the flooded area, while a team of journalists was asked to check the allegations against the businessman. According to the newspaper's sources, money had been taken from a children's charity and spent on luxury cars.",
         'By midnight, the first report from the flood zone had been broadcast. More than five thousand residents had been moved to schools and hospitals, and no deaths had been reported. However, doctors warned that an outbreak of disease could happen if clean water was not provided soon.',
-        'The second story was more difficult. A spokesman for the businessman said that all the claims were false and that the tabloid would be taken to court. The police announced that the case was being investigated, but nobody has been prosecuted yet. The next morning, an editorial was published reminding readers that a person is innocent until proven guilty. As one senior editor said, “Our job is not to be first. Our job is to be right.”'
+        'The second story was more difficult. In a statement, the businessman\'s lawyer said that all the claims were false and that the newspaper would be taken to court. The police announced that the case was being investigated, but nobody has been charged yet. The next morning, an editorial on the issue was published, reminding readers that a person is innocent until proven guilty. As one senior editor said, “Our job is not to be first. Our job is to be right.”'
       ],
       vi: [
-        'Lúc 9 giờ tối thứ Sáu tuần trước, phòng tin của một đài truyền hình quốc gia ở Hà Nội yên ắng một cách lạ thường. Rồi hai tin lớn đến cùng một lúc. Thứ nhất, một con đập ở miền Trung bị mưa lớn làm hư hại, và hàng nghìn người phải được sơ tán. Thứ hai, một vụ bê bối liên quan đến một doanh nhân nổi tiếng bị một tờ báo lá cải được nhiều người đọc phanh phui.',
-        'Các biên tập viên phải quyết định thật nhanh tin nào nên được đưa trước. Một phóng viên được cử đến vùng lũ, trong khi một nhóm nhà báo được giao kiểm tra những lời cáo buộc nhắm vào vị doanh nhân. Theo tờ báo lá cải, tiền đã bị lấy từ một quỹ từ thiện cho trẻ em và tiêu vào những chiếc xe sang.',
+        'Lúc 9 giờ tối thứ Sáu tuần trước, phòng tin của một đài truyền hình quốc gia ở Hà Nội yên ắng một cách lạ thường. Rồi hai tin lớn đến cùng một lúc. Thứ nhất, một con đập ở miền Trung bị mưa lớn làm hư hại, và hàng nghìn người phải được sơ tán. Thứ hai, một vụ bê bối liên quan đến một doanh nhân nổi tiếng bị một tờ báo mạng được nhiều người đọc phanh phui.',
+        'Các biên tập viên phải quyết định thật nhanh tin nào nên được đưa trước. Một phóng viên được cử đến vùng lũ, trong khi một nhóm nhà báo được giao kiểm tra những lời cáo buộc nhắm vào vị doanh nhân. Theo các nguồn tin của tờ báo, tiền đã bị lấy từ một quỹ từ thiện cho trẻ em và tiêu vào những chiếc xe sang.',
         'Đến nửa đêm, bản tin đầu tiên từ vùng lũ đã được phát sóng. Hơn năm nghìn người dân đã được chuyển đến trường học và bệnh viện, và chưa có ca tử vong nào được ghi nhận. Tuy nhiên, các bác sĩ cảnh báo dịch bệnh có thể bùng phát nếu không sớm có nước sạch.',
-        'Tin thứ hai khó hơn. Người phát ngôn của vị doanh nhân nói rằng mọi cáo buộc đều sai sự thật và tờ báo lá cải sẽ bị kiện ra toà. Cảnh sát thông báo vụ việc đang được điều tra, nhưng đến nay chưa ai bị truy tố. Sáng hôm sau, một bài xã luận được đăng để nhắc độc giả rằng một người vô tội cho đến khi bị chứng minh là có tội. Như một biên tập viên kỳ cựu nói: “Việc của chúng ta không phải là đưa tin đầu tiên. Việc của chúng ta là đưa tin đúng.”'
+        'Tin thứ hai khó hơn. Trong một thông cáo, luật sư của vị doanh nhân nói rằng mọi cáo buộc đều sai sự thật và tờ báo sẽ bị kiện ra toà. Cảnh sát thông báo vụ việc đang được điều tra, nhưng đến nay chưa ai bị buộc tội. Sáng hôm sau, một bài xã luận về vấn đề này được đăng để nhắc độc giả rằng một người vô tội cho đến khi bị chứng minh là có tội. Như một biên tập viên kỳ cựu nói: “Việc của chúng ta không phải là đưa tin đầu tiên. Việc của chúng ta là đưa tin đúng.”'
       ],
       questions: [
         { q: 'Bài đọc chủ yếu nói về điều gì?', options: ['Cách viết một bài xã luận hay', 'Một đêm làm việc bận rộn của toà soạn khi có hai tin lớn', 'Cuộc đời của một doanh nhân nổi tiếng', 'Cách phòng chống lũ lụt ở miền Trung'], answer: 1,
           explain: 'Cả bài kể cách toà soạn xử lý hai tin lớn (lũ lụt và vụ bê bối) trong cùng một đêm.' },
-        { q: 'Theo tờ báo lá cải, vị doanh nhân bị cáo buộc làm gì?', options: ['Làm hư hại một con đập', 'Lấy tiền của quỹ từ thiện trẻ em để mua xe sang', 'Bỏ trốn khỏi cảnh sát', 'Mua lại một đài truyền hình'], answer: 1,
+        { q: 'Theo tờ báo mạng, vị doanh nhân bị cáo buộc làm gì?', options: ['Làm hư hại một con đập', 'Lấy tiền của quỹ từ thiện trẻ em để mua xe sang', 'Bỏ trốn khỏi cảnh sát', 'Mua lại một đài truyền hình'], answer: 1,
           explain: '“Money had been taken from a children\'s charity and spent on luxury cars.”' },
         { q: 'Vì sao các bác sĩ lo lắng?', options: ['Vì nhiều người bị thương nặng', 'Vì bệnh viện bị ngập', 'Vì dịch bệnh có thể bùng phát nếu không sớm có nước sạch', 'Vì trường học thiếu bác sĩ'], answer: 2,
           explain: '“An outbreak of disease could happen if clean water was not provided soon.”' },
@@ -122,11 +122,11 @@ export default {
     vocab: [
       { w: 'exaggerate', ipa: '/ɪɡˈzædʒəˌreɪt/', vi: 'phóng đại, nói quá', ex: 'He said he had caught a fish as big as a car, but I think he was exaggerating.', exVi: 'Anh ấy bảo đã câu được con cá to bằng chiếc ô tô, nhưng tôi nghĩ anh ấy nói quá.' },
       { w: 'confess', ipa: '/kənˈfɛs/', vi: 'thú nhận, thú tội', ex: 'She confessed that she had broken the vase.', exVi: 'Cô ấy thú nhận rằng mình đã làm vỡ cái bình.' },
-      { w: 'assert', ipa: '/əˈsɜrt/', vi: 'khẳng định chắc chắn', ex: 'The manager asserted that the company was doing well.', exVi: 'Người quản lý khẳng định chắc chắn rằng công ty đang làm ăn tốt.' },
+      { w: 'reveal', ipa: '/rɪˈvil/', vi: 'tiết lộ, để lộ ra', ex: 'She revealed that she had been offered a job in Singapore.', exVi: 'Cô ấy tiết lộ rằng mình vừa được mời làm việc ở Singapore.' },
       { w: 'contradict', ipa: '/ˌkɑntrəˈdɪkt/', vi: 'nói ngược lại, mâu thuẫn với', ex: 'His story contradicts what he told us yesterday.', exVi: 'Câu chuyện của anh ta mâu thuẫn với những gì anh ta nói với chúng tôi hôm qua.' },
       { w: 'clarify', ipa: '/ˈklɛrəˌfaɪ/', vi: 'làm rõ, giải thích rõ', ex: 'The teacher asked whether we needed her to clarify anything.', exVi: 'Cô giáo hỏi chúng tôi có cần cô giải thích rõ thêm điều gì không.' },
       { w: 'accusation', ipa: '/ˌækjəˈzeɪʃən/', vi: 'lời buộc tội', ex: 'He denied the accusation that he had cheated in the exam.', exVi: 'Cậu ấy bác bỏ lời buộc tội rằng mình đã gian lận trong kỳ thi.' },
-      { w: 'mumble', ipa: '/ˈmʌmbəl/', vi: 'lẩm bẩm, nói lí nhí', ex: 'He mumbled that he was sorry, so I could hardly hear him.', exVi: 'Anh ấy lí nhí nói xin lỗi nên tôi gần như không nghe thấy.' },
+      { w: 'whisper', ipa: '/ˈwɪspər/', vi: 'thì thầm, nói nhỏ', ex: 'He whispered that he was sorry, so I could hardly hear him.', exVi: 'Anh ấy thì thầm xin lỗi nên tôi gần như không nghe thấy.' },
       { w: 'overhear', ipa: '/ˌoʊvərˈhɪr/', vi: 'tình cờ nghe được', ex: 'I overheard my boss saying that she was going to quit.', exVi: 'Tôi tình cờ nghe sếp nói rằng chị ấy sắp nghỉ việc.' },
       { w: 'quote', ipa: '/kwoʊt/', vi: 'trích dẫn; lời trích dẫn', ex: 'The newspaper quoted the minister as saying that prices would fall.', exVi: 'Tờ báo trích lời vị bộ trưởng nói rằng giá cả sẽ giảm.' },
       { w: 'misunderstand', ipa: '/ˌmɪsʌndərˈstænd/', vi: 'hiểu lầm, hiểu sai', ex: 'I think you misunderstood what I said.', exVi: 'Tôi nghĩ bạn đã hiểu lầm điều tôi nói.' }
@@ -140,9 +140,9 @@ export default {
         explain: 'Exaggerate = phóng đại, nói quá sự thật.' },
       { type: 'fill', q: '"Can you clarify the rules?" → She asked me ___ I could clarify the rules.', answer: ['if', 'whether'], hint: 'câu hỏi Yes/No tường thuật',
         explain: 'Câu hỏi Yes/No khi tường thuật dùng if/whether + chủ ngữ + động từ (không đảo ngữ).' },
-      { type: 'mc', q: 'He denied the ___ that he had cheated in the exam.', options: ['accusation', 'quote', 'mumble', 'dilemma'], answer: 0,
+      { type: 'mc', q: 'He denied the ___ that he had cheated in the exam.', options: ['accusation', 'quote', 'whisper', 'dilemma'], answer: 0,
         explain: 'Deny an accusation = bác bỏ lời buộc tội.' },
-      { type: 'fill', q: '"I am telling the truth." → He asserted that he ___ telling the truth.', answer: ['was'], hint: 'lùi thì của am',
+      { type: 'fill', q: '"I am telling the truth." → He insisted that he ___ telling the truth.', answer: ['was'], hint: 'lùi thì của am',
         explain: 'Hiện tại tiếp diễn (am telling) lùi thành quá khứ tiếp diễn (was telling).' },
       { type: 'order', vi: 'Cô ấy thú nhận rằng cô ấy đã quên sinh nhật tôi.', words: ['forgotten', 'that', 'She', 'birthday', 'had', 'confessed', 'my', 'she'],
         answer: 'She confessed that she had forgotten my birthday' },
@@ -153,16 +153,16 @@ export default {
       title: 'The Office Rumor',
       titleVi: 'Tin đồn ở văn phòng',
       text: [
-        'Last month, something funny happened at the small marketing company where I work. On Monday morning, my colleague Hoa overheard our director talking on the phone. She told us later that he had said, quite clearly, that the company would be sold before the end of the year. By lunchtime, the whole office was worried.',
-        'Of course, the story grew as it travelled. Tuan asserted that all of us would lose our jobs. Mai contradicted him and claimed that a foreign company had already bought the building. Someone even said that the director was moving to Australia. Everybody was exaggerating, but nobody had actually asked the director what was going on.',
+        'Last month, something funny happened at the small marketing company where I work. On Monday morning, my colleague Hoa overheard our director talking on the phone. Later she revealed that he had said, quite clearly, that the company would be sold before the end of the year. By lunchtime, the whole office was worried.',
+        'Of course, the story grew as it travelled. Tuan warned that all of us would lose our jobs. Mai contradicted him and claimed that a foreign company had already bought the building. Someone even said that the director was moving to Australia. Everybody was exaggerating, but nobody had actually asked the director what was going on.',
         'Finally, on Wednesday, I decided to clarify the situation. I knocked on his door and asked him whether the company was really being sold. He looked confused at first, then he started laughing. He explained that he had been talking about his old car, not the company. He said he wanted to sell it before the end of the year because it used too much petrol.',
-        'At the next meeting, Hoa confessed that she had only heard half of the conversation. She mumbled that she was sorry, and the director told her not to worry. He said that it was easy to misunderstand a phone call. However, he also asked us to check the facts before we repeated anything. Now, whenever someone starts a new rumor, we just quote his words: “Is it the company, or is it the car?”'
+        'At the next meeting, Hoa confessed that she had only heard half of the conversation. She whispered that she was sorry, and the director told her not to worry. He said that it was easy to misunderstand a phone call. However, he also asked us to check the facts before we repeated anything. Now, whenever someone starts a new rumor, we just quote his words: “Is it the company, or is it the car?”'
       ],
       vi: [
-        'Tháng trước, có một chuyện buồn cười xảy ra ở công ty marketing nhỏ nơi tôi làm việc. Sáng thứ Hai, đồng nghiệp của tôi là Hoa tình cờ nghe giám đốc nói chuyện điện thoại. Sau đó chị kể với chúng tôi rằng ông ấy đã nói khá rõ là công ty sẽ bị bán trước cuối năm. Đến giờ ăn trưa, cả văn phòng đều lo lắng.',
-        'Tất nhiên, câu chuyện càng truyền đi càng to ra. Tuấn khẳng định chắc chắn rằng tất cả chúng tôi sẽ mất việc. Mai cãi lại và nói rằng một công ty nước ngoài đã mua toà nhà rồi. Thậm chí có người còn nói giám đốc sắp chuyển sang Úc. Ai cũng nói quá lên, nhưng thật ra chưa ai hỏi giám đốc xem chuyện gì đang xảy ra.',
+        'Tháng trước, có một chuyện buồn cười xảy ra ở công ty marketing nhỏ nơi tôi làm việc. Sáng thứ Hai, đồng nghiệp của tôi là Hoa tình cờ nghe giám đốc nói chuyện điện thoại. Sau đó chị tiết lộ với chúng tôi rằng ông ấy đã nói khá rõ là công ty sẽ bị bán trước cuối năm. Đến giờ ăn trưa, cả văn phòng đều lo lắng.',
+        'Tất nhiên, câu chuyện càng truyền đi càng to ra. Tuấn cảnh báo rằng tất cả chúng tôi sẽ mất việc. Mai cãi lại và nói rằng một công ty nước ngoài đã mua toà nhà rồi. Thậm chí có người còn nói giám đốc sắp chuyển sang Úc. Ai cũng nói quá lên, nhưng thật ra chưa ai hỏi giám đốc xem chuyện gì đang xảy ra.',
         'Cuối cùng, vào thứ Tư, tôi quyết định làm rõ mọi chuyện. Tôi gõ cửa phòng ông và hỏi có thật là công ty sắp bị bán không. Lúc đầu ông có vẻ bối rối, rồi ông bật cười. Ông giải thích rằng ông đang nói về chiếc xe ô tô cũ của mình chứ không phải công ty. Ông nói ông muốn bán nó trước cuối năm vì nó quá tốn xăng.',
-        'Ở cuộc họp tiếp theo, Hoa thú nhận rằng chị chỉ nghe được một nửa cuộc nói chuyện. Chị lí nhí xin lỗi, và giám đốc bảo chị đừng lo. Ông nói rằng nghe điện thoại thì rất dễ hiểu lầm. Tuy vậy, ông cũng yêu cầu chúng tôi kiểm tra sự thật trước khi nhắc lại bất cứ điều gì. Giờ đây, mỗi khi có ai bắt đầu một tin đồn mới, chúng tôi chỉ cần trích lại câu của ông: “Là công ty, hay là cái xe?”'
+        'Ở cuộc họp tiếp theo, Hoa thú nhận rằng chị chỉ nghe được một nửa cuộc nói chuyện. Chị thì thầm xin lỗi, và giám đốc bảo chị đừng lo. Ông nói rằng nghe điện thoại thì rất dễ hiểu lầm. Tuy vậy, ông cũng yêu cầu chúng tôi kiểm tra sự thật trước khi nhắc lại bất cứ điều gì. Giờ đây, mỗi khi có ai bắt đầu một tin đồn mới, chúng tôi chỉ cần trích lại câu của ông: “Là công ty, hay là cái xe?”'
       ],
       questions: [
         { q: 'Tin đồn trong văn phòng bắt đầu từ đâu?', options: ['Từ một bài báo', 'Từ việc Hoa tình cờ nghe giám đốc nói chuyện điện thoại', 'Từ một email của giám đốc', 'Từ một công ty nước ngoài'], answer: 1,
@@ -245,7 +245,7 @@ export default {
       { w: 'hardware', ipa: '/ˈhɑrdˌwɛr/', vi: 'phần cứng (máy tính)', ex: 'This game needs better hardware to run smoothly.', exVi: 'Trò chơi này cần phần cứng mạnh hơn để chạy mượt.' },
       { w: 'broadband', ipa: '/ˈbrɔdˌbænd/', vi: 'internet băng thông rộng', ex: 'My grandparents are not used to having broadband at home yet.', exVi: 'Ông bà tôi vẫn chưa quen với việc có internet băng thông rộng ở nhà.' },
       { w: 'virtual reality', ipa: '/ˈvɜrtʃuəl riˈæləti/', vi: 'thực tế ảo', ex: 'I tried playing a game in virtual reality, and I could not stop smiling.', exVi: 'Tôi thử chơi một trò chơi thực tế ảo và không nhịn được cười.' },
-      { w: 'antivirus', ipa: '/ˈæntiˌvaɪrəs/', vi: '(phần mềm) diệt virus', ex: 'Remember to install antivirus software on your new laptop.', exVi: 'Nhớ cài phần mềm diệt virus cho chiếc laptop mới nhé.' },
+      { w: 'security', ipa: '/sɪˈkjʊrəti/', vi: 'an ninh, bảo mật', ex: 'Remember to check the security settings on your new laptop.', exVi: 'Nhớ kiểm tra phần cài đặt bảo mật trên chiếc laptop mới nhé.' },
       { w: 'compatible', ipa: '/kəmˈpætəbəl/', vi: 'tương thích', ex: "This charger isn't compatible with my phone.", exVi: 'Cái sạc này không tương thích với điện thoại của tôi.' },
       { w: 'innovation', ipa: '/ˌɪnəˈveɪʃən/', vi: 'sự đổi mới, phát minh mới', ex: 'The smartphone was one of the biggest innovations of the 21st century.', exVi: 'Điện thoại thông minh là một trong những phát minh lớn nhất thế kỷ 21.' }
     ],
@@ -260,7 +260,7 @@ export default {
         explain: 'Be used to + V-ing = quen với việc gì.' },
       { type: 'mc', q: "This charger isn't ___ with my phone, so I can't use it.", options: ['compatible', 'innovative', 'virtual', 'toxic'], answer: 0,
         explain: 'Compatible with = tương thích với.' },
-      { type: 'fill', q: "Don't forget ___ antivirus software on your new laptop. (install)", answer: ['to install'], hint: 'forget + ? (việc cần làm)',
+      { type: 'fill', q: "Don't forget ___ the security software on your new laptop. (install)", answer: ['to install'], hint: 'forget + ? (việc cần làm)',
         explain: 'Forget + to V = quên làm một việc cần làm; forget + V-ing = quên việc đã làm.' },
       { type: 'order', vi: 'Tội phạm mạng đang trở thành một vấn đề nghiêm trọng.', words: ['serious', 'is', 'Cybercrime', 'a', 'problem', 'becoming'],
         answer: 'Cybercrime is becoming a serious problem' },
@@ -274,13 +274,13 @@ export default {
         'My grandmother, Ba, is seventy-eight, and until two years ago she had never touched a computer. She used to write letters by hand and wait weeks for an answer. When my parents suggested getting broadband at her house, she refused to listen. “I don’t need the internet,” she said. “I have a radio and a telephone.”',
         'Everything changed during the pandemic, when she could not visit her friends. I offered to teach her, and she agreed to try. At first, she found it difficult to use a mouse, and she kept closing the browser by mistake. We also had to upgrade her old laptop, because the hardware was too slow and many new apps were not compatible with it.',
         'Now she is completely used to living online. She enjoys watching cooking videos, and she has even started selling her homemade pickles through a small online shop. I built a simple database to keep track of her customers. Last month, I let her try virtual reality at my university. She screamed at first, then she refused to take the headset off!',
-        'Of course, there are risks. Older people are often targets of cybercrime, so I made sure to install antivirus software and taught her never to share her passwords. Once, a stranger called and asked her to confirm her bank details. She hung up immediately and called me. For her, the internet is not just another innovation. It is a window to a world she thought she had lost.'
+        'Of course, there are risks. Older people are often targets of cybercrime, so I made sure to install good security software and taught her never to share her passwords. Once, a stranger called and asked her to confirm her bank details. She hung up immediately and called me. For her, the internet is not just another innovation. It is a window to a world she thought she had lost.'
       ],
       vi: [
         'Bà tôi, bà Ba, năm nay bảy mươi tám tuổi, và cho đến hai năm trước bà chưa từng chạm vào máy tính. Bà từng viết thư tay và chờ cả mấy tuần mới có thư hồi âm. Khi bố mẹ tôi gợi ý lắp internet băng thông rộng ở nhà bà, bà nhất quyết không nghe. “Bà không cần internet,” bà nói. “Bà có đài với điện thoại rồi.”',
         'Mọi thứ thay đổi trong đại dịch, khi bà không thể đi thăm bạn bè. Tôi đề nghị dạy bà và bà đồng ý thử. Lúc đầu, bà thấy dùng chuột rất khó, và cứ lỡ tay đóng trình duyệt. Chúng tôi còn phải nâng cấp chiếc laptop cũ của bà, vì phần cứng quá chậm và nhiều ứng dụng mới không tương thích với nó.',
         'Giờ đây bà đã hoàn toàn quen với cuộc sống trên mạng. Bà thích xem video nấu ăn, và thậm chí đã bắt đầu bán dưa muối nhà làm qua một cửa hàng trực tuyến nhỏ. Tôi lập một cơ sở dữ liệu đơn giản để theo dõi khách hàng của bà. Tháng trước, tôi cho bà thử thực tế ảo ở trường đại học của tôi. Lúc đầu bà hét lên, rồi sau đó nhất quyết không chịu tháo kính ra!',
-        'Tất nhiên là có rủi ro. Người lớn tuổi thường là mục tiêu của tội phạm mạng, nên tôi đã cài phần mềm diệt virus cẩn thận và dạy bà không bao giờ chia sẻ mật khẩu. Có lần, một người lạ gọi đến và yêu cầu bà xác nhận thông tin ngân hàng. Bà cúp máy ngay và gọi cho tôi. Với bà, internet không chỉ là một phát minh mới. Đó là cánh cửa mở ra thế giới mà bà tưởng mình đã đánh mất.'
+        'Tất nhiên là có rủi ro. Người lớn tuổi thường là mục tiêu của tội phạm mạng, nên tôi đã cài phần mềm bảo mật cẩn thận và dạy bà không bao giờ chia sẻ mật khẩu. Có lần, một người lạ gọi đến và yêu cầu bà xác nhận thông tin ngân hàng. Bà cúp máy ngay và gọi cho tôi. Với bà, internet không chỉ là một phát minh mới. Đó là cánh cửa mở ra thế giới mà bà tưởng mình đã đánh mất.'
       ],
       questions: [
         { q: 'Trước đây bà Ba thường liên lạc với người khác bằng cách nào?', options: ['Viết thư tay và chờ hồi âm', 'Gửi email', 'Dùng mạng xã hội', 'Gọi video'], answer: 0,

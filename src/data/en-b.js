@@ -20,7 +20,7 @@ addLevels('en', [
           { w: 'abroad', ipa: '/əˈbrɔd/', vi: 'ở nước ngoài, ra nước ngoài', ex: 'Have you ever traveled abroad?', exVi: 'Bạn đã bao giờ đi nước ngoài chưa?' },
           { w: 'sightseeing', ipa: '/ˈsaɪtˌsiɪŋ/', vi: 'việc tham quan, ngắm cảnh', ex: 'We went sightseeing all day.', exVi: 'Chúng tôi đi tham quan cả ngày.' },
           { w: 'accommodation', ipa: '/əˌkɑməˈdeɪʃən/', vi: 'chỗ ở (khách sạn, nhà nghỉ…)', ex: 'The price includes flights and accommodation.', exVi: 'Giá đã bao gồm vé máy bay và chỗ ở.' },
-          { w: 'delay', ipa: '/dɪˈleɪ/', vi: 'sự trì hoãn; làm chậm trễ', ex: 'Our flight has been delayed for two hours.', exVi: 'Chuyến bay của chúng tôi đã bị hoãn hai tiếng.' },
+          { w: 'delay', ipa: '/dɪˈleɪ/', vi: 'sự trì hoãn; làm chậm trễ', ex: 'The storm has delayed our flight by two hours.', exVi: 'Cơn bão đã làm chuyến bay của chúng tôi trễ hai tiếng.' },
           { w: 'book', ipa: '/bʊk/', vi: 'đặt (vé, phòng)', ex: "I've already booked a hotel room.", exVi: 'Tôi đã đặt phòng khách sạn rồi.' }
         ],
         grammar: {
@@ -69,8 +69,8 @@ addLevels('en', [
             explain: 'Never = chưa bao giờ, đi với has ở dạng khẳng định.' },
           { type: 'order', vi: 'Bạn đã bao giờ đi nước ngoài chưa?', words: ['traveled', 'ever', 'Have', 'abroad?', 'you'],
             answer: 'Have you ever traveled abroad?' },
-          { type: 'order', vi: 'Chuyến bay của chúng tôi vừa bị hoãn.', words: ['just', 'flight', 'has', 'delayed', 'Our', 'been'],
-            answer: 'Our flight has just been delayed' }
+          { type: 'order', vi: 'Chúng tôi vừa mới đặt khách sạn.', words: ['just', 'hotel', 'have', 'booked', 'We', 'a'],
+            answer: 'We have just booked a hotel' }
         ]
       },
       // ───────────────────────── B1-2 ─────────────────────────
@@ -153,7 +153,7 @@ addLevels('en', [
           { w: 'fever', ipa: '/ˈfivər/', vi: 'sốt', ex: 'The child has a high fever.', exVi: 'Đứa bé bị sốt cao.' },
           { w: 'sore throat', ipa: '/ˌsɔr ˈθroʊt/', vi: 'đau họng', ex: 'I have a sore throat and a cough.', exVi: 'Tôi bị đau họng và ho.' },
           { w: 'prescription', ipa: '/prɪˈskrɪpʃən/', vi: 'đơn thuốc', ex: 'You need a prescription to buy this medicine.', exVi: 'Bạn cần đơn thuốc để mua loại thuốc này.' },
-          { w: 'appointment', ipa: '/əˈpɔɪntmənt/', vi: 'cuộc hẹn (với bác sĩ…)', ex: "I've made an appointment with the dentist.", exVi: 'Tôi đã đặt lịch hẹn với nha sĩ.' },
+          { w: 'clinic', ipa: '/ˈklɪnɪk/', vi: 'phòng khám', ex: "You don't have to go to the hospital. The clinic near your house is open until 8 p.m.", exVi: 'Bạn không cần đến bệnh viện. Phòng khám gần nhà bạn mở cửa đến 8 giờ tối.' },
           { w: 'medicine', ipa: '/ˈmɛdəsən/', vi: 'thuốc', ex: 'Take this medicine twice a day.', exVi: 'Uống thuốc này hai lần một ngày.' },
           { w: 'recover', ipa: '/rɪˈkʌvər/', vi: 'hồi phục', ex: 'She recovered quickly after the operation.', exVi: 'Cô ấy hồi phục nhanh sau ca phẫu thuật.' },
           { w: 'injury', ipa: '/ˈɪndʒəri/', vi: 'chấn thương', ex: 'He has a knee injury from playing football.', exVi: 'Anh ấy bị chấn thương đầu gối do đá bóng.' },
@@ -362,8 +362,8 @@ addLevels('en', [
           { w: 'miss', ipa: '/mɪs/', vi: 'lỡ, bỏ lỡ', ex: "Hurry up or we'll miss the train.", exVi: 'Nhanh lên kẻo chúng ta lỡ tàu.' },
           { w: 'boil', ipa: '/bɔɪl/', vi: 'sôi, đun sôi', ex: 'Water boils at 100 degrees Celsius.', exVi: 'Nước sôi ở 100 độ C.' },
           { w: 'freeze', ipa: '/friz/', vi: 'đóng băng', ex: 'Water freezes at 0 degrees Celsius.', exVi: 'Nước đóng băng ở 0 độ C.' },
-          { w: 'umbrella', ipa: '/ʌmˈbrɛlə/', vi: 'cái ô, dù', ex: "Take an umbrella. It's going to rain.", exVi: 'Mang ô theo nhé. Trời sắp mưa đấy.' },
-          { w: 'probably', ipa: '/ˈprɑbəbli/', vi: 'có lẽ, có khả năng', ex: "If it rains, we'll probably stay home.", exVi: 'Nếu trời mưa, có lẽ chúng tôi sẽ ở nhà.' },
+          { w: 'temperature', ipa: '/ˈtɛmprətʃər/', vi: 'nhiệt độ', ex: 'If the temperature drops below zero, water freezes.', exVi: 'Nếu nhiệt độ xuống dưới 0, nước sẽ đóng băng.' },
+          { w: 'likely', ipa: '/ˈlaɪkli/', vi: 'có khả năng, nhiều khả năng sẽ', ex: "If it rains, we're likely to stay home.", exVi: 'Nếu trời mưa, nhiều khả năng chúng tôi sẽ ở nhà.' },
           { w: 'outdoor', ipa: '/ˈaʊtˌdɔr/', vi: 'ngoài trời', ex: 'We love outdoor activities in summer.', exVi: 'Chúng tôi thích các hoạt động ngoài trời vào mùa hè.' }
         ],
         grammar: {
@@ -537,7 +537,7 @@ addLevels('en', [
         dialogue: [
           { s: 'Anchor', t: 'Good evening. Here is the main news. A strong storm hit the coast last night.', vi: 'Chào buổi tối. Sau đây là tin chính. Một cơn bão mạnh đã đổ bộ vào bờ biển đêm qua.' },
           { s: 'Reporter', t: 'Yes. Hundreds of houses were damaged and twelve people were injured.', vi: 'Vâng. Hàng trăm ngôi nhà bị hư hại và mười hai người bị thương.' },
-          { s: 'Anchor', t: 'Have the injured been taken to hospital?', vi: 'Những người bị thương đã được đưa đến bệnh viện chưa?' },
+          { s: 'Anchor', t: 'Have the injured been taken to the hospital?', vi: 'Những người bị thương đã được đưa đến bệnh viện chưa?' },
           { s: 'Reporter', t: 'Yes, they have all been taken to the provincial hospital. Roads are being cleared now.', vi: 'Rồi, tất cả đã được đưa đến bệnh viện tỉnh. Hiện các tuyến đường đang được dọn dẹp.' },
           { s: 'Anchor', t: 'What has the government said?', vi: 'Chính phủ đã nói gì?' },
           { s: 'Reporter', t: 'It has been announced that emergency money will be sent to the area tomorrow.', vi: 'Đã có thông báo rằng tiền hỗ trợ khẩn cấp sẽ được gửi đến khu vực này vào ngày mai.' }
@@ -678,7 +678,7 @@ addLevels('en', [
           { s: 'Leo', t: "Sure! Is it the group whose leader was on TV last week?", vi: 'Có chứ! Có phải nhóm có trưởng nhóm lên tivi tuần trước không?' },
           { s: 'Vy', t: "Yes! She's a woman who really cares about the community.", vi: 'Đúng rồi! Chị ấy là người thực sự quan tâm đến cộng đồng.' },
           { s: 'Leo', t: 'Where do you usually go?', vi: 'Các cậu thường đi đâu?' },
-          { s: 'Vy', t: "To a small beach where a lot of plastic washes up. We recycle everything which we collect.", vi: 'Đến một bãi biển nhỏ, nơi rất nhiều rác nhựa dạt vào. Bọn mình tái chế mọi thứ thu gom được.' },
+          { s: 'Vy', t: "To a small beach where a lot of plastic washes up. We recycle everything we collect.", vi: 'Đến một bãi biển nhỏ, nơi rất nhiều rác nhựa dạt vào. Bọn mình tái chế mọi thứ thu gom được.' },
           { s: 'Leo', t: "Great. I think small actions like that are the start of a more sustainable future.", vi: 'Tuyệt. Mình nghĩ những hành động nhỏ như vậy là khởi đầu cho một tương lai bền vững hơn.' }
         ],
         exercises: [
@@ -690,8 +690,8 @@ addLevels('en', [
             explain: 'Mệnh đề không xác định (có dấu phẩy) dùng which, không dùng that.' },
           { type: 'fill', q: 'He is the volunteer ___ car was used to carry the rubbish.', answer: ['whose'], hint: 'sở hữu',
             explain: 'Whose car = xe của người đó.' },
-          { type: 'fill', q: 'Plastic bags are something ___ we should stop using.', answer: ['that', 'which'], hint: 'vật',
-            explain: 'Thay cho vật → that/which (trong mệnh đề xác định).' },
+          { type: 'fill', q: 'Plastic bags are something ___ we should stop using.', answer: ['that', 'which'], hint: 'vật (sau something)',
+            explain: 'Sau something, everything, anything, nothing, all… người bản xứ gần như luôn dùng that (hoặc lược bỏ): something that we should stop using. Which vẫn được chấm đúng nhưng ít tự nhiên.' },
           { type: 'fill', q: 'Energy which comes from the sun or wind is called ___ energy.', answer: ['renewable'], hint: 'có thể tái tạo',
             explain: 'Renewable energy = năng lượng tái tạo.' },
           { type: 'order', vi: 'Những người tái chế đang giúp bảo vệ hành tinh.', words: ['recycle', 'helping', 'People', 'planet', 'are', 'who', 'the'],

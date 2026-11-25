@@ -2,13 +2,13 @@
 export default {
   'en-a1-1': {
     vocab: [
-      { w: 'good afternoon', ipa: '/ɡʊd ˌæftərˈnuːn/', vi: 'chào buổi chiều', ex: 'Good afternoon, Mr. Brown!', exVi: 'Chào buổi chiều, thầy Brown!' },
+      { w: 'good afternoon', ipa: '/ɡʊd ˌæftərˈnun/', vi: 'chào buổi chiều', ex: 'Good afternoon, Mr. Brown!', exVi: 'Chào buổi chiều, thầy Brown!' },
       { w: 'good night', ipa: '/ɡʊd ˈnaɪt/', vi: 'chúc ngủ ngon; chào (khi chia tay buổi tối)', ex: 'Good night, Mom!', exVi: 'Chúc mẹ ngủ ngon!' },
-      { w: 'sorry', ipa: '/ˈsɑːri/', vi: 'xin lỗi', ex: 'Sorry, I am not Anna.', exVi: 'Xin lỗi, tôi không phải là Anna.' },
+      { w: 'sorry', ipa: '/ˈsɑri/', vi: 'xin lỗi', ex: 'Sorry, I am not Anna.', exVi: 'Xin lỗi, tôi không phải là Anna.' },
       { w: 'happy', ipa: '/ˈhæpi/', vi: 'vui, hạnh phúc', ex: 'We are happy today.', exVi: 'Hôm nay chúng tôi rất vui.' },
       { w: 'tired', ipa: '/ˈtaɪərd/', vi: 'mệt', ex: 'I am tired, but I am fine.', exVi: 'Tôi mệt, nhưng tôi ổn.' },
-      { w: 'teacher', ipa: '/ˈtiːtʃər/', vi: 'giáo viên, thầy/cô giáo', ex: 'My teacher is from England.', exVi: 'Cô giáo của tôi đến từ nước Anh.' },
-      { w: 'student', ipa: '/ˈstuːdənt/', vi: 'học sinh, sinh viên', ex: 'I am a student.', exVi: 'Tôi là sinh viên.' },
+      { w: 'teacher', ipa: '/ˈtitʃər/', vi: 'giáo viên, thầy/cô giáo', ex: 'My teacher is from England.', exVi: 'Cô giáo của tôi đến từ nước Anh.' },
+      { w: 'student', ipa: '/ˈstudənt/', vi: 'học sinh, sinh viên', ex: 'I am a student.', exVi: 'Tôi là sinh viên.' },
       { w: 'classmate', ipa: '/ˈklæsmeɪt/', vi: 'bạn cùng lớp', ex: 'Tom is my classmate.', exVi: 'Tom là bạn cùng lớp của tôi.' },
       { w: 'neighbor', ipa: '/ˈneɪbər/', vi: 'hàng xóm', ex: 'She is my neighbor.', exVi: 'Cô ấy là hàng xóm của tôi.' },
       { w: 'last name', ipa: '/ˈlæst ˌneɪm/', vi: 'họ (trong họ tên)', ex: 'My last name is Nguyen.', exVi: 'Họ của tôi là Nguyễn.' }
@@ -59,16 +59,16 @@ export default {
 
   'en-a1-2': {
     vocab: [
-      { w: 'eleven', ipa: '/ɪˈlevən/', vi: 'số 11', ex: 'My brother is eleven years old.', exVi: 'Em trai tôi mười một tuổi.' },
-      { w: 'fifteen', ipa: '/ˌfɪfˈtiːn/', vi: 'số 15', ex: 'Are you fifteen? — Yes, I am.', exVi: 'Bạn mười lăm tuổi phải không? — Đúng vậy.' },
-      { w: 'forty', ipa: '/ˈfɔːrti/', vi: 'số 40', ex: 'My mother is forty.', exVi: 'Mẹ tôi bốn mươi tuổi.' },
+      { w: 'eleven', ipa: '/ɪˈlɛvən/', vi: 'số 11', ex: 'My brother is eleven years old.', exVi: 'Em trai tôi mười một tuổi.' },
+      { w: 'fifteen', ipa: '/ˌfɪfˈtin/', vi: 'số 15', ex: 'Are you fifteen? — Yes, I am.', exVi: 'Bạn mười lăm tuổi phải không? — Đúng vậy.' },
+      { w: 'forty', ipa: '/ˈfɔrti/', vi: 'số 40', ex: 'My mother is forty.', exVi: 'Mẹ tôi bốn mươi tuổi.' },
       { w: 'fifty', ipa: '/ˈfɪfti/', vi: 'số 50', ex: 'Our teacher is fifty years old.', exVi: 'Thầy giáo của chúng tôi năm mươi tuổi.' },
       { w: 'age', ipa: '/eɪdʒ/', vi: 'tuổi, tuổi tác', ex: 'Age is just a number.', exVi: 'Tuổi tác chỉ là một con số.' },
       { w: 'nationality', ipa: '/ˌnæʃəˈnæləti/', vi: 'quốc tịch', ex: 'What is your nationality? — I am Vietnamese.', exVi: 'Quốc tịch của bạn là gì? — Tôi là người Việt Nam.' },
       { w: 'city', ipa: '/ˈsɪti/', vi: 'thành phố', ex: 'Hanoi is a big city.', exVi: 'Hà Nội là một thành phố lớn.' },
       { w: 'hometown', ipa: '/ˈhoʊmtaʊn/', vi: 'quê nhà, quê hương', ex: 'My hometown is Hue.', exVi: 'Quê tôi ở Huế.' },
       { w: 'language', ipa: '/ˈlæŋɡwɪdʒ/', vi: 'ngôn ngữ, tiếng', ex: 'What language is this? — It is Japanese.', exVi: 'Đây là tiếng gì? — Đó là tiếng Nhật.' },
-      { w: 'address', ipa: '/ˈædres/', vi: 'địa chỉ', ex: 'What is your address?', exVi: 'Địa chỉ của bạn là gì?' }
+      { w: 'address', ipa: '/ˈædrɛs/', vi: 'địa chỉ', ex: 'What is your address?', exVi: 'Địa chỉ của bạn là gì?' }
     ],
     exercises: [
       { type: 'mc', q: '___ old are you? — I am forty.', options: ['What', 'How', 'Where'], answer: 1,
@@ -116,15 +116,15 @@ export default {
 
   'en-a1-3': {
     vocab: [
-      { w: 'parents', ipa: '/ˈperənts/', vi: 'bố mẹ', ex: 'My parents are teachers.', exVi: 'Bố mẹ tôi là giáo viên.' },
+      { w: 'parents', ipa: '/ˈpɛrənts/', vi: 'bố mẹ', ex: 'My parents are teachers.', exVi: 'Bố mẹ tôi là giáo viên.' },
       { w: 'aunt', ipa: '/ænt/', vi: 'cô, dì, bác gái, mợ, thím', ex: 'My aunt is a nurse.', exVi: 'Dì của tôi là y tá.' },
       { w: 'uncle', ipa: '/ˈʌŋkəl/', vi: 'chú, bác trai, cậu, dượng', ex: 'Her uncle is from Da Nang.', exVi: 'Chú của cô ấy đến từ Đà Nẵng.' },
       { w: 'cousin', ipa: '/ˈkʌzən/', vi: 'anh/chị/em họ', ex: "Mai is my aunt's daughter. She is my cousin.", exVi: 'Mai là con gái của dì tôi. Bạn ấy là em họ của tôi.' },
       { w: 'grandmother', ipa: '/ˈɡrænˌmʌðər/', vi: 'bà (nội, ngoại)', ex: 'My grandmother is seventy.', exVi: 'Bà tôi bảy mươi tuổi.' },
-      { w: 'grandfather', ipa: '/ˈɡrænˌfɑːðər/', vi: 'ông (nội, ngoại)', ex: "My grandfather's name is Ba.", exVi: 'Ông tôi tên là Ba.' },
+      { w: 'grandfather', ipa: '/ˈɡrænˌfɑðər/', vi: 'ông (nội, ngoại)', ex: "My grandfather's name is Ba.", exVi: 'Ông tôi tên là Ba.' },
       { w: 'baby', ipa: '/ˈbeɪbi/', vi: 'em bé', ex: "The baby is my sister's son.", exVi: 'Em bé là con trai của chị tôi.' },
       { w: 'child', ipa: '/tʃaɪld/', vi: 'đứa trẻ, đứa con (số nhiều: children)', ex: 'They have one child.', exVi: 'Họ có một đứa con.' },
-      { w: 'pet', ipa: '/pet/', vi: 'thú cưng', ex: 'Is this your pet? — Yes, it is my cat.', exVi: 'Đây là thú cưng của bạn à? — Đúng, nó là con mèo của tôi.' },
+      { w: 'pet', ipa: '/pɛt/', vi: 'thú cưng', ex: 'Is this your pet? — Yes, it is my cat.', exVi: 'Đây là thú cưng của bạn à? — Đúng, nó là con mèo của tôi.' },
       { w: 'house', ipa: '/haʊs/', vi: 'ngôi nhà', ex: "This is my grandparents' house.", exVi: 'Đây là nhà của ông bà tôi.' }
     ],
     exercises: [
@@ -173,16 +173,16 @@ export default {
 
   'en-a1-4': {
     vocab: [
-      { w: 'pencil', ipa: '/ˈpensəl/', vi: 'bút chì', ex: 'These pencils are black.', exVi: 'Những cây bút chì này màu đen.' },
+      { w: 'pencil', ipa: '/ˈpɛnsəl/', vi: 'bút chì', ex: 'These pencils are black.', exVi: 'Những cây bút chì này màu đen.' },
       { w: 'notebook', ipa: '/ˈnoʊtbʊk/', vi: 'quyển vở, sổ tay', ex: 'Is that your notebook?', exVi: 'Kia có phải là vở của bạn không?' },
-      { w: 'desk', ipa: '/desk/', vi: 'bàn học, bàn làm việc', ex: 'My desk is small.', exVi: 'Bàn học của tôi nhỏ.' },
-      { w: 'chair', ipa: '/tʃer/', vi: 'cái ghế', ex: 'Those chairs are blue.', exVi: 'Những cái ghế kia màu xanh dương.' },
-      { w: 'key', ipa: '/kiː/', vi: 'chìa khoá', ex: 'Where is my key?', exVi: 'Chìa khoá của tôi đâu rồi?' },
-      { w: 'clock', ipa: '/klɑːk/', vi: 'đồng hồ (treo tường, để bàn)', ex: 'That clock is old.', exVi: 'Cái đồng hồ kia cũ rồi.' },
+      { w: 'desk', ipa: '/dɛsk/', vi: 'bàn học, bàn làm việc', ex: 'My desk is small.', exVi: 'Bàn học của tôi nhỏ.' },
+      { w: 'chair', ipa: '/tʃɛr/', vi: 'cái ghế', ex: 'Those chairs are blue.', exVi: 'Những cái ghế kia màu xanh dương.' },
+      { w: 'key', ipa: '/ki/', vi: 'chìa khoá', ex: 'Where is my key?', exVi: 'Chìa khoá của tôi đâu rồi?' },
+      { w: 'clock', ipa: '/klɑk/', vi: 'đồng hồ (treo tường, để bàn)', ex: 'That clock is old.', exVi: 'Cái đồng hồ kia cũ rồi.' },
       { w: 'white', ipa: '/waɪt/', vi: 'màu trắng', ex: 'I have a white bag.', exVi: 'Tôi có một cái túi màu trắng.' },
-      { w: 'yellow', ipa: '/ˈjeloʊ/', vi: 'màu vàng', ex: 'This pen is yellow.', exVi: 'Cây bút này màu vàng.' },
+      { w: 'yellow', ipa: '/ˈjɛloʊ/', vi: 'màu vàng', ex: 'This pen is yellow.', exVi: 'Cây bút này màu vàng.' },
       { w: 'brown', ipa: '/braʊn/', vi: 'màu nâu', ex: 'My dog is brown.', exVi: 'Con chó của tôi màu nâu.' },
-      { w: 'orange', ipa: '/ˈɔːrɪndʒ/', vi: 'quả cam; màu cam', ex: 'This is an orange. It is orange, too.', exVi: 'Đây là một quả cam. Nó cũng có màu cam.' }
+      { w: 'orange', ipa: '/ˈɔrɪndʒ/', vi: 'quả cam; màu cam', ex: 'This is an orange. It is orange, too.', exVi: 'Đây là một quả cam. Nó cũng có màu cam.' }
     ],
     exercises: [
       { type: 'mc', q: 'I have ___ orange.', options: ['a', 'an', 'two'], answer: 1,
@@ -234,11 +234,11 @@ export default {
       { w: 'brush', ipa: '/brʌʃ/', vi: 'chải; đánh (răng)', ex: 'She brushes her teeth every morning.', exVi: 'Sáng nào cô ấy cũng đánh răng.' },
       { w: 'lunch', ipa: '/lʌntʃ/', vi: 'bữa trưa', ex: 'We have lunch at twelve.', exVi: 'Chúng tôi ăn trưa lúc mười hai giờ.' },
       { w: 'dinner', ipa: '/ˈdɪnər/', vi: 'bữa tối', ex: 'My mother cooks dinner every day.', exVi: 'Ngày nào mẹ tôi cũng nấu bữa tối.' },
-      { w: 'homework', ipa: '/ˈhoʊmwɜːrk/', vi: 'bài tập về nhà', ex: 'He does his homework in the evening.', exVi: 'Cậu ấy làm bài tập về nhà vào buổi tối.' },
+      { w: 'homework', ipa: '/ˈhoʊmwɜrk/', vi: 'bài tập về nhà', ex: 'He does his homework in the evening.', exVi: 'Cậu ấy làm bài tập về nhà vào buổi tối.' },
       { w: 'study', ipa: '/ˈstʌdi/', vi: 'học, học tập', ex: 'She studies English every day.', exVi: 'Ngày nào cô ấy cũng học tiếng Anh.' },
       { w: 'cook', ipa: '/kʊk/', vi: 'nấu ăn; đầu bếp', ex: 'I cook dinner on Sundays.', exVi: 'Tôi nấu bữa tối vào các ngày Chủ nhật.' },
-      { w: 'walk', ipa: '/wɔːk/', vi: 'đi bộ', ex: 'They walk to school.', exVi: 'Họ đi bộ đến trường.' },
-      { w: 'often', ipa: '/ˈɔːfən/', vi: 'thường, hay', ex: 'I often drink coffee in the morning.', exVi: 'Tôi thường uống cà phê vào buổi sáng.' },
+      { w: 'walk', ipa: '/wɔk/', vi: 'đi bộ', ex: 'They walk to school.', exVi: 'Họ đi bộ đến trường.' },
+      { w: 'often', ipa: '/ˈɔfən/', vi: 'thường, hay', ex: 'I often drink coffee in the morning.', exVi: 'Tôi thường uống cà phê vào buổi sáng.' },
       { w: 'busy', ipa: '/ˈbɪzi/', vi: 'bận, bận rộn', ex: 'My father is busy every day.', exVi: 'Ngày nào bố tôi cũng bận.' }
     ],
     exercises: [
@@ -287,14 +287,14 @@ export default {
 
   'en-a1-6': {
     vocab: [
-      { w: 'juice', ipa: '/dʒuːs/', vi: 'nước ép (trái cây)', ex: "I'd like some apple juice, please.", exVi: 'Cho tôi một ít nước ép táo.' },
+      { w: 'juice', ipa: '/dʒus/', vi: 'nước ép (trái cây)', ex: "I'd like some apple juice, please.", exVi: 'Cho tôi một ít nước ép táo.' },
       { w: 'banana', ipa: '/bəˈnænə/', vi: 'quả chuối', ex: 'I eat a banana every morning.', exVi: 'Sáng nào tôi cũng ăn một quả chuối.' },
       { w: 'fish', ipa: '/fɪʃ/', vi: 'cá', ex: 'Do you have any fish?', exVi: 'Bạn có cá không?' },
-      { w: 'meat', ipa: '/miːt/', vi: 'thịt', ex: "I don't eat meat.", exVi: 'Tôi không ăn thịt.' },
-      { w: 'vegetable', ipa: '/ˈvedʒtəbəl/', vi: 'rau, rau củ', ex: 'Vegetables are good for you.', exVi: 'Rau củ tốt cho sức khoẻ của bạn.' },
-      { w: 'soup', ipa: '/suːp/', vi: 'súp, canh', ex: 'Would you like some soup?', exVi: 'Bạn có muốn ăn một ít súp không?' },
+      { w: 'meat', ipa: '/mit/', vi: 'thịt', ex: "I don't eat meat.", exVi: 'Tôi không ăn thịt.' },
+      { w: 'vegetable', ipa: '/ˈvɛdʒtəbəl/', vi: 'rau, rau củ', ex: 'Vegetables are good for you.', exVi: 'Rau củ tốt cho sức khoẻ của bạn.' },
+      { w: 'soup', ipa: '/sup/', vi: 'súp, canh', ex: 'Would you like some soup?', exVi: 'Bạn có muốn ăn một ít súp không?' },
       { w: 'sugar', ipa: '/ˈʃʊɡər/', vi: 'đường', ex: 'Coffee with no sugar, please.', exVi: 'Cho tôi cà phê không đường.' },
-      { w: 'cheese', ipa: '/tʃiːz/', vi: 'phô mai', ex: "We don't have any cheese.", exVi: 'Chúng tôi không có chút phô mai nào.' },
+      { w: 'cheese', ipa: '/tʃiz/', vi: 'phô mai', ex: "We don't have any cheese.", exVi: 'Chúng tôi không có chút phô mai nào.' },
       { w: 'sandwich', ipa: '/ˈsænwɪtʃ/', vi: 'bánh mì kẹp', ex: "I'd like a chicken sandwich, please.", exVi: 'Cho tôi một cái bánh mì kẹp gà.' },
       { w: 'delicious', ipa: '/dɪˈlɪʃəs/', vi: 'ngon', ex: 'This chicken is delicious!', exVi: 'Món gà này ngon quá!' }
     ],
