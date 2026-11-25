@@ -1,13 +1,14 @@
 import { Component, useEffect, useRef, useState } from 'react';
 import { App as AntApp, Button, ConfigProvider, Flex, Layout, Progress, Result, Tooltip, theme } from 'antd';
-import { BarChartOutlined, FireFilled, MoonOutlined, MutedOutlined, SoundOutlined, StarFilled, SunOutlined } from '@ant-design/icons';
+import { FireFilled, MoonOutlined, MutedOutlined, SoundOutlined, StarFilled, SunOutlined } from '@ant-design/icons';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import viVN from 'antd/locale/vi_VN';
 import { COURSES } from './lib/courses.js';
 import { DAILY_GOAL, backfillSrs, dailyXp, streakNow, update, useProgress } from './lib/store.js';
 import { stopRec, stopSpeaking, ttsEvents } from './lib/speech.js';
 import { pct } from './lib/utils.js';
-import { TokenVars } from './components/common.jsx';
+import { TokenVars, LinguaMark } from './components/common.jsx';
+import Shell, { LangPicker } from './components/Shell.jsx';
 import { CountUp, EASE } from './components/motion.jsx';
 import { play, useMuted } from './lib/sfx.js';
 import { sparkle } from './lib/celebrate.js';
@@ -81,7 +82,10 @@ function Header({ dark, onToggleTheme }) {
   return (
     <Layout.Header className="header">
       <Flex align="center" justify="space-between" className="wrap" style={{ height: '100%' }}>
-        <a href="#/" className="brand"><span className="brand-mark">L</span><span>Lingua</span></a>
+        <Flex align="center" gap={10}>
+          <a href="#/" className="brand" aria-label="Lingua – Trang chủ"><LinguaMark /><span className="brand-word">Lingua</span></a>
+          <LangPicker variant="header" />
+        </Flex>
         <Flex align="center" gap={14} className="header-right">
           <Tooltip title={streak ? `Bạn đã học ${streak} ngày liên tiếp` : 'Học hôm nay để bắt đầu chuỗi ngày học'}>
             <span className="stat">
@@ -112,9 +116,6 @@ function Header({ dark, onToggleTheme }) {
                 )}
               </AnimatePresence>
             </span>
-          </Tooltip>
-          <Tooltip title="Xem thống kê tiến bộ">
-            <Button type="text" shape="circle" icon={<BarChartOutlined />} href="#/stats" aria-label="Thống kê" />
           </Tooltip>
           <Tooltip title={muted ? 'Bật âm thanh hiệu ứng' : 'Tắt âm thanh hiệu ứng'}>
             <Button type="text" shape="circle" icon={muted ? <MutedOutlined /> : <SoundOutlined />} onClick={() => setMuted(!muted)} aria-label="Bật/tắt âm thanh" />
@@ -148,7 +149,7 @@ function TtsNotice() {
         novoice: ['Không phát được âm thanh: trình duyệt chưa có giọng đọc nào', fix + linux],
         nolang: [`Máy chưa có giọng đọc ${lang}`, `Trình duyệt có giọng đọc nhưng chưa có ${lang}. ` + fix]
       }[kind];
-      notification.warning({ message: text[0], description: text[1], duration: 12, placement: 'bottomRight', key });
+      notification.warning({ message: text[0], description: text[1], duration: 12, placement: window.innerWidth < 768 ? 'top' : 'bottomRight', key });
     };
     ttsEvents.addEventListener('problem', onProblem);
     return () => ttsEvents.removeEventListener('problem', onProblem);
@@ -222,17 +223,17 @@ export default function App() {
       <MotionConfig reducedMotion="user">
       <AntApp>
         <TokenVars>
-          <Layout className="app">
-            <TtsNotice />
-            <Header dark={dark} onToggleTheme={() => update(d => { d.theme = dark ? 'light' : 'dark'; })} />
+          <TtsNotice />
+          <Shell route={route}
+            header={<Header dark={dark} onToggleTheme={() => update(d => { d.theme = dark ? 'light' : 'dark'; })} />}>
             <Layout.Content className="wrap content">
-              <motion.div key={route.join('/')} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, ease: EASE }}>
+              <motion.div key={route.join('/')} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, ease: EASE }}>
                 <ErrorBoundary key={route.join('/')}><Page route={route} /></ErrorBoundary>
               </motion.div>
             </Layout.Content>
             <Layout.Footer className="footer">Lingua · Mỗi ngày một chút, đều đặn là giỏi</Layout.Footer>
-          </Layout>
+          </Shell>
         </TokenVars>
       </AntApp>
       </MotionConfig>

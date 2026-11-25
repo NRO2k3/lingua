@@ -123,9 +123,9 @@ function SentenceMode({ u, lang }) {
         </Flex>
       </Card>
 
-      <Flex justify="space-between">
-        <Button size="large" disabled={!i} icon={<LeftOutlined />} onClick={() => goTo(i - 1)}>Câu trước</Button>
-        <Button size="large" type={r && r.score >= SPEAK_PASS ? 'primary' : 'default'} disabled={i === items.length - 1} onClick={() => goTo(i + 1)}>
+      <Flex className="speak-nav">
+        <Button size="large" className="btn-3d" disabled={!i} icon={<LeftOutlined />} onClick={() => goTo(i - 1)}>Câu trước</Button>
+        <Button size="large" className="btn-3d" type={r && r.score >= SPEAK_PASS ? 'primary' : 'default'} disabled={i === items.length - 1} onClick={() => goTo(i + 1)}>
           Câu tiếp <RightOutlined />
         </Button>
       </Flex>
@@ -178,7 +178,7 @@ function RolePlay({ u, lang }) {
           <Text strong style={{ marginTop: 8 }}>Bạn muốn đóng vai ai?</Text>
           <Flex gap={12} wrap justify="center">
             {who.map(s => (
-              <Button key={s} size="large" onClick={() => restart(s)} icon={<Avatar size="small">{[...s][0]}</Avatar>}>{s}</Button>
+              <Button key={s} size="large" className="btn-3d" onClick={() => restart(s)} icon={<Avatar size="small">{[...s][0]}</Avatar>}>{s}</Button>
             ))}
           </Flex>
         </Flex>
@@ -214,8 +214,8 @@ function RolePlay({ u, lang }) {
             title={`Điểm nói trung bình: ${avg}%`}
             subTitle={avg >= SPEAK_PASS ? `Bạn nhập vai ${role} rất tốt!` : 'Luyện thêm vài lần nữa là sẽ trôi chảy hơn.'}
             extra={[
-              <Button key="again" type="primary" size="large" icon={<ReloadOutlined />} onClick={() => restart(role)}>Nhập vai lại</Button>,
-              <Button key="swap" size="large" icon={<SwapOutlined />} onClick={() => restart(null)}>Đổi vai</Button>
+              <Button key="again" type="primary" size="large" className="btn-3d" icon={<ReloadOutlined />} onClick={() => restart(role)}>Nhập vai lại</Button>,
+              <Button key="swap" size="large" className="btn-3d" icon={<SwapOutlined />} onClick={() => restart(null)}>Đổi vai</Button>
             ]} />
         </Card>
       )}
@@ -237,7 +237,7 @@ function RolePlay({ u, lang }) {
             <Space wrap style={{ justifyContent: 'center' }}>
               <Button icon={<SoundOutlined />} onClick={() => { mic.cancel(); speak(cur.t, tag, { rate: 0.8 }); }}>Nghe gợi ý</Button>
               {r
-                ? <Button type="primary" onClick={() => { mic.cancel(); setI(i + 1); }}>Tiếp tục <RightOutlined /></Button>
+                ? <Button type="primary" className="btn-3d" onClick={() => { mic.cancel(); setI(i + 1); }}>Tiếp tục <RightOutlined /></Button>
                 : <Button onClick={() => { mic.cancel(); setRes(s => ({ ...s, [i]: { heard: '', score: 0, skipped: true, ok: splitUnits(cur.t).map(() => false) } })); setI(i + 1); }}>Bỏ qua</Button>}
             </Space>
           </Flex>

@@ -4,7 +4,7 @@ import { ArrowRightOutlined, BookOutlined, CheckCircleFilled, CloseCircleFilled,
 import { AnimatePresence, motion } from 'framer-motion';
 import { COURSES, allUnits } from '../lib/courses.js';
 import { PASS, addXp, getProgress, logAnswer, update } from '../lib/store.js';
-import { speak } from '../lib/speech.js';
+import { speak, ttsAvailable, ttsEvents } from '../lib/speech.js';
 import { play } from '../lib/sfx.js';
 import { celebrate } from '../lib/celebrate.js';
 import { buildQuiz, checkFill, checkOrder, rightText } from '../lib/quiz.js';
@@ -43,8 +43,8 @@ function QuizResult({ u, lang, idx, summary, correct, total, wrongs, onRetry, on
               </div>
             </>}
             extra={[
-              passed && nx && <Button key="next" type="primary" size="large" href={`#/c/${lang}/u/${nx.id}`}>Học bài tiếp theo <ArrowRightOutlined /></Button>,
-              !passed && <Button key="review" type="primary" size="large" icon={<BookOutlined />} onClick={() => onGoStep(0)}>Xem lại từ vựng</Button>,
+              passed && nx && <Button key="next" type="primary" size="large" className="btn-3d" href={`#/c/${lang}/u/${nx.id}`}>Học bài tiếp theo <ArrowRightOutlined /></Button>,
+              !passed && <Button key="review" type="primary" size="large" className="btn-3d" icon={<BookOutlined />} onClick={() => onGoStep(0)}>Xem lại từ vựng</Button>,
               !passed && nx && <Button key="skip" size="large" href={`#/c/${lang}/u/${nx.id}`}>Sang bài tiếp theo</Button>,
               <Button key="retry" size="large" icon={<ReloadOutlined />} onClick={onRetry}>Làm lại</Button>,
               <Button key="road" size="large" href={`#/c/${lang}`}>Về lộ trình</Button>
@@ -69,41 +69,43 @@ function QuizResult({ u, lang, idx, summary, correct, total, wrongs, onRetry, on
   );
 }
 
-// Thanh cố định dưới đáy: nút Kiểm tra, hoặc kết quả đúng/sai + Tiếp tục
+// Thanh cố định dưới đáy (kiểu Duolingo): luôn gắn trong suốt bài kiểm tra để vùng thông báo (role="status")
+// không bị tạo lại; đổi màu xanh/đỏ khi chấm, trượt khỏi màn khi câu trắc nghiệm chưa trả lời.
 function BottomSheet({ ans, q, zh, i, last, canCheck, showCheck, onCheck, onNext, nextRef }) {
   const tone = ans ? (ans.ok ? 'ok' : 'no') : 'idle';
-  if (!ans && !showCheck) return null;
+  const open = !!ans || showCheck;
   return (
-    <motion.div className={'sheet ' + tone} initial={{ y: 80, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
-      transition={{ type: 'spring', stiffness: 420, damping: 34 }}>
+    <div className={'sheet ' + tone + (open ? '' : ' off')}>
       <div className="sheet-inner">
-        {ans ? (
-          <Flex gap={14} align="center" style={{ flex: 1, minWidth: 0 }}>
-            <motion.span className="sheet-icon" initial={{ scale: 0, rotate: -30 }} animate={{ scale: 1, rotate: 0 }}
-              transition={{ type: 'spring', stiffness: 500, damping: 15, delay: 0.05 }}>
-              {ans.ok ? <CheckCircleFilled /> : <CloseCircleFilled />}
-            </motion.span>
-            <div style={{ minWidth: 0 }}>
-              <div className="sheet-title">{ans.ok ? (ans.note ? 'Gần đúng!' : PRAISE[i % PRAISE.length]) : 'Chưa đúng rồi'}</div>
-              {ans.note && <div className="sheet-text">{ans.note}</div>}
-              {(!ans.ok || ans.note) && <div className="sheet-text">Đáp án đúng: <b>{rightText(q, zh)}</b></div>}
-              {q.explain && <div className="sheet-text sheet-explain">{q.explain}</div>}
-            </div>
-          </Flex>
-        ) : <span />}
+        <div className="sheet-msg" role="status" aria-live="polite">
+          {ans && (
+            <Flex gap={14} align="center" style={{ minWidth: 0 }}>
+              <motion.span key={i} className="sheet-icon" aria-hidden="true" initial={{ scale: 0, rotate: -30 }} animate={{ scale: 1, rotate: 0 }}
+                transition={{ type: 'spring', stiffness: 500, damping: 15, delay: 0.05 }}>
+                {ans.ok ? <CheckCircleFilled /> : <CloseCircleFilled />}
+              </motion.span>
+              <div style={{ minWidth: 0 }}>
+                <div className="sheet-title">{ans.ok ? (ans.note ? 'Gần đúng!' : PRAISE[i % PRAISE.length]) : 'Chưa đúng rồi'}</div>
+                {ans.note && <div className="sheet-text">{ans.note}</div>}
+                {(!ans.ok || ans.note) && <div className="sheet-text">Đáp án đúng: <b>{rightText(q, zh)}</b></div>}
+                {q.explain && <div className="sheet-text sheet-explain">{q.explain}</div>}
+              </div>
+            </Flex>
+          )}
+        </div>
         {ans
-          ? <Button ref={nextRef} type="primary" size="large" className={'sheet-btn ' + tone} onClick={onNext}>
+          ? <Button key="next" ref={nextRef} type="primary" size="large" className={'btn-3d sheet-btn ' + tone} onClick={onNext}>
               {last ? 'Xem kết quả' : 'Tiếp tục'} <ArrowRightOutlined />
             </Button>
-          : <Button type="primary" size="large" className="sheet-btn" disabled={!canCheck} onClick={onCheck}>Kiểm tra</Button>}
+          : showCheck && <Button key="check" type="primary" size="large" className="btn-3d sheet-btn" disabled={!canCheck} onClick={onCheck}>Kiểm tra</Button>}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
-export default function QuizStep({ u, lang, idx, onGoStep }) {
+export default function QuizStep({ u, lang, idx, onGoStep, onBusy }) {
   const zh = !!COURSES[lang].noSpace, tag = COURSES[lang].tts;
-  const [qs, setQs] = useState(() => buildQuiz(u, zh));
+  const [qs, setQs] = useState(() => buildQuiz(u, zh, tag));
   const [i, setI] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [combo, setCombo] = useState(0);
@@ -115,10 +117,22 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
   const nextBtn = useRef(null);
   const sayTimer = useRef(null);
   useEffect(() => () => clearTimeout(sayTimer.current), []);
-  const q = qs[i];
+  // Không có giọng đọc thì câu nghe đổi thành câu chọn từ theo nghĩa
+  const [canListen, setCanListen] = useState(() => ttsAvailable(tag));
+  useEffect(() => {
+    const h = () => setCanListen(ttsAvailable(tag));
+    ttsEvents?.addEventListener('ready', h); ttsEvents?.addEventListener('problem', h);
+    return () => { ttsEvents?.removeEventListener('ready', h); ttsEvents?.removeEventListener('problem', h); };
+  }, [tag]);
+  const raw = qs[i];
+  const q = raw?.type === 'listen' && !canListen ? { ...raw, type: 'mc', kind: 'Chọn từ đúng', q: raw.vi, say: undefined } : raw;
+
+  // Báo cho trang bài học biết đang làm dở (để hỏi lại trước khi thoát)
+  useEffect(() => { onBusy?.(!summary && (i > 0 || !!ans)); }, [i, ans, summary]);
+  useEffect(() => () => onBusy?.(false), []);
 
   const restart = () => {
-    setQs(buildQuiz(u, zh)); setI(0); setCorrect(0); setCombo(0); setWrongs([]);
+    setQs(buildQuiz(u, zh, tag)); setI(0); setCorrect(0); setCombo(0); setWrongs([]);
     setAns(null); setFill(''); setPicked([]); setSummary(null);
   };
 
@@ -201,8 +215,10 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
 
   return (
     <div className="quiz">
-      <Flex align="center" gap={12} style={{ marginBottom: 16 }}>
-        <Progress percent={pct(i + (ans ? 1 : 0), qs.length)} showInfo={false} strokeColor="var(--success)" style={{ flex: 1, margin: 0 }} />
+      <div className="quiz-top">
+        <div className="qbar" role="progressbar" aria-label="Tiến độ bài kiểm tra" aria-valuemin={0} aria-valuemax={qs.length} aria-valuenow={i + (ans ? 1 : 0)}>
+          <div className={'qbar-fill' + (i + (ans ? 1 : 0) ? '' : ' zero')} style={{ width: pct(i + (ans ? 1 : 0), qs.length) + '%' }} />
+        </div>
         <AnimatePresence>
           {combo >= 3 && (
             <motion.span key={combo} className="combo" initial={{ scale: 0.4, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
@@ -211,11 +227,11 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
             </motion.span>
           )}
         </AnimatePresence>
-        <Text type="secondary">{i + 1}/{qs.length}</Text>
-      </Flex>
+        <span className="quiz-count">{i + 1}/{qs.length}</span>
+      </div>
 
       <motion.div key={i} initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, ease: EASE }}>
-          <Card>
+          <div className="q-card">
             <Text type="secondary" className="q-kind">{q.kind}</Text>
 
             {q.type === 'listen' ? (
@@ -281,12 +297,12 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
                 </Flex>
               </>
             )}
-          </Card>
+          </div>
       </motion.div>
 
       {isMc && !ans && <Text type="secondary" className="kbd-hint">Mẹo: bấm phím 1–4 để chọn nhanh</Text>}
       <div className="sheet-spacer" />
-      <BottomSheet key={i + (ans ? '-a' : '-q')} ans={ans} q={q} zh={zh} i={i} last={i + 1 >= qs.length}
+      <BottomSheet ans={ans} q={q} zh={zh} i={i} last={i + 1 >= qs.length}
         canCheck={canCheck} showCheck={!isMc} onCheck={check} onNext={next} nextRef={nextBtn} />
     </div>
   );

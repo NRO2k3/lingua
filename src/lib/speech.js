@@ -10,10 +10,11 @@ const problem = (kind, tag) => ttsEvents?.dispatchEvent(new CustomEvent('problem
 // Danh sách giọng nạp không đồng bộ; quá 2,5 giây vẫn rỗng nghĩa là trình duyệt không có giọng đọc
 let voicesKnown = false;
 if (hasTTS()) {
-  const mark = () => { if (speechSynthesis.getVoices().length) voicesKnown = true; };
+  const known = () => { if (!voicesKnown) { voicesKnown = true; ttsEvents?.dispatchEvent(new Event('ready')); } };
+  const mark = () => { if (speechSynthesis.getVoices().length) known(); };
   mark();
   speechSynthesis.addEventListener?.('voiceschanged', mark);
-  setTimeout(() => { voicesKnown = true; }, 2500);
+  setTimeout(known, 2500);
 }
 
 // Giọng chất lượng cao (trực tuyến/neural) đọc tự nhiên hơn espeak
@@ -29,6 +30,8 @@ function pickVoice(tag) {
   const region = v => (same(v) === t ? 4 : same(v) === base ? 2 : 0) + (base === 'es' && /latin|mexic|america/i.test(v.name) ? -1 : 0) + (base === 'zh' && /latin|english|pinyin/i.test(v.name) ? -1 : 0);
   return close.sort((a, b) => (region(b) + quality(b)) - (region(a) + quality(a)))[0];
 }
+// Có giọng đọc nào không (chưa biết thì coi như có)
+export const hasAnyVoice = () => hasTTS() && (!voicesKnown || speechSynthesis.getVoices().length > 0);
 export function ttsAvailable(tag) {
   if (!hasTTS()) return false;
   return !voicesKnown || !!pickVoice(tag);

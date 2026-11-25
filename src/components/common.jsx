@@ -98,3 +98,14 @@ export function ChatLine({ l, right, lang, showVi = true, highlight, textNode, b
     </div>
   );
 }
+
+// Logo Lingua: chữ L trên nền tím bo góc, chấm vàng = đích đến của lộ trình
+export function LinguaMark({ size = 34 }) {
+  return (
+    <svg className="brand-mark" width={size} height={size} viewBox="0 0 72 72" aria-hidden="true">
+      <rect width="72" height="72" rx="18" fill="#534AB7" />
+      <path d="M25 18v30h21" fill="none" stroke="#fff" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="51" cy="22" r="6.5" fill="#FAC775" />
+    </svg>
+  );
+}

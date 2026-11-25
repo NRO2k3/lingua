@@ -59,7 +59,7 @@ export default function ReadingStep({ u, lang }) {
   return (
     <Flex vertical gap={16}>
       <Flex justify="space-between" align="center" wrap gap={12}>
-        <Button type="primary" icon={<PlayCircleOutlined />}
+        <Button type="primary" className="btn-3d" icon={<PlayCircleOutlined />}
           onClick={() => speakAll(r.text.map(t => ({ s: '', t })), tts)}>Nghe cả bài</Button>
         <Space><Switch checked={showVi} onChange={setShowVi} /><Text>Hiện bản dịch</Text></Space>
       </Flex>

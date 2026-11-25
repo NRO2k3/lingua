@@ -1,0 +1,123 @@
+/* Khung điều hướng chung: thanh bên (≥768px) / thanh tab đáy (<768px). Màu từ biến CSS của TokenVars. */
+.shell { --shell-side: 0px; --shell-tab: 60px; min-height: 100vh; }
+.snav, .snav *, .tabbar, .tabbar *, .lang-pick { box-sizing: border-box; }
+.shell-main { min-height: 100vh; }
+
+/* ---------- Thanh bên ---------- */
+.snav {
+  position: fixed; top: 0; bottom: 0; left: 0; z-index: 20; width: var(--shell-side);
+  display: none; flex-direction: column; gap: 10px; padding: 22px 14px; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--bg); border-right: 2px solid var(--border);
+}
+.snav-brand { padding: 4px 10px 14px; font-size: 22px; letter-spacing: -.01em; text-decoration: none; }
+.snav-brand .brand-mark { flex: none; }
+
+.snav-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.snav-item {
+  position: relative; display: flex; align-items: center; gap: 14px; min-height: 50px; padding: 0 14px;
+  border-radius: 14px; border: 2px solid transparent; color: var(--text-2) !important; font-weight: 700; font-size: 15px;
+  letter-spacing: .02em; text-decoration: none; isolation: isolate;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.snav-item:hover { background: var(--fill); color: var(--text) !important; }
+.snav-item.is-active { color: var(--primary) !important; }
+.snav-item.is-active:hover { background: transparent; }
+.snav-hl {
+  position: absolute; inset: -2px; z-index: -1; border-radius: 14px;
+  background: var(--primary-bg); border: 2px solid var(--primary-border);
+}
+.snav-icon { font-size: 22px; display: inline-flex; flex: none; width: 26px; justify-content: center; }
+.snav-label { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.snav-badge {
+  flex: none; min-width: 22px; height: 22px; padding: 0 7px; border-radius: 99px; display: inline-grid; place-items: center;
+  background: var(--error); color: #fff; font-size: 12px; font-weight: 800; line-height: 1;
+}
+
+/* Bộ chọn ngôn ngữ */
+.lang-pick {
+  display: flex; align-items: center; gap: 10px; width: 100%; min-height: var(--tap-min); padding: 0 12px;
+  border: 2px solid var(--border); border-bottom-width: 3px; border-radius: 14px; background: var(--bg); color: var(--text);
+  font: inherit; font-weight: 700; font-size: 15px; cursor: pointer; text-align: left;
+  transition: background-color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.lang-pick:hover { background: var(--fill); }
+.lang-pick:active { transform: translateY(1px); border-bottom-width: 2px; }
+.lang-pick-flag { font-size: 24px; line-height: 1; flex: none; }
+.lang-pick-name { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lang-pick-caret { font-size: 11px; color: var(--text-3); }
+.lang-pick.compact { width: var(--tap-min); justify-content: center; padding: 0; }
+.lang-pick.header { height: 40px; min-height: 40px; width: 44px; border-radius: 12px; }
+.lang-pick.header .lang-pick-flag { font-size: 22px; }
+
+.lang-opt { display: flex; align-items: center; gap: 10px; min-width: 190px; min-height: 36px; font-weight: 600; }
+.lang-opt-flag { font-size: 20px; line-height: 1; }
+.lang-opt-name { flex: 1; }
+.lang-opt-check { color: var(--primary); }
+
+/* ---------- Thanh tab đáy ---------- */
+.tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: none;
+  height: calc(var(--shell-tab) + var(--safe-bottom)); padding: 0 4px var(--safe-bottom);
+  background: var(--bg); border-top: 2px solid var(--border);
+}
+.tab-item {
+  flex: 1 1 0; min-width: 0; min-height: var(--tap-min); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px; color: var(--text-2) !important; text-decoration: none; font-weight: 700;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.tab-item.is-active { color: var(--primary) !important; }
+.tab-icon { position: relative; display: grid; place-items: center; width: 52px; height: 30px; font-size: 21px; isolation: isolate; }
+.tab-hl { position: absolute; inset: 0; z-index: -1; border-radius: 99px; background: var(--primary-bg); border: 1.5px solid var(--primary-border); }
+.tab-label { font-size: 11px; line-height: 1.2; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+.tab-badge {
+  position: absolute; top: -4px; left: 30px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px;
+  display: grid; place-items: center; background: var(--error); color: #fff; font-size: 11px; font-weight: 800; line-height: 1;
+  box-shadow: 0 0 0 2px var(--bg);
+}
+.tab-item:active .tab-icon { transform: scale(.92); transition: transform var(--dur-fast) var(--ease-out); }
+
+/* ---------- Bố cục theo bề rộng ---------- */
+@media (min-width: 1100px) {
+  .shell { --shell-side: 240px; }
+}
+@media (min-width: 768px) and (max-width: 1099.98px) {
+  .shell { --shell-side: 80px; }
+  .snav { padding: 22px 12px; align-items: center; }
+  .snav-brand { padding: 4px 0 14px; }
+  .snav-brand-name, .snav-label { display: none; }
+  .snav-list { width: 100%; align-items: center; }
+  .snav-list li { width: 100%; display: flex; justify-content: center; }
+  .snav-item { width: 52px; min-height: 52px; padding: 0; justify-content: center; }
+  .snav-icon { font-size: 24px; }
+  .snav-badge { position: absolute; top: -2px; right: -6px; min-width: 20px; height: 20px; padding: 0 5px; font-size: 11px; box-shadow: 0 0 0 2px var(--bg); }
+}
+@media (min-width: 768px) {
+  .shell:not(.shell-focus) .snav { display: flex; }
+  .shell:not(.shell-focus) .shell-main { margin-left: var(--shell-side); }
+  /* Thanh bên đã có logo + chọn ngôn ngữ */
+  .shell:not(.shell-focus) .header .brand,
+  .shell:not(.shell-focus) .header .lang-pick { display: none; }
+  .shell:not(.shell-focus) .header .wrap { justify-content: flex-end !important; }
+  /* Thanh phản hồi cố định của trang con không đè lên thanh bên */
+  .shell:not(.shell-focus) .sheet { left: var(--shell-side); }
+}
+@media (max-width: 767.98px) {
+  .shell:not(.shell-focus) .tabbar { display: flex; }
+  .shell:not(.shell-focus) .shell-main { padding-bottom: calc(var(--shell-tab) + var(--safe-bottom)); }
+  .shell:not(.shell-focus) .sheet { bottom: calc(var(--shell-tab) + var(--safe-bottom)); padding-bottom: 16px; }
+  /* Header gọn: logo + chọn ngôn ngữ | chuỗi ngày, mục tiêu, điểm, âm thanh, nền */
+  .header.ant-layout-header { height: 56px; line-height: 56px; padding-inline: 12px; }
+  .header .header-right { gap: 8px !important; }
+  .header .brand > span:last-child { display: none; }
+}
+
+/* ---------- Chế độ tập trung ---------- */
+.shell-focus .header, .shell-focus .footer { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .snav-item, .lang-pick, .tab-item, .tab-icon { transition: none; }
+  /* Quy tắc chung `* { transition-duration: .01ms !important }` (app.css) làm rc-trigger không căn được vị trí:
+     tooltip/dropdown của antd nằm ở toạ độ -12800px (vô hình). Trả popup về 0s để hiện đúng chỗ. */
+  .ant-tooltip, .ant-dropdown, .ant-popover, .ant-select-dropdown, .ant-picker-dropdown,
+  .ant-cascader-dropdown, .ant-mentions-dropdown, .ant-tour { transition-duration: 0s !important; }
+}

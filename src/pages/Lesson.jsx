@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Alert, Breadcrumb, Button, Card, Col, Flex, Grid, List, Result, Row, Segmented, Space, Steps, Switch, Table, Tag, Typography } from 'antd';
+import { Alert, App, Button, Card, Col, Flex, List, Result, Row, Segmented, Space, Switch, Table, Tag, Typography } from 'antd';
 import {
-  ArrowLeftOutlined, ArrowRightOutlined, AudioOutlined, BookOutlined, BulbFilled, BulbOutlined, CreditCardOutlined,
+  ArrowLeftOutlined, ArrowRightOutlined, AudioOutlined, BookOutlined, BulbFilled, BulbOutlined, CloseOutlined, CreditCardOutlined,
   LeftOutlined, MessageOutlined, PlayCircleOutlined, ReadOutlined, RightOutlined, TrophyOutlined, UnorderedListOutlined
 } from '@ant-design/icons';
 import { COURSES, LEVEL_NAME, findUnit } from '../lib/courses.js';
@@ -14,6 +14,7 @@ import ReadingStep from './ReadingStep.jsx';
 import { motion } from 'framer-motion';
 import { play } from '../lib/sfx.js';
 import { EASE, Item, Stagger } from '../components/motion.jsx';
+import '../styles/lesson.css';
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -122,7 +123,7 @@ function DialogueStep({ u, lang }) {
   return (
     <Flex vertical gap={16}>
       <Flex justify="space-between" align="center" wrap gap={12}>
-        <Button type="primary" icon={<PlayCircleOutlined />} onClick={() => speakAll(u.dialogue, COURSES[lang].tts)}>Nghe cả đoạn</Button>
+        <Button type="primary" className="btn-3d" icon={<PlayCircleOutlined />} onClick={() => speakAll(u.dialogue, COURSES[lang].tts)}>Nghe cả đoạn</Button>
         <Space><Switch checked={showVi} onChange={setShowVi} /><Text>Hiện bản dịch</Text></Space>
       </Flex>
       <Card>
@@ -134,63 +135,102 @@ function DialogueStep({ u, lang }) {
   );
 }
 
+// Thanh trên của chế độ tập trung: nút ✕ + thanh tiến độ phân đoạn (mỗi đoạn là một bước, bấm để chuyển)
+function LessonBar({ steps, step, onStep, onExit, u, idx }) {
+  return (
+    <div className="lbar">
+      <div className="lbar-inner">
+        <Button type="text" className="lbar-x" icon={<CloseOutlined />} onClick={onExit} aria-label="Thoát bài học, về lộ trình" />
+        <nav className="lbar-steps" aria-label="Các bước của bài học">
+          <ol>
+            {steps.map((s, k) => (
+              <li key={s.title}>
+                <button type="button" className={'seg-btn' + (k < step ? ' done' : k === step ? ' cur' : '')}
+                  aria-current={k === step ? 'step' : undefined} aria-label={`Bước ${k + 1}: ${s.title}${k < step ? ' (đã qua)' : ''}`}
+                  title={s.title} onClick={() => onStep(k)}>
+                  <span className="seg" aria-hidden="true">
+                    <span className="seg-fill" />
+                    <span className="seg-ico">{s.icon}</span>
+                    <span className="seg-lbl">{s.title}</span>
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      </div>
+      <div className="lbar-meta">
+        <span className="lbar-step">Bước {step + 1}/{steps.length} · <b>{steps[step].title}</b></span>
+        {step > 0 && <span className="lbar-title">{u.icon || '📘'} Bài {idx + 1}: {u.title}</span>}
+      </div>
+    </div>
+  );
+}
+
 export default function Lesson({ lang, uid }) {
-  const p = useProgress();
+  useProgress();
+  const { modal } = App.useApp();
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState(1);
-  const screens = Grid.useBreakpoint();
+  const [quizBusy, setQuizBusy] = useState(false);
   const { unit: u, idx } = findUnit(lang, uid);
-  const c = COURSES[lang];
 
   if (!u) {
     return <Result status="404" title="Không tìm thấy bài học" extra={<Button type="primary" href={`#/c/${lang}`}>Về lộ trình</Button>} />;
   }
 
   const go = s => { stopRec(); stopSpeaking(); setDir(s >= step ? 1 : -1); setStep(s); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+  // Đang làm dở bài kiểm tra: hỏi trước khi rời (kết quả chỉ được lưu khi làm hết)
+  const guard = fn => {
+    if (!quizBusy) return fn();
+    modal.confirm({
+      title: 'Thoát bài kiểm tra?', content: 'Kết quả lần này sẽ không được lưu.',
+      okText: 'Thoát', cancelText: 'Làm tiếp', okButtonProps: { danger: true },
+      onOk: () => { setQuizBusy(false); fn(); }
+    });
+  };
+  const exit = () => guard(() => { stopRec(); stopSpeaking(); location.hash = `#/c/${lang}`; });
   const STEPS = stepsFor(u);
   const Body = STEPS[step].Body;
 
   return (
     <LangTheme lang={lang}>
-      <Flex vertical gap={20}>
-        <Breadcrumb items={[
-          { title: <a href="#/">Trang chủ</a> },
-          { title: <a href={`#/c/${lang}`}>{c.name}</a> },
-          { title: `Bài ${idx + 1}` }
-        ]} />
+      <div className="lesson-focus">
+        <LessonBar steps={STEPS} step={step} u={u} idx={idx} onExit={exit}
+          onStep={k => { if (k !== step) guard(() => go(k)); }} />
 
-        <Flex gap={16} align="center">
-          <div className="lesson-icon">{u.icon || '📘'}</div>
-          <div>
-            <Tag bordered={false}>{LEVEL_NAME[u.level.id]} · {u.level.id}</Tag>
-            <Title level={2} style={{ margin: '4px 0 2px' }}>{u.title}</Title>
-            <Text type="secondary">🎯 Sau bài này bạn có thể: {u.goal.charAt(0).toLowerCase() + u.goal.slice(1)}</Text>
-          </div>
-        </Flex>
+        <div className="lesson-body">
+          {step === 0 && (
+            <div className="lesson-head">
+              <div className="lesson-icon">{u.icon || '📘'}</div>
+              <div>
+                <Tag bordered={false}>{LEVEL_NAME[u.level.id]} · {u.level.id}</Tag>
+                <Title level={2}>{u.title}</Title>
+                <Text type="secondary">🎯 Sau bài này bạn có thể: {u.goal.charAt(0).toLowerCase() + u.goal.slice(1)}</Text>
+              </div>
+            </div>
+          )}
 
-        <Card size="small" className="steps-card">
-          {/* Điện thoại: chỉ hiện biểu tượng + tên bước hiện tại, tránh tràn ngang */}
-          <Steps current={step} onChange={go} size="small" responsive={false} labelPlacement="vertical"
-            items={STEPS.map(s => ({ title: screens.sm ? s.title : '', icon: s.icon, 'aria-label': s.title }))} />
-          {!screens.sm && <Text strong className="step-caption">Bước {step + 1}/{STEPS.length} · {STEPS[step].title}</Text>}
-        </Card>
+          <motion.div key={step} initial={{ opacity: 0, x: 36 * dir }} animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, ease: EASE }} style={{ minWidth: 0 }}>
+            <Body u={u} lang={lang} idx={idx} onGoStep={go} onBusy={setQuizBusy} />
+          </motion.div>
 
-        <motion.div key={step} initial={{ opacity: 0, x: 36 * dir }} animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, ease: EASE }}>
-          <Body u={u} lang={lang} idx={idx} onGoStep={go} />
-        </motion.div>
-
-        {step < STEPS.length - 1 && (
-          <Flex justify="space-between" gap={12}>
-            {step > 0
-              ? <Button size="large" icon={<ArrowLeftOutlined />} onClick={() => go(step - 1)}>{STEPS[step - 1].title}</Button>
-              : <span />}
-            <Button type="primary" size="large" onClick={() => go(step + 1)}>
-              Tiếp: {STEPS[step + 1].title} <ArrowRightOutlined />
-            </Button>
-          </Flex>
-        )}
-      </Flex>
+          {step < STEPS.length - 1 && (
+            <div className="lesson-foot">
+              {step > 0 && (
+                <Button size="large" className="btn-3d foot-back" icon={<ArrowLeftOutlined />} onClick={() => go(step - 1)}
+                  aria-label={`Quay lại: ${STEPS[step - 1].title}`}>
+                  <span className="foot-back-lbl">{STEPS[step - 1].title}</span>
+                </Button>
+              )}
+              <Button type="primary" size="large" className="btn-3d foot-next" onClick={() => go(step + 1)}>
+                Tiếp: {STEPS[step + 1].title} <ArrowRightOutlined />
+              </Button>
+            </div>
+          )}
+        </div>
+      </div>
     </LangTheme>
   );
 }
