@@ -6,6 +6,7 @@ import { COURSES } from '../lib/courses.js';
 import { speakAll } from '../lib/speech.js';
 import { play } from '../lib/sfx.js';
 import { shuffleOptions } from '../lib/quiz.js';
+import { logAnswer } from '../lib/store.js';
 import { Pinyin, SoundButton } from '../components/common.jsx';
 import { EASE } from '../components/motion.jsx';
 
@@ -51,6 +52,7 @@ export default function ReadingStep({ u, lang }) {
 
   const choose = (k, j) => {
     play(j === r.questions[k].answer ? 'correct' : 'wrong');
+    logAnswer({ lang, uid: u.id, type: 'read', ok: j === r.questions[k].answer, q: r.questions[k] });
     setAnswers(a => ({ ...a, [k]: j }));
   };
 

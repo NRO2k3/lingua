@@ -1,6 +1,6 @@
 import { Component, useEffect, useRef, useState } from 'react';
 import { App as AntApp, Button, ConfigProvider, Flex, Layout, Progress, Result, Tooltip, theme } from 'antd';
-import { FireFilled, MoonOutlined, MutedOutlined, SoundOutlined, StarFilled, SunOutlined } from '@ant-design/icons';
+import { BarChartOutlined, FireFilled, MoonOutlined, MutedOutlined, SoundOutlined, StarFilled, SunOutlined } from '@ant-design/icons';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import viVN from 'antd/locale/vi_VN';
 import { COURSES } from './lib/courses.js';
@@ -18,6 +18,7 @@ import Review from './pages/Review.jsx';
 import WordBank from './pages/WordBank.jsx';
 import Pronunciation from './pages/Pronunciation.jsx';
 import LevelTest, { PlacementTest } from './pages/LevelTest.jsx';
+import Stats from './pages/Stats.jsx';
 
 const FONT = "'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', "
   + "'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif";
@@ -81,7 +82,7 @@ function Header({ dark, onToggleTheme }) {
     <Layout.Header className="header">
       <Flex align="center" justify="space-between" className="wrap" style={{ height: '100%' }}>
         <a href="#/" className="brand"><span className="brand-mark">L</span><span>Lingua</span></a>
-        <Flex align="center" gap={14}>
+        <Flex align="center" gap={14} className="header-right">
           <Tooltip title={streak ? `Bạn đã học ${streak} ngày liên tiếp` : 'Học hôm nay để bắt đầu chuỗi ngày học'}>
             <span className="stat">
               <motion.span key={streakGain?.k} className="stat-icon" animate={streakGain ? { scale: [1, 1.5, 1], rotate: [0, -15, 15, 0] } : {}} transition={{ duration: 0.7 }}>
@@ -111,6 +112,9 @@ function Header({ dark, onToggleTheme }) {
                 )}
               </AnimatePresence>
             </span>
+          </Tooltip>
+          <Tooltip title="Xem thống kê tiến bộ">
+            <Button type="text" shape="circle" icon={<BarChartOutlined />} href="#/stats" aria-label="Thống kê" />
           </Tooltip>
           <Tooltip title={muted ? 'Bật âm thanh hiệu ứng' : 'Tắt âm thanh hiệu ứng'}>
             <Button type="text" shape="circle" icon={muted ? <MutedOutlined /> : <SoundOutlined />} onClick={() => setMuted(!muted)} aria-label="Bật/tắt âm thanh" />
@@ -149,6 +153,7 @@ class ErrorBoundary extends Component {
 
 function Page({ route }) {
   const [c, lang, kind, uid] = route;
+  if (c === 'stats') return <Stats />;
   if (c !== 'c' || !Object.hasOwn(COURSES, lang)) return <Home />;
   if (kind === 'u' && uid) return <Lesson key={uid} lang={lang} uid={uid} />;
   if (kind === 'review') return <Review key={lang} lang={lang} />;

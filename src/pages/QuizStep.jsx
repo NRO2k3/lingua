@@ -3,7 +3,7 @@ import { Button, Card, Flex, Input, List, Progress, Result, Typography } from 'a
 import { ArrowRightOutlined, BookOutlined, CheckCircleFilled, CloseCircleFilled, FireFilled, ReloadOutlined, SoundFilled } from '@ant-design/icons';
 import { AnimatePresence, motion } from 'framer-motion';
 import { COURSES, allUnits } from '../lib/courses.js';
-import { PASS, addXp, getProgress, update } from '../lib/store.js';
+import { PASS, addXp, getProgress, logAnswer, update } from '../lib/store.js';
 import { speak } from '../lib/speech.js';
 import { play } from '../lib/sfx.js';
 import { celebrate } from '../lib/celebrate.js';
@@ -126,6 +126,7 @@ export default function QuizStep({ u, lang, idx, onGoStep }) {
     if (ans) return;
     setAns({ ok, ...extra });
     play(ok ? 'correct' : 'wrong');
+    logAnswer({ lang, uid: u.id, type: q.type, ok, q });
     if (ok) { setCorrect(c => c + 1); setCombo(c => c + 1); } else { setWrongs(w => [...w, q]); setCombo(0); }
     if (q.say) sayTimer.current = setTimeout(() => speak(q.say, tag), 350);
   };

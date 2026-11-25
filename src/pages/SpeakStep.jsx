@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Alert, App, Avatar, Button, Card, Flex, Progress, Result, Segmented, Space, Switch, Tag, Typography } from 'antd';
 import { AimOutlined, AudioOutlined, LeftOutlined, ReloadOutlined, RightOutlined, SoundOutlined, SwapOutlined, TeamOutlined } from '@ant-design/icons';
 import { COURSES } from '../lib/courses.js';
-import { addXp, update, useProgress } from '../lib/store.js';
+import { addXp, logAnswer, update, useProgress } from '../lib/store.js';
 import { SPEAK_PASS, bestMatch, finishRec, getSR, listen, speak, stopRec, stopSpeaking } from '../lib/speech.js';
 import { pct, splitUnits } from '../lib/utils.js';
 import { ChatLine, MarkedText, Pinyin } from '../components/common.jsx';
@@ -83,6 +83,7 @@ function SentenceMode({ u, lang }) {
     const k = at.current;
     if (!best) return;
     setRes(s => ({ ...s, [k]: best }));
+    logAnswer({ lang, uid: u.id, type: 'speak', ok: best.score >= SPEAK_PASS, q: items[k].t });
     if (best.score >= SPEAK_PASS) {
       update(d => {
         const done = d.spoken[u.id] || (d.spoken[u.id] = []);
@@ -141,7 +142,11 @@ function RolePlay({ u, lang }) {
   const [res, setRes] = useState({});
   const at = useRef(0);
   const bottom = useRef(null);
-  const mic = useMic(lang, best => { if (best) setRes(s => ({ ...s, [at.current]: best })); });
+  const mic = useMic(lang, best => {
+    if (!best) return;
+    setRes(s => ({ ...s, [at.current]: best }));
+    logAnswer({ lang, uid: u.id, type: 'speak', ok: best.score >= SPEAK_PASS, q: u.dialogue[at.current].t });
+  });
 
   const end = i >= u.dialogue.length;
   const cur = u.dialogue[i];
