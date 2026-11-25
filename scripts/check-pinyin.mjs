@@ -6,6 +6,9 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '../src/data') + '
 globalThis.window = globalThis;
 await import(pathToFileURL(root + 'registry.js'));
 for (const f of ['zh-a', 'zh-b']) await import(pathToFileURL(root + f + '.js'));
+// Bài mới (src/data/more) chèn vào sau bài `after`
+for (const f of readdirSync(root + 'more').filter(f => f.startsWith('zh-'))) for (const { after, unit } of (await import(pathToFileURL(root + 'more/' + f))).default)
+  for (const l of COURSES.zh.levels) { const k = l.units.findIndex(u => u.id === after); if (k >= 0) l.units.splice(k + 1, 0, unit); }
 const bank = new Map(JSON.parse(readFileSync(root + 'bank/zh.json', 'utf8')).map(r => [r[0], r[1]]));
 const base = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ü/g, 'v').toLowerCase().replace(/[^a-z]/g, '');
 const items = [];

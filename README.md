@@ -7,7 +7,7 @@ và tiếng Trung giản thể (HSK 1 → 4). Tiếng Trung có pinyin, âm Hán
 
 ## Lộ trình
 
-Mỗi ngôn ngữ có 4 cấp độ × 6 bài = 24 bài. Mỗi bài gồm 6 bước:
+Mỗi ngôn ngữ có 4 cấp độ, tổng cộng 121 bài (Anh 38, Tây Ban Nha 42, Trung 41), bám theo khung CEFR-J / PCIC / HSK 3.0. Mỗi bài gồm 6 bước:
 
 1. **Từ vựng** — 20 từ (10 từ cốt lõi + 10 từ mở rộng lấy từ danh sách chuẩn của cấp độ), phiên âm, nghĩa,
    câu ví dụ, nghe phát âm, chế độ flashcard
