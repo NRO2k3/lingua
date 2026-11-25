@@ -10,60 +10,61 @@ addLevels('zh', [
         id: 'zh-hsk3-1',
         icon: '✈️',
         title: 'Du lịch',
-        goal: 'Kể về những nơi đã từng đến, nói việc gì đã làm xong hay vẫn chưa làm bằng 过, 已经…了 và 还没…呢.',
+        goal: 'Nói việc đã làm xong hay vẫn chưa làm bằng 已经…了 / 还没…呢, và nói một việc làm mấy lần, mấy lượt, mấy chuyến với 次 / 遍 / 趟.',
         vocab: [
-          { w: '旅游', ipa: 'lǚyóu', hv: 'lữ du', vi: 'du lịch', ex: '你喜欢一个人去旅游吗？', exPy: 'Nǐ xǐhuan yí ge rén qù lǚyóu ma?', exVi: 'Bạn có thích đi du lịch một mình không?' },
+          { w: '遍', ipa: 'biàn', hv: 'biến', vi: 'lượt, lần (trọn từ đầu đến cuối)', ex: '这本书我看了两遍。', exPy: 'Zhè běn shū wǒ kàn le liǎng biàn.', exVi: 'Cuốn sách này tôi đã đọc hai lượt.' },
           { w: '护照', ipa: 'hùzhào', hv: 'hộ chiếu', vi: 'hộ chiếu', ex: '我的护照还没办好呢。', exPy: 'Wǒ de hùzhào hái méi bànhǎo ne.', exVi: 'Hộ chiếu của tôi vẫn chưa làm xong.' },
-          { w: '行李箱', ipa: 'xínglixiāng', hv: 'hành lý tương', vi: 'va li', ex: '你的行李箱已经准备好了吗？', exPy: 'Nǐ de xínglixiāng yǐjīng zhǔnbèi hǎo le ma?', exVi: 'Va li của bạn đã chuẩn bị xong chưa?' },
-          { w: '机场', ipa: 'jīchǎng', hv: 'cơ trường', vi: 'sân bay', ex: '我们已经到机场了。', exPy: 'Wǒmen yǐjīng dào jīchǎng le.', exVi: 'Chúng tôi đã đến sân bay rồi.' },
+          { w: '行李箱', ipa: 'xínglixiāng', hv: 'hành lý tương', vi: 'va li (mở rộng)', ex: '你的行李箱已经准备好了吗？', exPy: 'Nǐ de xínglixiāng yǐjīng zhǔnbèi hǎo le ma?', exVi: 'Va li của bạn đã chuẩn bị xong chưa?' },
+          { w: '导游', ipa: 'dǎoyóu', hv: 'đạo du', vi: 'hướng dẫn viên du lịch', ex: '导游还没来呢，我们再等一会儿吧。', exPy: 'Dǎoyóu hái méi lái ne, wǒmen zài děng yíhuìr ba.', exVi: 'Hướng dẫn viên vẫn chưa đến, chúng ta đợi thêm một lát nhé.' },
           { w: '地图', ipa: 'dìtú', hv: 'địa đồ', vi: 'bản đồ', ex: '你带地图了吗？', exPy: 'Nǐ dài dìtú le ma?', exVi: 'Bạn có mang bản đồ không?' },
           { w: '次', ipa: 'cì', hv: 'thứ', vi: 'lần (lượng từ)', ex: '我去过两次长城。', exPy: 'Wǒ qùguo liǎng cì Chángchéng.', exVi: 'Tôi đã từng đến Vạn Lý Trường Thành hai lần.' },
           { w: '照片', ipa: 'zhàopiàn', hv: 'chiếu phiến', vi: 'bức ảnh', ex: '这是我在长城照的照片。', exPy: 'Zhè shì wǒ zài Chángchéng zhào de zhàopiàn.', exVi: 'Đây là ảnh tôi chụp ở Vạn Lý Trường Thành.' },
-          { w: '宾馆', ipa: 'bīnguǎn', hv: 'tân quán', vi: 'khách sạn', ex: '我们已经订好宾馆了。', exPy: 'Wǒmen yǐjīng dìnghǎo bīnguǎn le.', exVi: 'Chúng tôi đã đặt xong khách sạn rồi.' },
+          { w: '宾馆', ipa: 'bīnguǎn', hv: 'tân quán', vi: 'khách sạn (mở rộng)', ex: '我们已经订好宾馆了。', exPy: 'Wǒmen yǐjīng dìnghǎo bīnguǎn le.', exVi: 'Chúng tôi đã đặt xong khách sạn rồi.' },
           { w: '还', ipa: 'hái', hv: 'hoàn', vi: 'vẫn, còn', ex: '他还没起床呢。', exPy: 'Tā hái méi qǐchuáng ne.', exVi: 'Anh ấy vẫn chưa dậy.' },
-          { w: '已经', ipa: 'yǐjīng', hv: 'dĩ kinh', vi: 'đã', ex: '飞机已经起飞了。', exPy: 'Fēijī yǐjīng qǐfēi le.', exVi: 'Máy bay đã cất cánh rồi.' }
+          { w: '门票', ipa: 'ménpiào', hv: 'môn phiếu', vi: 'vé vào cửa', ex: '门票我已经买好了。', exPy: 'Ménpiào wǒ yǐjīng mǎihǎo le.', exVi: 'Vé vào cửa tôi đã mua xong rồi.' }
         ],
         grammar: {
-          title: '过 (kinh nghiệm), 已经…了, 还没…呢',
+          title: '已经…了, 还没…呢 và bổ ngữ động lượng 次 / 遍 / 趟',
           explain: [
-            'Động từ + 过 (guo, đọc nhẹ) diễn tả kinh nghiệm: đã từng làm việc gì đó trong quá khứ. 我去过北京。= Tôi từng đến Bắc Kinh. Phủ định: 没(有) + động từ + 过: 我没去过北京。Câu hỏi: …过…吗？ hoặc …过…没有？',
-            'Số lần đứng sau 过: 去过两次 (từng đi hai lần). Muốn nói "chưa bao giờ" thêm 从来: 我从来没坐过飞机。',
-            '已经 (dĩ kinh) + động từ + 了 = đã … rồi, nhấn mạnh việc đã xảy ra hoặc hoàn thành: 我已经吃饭了。',
-            '还没(有) + động từ + 呢 = vẫn chưa …, ngụ ý việc đó sẽ làm sau. Trong câu phủ định này KHÔNG dùng 了: nói 我还没吃呢, không nói 我还没吃了.'
+            '已经 (dĩ kinh) + động từ + 了 = đã … rồi, nhấn mạnh việc đã xảy ra hoặc đã xong (thường sớm hơn dự kiến): 我们已经到宾馆了。Câu hỏi: …了吗？ hoặc …了没有？',
+            '还没(有) + động từ + 呢 = vẫn chưa …, ngụ ý việc đó sẽ làm sau. Trong câu phủ định này KHÔNG dùng 了: 我还没吃呢 (✗ 我还没吃了). Trả lời ngắn: 还没呢。',
+            'Bổ ngữ động lượng cho biết hành động diễn ra mấy lần, đứng SAU động từ: Động từ (+ 了/过) + số + 次/遍/趟. 次 cì (thứ): lần, dùng chung nhất. 遍 biàn (biến): một lượt trọn vẹn từ đầu đến cuối — đọc, nghe, xem, viết, nói lại. 趟 tàng: một chuyến đi rồi về — 去/来/跑一趟.',
+            'Vị trí tân ngữ: danh từ chỉ vật, địa danh đứng sau bổ ngữ hoặc đưa lên đầu câu: 我看了两遍这本书 / 这本书我看了两遍; địa danh đứng trước hay sau đều được: 去过两次上海 = 去过上海两次. Riêng đại từ chỉ người phải đứng TRƯỚC bổ ngữ: 我找过他三次.'
           ],
           table: [
             ['Mẫu', 'Ý nghĩa', 'Ví dụ'],
-            ['V + 过', 'đã từng', '我吃过北京烤鸭。'],
-            ['没 + V + 过', 'chưa từng', '我没坐过飞机。'],
-            ['已经 + V + 了', 'đã … rồi', '他已经走了。'],
-            ['还没 + V + 呢', 'vẫn chưa', '他还没来呢。']
+            ['已经 + V + 了', 'đã … rồi', '我们已经到宾馆了。'],
+            ['还没 + V + 呢', 'vẫn chưa', '导游还没来呢。'],
+            ['V + 过 + số + 次', 'đã (từng) … mấy lần', '我去过两次西安。'],
+            ['V + 了 + số + 遍', 'làm trọn mấy lượt', '这个故事我听了三遍。'],
+            ['去 / 来 + 一趟 (+ nơi)', 'đi / đến một chuyến', '我下午要去一趟银行。']
           ],
           examples: [
-            { t: '我去过三次上海。', py: 'Wǒ qùguo sān cì Shànghǎi.', vi: 'Tôi đã từng đến Thượng Hải ba lần.' },
-            { t: '你吃过北京烤鸭吗？', py: 'Nǐ chīguo Běijīng kǎoyā ma?', vi: 'Bạn đã từng ăn vịt quay Bắc Kinh chưa?' },
-            { t: '我从来没坐过飞机。', py: 'Wǒ cónglái méi zuòguo fēijī.', vi: 'Tôi chưa bao giờ đi máy bay.' },
             { t: '我们已经到宾馆了。', py: 'Wǒmen yǐjīng dào bīnguǎn le.', vi: 'Chúng tôi đã đến khách sạn rồi.' },
-            { t: '他还没起床呢。', py: 'Tā hái méi qǐchuáng ne.', vi: 'Anh ấy vẫn chưa dậy.' }
+            { t: '导游还没来呢。', py: 'Dǎoyóu hái méi lái ne.', vi: 'Hướng dẫn viên vẫn chưa đến.' },
+            { t: '这个地方我来过三次。', py: 'Zhège dìfang wǒ láiguo sān cì.', vi: 'Nơi này tôi đã đến ba lần rồi.' },
+            { t: '对不起，请再说一遍。', py: 'Duìbuqǐ, qǐng zài shuō yí biàn.', vi: 'Xin lỗi, xin nói lại một lần nữa.' },
+            { t: '我下午要去一趟银行。', py: 'Wǒ xiàwǔ yào qù yí tàng yínháng.', vi: 'Chiều nay tôi phải ra ngân hàng một chuyến.' }
           ],
-          tip: 'Người Việt hay gắn 了 vào mọi câu có chữ "đã", kể cả câu phủ định. Nhớ: "chưa từng" dùng 没…过, "vẫn chưa" dùng 还没…呢 — không có 了. Ngoài ra 过 chỉ kinh nghiệm đọc nhẹ (guo), khác với 过 (guò) nghĩa là "đi qua".'
+          tip: 'Người Việt hay gắn 了 vào mọi câu có chữ "đã", kể cả câu phủ định: "vẫn chưa" là 还没…呢, không có 了. Số lần đặt SAU động từ, không đặt trước như tiếng Việt "hai lần đến": ✗ 我两次去过北京 → 我去过两次北京; với đại từ: 我找过他两次 (✗ 我找过两次他). Phân biệt: 看一次 = xem một lần (có thể không hết), 看一遍 = xem trọn một lượt; 去一趟 = đi một chuyến rồi về. (过 "đã từng" đã học ở bài HSK2 "Cuối tuần vừa rồi".)'
         },
         dialogue: [
           { s: '王明', t: '李华，你去过西安吗？', py: 'Lǐ Huá, nǐ qùguo Xī\'ān ma?', vi: 'Lý Hoa, cậu từng đến Tây An chưa?' },
           { s: '李华', t: '去过，我去过两次。你呢？', py: 'Qùguo, wǒ qùguo liǎng cì. Nǐ ne?', vi: 'Đến rồi, mình đến hai lần rồi. Còn cậu?' },
-          { s: '王明', t: '我还没去过呢。下个月我想去旅游。', py: 'Wǒ hái méi qùguo ne. Xià ge yuè wǒ xiǎng qù lǚyóu.', vi: 'Mình vẫn chưa đến bao giờ. Tháng sau mình muốn đi du lịch đó.' },
+          { s: '王明', t: '我还没去过呢。下个月我想去一趟。', py: 'Wǒ hái méi qùguo ne. Xià ge yuè wǒ xiǎng qù yí tàng.', vi: 'Mình vẫn chưa đến bao giờ. Tháng sau mình muốn đi một chuyến.' },
           { s: '李华', t: '你已经订宾馆了吗？', py: 'Nǐ yǐjīng dìng bīnguǎn le ma?', vi: 'Cậu đặt khách sạn chưa?' },
-          { s: '王明', t: '还没订呢，不过机票已经买好了。', py: 'Hái méi dìng ne, búguò jīpiào yǐjīng mǎihǎo le.', vi: 'Vẫn chưa đặt, nhưng vé máy bay thì mua xong rồi.' },
-          { s: '李华', t: '那你一定要去看看兵马俑。我给你看看我的照片吧。', py: 'Nà nǐ yídìng yào qù kànkan Bīngmǎyǒng. Wǒ gěi nǐ kànkan wǒ de zhàopiàn ba.', vi: 'Vậy cậu nhất định phải đi xem tượng binh mã. Để mình cho cậu xem ảnh của mình.' }
+          { s: '王明', t: '还没订呢，不过机票已经买好了。介绍西安的书我也看了两遍。', py: 'Hái méi dìng ne, búguò jīpiào yǐjīng mǎihǎo le. Jièshào Xī\'ān de shū wǒ yě kàn le liǎng biàn.', vi: 'Vẫn chưa đặt, nhưng vé máy bay thì mua xong rồi. Sách giới thiệu Tây An mình cũng đọc hai lượt rồi.' },
+          { s: '李华', t: '那你一定要去看看兵马俑。我去了两次，还想再去一次呢！', py: 'Nà nǐ yídìng yào qù kànkan Bīngmǎyǒng. Wǒ qù le liǎng cì, hái xiǎng zài qù yí cì ne!', vi: 'Vậy cậu nhất định phải đi xem tượng binh mã. Mình đi hai lần rồi mà vẫn muốn đi thêm lần nữa đấy!' }
         ],
         exercises: [
-          { type: 'mc', q: '我以前去___两次长城。', options: ['过', '着', '呢'], answer: 0, explain: 'Có 以前 và số lần 两次 → nói kinh nghiệm đã từng, dùng 过.' },
-          { type: 'mc', q: 'Câu phủ định đúng của "我吃过烤鸭。" là:', options: ['我不吃过烤鸭。', '我没吃过烤鸭。', '我没吃过了烤鸭。'], answer: 1, explain: 'Phủ định của V + 过 là 没 + V + 过, không dùng 不 và không thêm 了.' },
-          { type: 'fill', q: '我还没吃饭___。', answer: ['呢', 'ne'], hint: 'trợ từ cuối câu (ne)', explain: 'Mẫu 还没…呢 = vẫn chưa….' },
+          { type: 'mc', q: '这本小说很有意思，我看了三___。', options: ['遍', '趟', '口'], answer: 0, explain: '遍: một lượt trọn vẹn từ đầu đến cuối (đọc, xem, nghe).' },
+          { type: 'mc', q: 'Câu nào đúng?', options: ['我两次去过上海。', '我去过两次上海。', '我去两次过上海。'], answer: 1, explain: 'Số lần (bổ ngữ động lượng) đứng sau 动词 + 过: 去过两次上海.' },
+          { type: 'fill', q: '我还没吃饭___。（Tôi vẫn chưa ăn cơm.）', answer: ['呢', 'ne'], hint: 'trợ từ cuối câu (ne)', explain: 'Mẫu 还没…呢 = vẫn chưa….' },
           { type: 'order', vi: 'Tôi đã từng đến Bắc Kinh hai lần.', words: ['两次', '我', '北京', '去过'], answer: '我 去过 两次 北京', alt: ['我 去过 北京 两次'] },
-          { type: 'mc', q: '飞机___起飞了。', options: ['还', '已经', '没'], answer: 1, explain: '已经…了 = đã … rồi.' },
-          { type: 'fill', q: '你去___中国吗？', answer: ['过', 'guo', 'guò'], hint: 'đã từng (guo)', explain: 'Hỏi kinh nghiệm: V + 过 + …吗？' },
+          { type: 'mc', q: '"Tôi vẫn chưa đặt khách sạn." nói thế nào?', options: ['我还没订宾馆了。', '我已经没订宾馆。', '我还没订宾馆呢。'], answer: 2, explain: '还没…呢, không dùng 了 trong câu phủ định.' },
+          { type: 'fill', q: '我明天要去一___银行。（Ngày mai tôi phải ra ngân hàng một chuyến.）', answer: ['趟', 'tàng', 'tang'], hint: 'tàng – chuyến (đi rồi về)', explain: '去一趟 + nơi chốn = đi một chuyến.' },
           { type: 'order', vi: 'Anh ấy vẫn chưa đến.', words: ['呢', '他', '来', '还没'], answer: '他 还没 来 呢' },
-          { type: 'mc', q: '"Tôi vẫn chưa đặt khách sạn." nói thế nào?', options: ['我还没订宾馆了。', '我还没订宾馆呢。', '我已经没订宾馆。'], answer: 1, explain: '还没…呢, không dùng 了 trong câu phủ định.' }
+          { type: 'mc', q: '"Tôi đã tìm anh ấy hai lần." nói thế nào?', options: ['我找过两次他。', '我找过他两次。', '我两次找过他。'], answer: 1, explain: 'Tân ngữ là đại từ (他) đứng trước bổ ngữ động lượng: 找过他两次.' }
         ]
       },
       // ───────────────────────── HSK3-2 ─────────────────────────
@@ -73,7 +74,7 @@ addLevels('zh', [
         title: 'Công việc & phỏng vấn',
         goal: 'Nói về công việc đang làm, mô tả trạng thái bằng 正在 / 着 và nói đã làm việc gì trong bao lâu.',
         vocab: [
-          { w: '工作', ipa: 'gōngzuò', hv: 'công tác', vi: 'công việc; làm việc', ex: '他在一家公司工作了三年。', exPy: 'Tā zài yì jiā gōngsī gōngzuòle sān nián.', exVi: 'Anh ấy đã làm việc ở một công ty ba năm.' },
+          { w: '公司', ipa: 'gōngsī', hv: 'công ty', vi: 'công ty', ex: '他在这家公司工作了三年。', exPy: 'Tā zài zhè jiā gōngsī gōngzuòle sān nián.', exVi: 'Anh ấy đã làm việc ở công ty này ba năm.' },
           { w: '面试', ipa: 'miànshì', hv: 'diện thí', vi: 'phỏng vấn', ex: '明天上午我有一个面试。', exPy: 'Míngtiān shàngwǔ wǒ yǒu yí ge miànshì.', exVi: 'Sáng mai tôi có một buổi phỏng vấn.' },
           { w: '经理', ipa: 'jīnglǐ', hv: 'kinh lý', vi: 'giám đốc, quản lý', ex: '经理正在开会呢。', exPy: 'Jīnglǐ zhèngzài kāihuì ne.', exVi: 'Giám đốc đang họp.' },
           { w: '同事', ipa: 'tóngshì', hv: 'đồng sự', vi: 'đồng nghiệp', ex: '我的同事都很热情。', exPy: 'Wǒ de tóngshì dōu hěn rèqíng.', exVi: 'Đồng nghiệp của tôi đều rất nhiệt tình.' },
@@ -201,7 +202,7 @@ addLevels('zh', [
           { w: '懂', ipa: 'dǒng', hv: 'đổng', vi: 'hiểu', ex: '你听懂了吗？', exPy: 'Nǐ tīngdǒng le ma?', exVi: 'Bạn nghe hiểu chưa?' },
           { w: '忘记', ipa: 'wàngjì', hv: 'vong ký', vi: 'quên', ex: '我忘记他的名字了。', exPy: 'Wǒ wàngjì tā de míngzi le.', exVi: 'Tôi quên tên anh ấy rồi.' },
           { w: '发现', ipa: 'fāxiàn', hv: 'phát hiện', vi: 'phát hiện, nhận ra', ex: '我发现钱包不见了。', exPy: 'Wǒ fāxiàn qiánbāo bú jiàn le.', exVi: 'Tôi phát hiện ví không thấy đâu nữa.' },
-          { w: '钥匙', ipa: 'yàoshi', hv: 'thược thi', vi: 'chìa khoá', ex: '我把钥匙放在桌子上了。', exPy: 'Wǒ bǎ yàoshi fàng zài zhuōzi shang le.', exVi: 'Tôi để chìa khoá trên bàn rồi.' },
+          { w: '钥匙', ipa: 'yàoshi', hv: 'thược thi', vi: 'chìa khoá (mở rộng)', ex: '我把钥匙放在桌子上了。', exPy: 'Wǒ bǎ yàoshi fàng zài zhuōzi shang le.', exVi: 'Tôi để chìa khoá trên bàn rồi.' },
           { w: '突然', ipa: 'tūrán', hv: 'đột nhiên', vi: 'đột nhiên, bỗng', ex: '突然下起雨来了。', exPy: 'Tūrán xiàqǐ yǔ lái le.', exVi: 'Bỗng nhiên trời đổ mưa.' },
           { w: '找', ipa: 'zhǎo', hv: 'trảo', vi: 'tìm', ex: '我找到我的手机了。', exPy: 'Wǒ zhǎodào wǒ de shǒujī le.', exVi: 'Tôi tìm thấy điện thoại của mình rồi.' },
           { w: '后来', ipa: 'hòulái', hv: 'hậu lai', vi: 'sau đó, về sau', ex: '后来他们成了好朋友。', exPy: 'Hòulái tāmen chéngle hǎo péngyou.', exVi: 'Về sau họ trở thành bạn thân.' }
@@ -264,7 +265,7 @@ addLevels('zh', [
           { w: '方便', ipa: 'fāngbiàn', hv: 'phương tiện', vi: 'tiện lợi', ex: '坐地铁比坐公交车方便。', exPy: 'Zuò dìtiě bǐ zuò gōngjiāochē fāngbiàn.', exVi: 'Đi tàu điện ngầm tiện hơn đi xe buýt.' },
           { w: '安静', ipa: 'ānjìng', hv: 'an tĩnh', vi: 'yên tĩnh', ex: '图书馆里很安静。', exPy: 'Túshūguǎn li hěn ānjìng.', exVi: 'Trong thư viện rất yên tĩnh.' },
           { w: '热闹', ipa: 'rènao', hv: 'nhiệt náo', vi: 'náo nhiệt, nhộn nhịp', ex: '上海比我的老家热闹多了。', exPy: 'Shànghǎi bǐ wǒ de lǎojiā rènao duō le.', exVi: 'Thượng Hải nhộn nhịp hơn quê tôi nhiều.' },
-          { w: '便宜', ipa: 'piányi', hv: 'tiện nghi', vi: 'rẻ', ex: '这家店的东西没有那家便宜。', exPy: 'Zhè jiā diàn de dōngxi méiyǒu nà jiā piányi.', exVi: 'Đồ ở cửa hàng này không rẻ bằng cửa hàng kia.' },
+          { w: '方面', ipa: 'fāngmiàn', hv: 'phương diện', vi: 'mặt, phương diện', ex: '在交通方面，城市比农村方便得多。', exPy: 'Zài jiāotōng fāngmiàn, chéngshì bǐ nóngcūn fāngbiàn de duō.', exVi: 'Về mặt giao thông, thành phố tiện hơn nông thôn nhiều.' },
           { w: '城市', ipa: 'chéngshì', hv: 'thành thị', vi: 'thành phố', ex: '你最喜欢哪个城市？', exPy: 'Nǐ zuì xǐhuan nǎge chéngshì?', exVi: 'Bạn thích thành phố nào nhất?' },
           { w: '更', ipa: 'gèng', hv: 'cánh', vi: 'hơn, càng', ex: '我觉得秋天更舒服。', exPy: 'Wǒ juéde qiūtiān gèng shūfu.', exVi: 'Tôi thấy mùa thu dễ chịu hơn.' }
         ],
@@ -385,13 +386,13 @@ addLevels('zh', [
         vocab: [
           { w: '要是', ipa: 'yàoshi', hv: 'yếu thị', vi: 'nếu (khẩu ngữ)', ex: '要是你早点儿告诉我就好了。', exPy: 'Yàoshi nǐ zǎo diǎnr gàosu wǒ jiù hǎo le.', exVi: 'Giá mà bạn nói với tôi sớm hơn thì tốt.' },
           { w: '假如', ipa: 'jiǎrú', hv: 'giả như', vi: 'giả sử, giả như', ex: '假如我是你，我就接受这份工作。', exPy: 'Jiǎrú wǒ shì nǐ, wǒ jiù jiēshòu zhè fèn gōngzuò.', exVi: 'Giả sử tôi là bạn, tôi sẽ nhận công việc này.' },
-          { w: '即使', ipa: 'jíshǐ', hv: 'tức sử', vi: 'cho dù, dù cho', ex: '即使很累，他也坚持跑步。', exPy: 'Jíshǐ hěn lèi, tā yě jiānchí pǎobù.', exVi: 'Dù rất mệt, anh ấy vẫn kiên trì chạy bộ.' },
-          { w: '希望', ipa: 'xīwàng', hv: 'hy vọng', vi: 'hy vọng, mong', ex: '希望你早日实现梦想。', exPy: 'Xīwàng nǐ zǎorì shíxiàn mèngxiǎng.', exVi: 'Mong bạn sớm thực hiện được ước mơ.' },
+          { w: '即使', ipa: 'jíshǐ', hv: 'tức sử', vi: 'cho dù, dù cho (mở rộng)', ex: '即使很累，他也坚持跑步。', exPy: 'Jíshǐ hěn lèi, tā yě jiānchí pǎobù.', exVi: 'Dù rất mệt, anh ấy vẫn kiên trì chạy bộ.' },
+          { w: '愿望', ipa: 'yuànwàng', hv: 'nguyện vọng', vi: 'nguyện vọng, điều mong ước', ex: '我的愿望是开一家自己的书店。', exPy: 'Wǒ de yuànwàng shì kāi yì jiā zìjǐ de shūdiàn.', exVi: 'Mong ước của tôi là mở một hiệu sách của riêng mình.' },
           { w: '梦想', ipa: 'mèngxiǎng', hv: 'mộng tưởng', vi: 'ước mơ', ex: '我的梦想是当一名医生。', exPy: 'Wǒ de mèngxiǎng shì dāng yì míng yīshēng.', exVi: 'Ước mơ của tôi là trở thành bác sĩ.' },
           { w: '实现', ipa: 'shíxiàn', hv: 'thực hiện', vi: 'thực hiện, trở thành hiện thực', ex: '只要努力，梦想就能实现。', exPy: 'Zhǐyào nǔlì, mèngxiǎng jiù néng shíxiàn.', exVi: 'Chỉ cần cố gắng, ước mơ sẽ thành hiện thực.' },
           { w: '坚持', ipa: 'jiānchí', hv: 'kiên trì', vi: 'kiên trì, bền bỉ', ex: '学外语一定要坚持。', exPy: 'Xué wàiyǔ yídìng yào jiānchí.', exVi: 'Học ngoại ngữ nhất định phải kiên trì.' },
-          { w: '放弃', ipa: 'fàngqì', hv: 'phóng khí', vi: 'từ bỏ', ex: '即使失败了，也不要放弃。', exPy: 'Jíshǐ shībài le, yě bú yào fàngqì.', exVi: 'Cho dù thất bại cũng đừng bỏ cuộc.' },
-          { w: '后悔', ipa: 'hòuhuǐ', hv: 'hậu hối', vi: 'hối hận', ex: '要是当时没去，我现在一定会后悔。', exPy: 'Yàoshi dāngshí méi qù, wǒ xiànzài yídìng huì hòuhuǐ.', exVi: 'Nếu hồi đó không đi, giờ tôi chắc chắn sẽ hối hận.' },
+          { w: '放弃', ipa: 'fàngqì', hv: 'phóng khí', vi: 'từ bỏ (mở rộng)', ex: '即使失败了，也不要放弃。', exPy: 'Jíshǐ shībài le, yě bú yào fàngqì.', exVi: 'Cho dù thất bại cũng đừng bỏ cuộc.' },
+          { w: '后悔', ipa: 'hòuhuǐ', hv: 'hậu hối', vi: 'hối hận (mở rộng)', ex: '要是当时没去，我现在一定会后悔。', exPy: 'Yàoshi dāngshí méi qù, wǒ xiànzài yídìng huì hòuhuǐ.', exVi: 'Nếu hồi đó không đi, giờ tôi chắc chắn sẽ hối hận.' },
           { w: '将来', ipa: 'jiānglái', hv: 'tương lai', vi: 'tương lai, sau này', ex: '将来我想开一家咖啡店。', exPy: 'Jiānglái wǒ xiǎng kāi yì jiā kāfēidiàn.', exVi: 'Sau này tôi muốn mở một quán cà phê.' }
         ],
         grammar: {
@@ -450,7 +451,7 @@ addLevels('zh', [
           { w: '发生', ipa: 'fāshēng', hv: 'phát sinh', vi: 'xảy ra', ex: '昨天晚上这里发生了一起交通事故。', exPy: 'Zuótiān wǎnshang zhèli fāshēngle yì qǐ jiāotōng shìgù.', exVi: 'Tối qua ở đây xảy ra một vụ tai nạn giao thông.' },
           { w: '事故', ipa: 'shìgù', hv: 'sự cố', vi: 'tai nạn, sự cố', ex: '幸好事故中没有人受伤。', exPy: 'Xìnghǎo shìgù zhōng méiyǒu rén shòushāng.', exVi: 'May mà trong vụ tai nạn không ai bị thương.' },
           { w: '警察', ipa: 'jǐngchá', hv: 'cảnh sát', vi: 'cảnh sát', ex: '小偷被警察抓住了。', exPy: 'Xiǎotōu bèi jǐngchá zhuāzhù le.', exVi: 'Tên trộm bị cảnh sát bắt rồi.' },
-          { w: '被', ipa: 'bèi', hv: 'bị', vi: 'bị, được (bị động)', ex: '我的自行车被人偷了。', exPy: 'Wǒ de zìxíngchē bèi rén tōu le.', exVi: 'Xe đạp của tôi bị người ta lấy trộm rồi.' },
+          { w: '现场', ipa: 'xiànchǎng', hv: 'hiện trường', vi: 'hiện trường; tại chỗ', ex: '警察很快就到了现场。', exPy: 'Jǐngchá hěn kuài jiù dào le xiànchǎng.', exVi: 'Cảnh sát rất nhanh đã đến hiện trường.' },
           { w: '破坏', ipa: 'pòhuài', hv: 'phá hoại', vi: 'phá huỷ, làm hư hại', ex: '很多房子被台风破坏了。', exPy: 'Hěn duō fángzi bèi táifēng pòhuài le.', exVi: 'Nhiều ngôi nhà bị bão tàn phá.' },
           { w: '受伤', ipa: 'shòushāng', hv: 'thụ thương', vi: 'bị thương', ex: '他在比赛中受伤了。', exPy: 'Tā zài bǐsài zhōng shòushāng le.', exVi: 'Anh ấy bị thương trong trận đấu.' },
           { w: '通知', ipa: 'tōngzhī', hv: 'thông tri', vi: 'thông báo', ex: '学校通知明天放假。', exPy: 'Xuéxiào tōngzhī míngtiān fàngjià.', exVi: 'Nhà trường thông báo ngày mai được nghỉ.' }
@@ -476,7 +477,7 @@ addLevels('zh', [
             { t: '那本书让我同事借走了。', py: 'Nà běn shū ràng wǒ tóngshì jièzǒu le.', vi: 'Cuốn sách đó bị đồng nghiệp tôi mượn mất rồi.' },
             { t: '幸好司机没被撞伤。', py: 'Xìnghǎo sījī méi bèi zhuàngshāng.', vi: 'May mà tài xế không bị đâm bị thương.' }
           ],
-          tip: 'Âm Hán Việt của 被 là "bị", và theo truyền thống 被 hay dùng cho việc không mong muốn. Ngày nay 被 cũng gặp trong việc tốt (他被选为班长 = cậu ấy được bầu làm lớp trưởng), nhưng đừng dịch máy móc mọi chữ "được": "Tôi được tặng một cuốn sách" nên nói 有人送了我一本书.'
+          tip: 'Âm Hán Việt của 被 là "bị", và theo truyền thống 被 hay dùng cho việc không mong muốn. Ngày nay 被 cũng gặp trong việc tốt (他被选为班长 = cậu ấy được bầu làm lớp trưởng), nhưng đừng dịch máy móc mọi chữ "được": "Tôi được tặng một cuốn sách" nên nói 有人送了我一本书. Bẫy Hán Việt: 新闻 đọc "tân văn" nhưng nghĩa là TIN TỨC (看新闻 = xem thời sự), còn tờ báo là 报纸; 消息 "tiêu tức" là tin, tin nhắn chứ không phải "tiêu tan"; 记者 "ký giả" = phóng viên, nhà báo.'
         },
         dialogue: [
           { s: '李华', t: '你看今天的新闻了吗？', py: 'Nǐ kàn jīntiān de xīnwén le ma?', vi: 'Cậu xem thời sự hôm nay chưa?' },
@@ -503,7 +504,7 @@ addLevels('zh', [
         id: 'zh-hsk4-3',
         icon: '💬',
         title: 'Kể lại lời nói',
-        goal: 'Thuật lại lời người khác và những tin nghe được bằng 说, 告诉, 听说, 据说.',
+        goal: 'Thuật lại lời người khác, lời dặn và những tin nghe được bằng 说, 告诉, 听说, 据说, 让 / 叫.',
         vocab: [
           { w: '告诉', ipa: 'gàosu', hv: 'cáo tố', vi: 'nói cho biết, bảo', ex: '他告诉我他明天不来了。', exPy: 'Tā gàosu wǒ tā míngtiān bù lái le.', exVi: 'Anh ấy bảo tôi mai anh ấy không đến nữa.' },
           { w: '听说', ipa: 'tīngshuō', hv: 'thính thuyết', vi: 'nghe nói', ex: '听说小王要结婚了。', exPy: 'Tīngshuō Xiǎo Wáng yào jiéhūn le.', exVi: 'Nghe nói Tiểu Vương sắp cưới rồi.' },
@@ -517,10 +518,10 @@ addLevels('zh', [
           { w: '怀疑', ipa: 'huáiyí', hv: 'hoài nghi', vi: 'nghi ngờ', ex: '我怀疑他说的不是真的。', exPy: 'Wǒ huáiyí tā shuō de bú shì zhēn de.', exVi: 'Tôi nghi những gì anh ta nói không phải sự thật.' }
         ],
         grammar: {
-          title: 'Thuật lại lời nói: 说, 告诉, 听说, 据说',
+          title: 'Thuật lại lời nói: 说, 告诉, 听说, 据说 và thuật lại yêu cầu với 让 / 叫',
           explain: [
             '说 (thuyết) = nói. Thuật lại: Ai + 说 + nội dung: 他说他明天不来了. Muốn nói "nói với ai" dùng 跟 / 对 + người + 说: 他跟我说… (không nói 他说我…).',
-            '告诉 (cáo tố) = cho biết, bảo; người nghe đứng ngay sau: 告诉 + người + nội dung. 她告诉我她换工作了.',
+            '告诉 (cáo tố) = cho biết, bảo; người nghe đứng ngay sau: 告诉 + người + nội dung. 她告诉我她换工作了. Thuật lại một yêu cầu, lời dặn thì dùng câu kiêm ngữ (đã học ở HSK3): A + 让 / 叫 + B + việc cần làm: 老师让我们明天交作业 (Cô bảo chúng tôi mai nộp bài); 妈妈叫你早点儿回家 (Mẹ bảo cậu về sớm).',
             '听说 = nghe nói; có thể chen nguồn tin vào giữa: 听小李说… (nghe Tiểu Lý nói…). 据说 = theo người ta nói / nghe đồn, trang trọng hơn, nguồn tin chung chung, thường đứng đầu câu và không có chủ ngữ.',
             'Khi trích dẫn gián tiếp, chỉ cần đổi đại từ (và từ chỉ thời gian nếu cần, vd 明天 → 第二天): lời gốc 王明："我很忙。" → 王明说他很忙. Tiếng Trung không phải lùi thì như tiếng Anh.'
           ],
@@ -529,13 +530,15 @@ addLevels('zh', [
             ['说', 'A + (跟 B) 说 + nội dung', '他跟我说他很忙。'],
             ['告诉', 'A + 告诉 + B + nội dung', '她告诉我她要出国。'],
             ['听说', '听 (A) 说 + nội dung', '听老师说明天考试。'],
-            ['据说', '据说 + nội dung', '据说这里以前是一个湖。']
+            ['据说', '据说 + nội dung', '据说这里以前是一个湖。'],
+            ['让 / 叫', 'A + 让/叫 + B + việc', '妈妈让我告诉你早点儿回家。']
           ],
           examples: [
             { t: '小李跟我说他下个月要去上海出差。', py: 'Xiǎo Lǐ gēn wǒ shuō tā xià ge yuè yào qù Shànghǎi chūchāi.', vi: 'Tiểu Lý nói với tôi tháng sau cậu ấy đi công tác Thượng Hải.' },
             { t: '经理告诉我们会议取消了。', py: 'Jīnglǐ gàosu wǒmen huìyì qǔxiāo le.', vi: 'Giám đốc báo với chúng tôi là cuộc họp bị huỷ.' },
             { t: '听说那家饭馆的菜特别好吃。', py: 'Tīngshuō nà jiā fànguǎn de cài tèbié hǎochī.', vi: 'Nghe nói món ăn ở quán đó rất ngon.' },
-            { t: '据说这个城市已经有两千多年的历史了。', py: 'Jùshuō zhège chéngshì yǐjīng yǒu liǎngqiān duō nián de lìshǐ le.', vi: 'Người ta nói thành phố này đã có hơn hai nghìn năm lịch sử.' }
+            { t: '据说这个城市已经有两千多年的历史了。', py: 'Jùshuō zhège chéngshì yǐjīng yǒu liǎngqiān duō nián de lìshǐ le.', vi: 'Người ta nói thành phố này đã có hơn hai nghìn năm lịch sử.' },
+            { t: '经理让我转告你，明天的会推迟到下午。', py: 'Jīnglǐ ràng wǒ zhuǎngào nǐ, míngtiān de huì tuīchí dào xiàwǔ.', vi: 'Giám đốc bảo tôi nhắn với anh là cuộc họp ngày mai lùi sang buổi chiều.' }
           ],
           tip: 'Người Việt hay nói 他说我… với nghĩa "anh ấy nói với tôi…", nhưng câu này dễ bị hiểu thành "anh ấy nói (về) tôi". Hãy dùng 他跟我说… hoặc 他告诉我…. Và 告诉 không đi với 跟: không nói 他跟我告诉….'
         },
@@ -568,7 +571,7 @@ addLevels('zh', [
         vocab: [
           { w: '环境', ipa: 'huánjìng', hv: 'hoàn cảnh', vi: 'môi trường', ex: '我们应该保护环境。', exPy: 'Wǒmen yīnggāi bǎohù huánjìng.', exVi: 'Chúng ta nên bảo vệ môi trường.' },
           { w: '保护', ipa: 'bǎohù', hv: 'bảo hộ', vi: 'bảo vệ', ex: '保护动物就是保护我们自己。', exPy: 'Bǎohù dòngwù jiù shì bǎohù wǒmen zìjǐ.', exVi: 'Bảo vệ động vật chính là bảo vệ chính chúng ta.' },
-          { w: '污染', ipa: 'wūrǎn', hv: 'ô nhiễm', vi: 'ô nhiễm', ex: '这条河的污染越来越严重。', exPy: 'Zhè tiáo hé de wūrǎn yuè lái yuè yánzhòng.', exVi: 'Ô nhiễm ở con sông này ngày càng nghiêm trọng.' },
+          { w: '污染', ipa: 'wūrǎn', hv: 'ô nhiễm', vi: 'ô nhiễm (mở rộng)', ex: '这条河的污染越来越严重。', exPy: 'Zhè tiáo hé de wūrǎn yuè lái yuè yánzhòng.', exVi: 'Ô nhiễm ở con sông này ngày càng nghiêm trọng.' },
           { w: '严重', ipa: 'yánzhòng', hv: 'nghiêm trọng', vi: 'nghiêm trọng', ex: '空气污染问题很严重。', exPy: 'Kōngqì wūrǎn wèntí hěn yánzhòng.', exVi: 'Vấn đề ô nhiễm không khí rất nghiêm trọng.' },
           { w: '垃圾', ipa: 'lājī', hv: '', vi: 'rác', ex: '请把垃圾扔进垃圾桶。', exPy: 'Qǐng bǎ lājī rēngjìn lājītǒng.', exVi: 'Hãy bỏ rác vào thùng rác.' },
           { w: '节约', ipa: 'jiéyuē', hv: 'tiết ước', vi: 'tiết kiệm', ex: '我们要节约用水。', exPy: 'Wǒmen yào jiéyuē yòng shuǐ.', exVi: 'Chúng ta phải tiết kiệm nước.' },
@@ -578,40 +581,40 @@ addLevels('zh', [
           { w: '影响', ipa: 'yǐngxiǎng', hv: 'ảnh hưởng', vi: 'ảnh hưởng', ex: '污染对健康有很大的影响。', exPy: 'Wūrǎn duì jiànkāng yǒu hěn dà de yǐngxiǎng.', exVi: 'Ô nhiễm ảnh hưởng rất lớn đến sức khoẻ.' }
         ],
         grammar: {
-          title: '不但…而且…, 越来越…, 对…来说',
+          title: '不但…而且…, 随着…, 对…来说',
           explain: [
             '不但 (bất đãn) A，而且 (nhi thả) B = Không những A mà còn B. Nếu hai vế cùng chủ ngữ, chủ ngữ đứng trước 不但: 他不但会说汉语，而且说得很好. Nếu khác chủ ngữ, 不但 đứng trước chủ ngữ thứ nhất. Vế sau hay thêm 也 / 还.',
-            '越来越 + tính từ / động từ tâm lý = càng ngày càng…: 天气越来越冷, 我越来越喜欢这里. Không thêm 很 / 非常 sau 越来越.',
+            '随着 suízhe + cụm danh từ chỉ một sự thay đổi, đứng đầu câu = cùng với / theo đà …; vế sau nói sự thay đổi kéo theo, hay có 越来越 (đã học ở HSK3), 也, 逐渐: 随着经济的发展，人们的生活越来越好. Sau 随着 là cụm danh từ, thường có 的: 随着城市的发展 (✗ 随着城市发展得很快).',
             '对 + người / nhóm + 来说 = đối với … mà nói: nêu quan điểm từ góc độ của ai đó. 对我来说，健康最重要.',
             'Phân biệt: 对…来说 nêu góc nhìn; còn 对…有影响 / 对…好 nói về tác động lên đối tượng (污染对健康有影响).'
           ],
           table: [
             ['Mẫu', 'Nghĩa', 'Ví dụ'],
             ['不但…而且…', 'không những … mà còn …', '这里不但干净，而且很安静。'],
-            ['越来越 + Adj', 'ngày càng …', '污染越来越严重。'],
+            ['随着 + N (的发展/变化)，…', 'cùng với, theo đà …', '随着城市的发展，车越来越多。'],
             ['对…来说', 'đối với … mà nói', '对学生来说，时间很宝贵。']
           ],
           examples: [
             { t: '骑自行车不但能锻炼身体，而且能减少污染。', py: 'Qí zìxíngchē búdàn néng duànliàn shēntǐ, érqiě néng jiǎnshǎo wūrǎn.', vi: 'Đi xe đạp không những rèn luyện sức khoẻ mà còn giảm ô nhiễm.' },
-            { t: '城市里的车越来越多了。', py: 'Chéngshì li de chē yuè lái yuè duō le.', vi: 'Xe cộ trong thành phố ngày càng nhiều.' },
+            { t: '随着城市的发展，路上的车越来越多了。', py: 'Suízhe chéngshì de fāzhǎn, lùshang de chē yuè lái yuè duō le.', vi: 'Cùng với sự phát triển của thành phố, xe cộ trên đường ngày càng nhiều.' },
             { t: '对年轻人来说，找工作越来越难了。', py: 'Duì niánqīngrén lái shuō, zhǎo gōngzuò yuè lái yuè nán le.', vi: 'Đối với người trẻ, tìm việc ngày càng khó.' },
             { t: '不但年轻人喜欢网上购物，而且老人也开始用手机买东西了。', py: 'Búdàn niánqīngrén xǐhuan wǎngshang gòuwù, érqiě lǎorén yě kāishǐ yòng shǒujī mǎi dōngxi le.', vi: 'Không chỉ người trẻ thích mua sắm trực tuyến, mà người già cũng bắt đầu mua đồ bằng điện thoại.' }
           ],
-          tip: 'Lỗi hay gặp: 越来越很冷 — sai, chỉ nói 越来越冷. Với 对…来说 đừng quên 来说 ở cuối: 对我来说, không nói 对我说 (nghĩa là "nói với tôi").'
+          tip: 'Lỗi hay gặp: sau 随着 phải là cụm danh từ — ✗ 随着城市发展很快 → 随着城市的发展; vế sau có 越来越 thì không thêm 很 (✗ 越来越很冷). Với 对…来说 đừng quên 来说 ở cuối: 对我来说, không nói 对我说 (nghĩa là "nói với tôi"). Bẫy Hán Việt: 环境 đọc "hoàn cảnh" nhưng nghĩa là MÔI TRƯỜNG (保护环境 = bảo vệ môi trường); "hoàn cảnh (khó khăn)" của một người là 情况 / 处境. 节约 "tiết ước" = tiết kiệm (điện, nước), còn 节目 "tiết mục" mới là chương trình.'
         },
         dialogue: [
           { s: '王明', t: '你看，这条河以前很干净，现在越来越脏了。', py: 'Nǐ kàn, zhè tiáo hé yǐqián hěn gānjìng, xiànzài yuè lái yuè zāng le.', vi: 'Cậu xem, con sông này trước kia rất sạch, giờ ngày càng bẩn.' },
-          { s: '李华', t: '是啊，工厂多了，污染也越来越严重了。', py: 'Shì a, gōngchǎng duō le, wūrǎn yě yuè lái yuè yánzhòng le.', vi: 'Ừ, nhà máy nhiều lên, ô nhiễm cũng ngày càng nghiêm trọng.' },
+          { s: '李华', t: '是啊，随着工业的发展，污染也越来越严重了。', py: 'Shì a, suízhe gōngyè de fāzhǎn, wūrǎn yě yuè lái yuè yánzhòng le.', vi: 'Ừ, cùng với sự phát triển của công nghiệp, ô nhiễm cũng ngày càng nghiêm trọng.' },
           { s: '王明', t: '污染不但影响环境，而且影响我们的健康。', py: 'Wūrǎn búdàn yǐngxiǎng huánjìng, érqiě yǐngxiǎng wǒmen de jiànkāng.', vi: 'Ô nhiễm không những ảnh hưởng môi trường mà còn ảnh hưởng sức khoẻ của chúng ta.' },
           { s: '李华', t: '对我们普通人来说，能做的就是从小事开始。', py: 'Duì wǒmen pǔtōngrén lái shuō, néng zuò de jiù shì cóng xiǎoshì kāishǐ.', vi: 'Đối với người bình thường như chúng ta, điều có thể làm là bắt đầu từ việc nhỏ.' },
           { s: '王明', t: '比如节约用水，少用塑料袋。', py: 'Bǐrú jiéyuē yòng shuǐ, shǎo yòng sùliàodài.', vi: 'Ví dụ như tiết kiệm nước, ít dùng túi ni lông.' },
           { s: '李华', t: '对，还要把垃圾分类。现在这种做法越来越普遍了。', py: 'Duì, hái yào bǎ lājī fēnlèi. Xiànzài zhè zhǒng zuòfǎ yuè lái yuè pǔbiàn le.', vi: 'Đúng, còn phải phân loại rác. Bây giờ cách làm này ngày càng phổ biến.' }
         ],
         exercises: [
-          { type: 'mc', q: '天气越来越___了。', options: ['冷', '很冷', '非常冷'], answer: 0, explain: 'Sau 越来越 không thêm 很 / 非常.' },
+          { type: 'mc', q: '___经济的发展，人们的生活越来越好了。', options: ['随着', '对于', '不但'], answer: 0, explain: '随着 + cụm danh từ chỉ sự thay đổi = cùng với…; vế sau nói sự thay đổi kéo theo.' },
           { type: 'mc', q: '他不但会说汉语，___会说日语。', options: ['但是', '而且还', '所以'], answer: 1, explain: '不但…而且… = không những… mà còn…; vế sau hay thêm 还 / 也.' },
           { type: 'fill', q: '___我来说，家人最重要。', answer: ['对', 'duì', 'dui'], hint: 'đối với (duì)', explain: '对…来说 = đối với … mà nói.' },
-          { type: 'order', vi: 'Ô nhiễm không khí ngày càng nghiêm trọng.', words: ['越来越', '空气污染', '严重了'], answer: '空气污染 越来越 严重了' },
+          { type: 'order', vi: 'Cùng với sự phát triển của xã hội, ô nhiễm ngày càng nghiêm trọng.', words: ['污染', '随着', '越来越严重了', '社会的发展，'], answer: '随着 社会的发展， 污染 越来越严重了' },
           { type: 'mc', q: '"节约" nghĩa là:', options: ['ô nhiễm', 'tiết kiệm', 'bảo vệ'], answer: 1, explain: '节约 (tiết ước) = tiết kiệm.' },
           { type: 'order', vi: 'Đi xe đạp không những rèn luyện sức khoẻ mà còn giảm ô nhiễm.', words: ['而且', '骑自行车', '能减少污染', '不但', '能锻炼身体，'], answer: '骑自行车 不但 能锻炼身体， 而且 能减少污染' },
           { type: 'fill', q: '我们应该___环境。', answer: ['保护', 'bǎohù', 'baohu'], hint: 'bảo vệ (bǎohù)', explain: '保护环境 = bảo vệ môi trường.' },
@@ -628,11 +631,11 @@ addLevels('zh', [
           { w: '电脑', ipa: 'diànnǎo', hv: 'điện não', vi: 'máy tính', ex: '我的电脑太旧了，打不开这个文件。', exPy: 'Wǒ de diànnǎo tài jiù le, dǎ bu kāi zhège wénjiàn.', exVi: 'Máy tính của tôi cũ quá, không mở được tệp này.' },
           { w: '网络', ipa: 'wǎngluò', hv: 'võng lạc', vi: 'mạng (internet)', ex: '这里的网络不太好。', exPy: 'Zhèli de wǎngluò bú tài hǎo.', exVi: 'Mạng ở đây không tốt lắm.' },
           { w: '密码', ipa: 'mìmǎ', hv: 'mật mã', vi: 'mật khẩu', ex: '我忘了邮箱的密码。', exPy: 'Wǒ wàngle yóuxiāng de mìmǎ.', exVi: 'Tôi quên mật khẩu hộp thư rồi.' },
-          { w: '软件', ipa: 'ruǎnjiàn', hv: 'nhuyễn kiện', vi: 'phần mềm, ứng dụng', ex: '这个软件连老人都会用。', exPy: 'Zhège ruǎnjiàn lián lǎorén dōu huì yòng.', exVi: 'Ứng dụng này đến người già cũng biết dùng.' },
+          { w: '软件', ipa: 'ruǎnjiàn', hv: 'nhuyễn kiện', vi: 'phần mềm, ứng dụng (mở rộng)', ex: '这个软件连老人都会用。', exPy: 'Zhège ruǎnjiàn lián lǎorén dōu huì yòng.', exVi: 'Ứng dụng này đến người già cũng biết dùng.' },
           { w: '下载', ipa: 'xiàzài', hv: 'hạ tải', vi: 'tải xuống', ex: '你可以在手机上下载这个软件。', exPy: 'Nǐ kěyǐ zài shǒujī shang xiàzài zhège ruǎnjiàn.', exVi: 'Bạn có thể tải ứng dụng này về điện thoại.' },
           { w: '信号', ipa: 'xìnhào', hv: 'tín hiệu', vi: 'tín hiệu, sóng', ex: '山里信号不好，我听不清你说话。', exPy: 'Shān li xìnhào bù hǎo, wǒ tīng bu qīng nǐ shuōhuà.', exVi: 'Trong núi sóng yếu, tôi nghe không rõ bạn nói.' },
           { w: '充电', ipa: 'chōngdiàn', hv: 'sung điện', vi: 'sạc pin', ex: '手机没电了，我得充电。', exPy: 'Shǒujī méi diàn le, wǒ děi chōngdiàn.', exVi: 'Điện thoại hết pin rồi, tôi phải sạc.' },
-          { w: '屏幕', ipa: 'píngmù', hv: 'bình mạc', vi: 'màn hình', ex: '屏幕上的字太小了，我看不清楚。', exPy: 'Píngmù shang de zì tài xiǎo le, wǒ kàn bu qīngchu.', exVi: 'Chữ trên màn hình nhỏ quá, tôi nhìn không rõ.' },
+          { w: '屏幕', ipa: 'píngmù', hv: 'bình mạc', vi: 'màn hình (mở rộng)', ex: '屏幕上的字太小了，我看不清楚。', exPy: 'Píngmù shang de zì tài xiǎo le, wǒ kàn bu qīngchu.', exVi: 'Chữ trên màn hình nhỏ quá, tôi nhìn không rõ.' },
           { w: '功能', ipa: 'gōngnéng', hv: 'công năng', vi: 'chức năng', ex: '这个手机的功能很多。', exPy: 'Zhège shǒujī de gōngnéng hěn duō.', exVi: 'Chiếc điện thoại này có nhiều chức năng.' },
           { w: '方法', ipa: 'fāngfǎ', hv: 'phương pháp', vi: 'cách, phương pháp', ex: '你有什么好方法吗？', exPy: 'Nǐ yǒu shénme hǎo fāngfǎ ma?', exVi: 'Bạn có cách nào hay không?' }
         ],
@@ -683,62 +686,64 @@ addLevels('zh', [
         id: 'zh-hsk4-6',
         icon: '✉️',
         title: 'Giao tiếp trang trọng & email',
-        goal: 'Viết email và giao tiếp lịch sự nơi công sở: xưng hô, nhờ vả, nêu lý do và kết thư đúng chuẩn.',
+        goal: 'Viết email và giao tiếp lịch sự nơi công sở: nêu chủ đề, trình bày lý do, đưa ra kết luận "đã… thì…" và nhượng bộ "mặc dù… vẫn…" bằng văn phong trang trọng.',
         vocab: [
-          { w: '您', ipa: 'nín', hv: 'nâm', vi: 'ông, bà, ngài (kính trọng của 你)', ex: '您好，请问您贵姓？', exPy: 'Nín hǎo, qǐngwèn nín guìxìng?', exVi: 'Xin chào, xin hỏi quý danh của ông/bà?' },
+          { w: '既然', ipa: 'jìrán', hv: 'ký nhiên', vi: 'đã… (thì), một khi đã', ex: '既然大家都同意，我们就按这个时间开会。', exPy: 'Jìrán dàjiā dōu tóngyì, wǒmen jiù àn zhège shíjiān kāihuì.', exVi: 'Mọi người đã đồng ý thì chúng ta họp theo giờ này.' },
           { w: '麻烦', ipa: 'máfan', hv: 'ma phiền', vi: 'làm phiền; phiền phức', ex: '麻烦您把文件发给我。', exPy: 'Máfan nín bǎ wénjiàn fā gěi wǒ.', exVi: 'Phiền anh/chị gửi tài liệu cho tôi.' },
           { w: '关于', ipa: 'guānyú', hv: 'quan vu', vi: 'về, liên quan đến', ex: '关于这个问题，我们明天再讨论。', exPy: 'Guānyú zhège wèntí, wǒmen míngtiān zài tǎolùn.', exVi: 'Về vấn đề này, mai chúng ta thảo luận tiếp.' },
           { w: '因此', ipa: 'yīncǐ', hv: 'nhân thử', vi: 'vì thế, do đó', ex: '他工作很认真，因此得到了大家的信任。', exPy: 'Tā gōngzuò hěn rènzhēn, yīncǐ dédàole dàjiā de xìnrèn.', exVi: 'Anh ấy làm việc rất nghiêm túc, vì thế được mọi người tin tưởng.' },
           { w: '由于', ipa: 'yóuyú', hv: 'do vu', vi: 'do, bởi vì', ex: '由于天气原因，航班推迟了。', exPy: 'Yóuyú tiānqì yuányīn, hángbān tuīchí le.', exVi: 'Do thời tiết, chuyến bay bị hoãn.' },
-          { w: '附件', ipa: 'fùjiàn', hv: 'phụ kiện', vi: 'tệp đính kèm', ex: '详细内容请看附件。', exPy: 'Xiángxì nèiróng qǐng kàn fùjiàn.', exVi: 'Nội dung chi tiết xin xem tệp đính kèm.' },
+          { w: '附件', ipa: 'fùjiàn', hv: 'phụ kiện', vi: 'tệp đính kèm (mở rộng)', ex: '详细内容请看附件。', exPy: 'Xiángxì nèiróng qǐng kàn fùjiàn.', exVi: 'Nội dung chi tiết xin xem tệp đính kèm.' },
           { w: '回复', ipa: 'huífù', hv: 'hồi phục', vi: 'trả lời, hồi âm', ex: '收到邮件后请尽快回复。', exPy: 'Shōudào yóujiàn hòu qǐng jǐnkuài huífù.', exVi: 'Sau khi nhận được thư xin vui lòng hồi âm sớm.' },
           { w: '邮件', ipa: 'yóujiàn', hv: 'bưu kiện', vi: 'thư, email', ex: '我昨天给您发了一封邮件。', exPy: 'Wǒ zuótiān gěi nín fāle yì fēng yóujiàn.', exVi: 'Hôm qua tôi đã gửi cho ông/bà một email.' },
           { w: '感谢', ipa: 'gǎnxiè', hv: 'cảm tạ', vi: 'cảm ơn (trang trọng)', ex: '感谢您的帮助！', exPy: 'Gǎnxiè nín de bāngzhù!', exVi: 'Cảm ơn sự giúp đỡ của ông/bà!' },
           { w: '安排', ipa: 'ānpái', hv: 'an bài', vi: 'sắp xếp, bố trí', ex: '请您安排一下会议时间。', exPy: 'Qǐng nín ānpái yíxià huìyì shíjiān.', exVi: 'Xin ông/bà sắp xếp thời gian họp.' }
         ],
         grammar: {
-          title: 'Ngôn ngữ trang trọng: 您, 请, 麻烦您, 关于, 因此 / 由于',
+          title: 'Văn phong trang trọng: 关于, 由于…因此…, 既然…就…, 尽管…还是…',
           explain: [
-            '您 (nín) là dạng kính trọng của 你, dùng với cấp trên, khách hàng, người lớn tuổi hoặc người mới gặp. Khi nói với nhiều người, thay vì 您们 nên dùng 各位 (các vị) hoặc 大家.',
-            '请 + động từ = xin mời / vui lòng; 麻烦您 + động từ = phiền ông/bà…, lời nhờ vả lịch sự, ngụ ý mình làm phiền người khác. Sau lời nhờ thường thêm 谢谢 hoặc 辛苦了.',
             '关于 (quan vu) + vấn đề = về, liên quan đến …, thường đứng đầu câu hoặc làm tiêu đề: 关于下周会议的通知 (Thông báo về cuộc họp tuần sau).',
-            '由于 (do vu) = do, bởi vì — trang trọng hơn 因为, đi với 因此 hoặc 所以. 因此 (nhân thử) = vì thế, đứng đầu vế sau. Lưu ý: dùng 由于…因此… hoặc 因为…所以…, tránh 因为…因此….'
+            '由于 (do vu) = do, bởi vì — trang trọng hơn 因为, đi với 因此 hoặc 所以. 因此 (nhân thử) = vì thế, đứng đầu vế sau. Dùng 由于…因此… hoặc 因为…所以…, tránh 因为…因此….',
+            '既然 (ký nhiên) + một sự thật đã biết / đã xảy ra, vế sau + 就 / 也 / 还 + kết luận hoặc đề nghị = "đã… thì…": 既然您下周不在，会议就推迟吧。Khác 如果 / 要是 (giả định, chưa chắc xảy ra): 既然 nói điều người nói và người nghe đều đã biết là thật.',
+            '尽管 (tận quản) + sự thật, vế sau + 但是 / 可是 / 还是 / 仍然 = "mặc dù… nhưng vẫn…", nghĩa như 虽然 nhưng trang trọng hơn, hay gặp trong thư từ, báo cáo. Đừng nhầm với 即使…也… (cho dù — điều giả định): 尽管下雨了 (trời đã mưa thật) ≠ 即使下雨 (cho dù có mưa).'
           ],
           table: [
-            ['Phần thư', 'Mẫu câu', 'Nghĩa'],
-            ['Xưng hô', '尊敬的王经理：', 'Kính gửi giám đốc Vương,'],
-            ['Chào', '您好！', 'Kính chào ông/bà!'],
+            ['Phần thư / chức năng', 'Mẫu câu', 'Nghĩa'],
+            ['Xưng hô', '尊敬的王经理：您好！', 'Kính gửi giám đốc Vương, kính chào ông!'],
             ['Nêu chủ đề', '关于…，…', 'Về việc …'],
-            ['Nhờ vả', '麻烦您…', 'Phiền ông/bà …'],
-            ['Kết thư', '期待您的回复。', 'Mong nhận được hồi âm của ông/bà.'],
-            ['Lời chào cuối', '此致 敬礼！', 'Trân trọng!']
+            ['Nêu lý do', '由于…，因此…', 'Do … nên …'],
+            ['Kết luận từ sự thật', '既然…，(我们)就…', 'Đã … thì …'],
+            ['Nhượng bộ', '尽管…，(但是)还是…', 'Mặc dù … nhưng vẫn …'],
+            ['Kết thư', '期待您的回复。此致 敬礼！', 'Mong hồi âm của ông/bà. Trân trọng!']
           ],
           examples: [
             { t: '尊敬的张经理：您好！', py: 'Zūnjìng de Zhāng jīnglǐ: Nín hǎo!', vi: 'Kính gửi giám đốc Trương: Kính chào ông!' },
             { t: '关于下周的会议，我想跟您确认一下时间。', py: 'Guānyú xià zhōu de huìyì, wǒ xiǎng gēn nín quèrèn yíxià shíjiān.', vi: 'Về cuộc họp tuần sau, tôi muốn xác nhận lại thời gian với ông.' },
             { t: '由于航班推迟，因此我不能按时参加会议。', py: 'Yóuyú hángbān tuīchí, yīncǐ wǒ bù néng ànshí cānjiā huìyì.', vi: 'Do chuyến bay bị hoãn nên tôi không thể tham dự cuộc họp đúng giờ.' },
-            { t: '麻烦您在周五以前回复我，谢谢！', py: 'Máfan nín zài zhōuwǔ yǐqián huífù wǒ, xièxie!', vi: 'Phiền ông/bà hồi âm cho tôi trước thứ sáu, cảm ơn!' }
+            { t: '既然您下周不在公司，会议就推迟到下个月吧。', py: 'Jìrán nín xià zhōu bú zài gōngsī, huìyì jiù tuīchí dào xià ge yuè ba.', vi: 'Ông đã không có mặt ở công ty tuần sau thì ta lùi cuộc họp sang tháng sau vậy.' },
+            { t: '尽管时间很紧，我们还是按时完成了报告。', py: 'Jǐnguǎn shíjiān hěn jǐn, wǒmen háishi ànshí wánchéngle bàogào.', vi: 'Mặc dù thời gian rất gấp, chúng tôi vẫn hoàn thành báo cáo đúng hạn.' }
           ],
-          tip: 'Thư trang trọng tiếng Trung mở đầu bằng 尊敬的 + họ + chức danh + dấu hai chấm (：), xuống dòng viết 您好！ Kết thư bằng 此致 (một dòng) và 敬礼！ (dòng dưới), hoặc 祝工作顺利！ Đừng dùng 你 với cấp trên hay khách hàng.'
+          tip: 'Thư trang trọng mở đầu bằng 尊敬的 + họ + chức danh + dấu hai chấm (：), xuống dòng viết 您好！, kết thư bằng 此致 (một dòng) và 敬礼！ (dòng dưới) hoặc 祝工作顺利！ Người Việt hay dùng 既然 như "nếu": ✗ 既然明天下雨，我们就不去了 (mai mưa hay không chưa biết) → 如果明天下雨…; chỉ dùng 既然 khi điều đó đã là sự thật: 既然下雨了，我们就不去了. Với 尽管, vế sau thường có 还是 / 仍然 / 但是, không dùng 也 như 即使: ✗ 尽管很累，他也… → 尽管很累，他还是坚持做完了. Bẫy Hán Việt: 邮件 đọc "bưu kiện" nhưng ngày nay chủ yếu là email (bưu kiện gửi qua bưu điện là 包裹); 回复 "hồi phục" nghĩa là trả lời thư, không phải hồi phục sức khoẻ (= 恢复).'
         },
         dialogue: [
           { s: '李华', t: '王经理，您好！我是市场部的李华。', py: 'Wáng jīnglǐ, nín hǎo! Wǒ shì shìchǎngbù de Lǐ Huá.', vi: 'Chào giám đốc Vương! Tôi là Lý Hoa ở phòng Marketing.' },
           { s: '王经理', t: '你好，小李，有什么事吗？', py: 'Nǐ hǎo, Xiǎo Lǐ, yǒu shénme shì ma?', vi: 'Chào Tiểu Lý, có việc gì thế?' },
           { s: '李华', t: '关于下周的会议，我昨天给您发了一封邮件，不知道您收到了没有。', py: 'Guānyú xià zhōu de huìyì, wǒ zuótiān gěi nín fāle yì fēng yóujiàn, bù zhīdào nín shōudàole méiyǒu.', vi: 'Về cuộc họp tuần sau, hôm qua tôi đã gửi ông một email, không biết ông đã nhận được chưa.' },
           { s: '王经理', t: '收到了。不过由于这两天太忙，因此还没回复。', py: 'Shōudào le. Búguò yóuyú zhè liǎng tiān tài máng, yīncǐ hái méi huífù.', vi: 'Nhận rồi. Có điều mấy hôm nay bận quá nên tôi chưa trả lời.' },
-          { s: '李华', t: '没关系。麻烦您看一下附件里的安排，有问题请随时告诉我。', py: 'Méi guānxi. Máfan nín kàn yíxià fùjiàn li de ānpái, yǒu wèntí qǐng suíshí gàosu wǒ.', vi: 'Không sao ạ. Phiền ông xem qua lịch sắp xếp trong tệp đính kèm, có vấn đề gì xin cứ báo tôi.' },
-          { s: '王经理', t: '好的，我今天下午回复你。', py: 'Hǎo de, wǒ jīntiān xiàwǔ huífù nǐ.', vi: 'Được, chiều nay tôi sẽ trả lời cô.' },
-          { s: '李华', t: '感谢您！那我不打扰您了。', py: 'Gǎnxiè nín! Nà wǒ bù dǎrǎo nín le.', vi: 'Cảm ơn ông! Vậy tôi không làm phiền ông nữa.' }
+          { s: '李华', t: '没关系。尽管时间有点儿紧，但是会议的安排我已经都放在附件里了。', py: 'Méi guānxi. Jǐnguǎn shíjiān yǒudiǎnr jǐn, dànshì huìyì de ānpái wǒ yǐjīng dōu fàng zài fùjiàn li le.', vi: 'Không sao ạ. Mặc dù thời gian hơi gấp, nhưng lịch sắp xếp cuộc họp tôi đã để cả trong tệp đính kèm rồi ạ.' },
+          { s: '王经理', t: '好。既然你都准备好了，我今天下午就看，看完马上回复你。', py: 'Hǎo. Jìrán nǐ dōu zhǔnbèi hǎo le, wǒ jīntiān xiàwǔ jiù kàn, kànwán mǎshàng huífù nǐ.', vi: 'Được. Cô đã chuẩn bị xong cả rồi thì chiều nay tôi sẽ xem, xem xong trả lời cô ngay.' },
+          { s: '李华', t: '感谢您！那我不打扰您了。', py: 'Gǎnxiè nín! Nà wǒ bù dǎrǎo nín le.', vi: 'Cảm ơn ông! Vậy tôi không làm phiền ông nữa.' },
+          { s: '王经理', t: '好的，辛苦了。', py: 'Hǎo de, xīnkǔ le.', vi: 'Được, cô vất vả rồi.' }
         ],
         exercises: [
           { type: 'mc', q: '___您帮我看一下这份文件，谢谢！', options: ['麻烦', '关于', '因此'], answer: 0, explain: '麻烦您 + V = phiền ông/bà làm gì (lời nhờ lịch sự).' },
           { type: 'mc', q: '由于天气不好，___航班推迟了。', options: ['但是', '因此', '虽然'], answer: 1, explain: '由于…因此… = do… nên….' },
-          { type: 'fill', q: '___下周的会议，请大家准时参加。', answer: ['关于', 'guānyú', 'guanyu'], hint: 'về, liên quan đến (guānyú)', explain: '关于 + vấn đề đứng đầu câu để nêu chủ đề.' },
+          { type: 'fill', q: '___下周的会议，请大家准时参加。（Về cuộc họp tuần sau, mời mọi người đến đúng giờ.）', answer: ['关于', 'guānyú', 'guanyu'], hint: 'về, liên quan đến (guānyú)', explain: '关于 + vấn đề đứng đầu câu để nêu chủ đề.' },
           { type: 'order', vi: 'Mong nhận được hồi âm của ông/bà.', words: ['回复', '期待', '的', '您'], answer: '期待 您 的 回复' },
-          { type: 'mc', q: 'Mở đầu email gửi giám đốc Trương, cách nào phù hợp nhất?', options: ['张经理，你好！', '尊敬的张经理：您好！', '喂，张经理！'], answer: 1, explain: 'Thư trang trọng: 尊敬的 + họ + chức danh + ：, rồi 您好！' },
+          { type: 'mc', q: '___大家都同意了，我们就按这个时间开会吧。', options: ['即使', '尽管', '既然'], answer: 2, explain: '既然 + sự thật đã biết (大家都同意了), vế sau 就 + đề nghị = đã… thì….' },
           { type: 'order', vi: 'Phiền anh/chị gửi tệp đính kèm cho tôi.', words: ['发给我', '麻烦', '附件', '您', '把'], answer: '麻烦 您 把 附件 发给我' },
-          { type: 'mc', q: '"由于" gần nghĩa nhất với:', options: ['因为', '所以', '但是'], answer: 0, explain: '由于 (do vu) = 因为 nhưng trang trọng hơn.' },
-          { type: 'mc', q: 'Cách kết thư trang trọng truyền thống là:', options: ['此致 敬礼！', '再见了！', '拜拜！'], answer: 0, explain: '此致 (một dòng) + 敬礼！ (dòng dưới) là công thức kết thư trang trọng.' }
+          { type: 'fill', q: '___时间很紧，我们还是按时完成了任务。（Mặc dù thời gian rất gấp, chúng tôi vẫn hoàn thành nhiệm vụ đúng hạn.）', answer: ['尽管', 'jǐnguǎn', 'jinguan', '虽然', 'suīrán', 'suiran'], hint: 'jǐnguǎn – mặc dù', explain: '尽管 + sự thật, 还是… = mặc dù… vẫn…; 虽然 cũng đúng nhưng kém trang trọng hơn.' },
+          { type: 'mc', q: 'Câu nào dùng 既然 ĐÚNG?', options: ['既然明天下雨，我们就不去了。', '既然你已经决定了，我就不说什么了。', '既然很累，他也坚持做完了。'], answer: 1, explain: '既然 chỉ đi với sự thật đã biết (你已经决定了). Chuyện mai mưa chưa chắc → dùng 如果; câu 3 là nhượng bộ → 尽管…还是….' }
         ]
       }
     ]

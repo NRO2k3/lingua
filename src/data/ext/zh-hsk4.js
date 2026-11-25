@@ -28,21 +28,21 @@ export default {
       title: '假如能回到十八岁',
       titleVi: 'Nếu được quay lại tuổi mười tám',
       text: [
-        '上个星期，我们班的老师给大家出了一个作文题目：“假如你能回到十八岁，你会做什么？”有的同学说要更努力地学习，有的同学说要多去旅游，看看外面的世界。',
+        '上个星期，老师给我们出了一个作文题目：“假如你能回到十八岁，你会做什么？”同学们的回答都不一样。',
         '我的同桌小林说，要是能回到十八岁，她一定会选择自己喜欢的专业。当时她想学画画，可是父母担心她将来找不到工作，她就放弃了。现在她在银行上班，工资不错，但是每天都过得不太开心。她说：“哪怕那时候失败了，我也不会像现在这么后悔。”',
-        '我想了很久。说实话，我很难想象如果当时做了别的选择，现在的生活会是什么样子。十八岁的时候，我胆子很小，连在大家面前说话都会脸红。要是那时候我能多一点儿勇气就好了，说不定我会认识更多的朋友，也会去追求更多的机会。',
+        '我想了很久。十八岁的时候，我胆子很小，连在大家面前说话都会脸红。要是那时候我能多一点儿勇气就好了，说不定我会认识更多的朋友，也会去追求更多的机会。',
         '不过，后来我明白了一个道理：过去的事情已经没办法改变，但是未来还在我们自己手里。即使今天已经不是十八岁，我们也可以继续奋斗。现在，我每天下班以后都去学一个小时的汉语，因为我期待有一天能用汉语和中国朋友聊天。'
       ],
       py: [
-        'Shàng ge xīngqī, wǒmen bān de lǎoshī gěi dàjiā chūle yí ge zuòwén tímù: “Jiǎrú nǐ néng huídào shíbā suì, nǐ huì zuò shénme?” Yǒu de tóngxué shuō yào gèng nǔlì de xuéxí, yǒu de tóngxué shuō yào duō qù lǚyóu, kànkan wàimian de shìjiè.',
+        'Shàng ge xīngqī, lǎoshī gěi wǒmen chūle yí ge zuòwén tímù: “Jiǎrú nǐ néng huídào shíbā suì, nǐ huì zuò shénme?” Tóngxuémen de huídá dōu bù yíyàng.',
         'Wǒ de tóngzhuō Xiǎo Lín shuō, yàoshi néng huídào shíbā suì, tā yídìng huì xuǎnzé zìjǐ xǐhuan de zhuānyè. Dāngshí tā xiǎng xué huàhuà, kěshì fùmǔ dānxīn tā jiānglái zhǎo bu dào gōngzuò, tā jiù fàngqì le. Xiànzài tā zài yínháng shàngbān, gōngzī búcuò, dànshì měi tiān dōu guò de bú tài kāixīn. Tā shuō: “Nǎpà nà shíhou shībài le, wǒ yě bú huì xiàng xiànzài zhème hòuhuǐ.”',
-        'Wǒ xiǎngle hěn jiǔ. Shuō shíhuà, wǒ hěn nán xiǎngxiàng rúguǒ dāngshí zuòle bié de xuǎnzé, xiànzài de shēnghuó huì shì shénme yàngzi. Shíbā suì de shíhou, wǒ dǎnzi hěn xiǎo, lián zài dàjiā miànqián shuōhuà dōu huì liǎnhóng. Yàoshi nà shíhou wǒ néng duō yìdiǎnr yǒngqì jiù hǎo le, shuōbudìng wǒ huì rènshi gèng duō de péngyou, yě huì qù zhuīqiú gèng duō de jīhuì.',
+        'Wǒ xiǎngle hěn jiǔ. Shíbā suì de shíhou, wǒ dǎnzi hěn xiǎo, lián zài dàjiā miànqián shuōhuà dōu huì liǎnhóng. Yàoshi nà shíhou wǒ néng duō yìdiǎnr yǒngqì jiù hǎo le, shuōbudìng wǒ huì rènshi gèng duō de péngyou, yě huì qù zhuīqiú gèng duō de jīhuì.',
         'Búguò, hòulái wǒ míngbaile yí ge dàoli: guòqù de shìqing yǐjīng méi bànfǎ gǎibiàn, dànshì wèilái hái zài wǒmen zìjǐ shǒu li. Jíshǐ jīntiān yǐjīng bú shì shíbā suì, wǒmen yě kěyǐ jìxù fèndòu. Xiànzài, wǒ měi tiān xiàbān yǐhòu dōu qù xué yí ge xiǎoshí de Hànyǔ, yīnwèi wǒ qīdài yǒu yì tiān néng yòng Hànyǔ hé Zhōngguó péngyou liáotiān.'
       ],
       vi: [
-        'Tuần trước, thầy giáo lớp chúng tôi ra cho cả lớp một đề tập làm văn: “Giả sử bạn được quay lại tuổi mười tám, bạn sẽ làm gì?” Có bạn nói sẽ học hành chăm chỉ hơn, có bạn nói sẽ đi du lịch nhiều hơn để ngắm nhìn thế giới bên ngoài.',
+        'Tuần trước, thầy giáo ra cho chúng tôi một đề tập làm văn: “Giả sử bạn được quay lại tuổi mười tám, bạn sẽ làm gì?” Câu trả lời của mọi người đều khác nhau.',
         'Tiểu Lâm, bạn ngồi cùng bàn với tôi, nói rằng nếu được quay lại tuổi mười tám, cô ấy nhất định sẽ chọn ngành mình thích. Hồi đó cô muốn học vẽ, nhưng bố mẹ lo sau này cô không tìm được việc, thế là cô từ bỏ. Bây giờ cô làm ở ngân hàng, lương khá, nhưng ngày nào cũng sống không vui lắm. Cô nói: “Cho dù hồi đó có thất bại, mình cũng sẽ không hối hận như bây giờ.”',
-        'Tôi nghĩ rất lâu. Nói thật, tôi khó mà tưởng tượng được nếu hồi đó chọn khác đi thì cuộc sống bây giờ sẽ ra sao. Năm mười tám tuổi, tôi rất nhát, đến nói chuyện trước mặt mọi người cũng đỏ mặt. Giá mà hồi đó tôi can đảm hơn một chút, biết đâu tôi đã quen thêm nhiều bạn bè và cũng dám theo đuổi nhiều cơ hội hơn.',
+        'Tôi nghĩ rất lâu. Năm mười tám tuổi, tôi rất nhát, đến nói chuyện trước mặt mọi người cũng đỏ mặt. Giá mà hồi đó tôi can đảm hơn một chút, biết đâu tôi đã quen thêm nhiều bạn bè và cũng dám theo đuổi nhiều cơ hội hơn.',
         'Nhưng về sau tôi hiểu ra một điều: chuyện quá khứ không thể thay đổi được nữa, còn tương lai vẫn nằm trong tay chính chúng ta. Cho dù hôm nay không còn mười tám tuổi, chúng ta vẫn có thể tiếp tục phấn đấu. Giờ đây, mỗi ngày sau giờ làm tôi đều đi học tiếng Trung một tiếng, vì tôi mong một ngày nào đó có thể trò chuyện với bạn bè Trung Quốc bằng tiếng Trung.'
       ],
       questions: [
@@ -136,20 +136,20 @@ export default {
       title: '一个小误会',
       titleVi: 'Một hiểu lầm nhỏ',
       text: [
-        '上个星期一，我刚到公司，就发现同事们在小声地议论着什么。我问小张发生了什么事，她告诉我：“听说王经理要离开公司了，据说是因为他跟老板吵架了。”我觉得很奇怪，因为上个星期王经理还说要带我们去做一个新项目。',
-        '中午吃饭的时候，这个消息已经传遍了整个办公室。有人说王经理要去上海工作，有人说他竟然被老板批评了。大家你一句我一句，描述得好像自己亲眼看见了一样。王经理走进来的时候，大家马上不说话了，他似乎也感觉到了什么。',
+        '上个星期一，我刚到公司，就发现同事们在小声地议论着什么。我问小张发生了什么事，她告诉我：“听说王经理要离开公司了，据说是因为他跟老板吵架了。”',
+        '中午吃饭的时候，这个消息已经传遍了整个办公室。有人说王经理要去上海工作，有人说他竟然被老板批评了。王经理走进来的时候，大家马上不说话了，他似乎也感觉到了什么。',
         '下午开会时，王经理笑着说：“我听说最近大家对我很关心。我要解释一下：我下个月确实要去上海，不过不是离开公司，而是去那里的分公司工作半年。至于跟老板吵架，那是误会。那天我们只是讨论问题的时候声音大了一点儿。”大家听了都笑了。',
         '会后，小张承认消息是她从别人那儿听来的，自己也没有问清楚。王经理再三提醒大家：“以后听到什么消息，最好先问问本人。”这件事让我明白，传话的人越多，话就越容易变样。'
       ],
       py: [
-        'Shàng ge xīngqīyī, wǒ gāng dào gōngsī, jiù fāxiàn tóngshìmen zài xiǎoshēng de yìlùnzhe shénme. Wǒ wèn Xiǎo Zhāng fāshēngle shénme shì, tā gàosu wǒ: “Tīngshuō Wáng jīnglǐ yào líkāi gōngsī le, jùshuō shì yīnwèi tā gēn lǎobǎn chǎojià le.” Wǒ juéde hěn qíguài, yīnwèi shàng ge xīngqī Wáng jīnglǐ hái shuō yào dài wǒmen qù zuò yí ge xīn xiàngmù.',
-        'Zhōngwǔ chīfàn de shíhou, zhège xiāoxi yǐjīng chuánbiànle zhěnggè bàngōngshì. Yǒu rén shuō Wáng jīnglǐ yào qù Shànghǎi gōngzuò, yǒu rén shuō tā jìngrán bèi lǎobǎn pīpíng le. Dàjiā nǐ yí jù wǒ yí jù, miáoshù de hǎoxiàng zìjǐ qīnyǎn kànjiànle yíyàng. Wáng jīnglǐ zǒu jìnlai de shíhou, dàjiā mǎshàng bù shuōhuà le, tā sìhū yě gǎnjué dàole shénme.',
+        'Shàng ge xīngqīyī, wǒ gāng dào gōngsī, jiù fāxiàn tóngshìmen zài xiǎoshēng de yìlùnzhe shénme. Wǒ wèn Xiǎo Zhāng fāshēngle shénme shì, tā gàosu wǒ: “Tīngshuō Wáng jīnglǐ yào líkāi gōngsī le, jùshuō shì yīnwèi tā gēn lǎobǎn chǎojià le.”',
+        'Zhōngwǔ chīfàn de shíhou, zhège xiāoxi yǐjīng chuánbiànle zhěnggè bàngōngshì. Yǒu rén shuō Wáng jīnglǐ yào qù Shànghǎi gōngzuò, yǒu rén shuō tā jìngrán bèi lǎobǎn pīpíng le. Wáng jīnglǐ zǒu jìnlai de shíhou, dàjiā mǎshàng bù shuōhuà le, tā sìhū yě gǎnjué dàole shénme.',
         'Xiàwǔ kāihuì shí, Wáng jīnglǐ xiàozhe shuō: “Wǒ tīngshuō zuìjìn dàjiā duì wǒ hěn guānxīn. Wǒ yào jiěshì yíxià: wǒ xià ge yuè quèshí yào qù Shànghǎi, búguò bú shì líkāi gōngsī, ér shì qù nàli de fēngōngsī gōngzuò bàn nián. Zhìyú gēn lǎobǎn chǎojià, nà shì wùhuì. Nà tiān wǒmen zhǐshì tǎolùn wèntí de shíhou shēngyīn dàle yìdiǎnr.” Dàjiā tīngle dōu xiào le.',
         'Huì hòu, Xiǎo Zhāng chéngrèn xiāoxi shì tā cóng biérén nàr tīnglai de, zìjǐ yě méiyǒu wèn qīngchu. Wáng jīnglǐ zàisān tíxǐng dàjiā: “Yǐhòu tīngdào shénme xiāoxi, zuìhǎo xiān wènwen běnrén.” Zhè jiàn shì ràng wǒ míngbai, chuánhuà de rén yuè duō, huà jiù yuè róngyì biànyàng.'
       ],
       vi: [
-        'Thứ Hai tuần trước, tôi vừa đến công ty đã thấy đồng nghiệp đang xì xào bàn tán chuyện gì đó. Tôi hỏi Tiểu Trương có chuyện gì, cô ấy bảo tôi: “Nghe nói giám đốc Vương sắp rời công ty, nghe đồn là vì ông ấy cãi nhau với sếp.” Tôi thấy rất lạ, vì tuần trước giám đốc Vương còn nói sẽ dẫn chúng tôi làm một dự án mới.',
-        'Đến giờ ăn trưa, tin này đã lan khắp văn phòng. Người thì bảo giám đốc Vương sắp đi Thượng Hải làm việc, người thì bảo vậy mà ông ấy bị sếp phê bình. Mọi người mỗi người một câu, kể lại cứ như chính mắt mình nhìn thấy. Lúc giám đốc Vương bước vào, mọi người lập tức im bặt, hình như ông ấy cũng cảm nhận được điều gì đó.',
+        'Thứ Hai tuần trước, tôi vừa đến công ty đã thấy đồng nghiệp đang xì xào bàn tán chuyện gì đó. Tôi hỏi Tiểu Trương có chuyện gì, cô ấy bảo tôi: “Nghe nói giám đốc Vương sắp rời công ty, nghe đồn là vì ông ấy cãi nhau với sếp.”',
+        'Đến giờ ăn trưa, tin này đã lan khắp văn phòng. Người thì bảo giám đốc Vương sắp đi Thượng Hải làm việc, người thì bảo vậy mà ông ấy bị sếp phê bình. Lúc giám đốc Vương bước vào, mọi người lập tức im bặt, hình như ông ấy cũng cảm nhận được điều gì đó.',
         'Buổi họp chiều, giám đốc Vương cười nói: “Tôi nghe nói dạo này mọi người rất quan tâm đến tôi. Tôi xin giải thích một chút: tháng sau tôi đúng là sẽ đi Thượng Hải, nhưng không phải rời công ty mà là sang chi nhánh ở đó làm việc nửa năm. Còn chuyện cãi nhau với sếp thì là hiểu lầm. Hôm đó chúng tôi chỉ bàn công việc nên nói hơi to một chút thôi.” Mọi người nghe xong đều bật cười.',
         'Sau cuộc họp, Tiểu Trương thừa nhận tin đó là cô nghe từ người khác, bản thân cũng không hỏi cho rõ. Giám đốc Vương nhắc đi nhắc lại với mọi người: “Sau này nghe được tin gì, tốt nhất hãy hỏi chính người trong cuộc trước.” Chuyện này giúp tôi hiểu rằng lời nói càng qua nhiều người truyền lại thì càng dễ bị sai lệch.'
       ],
@@ -190,21 +190,21 @@ export default {
       title: '我们小区的变化',
       titleVi: 'Khu dân cư của chúng tôi đã thay đổi',
       text: [
-        '我住的小区有二十多年的历史了。几年前，这里的环境很差：垃圾到处都是，河水又黑又臭，夏天的时候连窗户都不敢开。很多年轻人不愿意住在这儿，纷纷搬到了新的小区。对老人来说，这种环境不但影响心情，而且对身体也不好。',
-        '后来，居民们决定一起想办法改善环境。在政府的支持下，小区采取了几项措施：第一，垃圾要分类，每天按时扔；第二，居民们在空地上种植了很多花草和树木；第三，附近的超市不再免费提供塑料袋，鼓励大家自己带购物袋。',
-        '刚开始的时候，有些人觉得很麻烦，不愿意配合。可是慢慢地，大家发现小区逐渐变干净了，河水也变清了，周末还有不少人带着孩子来河边散步。现在，参加环保活动的人越来越多，连小学生都会提醒爸爸妈妈节约用水用电。',
+        '我住的小区有二十多年的历史了。几年前，这里的环境很差：垃圾到处都是，河水又黑又臭。很多年轻人不愿意住在这儿，纷纷搬到了新的小区。对老人来说，这种环境不但影响心情，而且对身体也不好。',
+        '后来，居民们决定一起想办法改善环境。小区采取了几项措施：第一，垃圾要分类，每天按时扔；第二，居民们在空地上种植了很多花草和树木；第三，附近的超市不再免费提供塑料袋，鼓励大家自己带购物袋。',
+        '几个月以后，大家发现小区逐渐变干净了，河水也变清了。现在，参加环保活动的人越来越多，连小学生都会提醒爸爸妈妈节约用水用电。',
         '当然，问题并没有完全解决。小区旁边还有几家小企业，它们的污染仍然比较严重。不过，从整个社会来看，保护环境已经成为一种趋势。我相信，只要每个人都从小事做起，我们的城市一定会越来越美丽。'
       ],
       py: [
-        'Wǒ zhù de xiǎoqū yǒu èrshí duō nián de lìshǐ le. Jǐ nián qián, zhèli de huánjìng hěn chà: lājī dàochù dōu shì, héshuǐ yòu hēi yòu chòu, xiàtiān de shíhou lián chuānghu dōu bù gǎn kāi. Hěn duō niánqīngrén bú yuànyì zhù zài zhèr, fēnfēn bāndàole xīn de xiǎoqū. Duì lǎorén lái shuō, zhè zhǒng huánjìng búdàn yǐngxiǎng xīnqíng, érqiě duì shēntǐ yě bù hǎo.',
-        'Hòulái, jūmínmen juédìng yìqǐ xiǎng bànfǎ gǎishàn huánjìng. Zài zhèngfǔ de zhīchí xià, xiǎoqū cǎiqǔle jǐ xiàng cuòshī: dì-yī, lājī yào fēnlèi, měi tiān ànshí rēng; dì-èr, jūmínmen zài kòngdì shang zhòngzhíle hěn duō huācǎo hé shùmù; dì-sān, fùjìn de chāoshì bú zài miǎnfèi tígōng sùliàodài, gǔlì dàjiā zìjǐ dài gòuwùdài.',
-        'Gāng kāishǐ de shíhou, yǒuxiē rén juéde hěn máfan, bú yuànyì pèihé. Kěshì mànmàn de, dàjiā fāxiàn xiǎoqū zhújiàn biàn gānjìng le, héshuǐ yě biàn qīng le, zhōumò hái yǒu bù shǎo rén dàizhe háizi lái hébiān sànbù. Xiànzài, cānjiā huánbǎo huódòng de rén yuè lái yuè duō, lián xiǎoxuéshēng dōu huì tíxǐng bàba māma jiéyuē yòng shuǐ yòng diàn.',
+        'Wǒ zhù de xiǎoqū yǒu èrshí duō nián de lìshǐ le. Jǐ nián qián, zhèli de huánjìng hěn chà: lājī dàochù dōu shì, héshuǐ yòu hēi yòu chòu. Hěn duō niánqīngrén bú yuànyì zhù zài zhèr, fēnfēn bāndàole xīn de xiǎoqū. Duì lǎorén lái shuō, zhè zhǒng huánjìng búdàn yǐngxiǎng xīnqíng, érqiě duì shēntǐ yě bù hǎo.',
+        'Hòulái, jūmínmen juédìng yìqǐ xiǎng bànfǎ gǎishàn huánjìng. Xiǎoqū cǎiqǔle jǐ xiàng cuòshī: dì-yī, lājī yào fēnlèi, měi tiān ànshí rēng; dì-èr, jūmínmen zài kòngdì shang zhòngzhíle hěn duō huācǎo hé shùmù; dì-sān, fùjìn de chāoshì bú zài miǎnfèi tígōng sùliàodài, gǔlì dàjiā zìjǐ dài gòuwùdài.',
+        'Jǐ ge yuè yǐhòu, dàjiā fāxiàn xiǎoqū zhújiàn biàn gānjìng le, héshuǐ yě biàn qīng le. Xiànzài, cānjiā huánbǎo huódòng de rén yuè lái yuè duō, lián xiǎoxuéshēng dōu huì tíxǐng bàba māma jiéyuē yòng shuǐ yòng diàn.',
         'Dāngrán, wèntí bìng méiyǒu wánquán jiějué. Xiǎoqū pángbiān hái yǒu jǐ jiā xiǎo qǐyè, tāmen de wūrǎn réngrán bǐjiào yánzhòng. Búguò, cóng zhěnggè shèhuì lái kàn, bǎohù huánjìng yǐjīng chéngwéi yì zhǒng qūshì. Wǒ xiāngxìn, zhǐyào měi ge rén dōu cóng xiǎoshì zuòqǐ, wǒmen de chéngshì yídìng huì yuè lái yuè měilì.'
       ],
       vi: [
-        'Khu dân cư tôi ở đã có hơn hai mươi năm lịch sử. Vài năm trước, môi trường ở đây rất tệ: rác vứt khắp nơi, nước sông vừa đen vừa hôi, mùa hè đến cửa sổ cũng không dám mở. Nhiều người trẻ không muốn sống ở đây, lần lượt chuyển sang các khu mới. Đối với người già, môi trường như vậy không chỉ ảnh hưởng đến tâm trạng mà còn không tốt cho sức khoẻ.',
-        'Về sau, cư dân quyết định cùng nhau tìm cách cải thiện môi trường. Với sự hỗ trợ của chính quyền, khu dân cư đã áp dụng mấy biện pháp: thứ nhất, rác phải phân loại và vứt đúng giờ mỗi ngày; thứ hai, cư dân trồng nhiều hoa cỏ và cây xanh trên các khoảnh đất trống; thứ ba, siêu thị gần đó không còn phát túi ni-lông miễn phí, khuyến khích mọi người tự mang túi đi chợ.',
-        'Lúc đầu, có người thấy phiền phức, không muốn hợp tác. Nhưng dần dần, mọi người nhận ra khu dân cư sạch sẽ hơn, nước sông cũng trong trở lại, cuối tuần còn có nhiều người dẫn con ra bờ sông đi dạo. Giờ đây, người tham gia các hoạt động bảo vệ môi trường ngày càng đông, đến cả học sinh tiểu học cũng biết nhắc bố mẹ tiết kiệm điện nước.',
+        'Khu dân cư tôi ở đã có hơn hai mươi năm lịch sử. Vài năm trước, môi trường ở đây rất tệ: rác vứt khắp nơi, nước sông vừa đen vừa hôi. Nhiều người trẻ không muốn sống ở đây, lần lượt chuyển sang các khu mới. Đối với người già, môi trường như vậy không chỉ ảnh hưởng đến tâm trạng mà còn không tốt cho sức khoẻ.',
+        'Về sau, cư dân quyết định cùng nhau tìm cách cải thiện môi trường. Khu dân cư đã áp dụng mấy biện pháp: thứ nhất, rác phải phân loại và vứt đúng giờ mỗi ngày; thứ hai, cư dân trồng nhiều hoa cỏ và cây xanh trên các khoảnh đất trống; thứ ba, siêu thị gần đó không còn phát túi ni-lông miễn phí, khuyến khích mọi người tự mang túi đi chợ.',
+        'Vài tháng sau, mọi người nhận ra khu dân cư dần dần sạch sẽ hơn, nước sông cũng trong trở lại. Giờ đây, người tham gia các hoạt động bảo vệ môi trường ngày càng đông, đến cả học sinh tiểu học cũng biết nhắc bố mẹ tiết kiệm điện nước.',
         'Tất nhiên, vấn đề vẫn chưa được giải quyết hoàn toàn. Cạnh khu dân cư vẫn còn vài doanh nghiệp nhỏ gây ô nhiễm khá nặng. Tuy vậy, nhìn trên toàn xã hội, bảo vệ môi trường đã trở thành một xu thế. Tôi tin rằng chỉ cần mỗi người bắt đầu từ những việc nhỏ, thành phố của chúng ta nhất định sẽ ngày càng đẹp hơn.'
       ],
       questions: [
@@ -244,22 +244,22 @@ export default {
       title: '教奶奶用智能手机',
       titleVi: 'Dạy bà dùng điện thoại thông minh',
       text: [
-        '我奶奶今年七十五岁了。以前她只用一部很旧的老年手机，除了打电话以外，什么功能都没有。去年过生日的时候，我们给她买了一部智能手机，希望她能跟住在国外的姑姑视频聊天。可是奶奶看着手机，皱着眉头说：“这么复杂的东西，我肯定学不会。”',
-        '于是，我决定每个周末都去教她。第一次，我先帮她把字体设置得大一点儿，因为屏幕上的字太小，她看不清楚。然后，我教她怎么充电、怎么打开微信。奶奶的记性不太好，刚学的操作，第二天就忘了。我只好把每一步都写在纸上，让她照着做。',
+        '我奶奶今年七十五岁了。以前她只用一部很旧的老年手机，除了打电话以外，什么功能都没有。去年过生日的时候，我们给她买了一部智能手机，希望她能跟住在国外的姑姑视频聊天。可是奶奶说：“这么复杂的东西，我肯定学不会。”',
+        '于是，我决定每个周末都去教她。第一次，我先帮她把字体设置得大一点儿，因为屏幕上的字太小，她看不清楚。然后，我教她怎么充电、怎么打开微信。',
         '一个月以后，奶奶竟然学会了不少东西。她不但会自己登录微信，而且还会用手机拍照、看新闻、听戏曲。有时候她连吃饭的时候都拿着手机，被我爸爸说了好几次。',
-        '上个星期，奶奶第一次跟姑姑视频。看到屏幕上的女儿，她高兴得说不出话来。挂了电话以后，她笑着对我说：“原来科技也没那么可怕，只要愿意学，老人也跟得上时代。”我想，对老年人来说，最需要的也许不是更好的手机，而是家人的耐心。'
+        '上个星期，奶奶第一次跟姑姑视频。看到屏幕上的女儿，她高兴得说不出话来。她笑着对我说：“原来科技也没那么可怕，只要愿意学，老人也跟得上时代。”我想，对老年人来说，最需要的也许不是更好的手机，而是家人的耐心。'
       ],
       py: [
-        'Wǒ nǎinai jīnnián qīshíwǔ suì le. Yǐqián tā zhǐ yòng yí bù hěn jiù de lǎonián shǒujī, chúle dǎ diànhuà yǐwài, shénme gōngnéng dōu méiyǒu. Qùnián guò shēngrì de shíhou, wǒmen gěi tā mǎile yí bù zhìnéng shǒujī, xīwàng tā néng gēn zhù zài guówài de gūgu shìpín liáotiān. Kěshì nǎinai kànzhe shǒujī, zhòuzhe méitóu shuō: “Zhème fùzá de dōngxi, wǒ kěndìng xué bu huì.”',
-        'Yúshì, wǒ juédìng měi ge zhōumò dōu qù jiāo tā. Dì-yī cì, wǒ xiān bāng tā bǎ zìtǐ shèzhì de dà yìdiǎnr, yīnwèi píngmù shang de zì tài xiǎo, tā kàn bu qīngchu. Ránhòu, wǒ jiāo tā zěnme chōngdiàn, zěnme dǎkāi Wēixìn. Nǎinai de jìxing bú tài hǎo, gāng xué de cāozuò, dì-èr tiān jiù wàng le. Wǒ zhǐhǎo bǎ měi yí bù dōu xiě zài zhǐ shang, ràng tā zhàozhe zuò.',
+        'Wǒ nǎinai jīnnián qīshíwǔ suì le. Yǐqián tā zhǐ yòng yí bù hěn jiù de lǎonián shǒujī, chúle dǎ diànhuà yǐwài, shénme gōngnéng dōu méiyǒu. Qùnián guò shēngrì de shíhou, wǒmen gěi tā mǎile yí bù zhìnéng shǒujī, xīwàng tā néng gēn zhù zài guówài de gūgu shìpín liáotiān. Kěshì nǎinai shuō: “Zhème fùzá de dōngxi, wǒ kěndìng xué bu huì.”',
+        'Yúshì, wǒ juédìng měi ge zhōumò dōu qù jiāo tā. Dì-yī cì, wǒ xiān bāng tā bǎ zìtǐ shèzhì de dà yìdiǎnr, yīnwèi píngmù shang de zì tài xiǎo, tā kàn bu qīngchu. Ránhòu, wǒ jiāo tā zěnme chōngdiàn, zěnme dǎkāi Wēixìn.',
         'Yí ge yuè yǐhòu, nǎinai jìngrán xuéhuìle bù shǎo dōngxi. Tā búdàn huì zìjǐ dēnglù Wēixìn, érqiě hái huì yòng shǒujī pāizhào, kàn xīnwén, tīng xìqǔ. Yǒushíhou tā lián chīfàn de shíhou dōu názhe shǒujī, bèi wǒ bàba shuōle hǎo jǐ cì.',
-        "Shàng ge xīngqī, nǎinai dì-yī cì gēn gūgu shìpín. Kàndào píngmù shang de nǚ'ér, tā gāoxìng de shuō bu chū huà lai. Guàle diànhuà yǐhòu, tā xiàozhe duì wǒ shuō: “Yuánlái kējì yě méi nàme kěpà, zhǐyào yuànyì xué, lǎorén yě gēn de shàng shídài.” Wǒ xiǎng, duì lǎoniánrén lái shuō, zuì xūyào de yěxǔ bú shì gèng hǎo de shǒujī, ér shì jiārén de nàixīn."
+        "Shàng ge xīngqī, nǎinai dì-yī cì gēn gūgu shìpín. Kàndào píngmù shang de nǚ'ér, tā gāoxìng de shuō bu chū huà lai. Tā xiàozhe duì wǒ shuō: “Yuánlái kējì yě méi nàme kěpà, zhǐyào yuànyì xué, lǎorén yě gēn de shàng shídài.” Wǒ xiǎng, duì lǎoniánrén lái shuō, zuì xūyào de yěxǔ bú shì gèng hǎo de shǒujī, ér shì jiārén de nàixīn."
       ],
       vi: [
-        'Bà tôi năm nay bảy mươi lăm tuổi. Trước đây bà chỉ dùng một chiếc điện thoại người già rất cũ, ngoài gọi điện ra thì chẳng có chức năng gì. Sinh nhật năm ngoái, cả nhà mua cho bà một chiếc điện thoại thông minh, mong bà có thể gọi video với cô tôi đang sống ở nước ngoài. Nhưng bà nhìn chiếc điện thoại, nhíu mày nói: “Thứ phức tạp thế này, bà chắc chắn học không nổi.”',
-        'Thế là tôi quyết định cuối tuần nào cũng sang dạy bà. Lần đầu, tôi chỉnh cỡ chữ to hơn một chút cho bà, vì chữ trên màn hình nhỏ quá, bà nhìn không rõ. Sau đó, tôi dạy bà cách sạc pin và cách mở WeChat. Trí nhớ của bà không tốt lắm, thao tác vừa học xong, hôm sau đã quên. Tôi đành ghi từng bước ra giấy để bà làm theo.',
+        'Bà tôi năm nay bảy mươi lăm tuổi. Trước đây bà chỉ dùng một chiếc điện thoại người già rất cũ, ngoài gọi điện ra thì chẳng có chức năng gì. Sinh nhật năm ngoái, cả nhà mua cho bà một chiếc điện thoại thông minh, mong bà có thể gọi video với cô tôi đang sống ở nước ngoài. Nhưng bà nói: “Thứ phức tạp thế này, bà chắc chắn học không nổi.”',
+        'Thế là tôi quyết định cuối tuần nào cũng sang dạy bà. Lần đầu, tôi chỉnh cỡ chữ to hơn một chút cho bà, vì chữ trên màn hình nhỏ quá, bà nhìn không rõ. Sau đó, tôi dạy bà cách sạc pin và cách mở WeChat.',
         'Một tháng sau, không ngờ bà đã học được khá nhiều thứ. Bà không chỉ tự đăng nhập WeChat được mà còn biết dùng điện thoại chụp ảnh, xem tin tức, nghe hí khúc. Có lúc đến bữa ăn bà cũng cầm điện thoại, bị bố tôi nhắc mấy lần.',
-        'Tuần trước, lần đầu tiên bà gọi video với cô tôi. Nhìn thấy con gái trên màn hình, bà vui đến mức không nói nên lời. Cúp máy xong, bà cười bảo tôi: “Hoá ra công nghệ cũng không đáng sợ đến thế, chỉ cần chịu học thì người già cũng theo kịp thời đại.” Tôi nghĩ, đối với người cao tuổi, điều cần nhất có lẽ không phải là chiếc điện thoại tốt hơn, mà là sự kiên nhẫn của người thân.'
+        'Tuần trước, lần đầu tiên bà gọi video với cô tôi. Nhìn thấy con gái trên màn hình, bà vui đến mức không nói nên lời. Bà cười bảo tôi: “Hoá ra công nghệ cũng không đáng sợ đến thế, chỉ cần chịu học thì người già cũng theo kịp thời đại.” Tôi nghĩ, đối với người cao tuổi, điều cần nhất có lẽ không phải là chiếc điện thoại tốt hơn, mà là sự kiên nhẫn của người thân.'
       ],
       questions: [
         { q: 'Cả nhà mua điện thoại thông minh cho bà chủ yếu để làm gì?', options: ['Để bà đọc báo', 'Để bà gọi video với con gái ở nước ngoài', 'Để bà chơi trò chơi', 'Để bà học tiếng Anh'], answer: 1, explain: 'Đoạn 1: 希望她能跟住在国外的姑姑视频聊天。' },
