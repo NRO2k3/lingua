@@ -2,16 +2,16 @@
 export default {
   'es-a2-1': {
     vocab: [
-      { w: 'la fecha', ipa: 'la phê-cha', vi: 'ngày (tháng)', ex: '¿Qué fecha es hoy?', exVi: 'Hôm nay là ngày bao nhiêu?' },
-      { w: 'el cumpleaños', ipa: 'el cum-plê-a-nhốt', vi: 'sinh nhật', ex: 'Mi cumpleaños es el 3 de marzo.', exVi: 'Sinh nhật tôi là ngày 3 tháng 3.' },
-      { w: 'el minuto', ipa: 'el mi-nu-tô', vi: 'phút', ex: 'El autobús llega en cinco minutos.', exVi: 'Năm phút nữa xe buýt đến.' },
-      { w: 'tarde', ipa: 'tar-đê', vi: 'muộn, trễ', ex: 'Lo siento, llego tarde.', exVi: 'Xin lỗi, tôi đến muộn.' },
-      { w: 'quedar', ipa: 'kê-đar', vi: 'hẹn gặp', ex: '¿Quedamos el viernes a las siete?', exVi: 'Mình hẹn nhau thứ Sáu lúc bảy giờ nhé?' },
-      { w: 'tardar', ipa: 'tar-đar', vi: 'mất (bao lâu)', ex: 'Tardo veinte minutos en llegar al trabajo.', exVi: 'Tôi mất hai mươi phút để đến chỗ làm.' },
-      { w: 'la prisa', ipa: 'la pri-xa', vi: 'sự vội vàng (tener prisa: đang vội)', ex: 'Tengo prisa, son las nueve menos cinco.', exVi: 'Tôi đang vội, đã chín giờ kém năm rồi.' },
-      { w: 'el reloj', ipa: 'el rê-lốc', vi: 'đồng hồ', ex: 'Mi reloj dice que son las tres y cuarto.', exVi: 'Đồng hồ của tôi chỉ ba giờ mười lăm.' },
-      { w: 'el mediodía', ipa: 'el mê-đi-ô-đi-a', vi: 'buổi trưa, giữa trưa', ex: 'Te llamo a mediodía.', exVi: 'Mình gọi cho bạn vào buổi trưa.' },
-      { w: 'el rato', ipa: 'el ra-tô', vi: 'một lúc, một lát', ex: 'Espera un rato, por favor.', exVi: 'Làm ơn đợi một lát.' }
+      { w: 'la fecha', ipa: 'la PHÊ-cha', vi: 'ngày (tháng)', ex: '¿Qué fecha es hoy?', exVi: 'Hôm nay là ngày bao nhiêu?' },
+      { w: 'el cumpleaños', ipa: 'êl cum-plê-A-nhôs', vi: 'sinh nhật', ex: 'Mi cumpleaños es el 3 de marzo.', exVi: 'Sinh nhật tôi là ngày 3 tháng 3.' },
+      { w: 'el minuto', ipa: 'êl mi-NU-tô', vi: 'phút', ex: 'El autobús llega en cinco minutos.', exVi: 'Năm phút nữa xe buýt đến.' },
+      { w: 'tarde', ipa: 'TAR-đê', vi: 'muộn, trễ', ex: 'Lo siento, llego tarde.', exVi: 'Xin lỗi, tôi đến muộn.' },
+      { w: 'quedar', ipa: 'kê-ĐAR', vi: 'hẹn gặp', ex: '¿Quedamos el viernes a las siete?', exVi: 'Mình hẹn nhau thứ Sáu lúc bảy giờ nhé?' },
+      { w: 'tardar', ipa: 'tar-ĐAR', vi: 'mất (bao lâu)', ex: 'Tardo veinte minutos en llegar al trabajo.', exVi: 'Tôi mất hai mươi phút để đến chỗ làm.' },
+      { w: 'la prisa', ipa: 'la PRI-xa', vi: 'sự vội vàng (tener prisa: đang vội)', ex: 'Tengo prisa, son las nueve menos cinco.', exVi: 'Tôi đang vội, đã chín giờ kém năm rồi.' },
+      { w: 'el reloj', ipa: 'êl rrê-LÔKH', vi: 'đồng hồ', ex: 'Mi reloj dice que son las tres y cuarto.', exVi: 'Đồng hồ của tôi chỉ ba giờ mười lăm.' },
+      { w: 'el mediodía', ipa: 'êl mê-đi-ô-ĐI-a', vi: 'buổi trưa, giữa trưa', ex: 'Te llamo a mediodía.', exVi: 'Mình gọi cho bạn vào buổi trưa.' },
+      { w: 'el rato', ipa: 'êl RRA-tô', vi: 'một lúc, một lát', ex: 'Espera un rato, por favor.', exVi: 'Làm ơn đợi một lát.' }
     ],
     exercises: [
       { type: 'mc', q: '¿___ es tu cumpleaños?', options: ['Cuándo', 'Qué hora', 'Cuánto'], answer: 0,
@@ -59,16 +59,16 @@ export default {
 
   'es-a2-2': {
     vocab: [
-      { w: 'el precio', ipa: 'el prê-thi-ô', vi: 'giá', ex: 'El precio de esta camisa es muy bueno.', exVi: 'Giá của chiếc áo sơ mi này rất tốt.' },
-      { w: 'la ropa', ipa: 'la rô-pa', vi: 'quần áo', ex: 'Compro ropa en el centro.', exVi: 'Tôi mua quần áo ở trung tâm.' },
-      { w: 'costar', ipa: 'cốt-tar', vi: 'có giá, tốn (tiền)', ex: '¿Cuánto cuesta este vestido?', exVi: 'Chiếc váy này giá bao nhiêu?' },
-      { w: 'la bolsa', ipa: 'la bôn-xa', vi: 'cái túi', ex: '¿Necesita una bolsa?', exVi: 'Anh/chị có cần túi không?' },
-      { w: 'la tarjeta', ipa: 'la tar-khê-ta', vi: 'thẻ (ngân hàng)', ex: '¿Puedo pagar con tarjeta?', exVi: 'Tôi trả bằng thẻ được không?' },
-      { w: 'el mercado', ipa: 'el mẹc-ca-đô', vi: 'chợ', ex: 'Los sábados voy al mercado.', exVi: 'Thứ Bảy nào tôi cũng đi chợ.' },
-      { w: 'probarse', ipa: 'prô-bar-xê', vi: 'mặc thử, đi thử', ex: '¿Puedo probarme estos pantalones?', exVi: 'Tôi mặc thử chiếc quần này được không?' },
-      { w: 'pagar', ipa: 'pa-gar', vi: 'trả tiền', ex: 'Pago en efectivo.', exVi: 'Tôi trả bằng tiền mặt.' },
-      { w: 'el traje', ipa: 'el tra-khê', vi: 'bộ com-lê, bộ vest', ex: 'Mi padre lleva un traje negro.', exVi: 'Bố tôi mặc một bộ com-lê đen.' },
-      { w: 'el cliente / la clienta', ipa: 'el cli-ên-tê / la cli-ên-ta', vi: 'khách hàng', ex: 'Hoy la tienda tiene muchos clientes.', exVi: 'Hôm nay cửa hàng có nhiều khách.' }
+      { w: 'el precio', ipa: 'êl PRÊ-θi-ô', vi: 'giá', ex: 'El precio de esta camisa es muy bueno.', exVi: 'Giá của chiếc áo sơ mi này rất tốt.' },
+      { w: 'la ropa', ipa: 'la RRÔ-pa', vi: 'quần áo', ex: 'Compro ropa en el centro.', exVi: 'Tôi mua quần áo ở trung tâm.' },
+      { w: 'costar', ipa: 'côs-TAR', vi: 'có giá, tốn (tiền)', ex: '¿Cuánto cuesta este vestido?', exVi: 'Chiếc váy này giá bao nhiêu?' },
+      { w: 'la bolsa', ipa: 'la BÔL-xa', vi: 'cái túi', ex: '¿Necesita una bolsa?', exVi: 'Anh/chị có cần túi không?' },
+      { w: 'la tarjeta', ipa: 'la tar-KHÊ-ta', vi: 'thẻ (ngân hàng)', ex: '¿Puedo pagar con tarjeta?', exVi: 'Tôi trả bằng thẻ được không?' },
+      { w: 'el mercado', ipa: 'êl mêr-CA-đô', vi: 'chợ', ex: 'Los sábados voy al mercado.', exVi: 'Thứ Bảy nào tôi cũng đi chợ.' },
+      { w: 'probarse', ipa: 'prô-BAR-xê', vi: 'mặc thử, đi thử', ex: '¿Puedo probarme estos pantalones?', exVi: 'Tôi mặc thử chiếc quần này được không?' },
+      { w: 'pagar', ipa: 'pa-GAR', vi: 'trả tiền', ex: 'Pago en efectivo.', exVi: 'Tôi trả bằng tiền mặt.' },
+      { w: 'el traje', ipa: 'êl TRA-khê', vi: 'bộ com-lê, bộ vest', ex: 'Mi padre lleva un traje negro.', exVi: 'Bố tôi mặc một bộ com-lê đen.' },
+      { w: 'el cliente / la clienta', ipa: 'êl cli-ÊN-tê / la cli-ÊN-ta', vi: 'khách hàng', ex: 'Hoy la tienda tiene muchos clientes.', exVi: 'Hôm nay cửa hàng có nhiều khách.' }
     ],
     exercises: [
       { type: 'mc', q: 'Las bolsas ___ en la caja.', options: ['son', 'están', 'hay'], answer: 1,
@@ -116,16 +116,16 @@ export default {
 
   'es-a2-3': {
     vocab: [
-      { w: 'el piso', ipa: 'el pi-xô', vi: 'căn hộ (ở Tây Ban Nha)', ex: 'Vivo en un piso pequeño en el centro.', exVi: 'Tôi sống trong một căn hộ nhỏ ở trung tâm.' },
-      { w: 'la habitación', ipa: 'la a-bi-ta-thi-ôn', vi: 'căn phòng', ex: 'Mi piso tiene tres habitaciones.', exVi: 'Căn hộ của tôi có ba phòng.' },
-      { w: 'el ascensor', ipa: 'el a-then-xọ', vi: 'thang máy', ex: 'El ascensor está a la derecha de la entrada.', exVi: 'Thang máy ở bên phải lối vào.' },
-      { w: 'el edificio', ipa: 'el ê-đi-phi-thi-ô', vi: 'toà nhà', ex: 'Mi piso está en un edificio antiguo.', exVi: 'Căn hộ của tôi ở trong một toà nhà cũ.' },
-      { w: 'el vecino / la vecina', ipa: 'el bê-thi-nô / la bê-thi-na', vi: 'hàng xóm', ex: 'Mi vecina es muy simpática.', exVi: 'Bà hàng xóm của tôi rất dễ mến.' },
-      { w: 'cruzar', ipa: 'cru-thar', vi: 'băng qua, đi qua', ex: 'Cruza la calle y gira a la derecha.', exVi: 'Băng qua đường rồi rẽ phải.' },
-      { w: 'la esquina', ipa: 'la ét-ki-na', vi: 'góc phố', ex: 'La farmacia está en la esquina.', exVi: 'Hiệu thuốc ở góc phố.' },
-      { w: 'cerca de', ipa: 'thẹc-ca đê', vi: 'gần', ex: 'Mi casa está cerca de la estación.', exVi: 'Nhà tôi ở gần nhà ga.' },
-      { w: 'lejos de', ipa: 'lê-khốt đê', vi: 'xa', ex: 'El museo está lejos de aquí.', exVi: 'Bảo tàng ở xa chỗ này.' },
-      { w: 'el metro', ipa: 'el mê-trô', vi: 'tàu điện ngầm', ex: 'Voy al trabajo en metro.', exVi: 'Tôi đi làm bằng tàu điện ngầm.' }
+      { w: 'el piso', ipa: 'êl PI-xô', vi: 'căn hộ (ở Tây Ban Nha)', ex: 'Vivo en un piso pequeño en el centro.', exVi: 'Tôi sống trong một căn hộ nhỏ ở trung tâm.' },
+      { w: 'la habitación', ipa: 'la a-bi-ta-θi-ÔN', vi: 'căn phòng', ex: 'Mi piso tiene tres habitaciones.', exVi: 'Căn hộ của tôi có ba phòng.' },
+      { w: 'el ascensor', ipa: 'êl as-θên-XÔR', vi: 'thang máy', ex: 'El ascensor está a la derecha de la entrada.', exVi: 'Thang máy ở bên phải lối vào.' },
+      { w: 'el edificio', ipa: 'êl ê-đi-PHI-θi-ô', vi: 'toà nhà', ex: 'Mi piso está en un edificio antiguo.', exVi: 'Căn hộ của tôi ở trong một toà nhà cũ.' },
+      { w: 'el vecino / la vecina', ipa: 'êl bê-θI-nô / la bê-θI-na', vi: 'hàng xóm', ex: 'Mi vecina es muy simpática.', exVi: 'Bà hàng xóm của tôi rất dễ mến.' },
+      { w: 'cruzar', ipa: 'cru-θAR', vi: 'băng qua, đi qua', ex: 'Cruza la calle y gira a la derecha.', exVi: 'Băng qua đường rồi rẽ phải.' },
+      { w: 'la esquina', ipa: 'la ês-KI-na', vi: 'góc phố', ex: 'La farmacia está en la esquina.', exVi: 'Hiệu thuốc ở góc phố.' },
+      { w: 'cerca de', ipa: 'θÊR-ca đê', vi: 'gần', ex: 'Mi casa está cerca de la estación.', exVi: 'Nhà tôi ở gần nhà ga.' },
+      { w: 'lejos de', ipa: 'LÊ-khôs đê', vi: 'xa', ex: 'El museo está lejos de aquí.', exVi: 'Bảo tàng ở xa chỗ này.' },
+      { w: 'el metro', ipa: 'êl MÊ-trô', vi: 'tàu điện ngầm', ex: 'Voy al trabajo en metro.', exVi: 'Tôi đi làm bằng tàu điện ngầm.' }
     ],
     exercises: [
       { type: 'mc', q: '¿___ un metro cerca de aquí?', options: ['Hay', 'Está', 'Es'], answer: 0,
@@ -173,16 +173,16 @@ export default {
 
   'es-a2-4': {
     vocab: [
-      { w: 'el cine', ipa: 'el thi-nê', vi: 'rạp chiếu phim', ex: 'El sábado fui al cine con mi novia.', exVi: 'Thứ Bảy tôi đã đi xem phim với bạn gái.' },
-      { w: 'la cena', ipa: 'la thê-na', vi: 'bữa tối', ex: 'La cena fue deliciosa.', exVi: 'Bữa tối đã rất ngon.' },
-      { w: 'celebrar', ipa: 'thê-lê-brar', vi: 'tổ chức, ăn mừng', ex: 'Ayer celebré mi cumpleaños en un restaurante.', exVi: 'Hôm qua tôi đã tổ chức sinh nhật ở một nhà hàng.' },
-      { w: 'disfrutar', ipa: 'đít-phru-tar', vi: 'tận hưởng, thích thú', ex: 'Disfruté mucho del concierto.', exVi: 'Tôi đã rất thích buổi hoà nhạc.' },
-      { w: 'la fiesta', ipa: 'la phi-ết-ta', vi: 'bữa tiệc', ex: 'Anoche hubo una fiesta en casa de Luis.', exVi: 'Tối qua có một bữa tiệc ở nhà Luis.' },
-      { w: 'cansado / cansada', ipa: 'can-xa-đô / can-xa-đa', vi: 'mệt', ex: 'Volví a casa muy cansado.', exVi: 'Tôi đã trở về nhà rất mệt.' },
-      { w: 'la montaña', ipa: 'la môn-ta-nha', vi: 'núi', ex: 'El domingo fuimos a la montaña.', exVi: 'Chủ nhật chúng tôi đã đi núi.' },
-      { w: 'el mar', ipa: 'el mar', vi: 'biển', ex: 'Ayer nadé en el mar.', exVi: 'Hôm qua tôi đã bơi ở biển.' },
-      { w: 'la semana pasada', ipa: 'la xê-ma-na pa-xa-đa', vi: 'tuần trước', ex: 'La semana pasada visité a mis abuelos.', exVi: 'Tuần trước tôi đã đến thăm ông bà.' },
-      { w: 'la boda', ipa: 'la bô-đa', vi: 'đám cưới', ex: 'En junio fuimos a la boda de mi prima.', exVi: 'Tháng Sáu chúng tôi đã đi đám cưới chị họ tôi.' }
+      { w: 'el cine', ipa: 'êl θI-nê', vi: 'rạp chiếu phim', ex: 'El sábado fui al cine con mi novia.', exVi: 'Thứ Bảy tôi đã đi xem phim với bạn gái.' },
+      { w: 'la cena', ipa: 'la θÊ-na', vi: 'bữa tối', ex: 'La cena fue deliciosa.', exVi: 'Bữa tối đã rất ngon.' },
+      { w: 'celebrar', ipa: 'θê-lê-BRAR', vi: 'tổ chức, ăn mừng', ex: 'Ayer celebré mi cumpleaños en un restaurante.', exVi: 'Hôm qua tôi đã tổ chức sinh nhật ở một nhà hàng.' },
+      { w: 'disfrutar', ipa: 'đis-phru-TAR', vi: 'tận hưởng, thích thú', ex: 'Disfruté mucho del concierto.', exVi: 'Tôi đã rất thích buổi hoà nhạc.' },
+      { w: 'la fiesta', ipa: 'la phi-ÊS-ta', vi: 'bữa tiệc', ex: 'Anoche hubo una fiesta en casa de Luis.', exVi: 'Tối qua có một bữa tiệc ở nhà Luis.' },
+      { w: 'cansado / cansada', ipa: 'can-XA-đô / can-XA-đa', vi: 'mệt', ex: 'Volví a casa muy cansado.', exVi: 'Tôi đã trở về nhà rất mệt.' },
+      { w: 'la montaña', ipa: 'la môn-TA-nha', vi: 'núi', ex: 'El domingo fuimos a la montaña.', exVi: 'Chủ nhật chúng tôi đã đi núi.' },
+      { w: 'el mar', ipa: 'êl mar', vi: 'biển', ex: 'Ayer nadé en el mar.', exVi: 'Hôm qua tôi đã bơi ở biển.' },
+      { w: 'la semana pasada', ipa: 'la xê-MA-na pa-XA-đa', vi: 'tuần trước', ex: 'La semana pasada visité a mis abuelos.', exVi: 'Tuần trước tôi đã đến thăm ông bà.' },
+      { w: 'la boda', ipa: 'la BÔ-đa', vi: 'đám cưới', ex: 'En junio fuimos a la boda de mi prima.', exVi: 'Tháng Sáu chúng tôi đã đi đám cưới chị họ tôi.' }
     ],
     exercises: [
       { type: 'mc', q: 'Anoche nosotros ___ al cine.', options: ['fuimos', 'vamos', 'fueron'], answer: 0,
@@ -230,16 +230,16 @@ export default {
 
   'es-a2-5': {
     vocab: [
-      { w: 'jugar', ipa: 'khu-gar', vi: 'chơi (thể thao, trò chơi)', ex: 'Juego al tenis con mi padre.', exVi: 'Tôi chơi quần vợt với bố.' },
-      { w: 'cantar', ipa: 'can-tar', vi: 'hát', ex: 'A mi hermana le encanta cantar.', exVi: 'Em gái tôi rất mê hát.' },
-      { w: 'la canción', ipa: 'la can-thi-ôn', vi: 'bài hát', ex: 'Me gusta mucho esta canción.', exVi: 'Tôi rất thích bài hát này.' },
-      { w: 'el equipo', ipa: 'el ê-ki-pô', vi: 'đội (thể thao)', ex: 'Mi equipo favorito es el Real Madrid.', exVi: 'Đội bóng yêu thích của tôi là Real Madrid.' },
-      { w: 'el partido', ipa: 'el par-ti-đô', vi: 'trận đấu', ex: 'Vemos el partido en la tele.', exVi: 'Chúng tôi xem trận đấu trên ti vi.' },
-      { w: 'ganar', ipa: 'ga-nar', vi: 'thắng', ex: 'Nuestro equipo casi siempre gana.', exVi: 'Đội chúng tôi hầu như luôn thắng.' },
-      { w: 'caminar', ipa: 'ca-mi-nar', vi: 'đi bộ', ex: 'Me gusta caminar por el parque.', exVi: 'Tôi thích đi bộ trong công viên.' },
-      { w: 'pintar', ipa: 'pin-tar', vi: 'vẽ (tranh), sơn', ex: 'A mi abuelo le gusta pintar.', exVi: 'Ông tôi thích vẽ tranh.' },
-      { w: 'a veces', ipa: 'a bê-thết', vi: 'đôi khi, thỉnh thoảng', ex: 'A veces nado en la piscina.', exVi: 'Thỉnh thoảng tôi bơi ở bể bơi.' },
-      { w: 'favorito / favorita', ipa: 'pha-bô-ri-tô / pha-bô-ri-ta', vi: 'yêu thích', ex: '¿Cuál es tu deporte favorito?', exVi: 'Môn thể thao yêu thích của bạn là gì?' }
+      { w: 'jugar', ipa: 'khu-GAR', vi: 'chơi (thể thao, trò chơi)', ex: 'Juego al tenis con mi padre.', exVi: 'Tôi chơi quần vợt với bố.' },
+      { w: 'cantar', ipa: 'can-TAR', vi: 'hát', ex: 'A mi hermana le encanta cantar.', exVi: 'Em gái tôi rất mê hát.' },
+      { w: 'la canción', ipa: 'la can-θi-ÔN', vi: 'bài hát', ex: 'Me gusta mucho esta canción.', exVi: 'Tôi rất thích bài hát này.' },
+      { w: 'el equipo', ipa: 'êl ê-KI-pô', vi: 'đội (thể thao)', ex: 'Mi equipo favorito es el Real Madrid.', exVi: 'Đội bóng yêu thích của tôi là Real Madrid.' },
+      { w: 'el partido', ipa: 'êl par-TI-đô', vi: 'trận đấu', ex: 'Vemos el partido en la tele.', exVi: 'Chúng tôi xem trận đấu trên ti vi.' },
+      { w: 'ganar', ipa: 'ga-NAR', vi: 'thắng', ex: 'Nuestro equipo casi siempre gana.', exVi: 'Đội chúng tôi hầu như luôn thắng.' },
+      { w: 'caminar', ipa: 'ca-mi-NAR', vi: 'đi bộ', ex: 'Me gusta caminar por el parque.', exVi: 'Tôi thích đi bộ trong công viên.' },
+      { w: 'pintar', ipa: 'pin-TAR', vi: 'vẽ (tranh), sơn', ex: 'A mi abuelo le gusta pintar.', exVi: 'Ông tôi thích vẽ tranh.' },
+      { w: 'a veces', ipa: 'a BÊ-θês', vi: 'đôi khi, thỉnh thoảng', ex: 'A veces nado en la piscina.', exVi: 'Thỉnh thoảng tôi bơi ở bể bơi.' },
+      { w: 'favorito / favorita', ipa: 'pha-bô-RI-tô / pha-bô-RI-ta', vi: 'yêu thích', ex: '¿Cuál es tu deporte favorito?', exVi: 'Môn thể thao yêu thích của bạn là gì?' }
     ],
     exercises: [
       { type: 'mc', q: 'A nosotros nos ___ cantar.', options: ['gusta', 'gustan', 'gustamos'], answer: 0,
@@ -287,16 +287,16 @@ export default {
 
   'es-a2-6': {
     vocab: [
-      { w: 'el avión', ipa: 'el a-bi-ôn', vi: 'máy bay', ex: 'Vamos a ir a Barcelona en avión.', exVi: 'Chúng tôi sẽ đi Barcelona bằng máy bay.' },
-      { w: 'el tren', ipa: 'el tren', vi: 'tàu hoả', ex: 'El tren saldrá a las diez.', exVi: 'Tàu sẽ khởi hành lúc mười giờ.' },
-      { w: 'la maleta', ipa: 'la ma-lê-ta', vi: 'va li', ex: 'Mañana haré la maleta.', exVi: 'Ngày mai tôi sẽ xếp va li.' },
-      { w: 'el futuro', ipa: 'el phu-tu-rô', vi: 'tương lai', ex: 'En el futuro viviré en otro país.', exVi: 'Trong tương lai tôi sẽ sống ở một nước khác.' },
-      { w: 'la isla', ipa: 'la ít-la', vi: 'hòn đảo', ex: 'Este verano vamos a visitar una isla.', exVi: 'Hè này chúng tôi sẽ đi thăm một hòn đảo.' },
-      { w: 'la costa', ipa: 'la cốt-ta', vi: 'bờ biển, vùng ven biển', ex: 'Pasaremos una semana en la costa.', exVi: 'Chúng tôi sẽ ở vùng biển một tuần.' },
-      { w: 'probablemente', ipa: 'prô-ba-blê-men-tê', vi: 'có lẽ, có khả năng', ex: 'Probablemente lloverá mañana.', exVi: 'Có lẽ ngày mai trời sẽ mưa.' },
-      { w: 'el regreso', ipa: 'el rê-grê-xô', vi: 'chuyến về, sự trở về', ex: 'El regreso será el domingo.', exVi: 'Chuyến về sẽ vào ngày Chủ nhật.' },
-      { w: 'el sol', ipa: 'el xôn', vi: 'mặt trời, nắng', ex: 'En la isla hará sol todos los días.', exVi: 'Trên đảo ngày nào cũng sẽ có nắng.' },
-      { w: 'el aeropuerto', ipa: 'el a-ê-rô-puẹc-tô', vi: 'sân bay', ex: 'Iremos al aeropuerto en taxi.', exVi: 'Chúng tôi sẽ đi taxi ra sân bay.' }
+      { w: 'el avión', ipa: 'êl a-bi-ÔN', vi: 'máy bay', ex: 'Vamos a ir a Barcelona en avión.', exVi: 'Chúng tôi sẽ đi Barcelona bằng máy bay.' },
+      { w: 'el tren', ipa: 'êl trên', vi: 'tàu hoả', ex: 'El tren saldrá a las diez.', exVi: 'Tàu sẽ khởi hành lúc mười giờ.' },
+      { w: 'la maleta', ipa: 'la ma-LÊ-ta', vi: 'va li', ex: 'Mañana haré la maleta.', exVi: 'Ngày mai tôi sẽ xếp va li.' },
+      { w: 'el futuro', ipa: 'êl phu-TU-rô', vi: 'tương lai', ex: 'En el futuro viviré en otro país.', exVi: 'Trong tương lai tôi sẽ sống ở một nước khác.' },
+      { w: 'la isla', ipa: 'la IS-la', vi: 'hòn đảo', ex: 'Este verano vamos a visitar una isla.', exVi: 'Hè này chúng tôi sẽ đi thăm một hòn đảo.' },
+      { w: 'la costa', ipa: 'la CÔS-ta', vi: 'bờ biển, vùng ven biển', ex: 'Pasaremos una semana en la costa.', exVi: 'Chúng tôi sẽ ở vùng biển một tuần.' },
+      { w: 'probablemente', ipa: 'prô-ba-blê-MÊN-tê', vi: 'có lẽ, có khả năng', ex: 'Probablemente lloverá mañana.', exVi: 'Có lẽ ngày mai trời sẽ mưa.' },
+      { w: 'el regreso', ipa: 'êl rrê-GRÊ-xô', vi: 'chuyến về, sự trở về', ex: 'El regreso será el domingo.', exVi: 'Chuyến về sẽ vào ngày Chủ nhật.' },
+      { w: 'el puerto', ipa: 'êl PUÊR-tô', vi: 'bến cảng', ex: 'El barco saldrá del puerto a las ocho.', exVi: 'Con tàu sẽ rời cảng lúc tám giờ.' },
+      { w: 'el aeropuerto', ipa: 'êl a-ê-rô-PUÊR-tô', vi: 'sân bay', ex: 'Iremos al aeropuerto en taxi.', exVi: 'Chúng tôi sẽ đi taxi ra sân bay.' }
     ],
     exercises: [
       { type: 'mc', q: 'El año que viene (yo) ___ a Japón.', options: ['viajaré', 'viajaremos', 'viajará'], answer: 0,

@@ -2,16 +2,16 @@
 export default {
   'es-b1-1': {
     vocab: [
-      { w: 'el asiento', ipa: 'el a-xi-ên-tô', vi: 'chỗ ngồi, ghế (trên xe, máy bay)', ex: 'He reservado un asiento junto a la ventanilla.', exVi: 'Tôi đã đặt một chỗ ngồi cạnh cửa sổ.' },
-      { w: 'la llegada', ipa: 'la giê-ga-đa', vi: 'sự đến nơi, giờ đến', ex: 'La llegada del tren ha sido puntual.', exVi: 'Tàu đã đến đúng giờ.' },
-      { w: 'el retraso', ipa: 'el rê-tra-xô', vi: 'sự chậm trễ', ex: 'El vuelo ha salido con dos horas de retraso.', exVi: 'Chuyến bay đã cất cánh trễ hai tiếng.' },
-      { w: 'la ruta', ipa: 'la ru-ta', vi: 'tuyến đường, lộ trình', ex: 'Hemos hecho una ruta en coche por el norte de España.', exVi: 'Chúng tôi đã đi một chuyến bằng ô tô qua miền Bắc Tây Ban Nha.' },
-      { w: 'el mapa', ipa: 'el ma-pa', vi: 'bản đồ', ex: '¿Has mirado el mapa antes de salir?', exVi: 'Bạn đã xem bản đồ trước khi đi chưa?' },
-      { w: 'la guía', ipa: 'la ghi-a', vi: 'sách hướng dẫn du lịch (el/la guía: hướng dẫn viên)', ex: 'He comprado una guía de Andalucía.', exVi: 'Tôi đã mua một cuốn sách hướng dẫn du lịch Andalucía.' },
-      { w: 'la aventura', ipa: 'la a-bên-tu-ra', vi: 'cuộc phiêu lưu', ex: 'Este viaje ha sido una gran aventura.', exVi: 'Chuyến đi này đúng là một cuộc phiêu lưu lớn.' },
-      { w: 'la temporada', ipa: 'la tem-pô-ra-đa', vi: 'mùa (du lịch), thời kỳ', ex: 'En temporada alta los hoteles son más caros.', exVi: 'Vào mùa cao điểm, khách sạn đắt hơn.' },
-      { w: 'el paisaje', ipa: 'el pai-xa-khê', vi: 'phong cảnh', ex: 'Nunca he visto un paisaje tan bonito.', exVi: 'Tôi chưa bao giờ thấy phong cảnh nào đẹp như vậy.' },
-      { w: 'pasear', ipa: 'pa-xê-ar', vi: 'đi dạo', ex: 'Esta mañana hemos paseado por el casco antiguo.', exVi: 'Sáng nay chúng tôi đã đi dạo quanh khu phố cổ.' }
+      { w: 'el asiento', ipa: 'êl a-xi-ÊN-tô', vi: 'chỗ ngồi, ghế (trên xe, máy bay)', ex: 'He reservado un asiento junto a la ventanilla.', exVi: 'Tôi đã đặt một chỗ ngồi cạnh cửa sổ.' },
+      { w: 'la llegada', ipa: 'la giê-GA-đa', vi: 'sự đến nơi, giờ đến', ex: 'La llegada del tren ha sido puntual.', exVi: 'Tàu đã đến đúng giờ.' },
+      { w: 'el retraso', ipa: 'êl rrê-TRA-xô', vi: 'sự chậm trễ', ex: 'El vuelo ha salido con dos horas de retraso.', exVi: 'Chuyến bay đã cất cánh trễ hai tiếng.' },
+      { w: 'la ruta', ipa: 'la RRU-ta', vi: 'tuyến đường, lộ trình', ex: 'Hemos hecho una ruta en coche por el norte de España.', exVi: 'Chúng tôi đã đi một chuyến bằng ô tô qua miền Bắc Tây Ban Nha.' },
+      { w: 'el mapa', ipa: 'êl MA-pa', vi: 'bản đồ', ex: '¿Has mirado el mapa antes de salir?', exVi: 'Bạn đã xem bản đồ trước khi đi chưa?' },
+      { w: 'la guía', ipa: 'la GHI-a', vi: 'sách hướng dẫn du lịch (el/la guía: hướng dẫn viên)', ex: 'He comprado una guía de Andalucía.', exVi: 'Tôi đã mua một cuốn sách hướng dẫn du lịch Andalucía.' },
+      { w: 'la aventura', ipa: 'la a-bên-TU-ra', vi: 'cuộc phiêu lưu', ex: 'Este viaje ha sido una gran aventura.', exVi: 'Chuyến đi này đúng là một cuộc phiêu lưu lớn.' },
+      { w: 'la temporada', ipa: 'la têm-pô-RA-đa', vi: 'mùa (du lịch), thời kỳ', ex: 'En temporada alta los hoteles son más caros.', exVi: 'Vào mùa cao điểm, khách sạn đắt hơn.' },
+      { w: 'el paisaje', ipa: 'êl pai-XA-khê', vi: 'phong cảnh', ex: 'Nunca he visto un paisaje tan bonito.', exVi: 'Tôi chưa bao giờ thấy phong cảnh nào đẹp như vậy.' },
+      { w: 'pasear', ipa: 'pa-xê-AR', vi: 'đi dạo', ex: 'Esta mañana hemos paseado por el casco antiguo.', exVi: 'Sáng nay chúng tôi đã đi dạo quanh khu phố cổ.' }
     ],
     exercises: [
       { type: 'mc', q: '¿___ estado alguna vez en Granada? (tú)', options: ['Has', 'Hemos', 'Ha'], answer: 0,
@@ -61,16 +61,16 @@ export default {
 
   'es-b1-2': {
     vocab: [
-      { w: 'el contrato', ipa: 'el côn-tra-tô', vi: 'hợp đồng', ex: 'Ayer firmé mi primer contrato de trabajo.', exVi: 'Hôm qua tôi đã ký hợp đồng lao động đầu tiên.' },
-      { w: 'el empleo', ipa: 'el em-plê-ô', vi: 'việc làm', ex: 'Busco empleo desde hace tres meses.', exVi: 'Tôi tìm việc đã được ba tháng.' },
-      { w: 'solicitar', ipa: 'xô-li-thi-tar', vi: 'nộp đơn, xin (việc, giấy tờ)', ex: 'El año pasado solicité un puesto en un banco.', exVi: 'Năm ngoái tôi đã nộp đơn vào một vị trí ở ngân hàng.' },
-      { w: 'la jornada', ipa: 'la khọc-na-đa', vi: 'ngày làm việc (jornada completa: toàn thời gian)', ex: 'Este puesto es de jornada completa.', exVi: 'Vị trí này làm toàn thời gian.' },
-      { w: 'la formación', ipa: 'la phọc-ma-thi-ôn', vi: 'quá trình đào tạo, trình độ chuyên môn', ex: '¿Qué formación tiene usted?', exVi: 'Anh/chị được đào tạo chuyên ngành gì?' },
-      { w: 'la habilidad', ipa: 'la a-bi-li-đát', vi: 'kỹ năng, khả năng', ex: 'Hablar idiomas es una habilidad muy útil.', exVi: 'Nói được ngoại ngữ là một kỹ năng rất hữu ích.' },
-      { w: 'renunciar', ipa: 'rê-nun-thi-ar', vi: 'từ bỏ, xin nghỉ (renunciar a)', ex: 'En 2022 renunció a su trabajo para estudiar.', exVi: 'Năm 2022 anh ấy đã nghỉ việc để đi học.' },
-      { w: 'cobrar', ipa: 'cô-brar', vi: 'nhận (lương), thu (tiền)', ex: '¿Cuánto cobras al mes?', exVi: 'Mỗi tháng bạn nhận lương bao nhiêu?' },
-      { w: 'el compañero / la compañera', ipa: 'el côm-pa-nhê-rô / la côm-pa-nhê-ra', vi: 'đồng nghiệp, bạn cùng (lớp, phòng)', ex: 'Mis compañeros me han ayudado mucho esta semana.', exVi: 'Tuần này các đồng nghiệp đã giúp tôi rất nhiều.' },
-      { w: 'el empleado / la empleada', ipa: 'el em-plê-a-đô / la em-plê-a-đa', vi: 'nhân viên', ex: 'La empresa ha contratado a diez empleados nuevos este año.', exVi: 'Năm nay công ty đã tuyển mười nhân viên mới.' }
+      { w: 'el contrato', ipa: 'êl côn-TRA-tô', vi: 'hợp đồng', ex: 'Ayer firmé mi primer contrato de trabajo.', exVi: 'Hôm qua tôi đã ký hợp đồng lao động đầu tiên.' },
+      { w: 'el empleo', ipa: 'êl êm-PLÊ-ô', vi: 'việc làm', ex: 'Busco empleo desde hace tres meses.', exVi: 'Tôi tìm việc đã được ba tháng.' },
+      { w: 'solicitar', ipa: 'xô-li-θi-TAR', vi: 'nộp đơn, xin (việc, giấy tờ)', ex: 'El año pasado solicité un puesto en un banco.', exVi: 'Năm ngoái tôi đã nộp đơn vào một vị trí ở ngân hàng.' },
+      { w: 'la jornada', ipa: 'la khôr-NA-đa', vi: 'ngày làm việc (jornada completa: toàn thời gian)', ex: 'Este puesto es de jornada completa.', exVi: 'Vị trí này làm toàn thời gian.' },
+      { w: 'la formación', ipa: 'la phôr-ma-θi-ÔN', vi: 'quá trình đào tạo, trình độ chuyên môn', ex: '¿Qué formación tiene usted?', exVi: 'Anh/chị được đào tạo chuyên ngành gì?' },
+      { w: 'la habilidad', ipa: 'la a-bi-li-ĐAĐ', vi: 'kỹ năng, khả năng', ex: 'Hablar idiomas es una habilidad muy útil.', exVi: 'Nói được ngoại ngữ là một kỹ năng rất hữu ích.' },
+      { w: 'renunciar', ipa: 'rrê-nun-θi-AR', vi: 'từ bỏ, xin nghỉ (renunciar a)', ex: 'En 2022 renunció a su trabajo para estudiar.', exVi: 'Năm 2022 anh ấy đã nghỉ việc để đi học.' },
+      { w: 'cobrar', ipa: 'cô-BRAR', vi: 'nhận (lương), thu (tiền)', ex: '¿Cuánto cobras al mes?', exVi: 'Mỗi tháng bạn nhận lương bao nhiêu?' },
+      { w: 'el compañero / la compañera', ipa: 'êl côm-pa-NHÊ-rô / la côm-pa-NHÊ-ra', vi: 'đồng nghiệp, bạn cùng (lớp, phòng)', ex: 'Mis compañeros me han ayudado mucho esta semana.', exVi: 'Tuần này các đồng nghiệp đã giúp tôi rất nhiều.' },
+      { w: 'el empleado / la empleada', ipa: 'êl êm-plê-A-đô / la êm-plê-A-đa', vi: 'nhân viên', ex: 'La empresa ha contratado a diez empleados nuevos este año.', exVi: 'Năm nay công ty đã tuyển mười nhân viên mới.' }
     ],
     exercises: [
       { type: 'mc', q: 'El año pasado ___ en una tienda de ropa.', options: ['trabajé', 'he trabajado', 'trabajo'], answer: 0,
@@ -120,16 +120,16 @@ export default {
 
   'es-b1-3': {
     vocab: [
-      { w: 'el síntoma', ipa: 'el xin-tô-ma', vi: 'triệu chứng', ex: '¿Qué síntomas tiene usted?', exVi: 'Anh/chị có những triệu chứng gì?' },
-      { w: 'el dolor', ipa: 'el đô-lór', vi: 'cơn đau, sự đau', ex: 'Tengo mucho dolor de cabeza.', exVi: 'Tôi bị đau đầu nhiều.' },
-      { w: 'el estómago', ipa: 'el ét-tô-ma-gô', vi: 'dạ dày, bụng', ex: 'Me duele el estómago después de comer.', exVi: 'Tôi bị đau bụng sau khi ăn.' },
-      { w: 'la rodilla', ipa: 'la rô-đi-gia', vi: 'đầu gối', ex: 'Me duelen las rodillas cuando corro.', exVi: 'Tôi bị đau đầu gối khi chạy.' },
-      { w: 'el hombro', ipa: 'el ôm-brô', vi: 'vai', ex: 'Me duele el hombro derecho.', exVi: 'Tôi bị đau vai phải.' },
-      { w: 'la pastilla', ipa: 'la pát-ti-gia', vi: 'viên thuốc', ex: 'Tiene que tomar una pastilla cada ocho horas.', exVi: 'Anh phải uống một viên thuốc mỗi tám tiếng.' },
-      { w: 'sano / sana', ipa: 'xa-nô / xa-na', vi: 'khoẻ mạnh, lành mạnh', ex: 'Hay que comer sano para estar bien.', exVi: 'Phải ăn uống lành mạnh để khoẻ.' },
-      { w: 'enfermo / enferma', ipa: 'en-phẹc-mô / en-phẹc-ma', vi: 'ốm, bị bệnh', ex: 'Hoy no voy a clase porque estoy enfermo.', exVi: 'Hôm nay tôi không đi học vì bị ốm.' },
-      { w: 'el enfermero / la enfermera', ipa: 'el en-phẹc-mê-rô / la en-phẹc-mê-ra', vi: 'y tá, điều dưỡng', ex: 'La enfermera me ha tomado la temperatura.', exVi: 'Cô y tá đã đo nhiệt độ cho tôi.' },
-      { w: 'curarse', ipa: 'cu-rar-xê', vi: 'khỏi bệnh', ex: 'Si descansas, te vas a curar pronto.', exVi: 'Nếu bạn nghỉ ngơi, bạn sẽ sớm khỏi bệnh.' }
+      { w: 'el síntoma', ipa: 'êl XIN-tô-ma', vi: 'triệu chứng', ex: '¿Qué síntomas tiene usted?', exVi: 'Anh/chị có những triệu chứng gì?' },
+      { w: 'el dolor', ipa: 'êl đô-LÔR', vi: 'cơn đau, sự đau', ex: 'Tengo mucho dolor de cabeza.', exVi: 'Tôi bị đau đầu nhiều.' },
+      { w: 'el estómago', ipa: 'êl ês-TÔ-ma-gô', vi: 'dạ dày, bụng', ex: 'Me duele el estómago después de comer.', exVi: 'Tôi bị đau bụng sau khi ăn.' },
+      { w: 'la rodilla', ipa: 'la rrô-ĐI-gia', vi: 'đầu gối', ex: 'Me duelen las rodillas cuando corro.', exVi: 'Tôi bị đau đầu gối khi chạy.' },
+      { w: 'el hombro', ipa: 'êl ÔM-brô', vi: 'vai', ex: 'Me duele el hombro derecho.', exVi: 'Tôi bị đau vai phải.' },
+      { w: 'la pastilla', ipa: 'la pas-TI-gia', vi: 'viên thuốc', ex: 'Tiene que tomar una pastilla cada ocho horas.', exVi: 'Anh phải uống một viên thuốc mỗi tám tiếng.' },
+      { w: 'sano / sana', ipa: 'XA-nô / XA-na', vi: 'khoẻ mạnh, lành mạnh', ex: 'Hay que comer sano para estar bien.', exVi: 'Phải ăn uống lành mạnh để khoẻ.' },
+      { w: 'enfermo / enferma', ipa: 'ên-PHÊR-mô / ên-PHÊR-ma', vi: 'ốm, bị bệnh', ex: 'Hoy no voy a clase porque estoy enfermo.', exVi: 'Hôm nay tôi không đi học vì bị ốm.' },
+      { w: 'el enfermero / la enfermera', ipa: 'êl ên-phêr-MÊ-rô / la ên-phêr-MÊ-ra', vi: 'y tá, điều dưỡng', ex: 'La enfermera me ha tomado la temperatura.', exVi: 'Cô y tá đã đo nhiệt độ cho tôi.' },
+      { w: 'curarse', ipa: 'cu-RAR-xê', vi: 'khỏi bệnh', ex: 'Si descansas, te vas a curar pronto.', exVi: 'Nếu bạn nghỉ ngơi, bạn sẽ sớm khỏi bệnh.' }
     ],
     exercises: [
       { type: 'mc', q: 'Me ___ las rodillas.', options: ['duelen', 'duele', 'dolor'], answer: 0,
@@ -179,16 +179,16 @@ export default {
 
   'es-b1-4': {
     vocab: [
-      { w: 'el cuento', ipa: 'el cuên-tô', vi: 'truyện (ngắn, cổ tích)', ex: 'Cuando era pequeño, mi abuela me contaba cuentos.', exVi: 'Hồi nhỏ, bà tôi hay kể chuyện cho tôi nghe.' },
-      { w: 'la sombra', ipa: 'la xôm-bra', vi: 'cái bóng, bóng râm', ex: 'De repente vi una sombra en la ventana.', exVi: 'Bỗng nhiên tôi thấy một cái bóng ở cửa sổ.' },
-      { w: 'el grito', ipa: 'el gri-tô', vi: 'tiếng hét, tiếng la', ex: 'Mientras dormíamos, oímos un grito.', exVi: 'Trong lúc chúng tôi đang ngủ thì nghe thấy một tiếng hét.' },
-      { w: 'la tormenta', ipa: 'la tọc-men-ta', vi: 'cơn giông bão', ex: 'Aquella noche había una tormenta terrible.', exVi: 'Đêm hôm đó có một cơn giông khủng khiếp.' },
-      { w: 'la pesadilla', ipa: 'la pê-xa-đi-gia', vi: 'cơn ác mộng', ex: 'Anoche tuve una pesadilla horrible.', exVi: 'Đêm qua tôi gặp một cơn ác mộng kinh khủng.' },
-      { w: 'el misterio', ipa: 'el mít-tê-ri-ô', vi: 'điều bí ẩn', ex: 'Nadie sabía quién era: era un misterio.', exVi: 'Không ai biết người đó là ai: đó là một điều bí ẩn.' },
-      { w: 'la costumbre', ipa: 'la cót-tum-brê', vi: 'thói quen, phong tục', ex: 'De niño tenía la costumbre de leer antes de dormir.', exVi: 'Hồi nhỏ tôi có thói quen đọc sách trước khi ngủ.' },
-      { w: 'la juventud', ipa: 'la khu-ben-tút', vi: 'tuổi trẻ, thời thanh niên', ex: 'En su juventud, mi padre vivía en el campo.', exVi: 'Thời trẻ, bố tôi sống ở nông thôn.' },
-      { w: 'esconderse', ipa: 'ét-côn-đẹc-xê', vi: 'trốn, nấp', ex: 'El niño se escondió debajo de la cama.', exVi: 'Cậu bé trốn xuống gầm giường.' },
-      { w: 'despertarse', ipa: 'đét-pẹc-tar-xê', vi: 'thức giấc, tỉnh dậy', ex: 'Me desperté a las tres porque había mucho ruido.', exVi: 'Tôi tỉnh giấc lúc ba giờ vì có nhiều tiếng ồn.' }
+      { w: 'el cuento', ipa: 'êl QUÊN-tô', vi: 'truyện (ngắn, cổ tích)', ex: 'Cuando era pequeño, mi abuela me contaba cuentos.', exVi: 'Hồi nhỏ, bà tôi hay kể chuyện cho tôi nghe.' },
+      { w: 'la sombra', ipa: 'la XÔM-bra', vi: 'cái bóng, bóng râm', ex: 'De repente vi una sombra en la ventana.', exVi: 'Bỗng nhiên tôi thấy một cái bóng ở cửa sổ.' },
+      { w: 'el grito', ipa: 'êl GRI-tô', vi: 'tiếng hét, tiếng la', ex: 'Mientras dormíamos, oímos un grito.', exVi: 'Trong lúc chúng tôi đang ngủ thì nghe thấy một tiếng hét.' },
+      { w: 'la tormenta', ipa: 'la tôr-MÊN-ta', vi: 'cơn giông bão', ex: 'Aquella noche había una tormenta terrible.', exVi: 'Đêm hôm đó có một cơn giông khủng khiếp.' },
+      { w: 'la pesadilla', ipa: 'la pê-xa-ĐI-gia', vi: 'cơn ác mộng', ex: 'Anoche tuve una pesadilla horrible.', exVi: 'Đêm qua tôi gặp một cơn ác mộng kinh khủng.' },
+      { w: 'el misterio', ipa: 'êl mis-TÊ-ri-ô', vi: 'điều bí ẩn', ex: 'Nadie sabía quién era: era un misterio.', exVi: 'Không ai biết người đó là ai: đó là một điều bí ẩn.' },
+      { w: 'la costumbre', ipa: 'la côs-TUM-brê', vi: 'thói quen, phong tục', ex: 'De niño tenía la costumbre de leer antes de dormir.', exVi: 'Hồi nhỏ tôi có thói quen đọc sách trước khi ngủ.' },
+      { w: 'la juventud', ipa: 'la khu-bên-TUĐ', vi: 'tuổi trẻ, thời thanh niên', ex: 'En su juventud, mi padre vivía en el campo.', exVi: 'Thời trẻ, bố tôi sống ở nông thôn.' },
+      { w: 'esconderse', ipa: 'ês-côn-ĐÊR-xê', vi: 'trốn, nấp', ex: 'El niño se escondió debajo de la cama.', exVi: 'Cậu bé trốn xuống gầm giường.' },
+      { w: 'despertarse', ipa: 'đês-pêr-TAR-xê', vi: 'thức giấc, tỉnh dậy', ex: 'Me desperté a las tres porque había mucho ruido.', exVi: 'Tôi tỉnh giấc lúc ba giờ vì có nhiều tiếng ồn.' }
     ],
     exercises: [
       { type: 'mc', q: 'Mientras yo ___, sonó el teléfono.', options: ['dormía', 'dormí', 'he dormido'], answer: 0,
@@ -238,16 +238,16 @@ export default {
 
   'es-b1-5': {
     vocab: [
-      { w: 'opinar', ipa: 'ô-pi-nar', vi: 'cho rằng, có ý kiến', ex: '¿Qué opinas de vivir en el centro?', exVi: 'Bạn nghĩ sao về việc sống ở trung tâm?' },
-      { w: 'comparar', ipa: 'côm-pa-rar', vi: 'so sánh', ex: 'No puedes comparar Madrid con un pueblo pequeño.', exVi: 'Bạn không thể so sánh Madrid với một ngôi làng nhỏ.' },
-      { w: 'el barrio', ipa: 'el ba-rri-ô', vi: 'khu phố, khu dân cư', ex: 'Mi barrio es más tranquilo que el centro.', exVi: 'Khu phố của tôi yên tĩnh hơn trung tâm.' },
-      { w: 'el tráfico', ipa: 'el tra-phi-cô', vi: 'giao thông, xe cộ', ex: 'En la ciudad hay demasiado tráfico.', exVi: 'Ở thành phố có quá nhiều xe cộ.' },
-      { w: 'la vivienda', ipa: 'la bi-bi-ên-đa', vi: 'nhà ở', ex: 'La vivienda en Barcelona es carísima.', exVi: 'Nhà ở tại Barcelona đắt kinh khủng.' },
-      { w: 'la calidad', ipa: 'la ca-li-đát', vi: 'chất lượng', ex: 'La calidad de vida en el campo es mejor.', exVi: 'Chất lượng sống ở nông thôn tốt hơn.' },
-      { w: 'parecido / parecida', ipa: 'pa-rê-thi-đô / pa-rê-thi-đa', vi: 'giống, tương tự', ex: 'Tu barrio es muy parecido al mío.', exVi: 'Khu phố của bạn rất giống khu của tôi.' },
-      { w: 'tranquilo / tranquila', ipa: 'tran-ki-lô / tran-ki-la', vi: 'yên tĩnh, bình yên', ex: 'El pueblo es menos ruidoso y más tranquilo.', exVi: 'Ngôi làng ít ồn ào hơn và yên bình hơn.' },
-      { w: 'el ritmo', ipa: 'el rít-mô', vi: 'nhịp độ, nhịp điệu', ex: 'En la ciudad el ritmo de vida es muy rápido.', exVi: 'Ở thành phố nhịp sống rất nhanh.' },
-      { w: 'el punto de vista', ipa: 'el pun-tô đê bít-ta', vi: 'quan điểm', ex: 'Desde mi punto de vista, el campo es más sano.', exVi: 'Theo quan điểm của tôi, nông thôn lành mạnh hơn.' }
+      { w: 'opinar', ipa: 'ô-pi-NAR', vi: 'cho rằng, có ý kiến', ex: '¿Qué opinas de vivir en el centro?', exVi: 'Bạn nghĩ sao về việc sống ở trung tâm?' },
+      { w: 'comparar', ipa: 'côm-pa-RAR', vi: 'so sánh', ex: 'No puedes comparar Madrid con un pueblo pequeño.', exVi: 'Bạn không thể so sánh Madrid với một ngôi làng nhỏ.' },
+      { w: 'el barrio', ipa: 'êl BA-rri-ô', vi: 'khu phố, khu dân cư', ex: 'Mi barrio es más tranquilo que el centro.', exVi: 'Khu phố của tôi yên tĩnh hơn trung tâm.' },
+      { w: 'el tráfico', ipa: 'êl TRA-phi-cô', vi: 'giao thông, xe cộ', ex: 'En la ciudad hay demasiado tráfico.', exVi: 'Ở thành phố có quá nhiều xe cộ.' },
+      { w: 'la vivienda', ipa: 'la bi-bi-ÊN-đa', vi: 'nhà ở', ex: 'La vivienda en Barcelona es carísima.', exVi: 'Nhà ở tại Barcelona đắt kinh khủng.' },
+      { w: 'la calidad', ipa: 'la ca-li-ĐAĐ', vi: 'chất lượng', ex: 'La calidad de vida en el campo es mejor.', exVi: 'Chất lượng sống ở nông thôn tốt hơn.' },
+      { w: 'parecido / parecida', ipa: 'pa-rê-θI-đô / pa-rê-θI-đa', vi: 'giống, tương tự', ex: 'Tu barrio es muy parecido al mío.', exVi: 'Khu phố của bạn rất giống khu của tôi.' },
+      { w: 'tranquilo / tranquila', ipa: 'tran-KI-lô / tran-KI-la', vi: 'yên tĩnh, bình yên', ex: 'El pueblo es menos ruidoso y más tranquilo.', exVi: 'Ngôi làng ít ồn ào hơn và yên bình hơn.' },
+      { w: 'el ritmo', ipa: 'êl RRIT-mô', vi: 'nhịp độ, nhịp điệu', ex: 'En la ciudad el ritmo de vida es muy rápido.', exVi: 'Ở thành phố nhịp sống rất nhanh.' },
+      { w: 'el punto de vista', ipa: 'êl PUN-tô đê BIS-ta', vi: 'quan điểm', ex: 'Desde mi punto de vista, el campo es más sano.', exVi: 'Theo quan điểm của tôi, nông thôn lành mạnh hơn.' }
     ],
     exercises: [
       { type: 'mc', q: 'Madrid es ___ grande que Sevilla.', options: ['más', 'tan', 'mejor'], answer: 0,
@@ -297,16 +297,16 @@ export default {
 
   'es-b1-6': {
     vocab: [
-      { w: 'el paquete', ipa: 'el pa-kê-tê', vi: 'bưu kiện, gói hàng', ex: 'Si llega el paquete, ¿me lo guardas?', exVi: 'Nếu gói hàng đến, bạn giữ hộ mình nhé?' },
-      { w: 'regalar', ipa: 'rê-ga-lar', vi: 'tặng (quà)', ex: 'Si te gusta este libro, te lo regalo.', exVi: 'Nếu bạn thích cuốn sách này, mình tặng bạn.' },
-      { w: 'recomendar', ipa: 'rê-cô-men-đar', vi: 'giới thiệu, khuyên (nên dùng)', ex: 'Si buscas un buen restaurante, te recomiendo este.', exVi: 'Nếu bạn tìm nhà hàng ngon, mình giới thiệu chỗ này.' },
-      { w: 'cancelar', ipa: 'can-thê-lar', vi: 'huỷ', ex: 'Si llueve, cancelamos la excursión.', exVi: 'Nếu trời mưa, chúng ta huỷ chuyến dã ngoại.' },
-      { w: 'arreglar', ipa: 'a-rê-glar', vi: 'sửa chữa', ex: 'Si la lavadora no funciona, la arreglo yo.', exVi: 'Nếu máy giặt không chạy, tôi sẽ sửa nó.' },
-      { w: 'encender', ipa: 'en-thên-đẹc', vi: 'bật (đèn, máy), châm (lửa)', ex: 'Si tienes frío, enciende la calefacción.', exVi: 'Nếu bạn lạnh thì bật lò sưởi lên.' },
-      { w: 'cargar', ipa: 'cạc-gar', vi: 'sạc (pin), chất (hàng)', ex: 'Si no cargas el móvil, se va a apagar.', exVi: 'Nếu bạn không sạc điện thoại, nó sẽ tắt nguồn.' },
-      { w: 'el móvil', ipa: 'el mô-bil', vi: 'điện thoại di động', ex: 'Si no encuentras el móvil, te llamo.', exVi: 'Nếu bạn không tìm thấy điện thoại, mình sẽ gọi cho bạn.' },
-      { w: 'llover', ipa: 'giô-bẹc', vi: 'mưa', ex: 'Si llueve mañana, nos quedamos en casa.', exVi: 'Nếu mai trời mưa, chúng ta ở nhà.' },
-      { w: 'guardar', ipa: 'goa-đạc', vi: 'cất giữ, giữ hộ', ex: 'Si quieres, te guardo el sitio.', exVi: 'Nếu bạn muốn, mình giữ chỗ cho bạn.' }
+      { w: 'el paquete', ipa: 'êl pa-KÊ-tê', vi: 'bưu kiện, gói hàng', ex: 'Si llega el paquete, ¿me lo guardas?', exVi: 'Nếu gói hàng đến, bạn giữ hộ mình nhé?' },
+      { w: 'regalar', ipa: 'rrê-ga-LAR', vi: 'tặng (quà)', ex: 'Si te gusta este libro, te lo regalo.', exVi: 'Nếu bạn thích cuốn sách này, mình tặng bạn.' },
+      { w: 'recomendar', ipa: 'rrê-cô-mên-ĐAR', vi: 'giới thiệu, khuyên (nên dùng)', ex: 'Si buscas un buen restaurante, te recomiendo este.', exVi: 'Nếu bạn tìm nhà hàng ngon, mình giới thiệu chỗ này.' },
+      { w: 'cancelar', ipa: 'can-θê-LAR', vi: 'huỷ', ex: 'Si llueve, cancelamos la excursión.', exVi: 'Nếu trời mưa, chúng ta huỷ chuyến dã ngoại.' },
+      { w: 'arreglar', ipa: 'a-rrê-GLAR', vi: 'sửa chữa', ex: 'Si la lavadora no funciona, la arreglo yo.', exVi: 'Nếu máy giặt không chạy, tôi sẽ sửa nó.' },
+      { w: 'encender', ipa: 'ên-θên-ĐÊR', vi: 'bật (đèn, máy), châm (lửa)', ex: 'Si tienes frío, enciende la calefacción.', exVi: 'Nếu bạn lạnh thì bật lò sưởi lên.' },
+      { w: 'cargar', ipa: 'car-GAR', vi: 'sạc (pin), chất (hàng)', ex: 'Si no cargas el móvil, se va a apagar.', exVi: 'Nếu bạn không sạc điện thoại, nó sẽ tắt nguồn.' },
+      { w: 'el móvil', ipa: 'êl MÔ-bil', vi: 'điện thoại di động', ex: 'Si no encuentras el móvil, te llamo.', exVi: 'Nếu bạn không tìm thấy điện thoại, mình sẽ gọi cho bạn.' },
+      { w: 'apagar', ipa: 'a-pa-GAR', vi: 'tắt (đèn, máy)', ex: 'Si sales el último, apaga la luz.', exVi: 'Nếu bạn ra về sau cùng thì tắt đèn nhé.' },
+      { w: 'guardar', ipa: 'goar-ĐAR', vi: 'cất giữ, giữ hộ', ex: 'Si quieres, te guardo el sitio.', exVi: 'Nếu bạn muốn, mình giữ chỗ cho bạn.' }
     ],
     exercises: [
       { type: 'mc', q: 'Si ___ mañana, no vamos a la playa.', options: ['llueve', 'lloverá', 'llover'], answer: 0,

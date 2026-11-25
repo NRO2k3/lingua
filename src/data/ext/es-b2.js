@@ -2,16 +2,16 @@
 export default {
   'es-b2-1': {
     vocab: [
-      { w: 'la ansiedad', ipa: 'la an-xi-ê-đát', vi: 'sự lo âu, bồn chồn', ex: 'Me produce ansiedad que no contestes mis mensajes.', exVi: 'Việc bạn không trả lời tin nhắn làm tôi thấy bồn chồn.' },
-      { w: 'el alivio', ipa: 'el a-li-bi-ô', vi: 'sự nhẹ nhõm', ex: '¡Qué alivio que estés bien!', exVi: 'Thật nhẹ cả người khi biết bạn ổn!' },
-      { w: 'el entusiasmo', ipa: 'el en-tu-xi-át-mô', vi: 'sự hào hứng, nhiệt tình', ex: 'Espero que mantengas el entusiasmo en tu nuevo trabajo.', exVi: 'Mong là bạn giữ được sự hào hứng ở công việc mới.' },
-      { w: 'decepcionar', ipa: 'đê-thép-thi-ô-nar', vi: 'làm thất vọng', ex: 'Me decepciona que no vengas a mi boda.', exVi: 'Bạn không đến đám cưới mình làm mình thất vọng.' },
-      { w: 'fastidiar', ipa: 'phát-ti-đi-ar', vi: 'làm phiền, làm bực mình', ex: 'Me fastidia que la gente hable por teléfono en el cine.', exVi: 'Tôi bực mình khi người ta nói điện thoại trong rạp chiếu phim.' },
-      { w: 'la expectativa', ipa: 'la ếch-pếch-ta-ti-ba', vi: 'sự kỳ vọng, mong đợi', ex: 'Mis padres tienen muchas expectativas puestas en mí.', exVi: 'Bố mẹ tôi đặt rất nhiều kỳ vọng vào tôi.' },
-      { w: 'los celos', ipa: 'lốt thê-lốt', vi: 'sự ghen tuông, ghen tị (tener celos: ghen)', ex: 'No es normal que tengas celos de todos mis amigos.', exVi: 'Bạn ghen với tất cả bạn bè của mình như vậy là không bình thường.' },
-      { w: 'la rabia', ipa: 'la ra-bi-a', vi: 'sự tức giận (dar rabia: làm ai phát bực)', ex: 'Me da rabia que siempre llegues tarde.', exVi: 'Mình phát bực vì lúc nào bạn cũng đến muộn.' },
-      { w: 'apetecer', ipa: 'a-pê-tê-thẹc', vi: 'thấy thích, muốn (dùng như gustar)', ex: '¿Te apetece que vayamos al cine esta noche?', exVi: 'Tối nay bạn có muốn chúng ta đi xem phim không?' },
-      { w: 'deprimido / deprimida', ipa: 'đê-pri-mi-đô / đê-pri-mi-đa', vi: 'chán nản, suy sụp, trầm cảm', ex: 'Está deprimida desde que perdió el trabajo.', exVi: 'Cô ấy suy sụp từ khi mất việc.' }
+      { w: 'la ansiedad', ipa: 'la an-xi-ê-ĐAĐ', vi: 'sự lo âu, bồn chồn', ex: 'Me produce ansiedad que no contestes mis mensajes.', exVi: 'Việc bạn không trả lời tin nhắn làm tôi thấy bồn chồn.' },
+      { w: 'el alivio', ipa: 'êl a-LI-bi-ô', vi: 'sự nhẹ nhõm', ex: '¡Qué alivio que estés bien!', exVi: 'Thật nhẹ cả người khi biết bạn ổn!' },
+      { w: 'el entusiasmo', ipa: 'êl ên-tu-xi-AS-mô', vi: 'sự hào hứng, nhiệt tình', ex: 'Espero que mantengas el entusiasmo en tu nuevo trabajo.', exVi: 'Mong là bạn giữ được sự hào hứng ở công việc mới.' },
+      { w: 'decepcionar', ipa: 'đê-θêp-θi-ô-NAR', vi: 'làm thất vọng', ex: 'Me decepciona que no vengas a mi boda.', exVi: 'Bạn không đến đám cưới mình làm mình thất vọng.' },
+      { w: 'fastidiar', ipa: 'phas-ti-đi-AR', vi: 'làm phiền, làm bực mình', ex: 'Me fastidia que la gente hable por teléfono en el cine.', exVi: 'Tôi bực mình khi người ta nói điện thoại trong rạp chiếu phim.' },
+      { w: 'la expectativa', ipa: 'la êcs-pêc-ta-TI-ba', vi: 'sự kỳ vọng, mong đợi', ex: 'Mis padres tienen muchas expectativas puestas en mí.', exVi: 'Bố mẹ tôi đặt rất nhiều kỳ vọng vào tôi.' },
+      { w: 'los celos', ipa: 'lôs θÊ-lôs', vi: 'sự ghen tuông, ghen tị (tener celos: ghen)', ex: 'No es normal que tengas celos de todos mis amigos.', exVi: 'Bạn ghen với tất cả bạn bè của mình như vậy là không bình thường.' },
+      { w: 'la rabia', ipa: 'la RRA-bi-a', vi: 'sự tức giận (dar rabia: làm ai phát bực)', ex: 'Me da rabia que siempre llegues tarde.', exVi: 'Mình phát bực vì lúc nào bạn cũng đến muộn.' },
+      { w: 'apetecer', ipa: 'a-pê-tê-θÊR', vi: 'thấy thích, muốn (dùng như gustar)', ex: '¿Te apetece que vayamos al cine esta noche?', exVi: 'Tối nay bạn có muốn chúng ta đi xem phim không?' },
+      { w: 'deprimido / deprimida', ipa: 'đê-pri-MI-đô / đê-pri-MI-đa', vi: 'chán nản, suy sụp, trầm cảm', ex: 'Está deprimida desde que perdió el trabajo.', exVi: 'Cô ấy suy sụp từ khi mất việc.' }
     ],
     exercises: [
       { type: 'mc', q: 'Me da rabia que Pedro siempre ___ tarde.', options: ['llega', 'llegue', 'llegar'], answer: 1,
@@ -61,16 +61,16 @@ export default {
 
   'es-b2-2': {
     vocab: [
-      { w: 'invertir', ipa: 'in-bẹc-tir', vi: 'đầu tư', ex: 'Si tuviera dinero, lo invertiría en una casa.', exVi: 'Nếu có tiền, tôi sẽ đầu tư vào một ngôi nhà.' },
-      { w: 'la herencia', ipa: 'la ê-ren-thi-a', vi: 'tài sản thừa kế', ex: 'Si recibiera una herencia, dejaría de trabajar.', exVi: 'Nếu được hưởng một khoản thừa kế, tôi sẽ nghỉ làm.' },
-      { w: 'el préstamo', ipa: 'el prét-ta-mô', vi: 'khoản vay', ex: 'Si pidiera un préstamo, podría abrir mi propio negocio.', exVi: 'Nếu vay tiền, tôi có thể mở cơ sở kinh doanh riêng.' },
-      { w: 'emprender', ipa: 'em-pren-đẹc', vi: 'khởi nghiệp, bắt tay vào (việc lớn)', ex: 'Yo que tú, emprendería un proyecto propio.', exVi: 'Nếu là bạn, tôi sẽ bắt tay vào một dự án của riêng mình.' },
-      { w: 'la probabilidad', ipa: 'la prô-ba-bi-li-đát', vi: 'khả năng, xác suất', ex: 'La probabilidad de ganar la lotería es mínima.', exVi: 'Khả năng trúng xổ số là cực kỳ nhỏ.' },
-      { w: 'arriesgado / arriesgada', ipa: 'a-ri-ết-ga-đô / a-ri-ết-ga-đa', vi: 'mạo hiểm, rủi ro', ex: 'Dejar el trabajo sin un plan sería muy arriesgado.', exVi: 'Bỏ việc mà không có kế hoạch sẽ rất mạo hiểm.' },
-      { w: 'el azar', ipa: 'el a-thar', vi: 'sự ngẫu nhiên, may rủi', ex: 'No dejaría mi futuro en manos del azar.', exVi: 'Tôi sẽ không phó mặc tương lai của mình cho may rủi.' },
-      { w: 'la beca', ipa: 'la bê-ca', vi: 'học bổng', ex: 'Si me dieran una beca, estudiaría en Salamanca.', exVi: 'Nếu được cấp học bổng, tôi sẽ học ở Salamanca.' },
-      { w: 'el lujo', ipa: 'el lu-khô', vi: 'sự xa xỉ, đồ xa xỉ', ex: 'Si fuera rico, no gastaría el dinero en lujos.', exVi: 'Nếu giàu, tôi sẽ không tiêu tiền vào đồ xa xỉ.' },
-      { w: 'optar por', ipa: 'ốp-tar pọc', vi: 'chọn (giữa nhiều phương án)', ex: 'Si pudiera elegir, optaría por vivir en el campo.', exVi: 'Nếu được chọn, tôi sẽ chọn sống ở nông thôn.' }
+      { w: 'invertir', ipa: 'in-bêr-TIR', vi: 'đầu tư', ex: 'Si tuviera dinero, lo invertiría en una casa.', exVi: 'Nếu có tiền, tôi sẽ đầu tư vào một ngôi nhà.' },
+      { w: 'la herencia', ipa: 'la ê-RÊN-θi-a', vi: 'tài sản thừa kế', ex: 'Si recibiera una herencia, dejaría de trabajar.', exVi: 'Nếu được hưởng một khoản thừa kế, tôi sẽ nghỉ làm.' },
+      { w: 'el préstamo', ipa: 'êl PRÊS-ta-mô', vi: 'khoản vay', ex: 'Si pidiera un préstamo, podría abrir mi propio negocio.', exVi: 'Nếu vay tiền, tôi có thể mở cơ sở kinh doanh riêng.' },
+      { w: 'emprender', ipa: 'êm-prên-ĐÊR', vi: 'khởi nghiệp, bắt tay vào (việc lớn)', ex: 'Yo que tú, emprendería un proyecto propio.', exVi: 'Nếu là bạn, tôi sẽ bắt tay vào một dự án của riêng mình.' },
+      { w: 'la probabilidad', ipa: 'la prô-ba-bi-li-ĐAĐ', vi: 'khả năng, xác suất', ex: 'La probabilidad de ganar la lotería es mínima.', exVi: 'Khả năng trúng xổ số là cực kỳ nhỏ.' },
+      { w: 'arriesgado / arriesgada', ipa: 'a-rri-ês-GA-đô / a-rri-ês-GA-đa', vi: 'mạo hiểm, rủi ro', ex: 'Dejar el trabajo sin un plan sería muy arriesgado.', exVi: 'Bỏ việc mà không có kế hoạch sẽ rất mạo hiểm.' },
+      { w: 'el azar', ipa: 'êl a-θAR', vi: 'sự ngẫu nhiên, may rủi', ex: 'No dejaría mi futuro en manos del azar.', exVi: 'Tôi sẽ không phó mặc tương lai của mình cho may rủi.' },
+      { w: 'la beca', ipa: 'la BÊ-ca', vi: 'học bổng', ex: 'Si me dieran una beca, estudiaría en Salamanca.', exVi: 'Nếu được cấp học bổng, tôi sẽ học ở Salamanca.' },
+      { w: 'el lujo', ipa: 'êl LU-khô', vi: 'sự xa xỉ, đồ xa xỉ', ex: 'Si fuera rico, no gastaría el dinero en lujos.', exVi: 'Nếu giàu, tôi sẽ không tiêu tiền vào đồ xa xỉ.' },
+      { w: 'optar por', ipa: 'ôp-TAR pôr', vi: 'chọn (giữa nhiều phương án)', ex: 'Si pudiera elegir, optaría por vivir en el campo.', exVi: 'Nếu được chọn, tôi sẽ chọn sống ở nông thôn.' }
     ],
     exercises: [
       { type: 'mc', q: 'Si ___ una beca, estudiaría en Madrid.', options: ['consiguiera', 'conseguiría', 'consigo'], answer: 0,
@@ -120,16 +120,16 @@ export default {
 
   'es-b2-3': {
     vocab: [
-      { w: 'el portavoz', ipa: 'el pọc-ta-bốt', vi: 'người phát ngôn', ex: 'Según el portavoz del gobierno, la ley será aprobada en marzo.', exVi: 'Theo người phát ngôn chính phủ, luật sẽ được thông qua vào tháng Ba.' },
-      { w: 'el comunicado', ipa: 'el cô-mu-ni-ca-đô', vi: 'thông cáo', ex: 'La empresa publicó un comunicado para pedir disculpas.', exVi: 'Công ty đã đăng một thông cáo để xin lỗi.' },
-      { w: 'el suceso', ipa: 'el xu-thê-xô', vi: 'sự việc, vụ việc (tai nạn, vụ án)', ex: 'El suceso fue grabado por un vecino con su móvil.', exVi: 'Vụ việc đã được một người hàng xóm quay lại bằng điện thoại.' },
-      { w: 'la protesta', ipa: 'la prô-tết-ta', vi: 'cuộc biểu tình, sự phản đối', ex: 'Miles de personas participaron en la protesta contra la nueva ley.', exVi: 'Hàng nghìn người đã tham gia cuộc biểu tình phản đối luật mới.' },
-      { w: 'el reportero / la reportera', ipa: 'el rê-pọc-tê-rô / la rê-pọc-tê-ra', vi: 'phóng viên', ex: 'La reportera entrevistó a varios testigos del accidente.', exVi: 'Nữ phóng viên đã phỏng vấn vài nhân chứng của vụ tai nạn.' },
-      { w: 'la votación', ipa: 'la bô-ta-thi-ôn', vi: 'cuộc bỏ phiếu', ex: 'La propuesta fue aprobada en una votación muy ajustada.', exVi: 'Đề xuất được thông qua trong một cuộc bỏ phiếu rất sít sao.' },
-      { w: 'la corrupción', ipa: 'la cô-rúp-thi-ôn', vi: 'tham nhũng', ex: 'Se investigan varios casos de corrupción en el ayuntamiento.', exVi: 'Nhiều vụ tham nhũng ở toà thị chính đang được điều tra.' },
-      { w: 'la polémica', ipa: 'la pô-lê-mi-ca', vi: 'cuộc tranh cãi, sự tranh luận gay gắt', ex: 'Las palabras del ministro han generado mucha polémica.', exVi: 'Phát ngôn của bộ trưởng đã gây ra nhiều tranh cãi.' },
-      { w: 'difundir', ipa: 'đi-phun-đir', vi: 'lan truyền, phổ biến', ex: 'La noticia se difundió rápidamente por las redes sociales.', exVi: 'Tin tức đã lan truyền nhanh chóng trên mạng xã hội.' },
-      { w: 'el decreto', ipa: 'el đê-crê-tô', vi: 'nghị định, sắc lệnh', ex: 'El decreto fue firmado ayer por el presidente.', exVi: 'Nghị định đã được tổng thống ký hôm qua.' }
+      { w: 'el portavoz', ipa: 'êl pôr-ta-BÔθ', vi: 'người phát ngôn', ex: 'Según el portavoz del gobierno, la ley será aprobada en marzo.', exVi: 'Theo người phát ngôn chính phủ, luật sẽ được thông qua vào tháng Ba.' },
+      { w: 'el comunicado', ipa: 'êl cô-mu-ni-CA-đô', vi: 'thông cáo', ex: 'La empresa publicó un comunicado para pedir disculpas.', exVi: 'Công ty đã đăng một thông cáo để xin lỗi.' },
+      { w: 'el suceso', ipa: 'êl xu-θÊ-xô', vi: 'sự việc, vụ việc (tai nạn, vụ án)', ex: 'El suceso fue grabado por un vecino con su móvil.', exVi: 'Vụ việc đã được một người hàng xóm quay lại bằng điện thoại.' },
+      { w: 'la protesta', ipa: 'la prô-TÊS-ta', vi: 'cuộc biểu tình, sự phản đối', ex: 'Miles de personas participaron en la protesta contra la nueva ley.', exVi: 'Hàng nghìn người đã tham gia cuộc biểu tình phản đối luật mới.' },
+      { w: 'el reportero / la reportera', ipa: 'êl rrê-pôr-TÊ-rô / la rrê-pôr-TÊ-ra', vi: 'phóng viên', ex: 'La reportera entrevistó a varios testigos del accidente.', exVi: 'Nữ phóng viên đã phỏng vấn vài nhân chứng của vụ tai nạn.' },
+      { w: 'la votación', ipa: 'la bô-ta-θi-ÔN', vi: 'cuộc bỏ phiếu', ex: 'La propuesta fue aprobada en una votación muy ajustada.', exVi: 'Đề xuất được thông qua trong một cuộc bỏ phiếu rất sít sao.' },
+      { w: 'la corrupción', ipa: 'la cô-rrup-θi-ÔN', vi: 'tham nhũng', ex: 'Se investigan varios casos de corrupción en el ayuntamiento.', exVi: 'Nhiều vụ tham nhũng ở toà thị chính đang được điều tra.' },
+      { w: 'la polémica', ipa: 'la pô-LÊ-mi-ca', vi: 'cuộc tranh cãi, sự tranh luận gay gắt', ex: 'Las palabras del ministro han generado mucha polémica.', exVi: 'Phát ngôn của bộ trưởng đã gây ra nhiều tranh cãi.' },
+      { w: 'difundir', ipa: 'đi-phun-ĐIR', vi: 'lan truyền, phổ biến', ex: 'La noticia se difundió rápidamente por las redes sociales.', exVi: 'Tin tức đã lan truyền nhanh chóng trên mạng xã hội.' },
+      { w: 'el decreto', ipa: 'êl đê-CRÊ-tô', vi: 'nghị định, sắc lệnh', ex: 'El decreto fue firmado ayer por el presidente.', exVi: 'Nghị định đã được tổng thống ký hôm qua.' }
     ],
     exercises: [
       { type: 'mc', q: 'El decreto fue ___ ayer por el Gobierno.', options: ['aprobado', 'aprobada', 'aprobados'], answer: 0,
@@ -179,16 +179,16 @@ export default {
 
   'es-b2-4': {
     vocab: [
-      { w: 'la afirmación', ipa: 'la a-phiẹc-ma-thi-ôn', vi: 'lời khẳng định', ex: 'El director dijo que aquellas afirmaciones eran falsas.', exVi: 'Giám đốc nói rằng những lời khẳng định đó là sai sự thật.' },
-      { w: 'insinuar', ipa: 'in-xi-nu-ar', vi: 'ám chỉ, nói bóng gió', ex: 'Ana insinuó que yo había leído su diario.', exVi: 'Ana ám chỉ rằng tôi đã đọc nhật ký của cô ấy.' },
-      { w: 'la sugerencia', ipa: 'la xu-khê-ren-thi-a', vi: 'lời gợi ý, đề xuất', ex: 'Mi jefe me hizo una sugerencia: que revisara el informe otra vez.', exVi: 'Sếp gợi ý tôi xem lại bản báo cáo thêm lần nữa.' },
-      { w: 'la advertencia', ipa: 'la ađ-bẹc-ten-thi-a', vi: 'lời cảnh báo', ex: 'Ignoró la advertencia del médico y siguió fumando.', exVi: 'Anh ấy phớt lờ lời cảnh báo của bác sĩ và tiếp tục hút thuốc.' },
-      { w: 'la confesión', ipa: 'la côn-phê-xi-ôn', vi: 'lời thú nhận', ex: 'En su confesión, dijo que había robado el dinero.', exVi: 'Trong lời thú nhận, anh ta nói rằng mình đã lấy trộm số tiền.' },
-      { w: 'la queja', ipa: 'la kê-kha', vi: 'lời phàn nàn, đơn khiếu nại', ex: 'Los clientes presentaron una queja por el retraso.', exVi: 'Khách hàng đã gửi khiếu nại vì sự chậm trễ.' },
-      { w: 'el testimonio', ipa: 'el tết-ti-mô-ni-ô', vi: 'lời khai, lời chứng', ex: 'Según el testimonio del vecino, el ladrón huyó en moto.', exVi: 'Theo lời khai của người hàng xóm, tên trộm đã tẩu thoát bằng xe máy.' },
-      { w: 'citar', ipa: 'thi-tar', vi: 'trích dẫn (lời ai)', ex: 'El periodista citó las palabras exactas de la ministra.', exVi: 'Nhà báo trích dẫn nguyên văn lời của bà bộ trưởng.' },
-      { w: 'subrayar', ipa: 'xu-bra-iar', vi: 'nhấn mạnh; gạch chân', ex: 'La profesora subrayó que el examen sería el lunes.', exVi: 'Cô giáo nhấn mạnh rằng bài thi sẽ diễn ra vào thứ Hai.' },
-      { w: 'el resumen', ipa: 'el rê-xu-men', vi: 'bản tóm tắt (en resumen: tóm lại)', ex: 'En resumen, nos dijo que no habría cambios.', exVi: 'Tóm lại, anh ấy nói với chúng tôi là sẽ không có thay đổi gì.' }
+      { w: 'la afirmación', ipa: 'la a-phir-ma-θi-ÔN', vi: 'lời khẳng định', ex: 'El director dijo que aquellas afirmaciones eran falsas.', exVi: 'Giám đốc nói rằng những lời khẳng định đó là sai sự thật.' },
+      { w: 'insinuar', ipa: 'in-xi-NOAR', vi: 'ám chỉ, nói bóng gió', ex: 'Ana insinuó que yo había leído su diario.', exVi: 'Ana ám chỉ rằng tôi đã đọc nhật ký của cô ấy.' },
+      { w: 'la sugerencia', ipa: 'la xu-khê-RÊN-θi-a', vi: 'lời gợi ý, đề xuất', ex: 'Mi jefe me hizo una sugerencia: que revisara el informe otra vez.', exVi: 'Sếp gợi ý tôi xem lại bản báo cáo thêm lần nữa.' },
+      { w: 'la advertencia', ipa: 'la ađ-bêr-TÊN-θi-a', vi: 'lời cảnh báo', ex: 'Ignoró la advertencia del médico y siguió fumando.', exVi: 'Anh ấy phớt lờ lời cảnh báo của bác sĩ và tiếp tục hút thuốc.' },
+      { w: 'la confesión', ipa: 'la côn-phê-xi-ÔN', vi: 'lời thú nhận', ex: 'En su confesión, dijo que había robado el dinero.', exVi: 'Trong lời thú nhận, anh ta nói rằng mình đã lấy trộm số tiền.' },
+      { w: 'la queja', ipa: 'la KÊ-kha', vi: 'lời phàn nàn, đơn khiếu nại', ex: 'Los clientes presentaron una queja por el retraso.', exVi: 'Khách hàng đã gửi khiếu nại vì sự chậm trễ.' },
+      { w: 'el testimonio', ipa: 'êl tês-ti-MÔ-ni-ô', vi: 'lời khai, lời chứng', ex: 'Según el testimonio del vecino, el ladrón huyó en moto.', exVi: 'Theo lời khai của người hàng xóm, tên trộm đã tẩu thoát bằng xe máy.' },
+      { w: 'citar', ipa: 'θi-TAR', vi: 'trích dẫn (lời ai)', ex: 'El periodista citó las palabras exactas de la ministra.', exVi: 'Nhà báo trích dẫn nguyên văn lời của bà bộ trưởng.' },
+      { w: 'subrayar', ipa: 'xu-bra-GIAR', vi: 'nhấn mạnh; gạch chân', ex: 'La profesora subrayó que el examen sería el lunes.', exVi: 'Cô giáo nhấn mạnh rằng bài thi sẽ diễn ra vào thứ Hai.' },
+      { w: 'el resumen', ipa: 'êl rrê-XU-mên', vi: 'bản tóm tắt (en resumen: tóm lại)', ex: 'En resumen, nos dijo que no habría cambios.', exVi: 'Tóm lại, anh ấy nói với chúng tôi là sẽ không có thay đổi gì.' }
     ],
     exercises: [
       { type: 'mc', q: 'Carlos: «Estoy cansado». → Carlos dijo que ___ cansado.', options: ['estaba', 'estuvo', 'estará'], answer: 0,
@@ -238,16 +238,16 @@ export default {
 
   'es-b2-5': {
     vocab: [
-      { w: 'la pobreza', ipa: 'la pô-brê-tha', vi: 'sự nghèo đói', ex: 'Es un barrio donde la pobreza afecta a muchas familias.', exVi: 'Đó là một khu phố nơi cái nghèo ảnh hưởng đến nhiều gia đình.' },
-      { w: 'la solidaridad', ipa: 'la xô-li-đa-ri-đát', vi: 'tình đoàn kết, tinh thần tương trợ', ex: 'Las personas que ayudaron tras la inundación demostraron mucha solidaridad.', exVi: 'Những người giúp đỡ sau trận lũ đã thể hiện tinh thần tương trợ rất lớn.' },
-      { w: 'el bienestar', ipa: 'el bi-ên-ết-tar', vi: 'phúc lợi, sự sung túc', ex: 'Es una ciudad que se preocupa por el bienestar de sus habitantes.', exVi: 'Đó là một thành phố quan tâm đến đời sống của người dân.' },
-      { w: 'ambiental', ipa: 'am-bi-ên-tal', vi: '(thuộc) môi trường', ex: 'La contaminación ambiental es un problema cuyas consecuencias sufrimos todos.', exVi: 'Ô nhiễm môi trường là vấn đề mà hậu quả của nó tất cả chúng ta đều phải gánh chịu.' },
-      { w: 'el combustible', ipa: 'el côm-bút-ti-blê', vi: 'nhiên liệu', ex: 'Los coches que usan combustibles fósiles contaminan más.', exVi: 'Những chiếc xe dùng nhiên liệu hoá thạch gây ô nhiễm nhiều hơn.' },
-      { w: 'el plástico', ipa: 'el plát-ti-cô', vi: 'nhựa, đồ nhựa', ex: 'El plástico que tiramos al mar tarda siglos en desaparecer.', exVi: 'Nhựa mà chúng ta vứt xuống biển phải mất hàng thế kỷ mới phân huỷ.' },
-      { w: 'la atmósfera', ipa: 'la át-mốt-phê-ra', vi: 'bầu khí quyển; bầu không khí', ex: 'Los gases que se acumulan en la atmósfera calientan el planeta.', exVi: 'Những khí tích tụ trong bầu khí quyển làm Trái Đất nóng lên.' },
-      { w: 'el refugiado / la refugiada', ipa: 'el rê-phu-khi-a-đô / la rê-phu-khi-a-đa', vi: 'người tị nạn', ex: 'Los refugiados con quienes hablé huyeron de la guerra.', exVi: 'Những người tị nạn mà tôi đã nói chuyện cùng đều chạy trốn khỏi chiến tranh.' },
-      { w: 'la agricultura', ipa: 'la a-gri-cun-tu-ra', vi: 'nông nghiệp', ex: 'La sequía afecta sobre todo a la agricultura.', exVi: 'Hạn hán ảnh hưởng chủ yếu đến nông nghiệp.' },
-      { w: 'el consumidor / la consumidora', ipa: 'el côn-xu-mi-đọc / la côn-xu-mi-đô-ra', vi: 'người tiêu dùng', ex: 'Cada vez más consumidores buscan productos que no lleven plástico.', exVi: 'Ngày càng nhiều người tiêu dùng tìm những sản phẩm không có bao bì nhựa.' }
+      { w: 'la pobreza', ipa: 'la pô-BRÊ-θa', vi: 'sự nghèo đói', ex: 'Es un barrio donde la pobreza afecta a muchas familias.', exVi: 'Đó là một khu phố nơi cái nghèo ảnh hưởng đến nhiều gia đình.' },
+      { w: 'la solidaridad', ipa: 'la xô-li-đa-ri-ĐAĐ', vi: 'tình đoàn kết, tinh thần tương trợ', ex: 'Las personas que ayudaron tras la inundación demostraron mucha solidaridad.', exVi: 'Những người giúp đỡ sau trận lũ đã thể hiện tinh thần tương trợ rất lớn.' },
+      { w: 'el bienestar', ipa: 'êl bi-ê-nês-TAR', vi: 'phúc lợi, sự sung túc', ex: 'Es una ciudad que se preocupa por el bienestar de sus habitantes.', exVi: 'Đó là một thành phố quan tâm đến đời sống của người dân.' },
+      { w: 'ambiental', ipa: 'am-bi-ên-TAL', vi: '(thuộc) môi trường', ex: 'La contaminación ambiental es un problema cuyas consecuencias sufrimos todos.', exVi: 'Ô nhiễm môi trường là vấn đề mà hậu quả của nó tất cả chúng ta đều phải gánh chịu.' },
+      { w: 'el combustible', ipa: 'êl côm-bus-TI-blê', vi: 'nhiên liệu', ex: 'Los coches que usan combustibles fósiles contaminan más.', exVi: 'Những chiếc xe dùng nhiên liệu hoá thạch gây ô nhiễm nhiều hơn.' },
+      { w: 'el plástico', ipa: 'êl PLAS-ti-cô', vi: 'nhựa, đồ nhựa', ex: 'El plástico que tiramos al mar tarda siglos en desaparecer.', exVi: 'Nhựa mà chúng ta vứt xuống biển phải mất hàng thế kỷ mới phân huỷ.' },
+      { w: 'la atmósfera', ipa: 'la at-MÔS-phê-ra', vi: 'bầu khí quyển; bầu không khí', ex: 'Los gases que se acumulan en la atmósfera calientan el planeta.', exVi: 'Những khí tích tụ trong bầu khí quyển làm Trái Đất nóng lên.' },
+      { w: 'el refugiado / la refugiada', ipa: 'êl rrê-phu-khi-A-đô / la rrê-phu-khi-A-đa', vi: 'người tị nạn', ex: 'Los refugiados con quienes hablé huyeron de la guerra.', exVi: 'Những người tị nạn mà tôi đã nói chuyện cùng đều chạy trốn khỏi chiến tranh.' },
+      { w: 'la agricultura', ipa: 'la a-gri-cul-TU-ra', vi: 'nông nghiệp', ex: 'La sequía afecta sobre todo a la agricultura.', exVi: 'Hạn hán ảnh hưởng chủ yếu đến nông nghiệp.' },
+      { w: 'el consumidor / la consumidora', ipa: 'êl côn-xu-mi-ĐÔR / la côn-xu-mi-ĐÔ-ra', vi: 'người tiêu dùng', ex: 'Cada vez más consumidores buscan productos que no lleven plástico.', exVi: 'Ngày càng nhiều người tiêu dùng tìm những sản phẩm không có bao bì nhựa.' }
     ],
     exercises: [
       { type: 'mc', q: 'Es una organización ___ voluntarios ayudan a los refugiados.', options: ['cuyos', 'que', 'donde'], answer: 0,
@@ -297,20 +297,20 @@ export default {
 
   'es-b2-6': {
     vocab: [
-      { w: 'el requisito', ipa: 'el rê-ki-xi-tô', vi: 'điều kiện, yêu cầu bắt buộc', ex: 'Lamentamos informarle de que no cumple usted todos los requisitos.', exVi: 'Chúng tôi rất tiếc phải thông báo rằng ông/bà chưa đáp ứng đủ các điều kiện.' },
-      { w: 'la factura', ipa: 'la phác-tu-ra', vi: 'hoá đơn', ex: 'Le envío la factura correspondiente al mes de mayo.', exVi: 'Tôi xin gửi ông/bà hoá đơn của tháng Năm.' },
-      { w: 'el certificado', ipa: 'el thẹc-ti-phi-ca-đô', vi: 'giấy chứng nhận, chứng chỉ', ex: 'Necesitamos una copia de su certificado de idiomas.', exVi: 'Chúng tôi cần một bản sao chứng chỉ ngoại ngữ của ông/bà.' },
-      { w: 'la tarifa', ipa: 'la ta-ri-pha', vi: 'giá cước, biểu phí', ex: 'Le informamos de que la tarifa aumentará a partir de enero.', exVi: 'Chúng tôi xin thông báo rằng giá cước sẽ tăng từ tháng Một.' },
-      { w: 'remitir', ipa: 'rê-mi-tir', vi: 'gửi (văn bản); chuyển (hồ sơ) đến', ex: 'Le remito el contrato firmado.', exVi: 'Tôi xin gửi ông/bà bản hợp đồng đã ký.' },
-      { w: 'la consulta', ipa: 'la côn-xun-ta', vi: 'câu hỏi, yêu cầu tư vấn; buổi khám', ex: 'Para cualquier consulta, no dude en ponerse en contacto con nosotros.', exVi: 'Mọi thắc mắc xin ông/bà đừng ngần ngại liên hệ với chúng tôi.' },
-      { w: 'el gerente / la gerente', ipa: 'el khê-ren-tê / la khê-ren-tê', vi: 'giám đốc, người quản lý', ex: 'Quisiera hablar con el gerente, por favor.', exVi: 'Tôi muốn nói chuyện với người quản lý.' },
-      { w: 'la renuncia', ipa: 'la rê-nun-thi-a', vi: 'sự từ chức, đơn xin thôi việc', ex: 'Le comunico mi renuncia al puesto a partir del 1 de junio.', exVi: 'Tôi xin thông báo việc thôi giữ vị trí kể từ ngày 1 tháng Sáu.' },
-      { w: 'el importe', ipa: 'el im-pọc-tê', vi: 'số tiền (phải trả)', ex: 'El importe total asciende a 350 euros.', exVi: 'Tổng số tiền là 350 euro.' },
-      { w: 'la sede', ipa: 'la xê-đê', vi: 'trụ sở', ex: 'La entrevista tendrá lugar en nuestra sede de Madrid.', exVi: 'Buổi phỏng vấn sẽ diễn ra tại trụ sở của chúng tôi ở Madrid.' }
+      { w: 'el requisito', ipa: 'êl rrê-ki-XI-tô', vi: 'điều kiện, yêu cầu bắt buộc', ex: 'Lamentamos informarle de que no cumple usted todos los requisitos.', exVi: 'Chúng tôi rất tiếc phải thông báo rằng ông/bà chưa đáp ứng đủ các điều kiện.' },
+      { w: 'la factura', ipa: 'la phac-TU-ra', vi: 'hoá đơn', ex: 'Le envío la factura correspondiente al mes de mayo.', exVi: 'Tôi xin gửi ông/bà hoá đơn của tháng Năm.' },
+      { w: 'el certificado', ipa: 'êl θêr-ti-phi-CA-đô', vi: 'giấy chứng nhận, chứng chỉ', ex: 'Necesitamos una copia de su certificado de idiomas.', exVi: 'Chúng tôi cần một bản sao chứng chỉ ngoại ngữ của ông/bà.' },
+      { w: 'la tarifa', ipa: 'la ta-RI-pha', vi: 'giá cước, biểu phí', ex: 'Le informamos de que la tarifa aumentará a partir de enero.', exVi: 'Chúng tôi xin thông báo rằng giá cước sẽ tăng từ tháng Một.' },
+      { w: 'remitir', ipa: 'rrê-mi-TIR', vi: 'gửi (văn bản); chuyển (hồ sơ) đến', ex: 'Le remito el contrato firmado.', exVi: 'Tôi xin gửi ông/bà bản hợp đồng đã ký.' },
+      { w: 'la consulta', ipa: 'la côn-XUL-ta', vi: 'câu hỏi, yêu cầu tư vấn; buổi khám', ex: 'Para cualquier consulta, no dude en ponerse en contacto con nosotros.', exVi: 'Mọi thắc mắc xin ông/bà đừng ngần ngại liên hệ với chúng tôi.' },
+      { w: 'el gerente / la gerente', ipa: 'êl khê-RÊN-tê / la khê-RÊN-tê', vi: 'giám đốc, người quản lý', ex: 'Quisiera hablar con el gerente, por favor.', exVi: 'Tôi muốn nói chuyện với người quản lý.' },
+      { w: 'la renuncia', ipa: 'la rrê-NUN-θi-a', vi: 'sự từ chức, đơn xin thôi việc', ex: 'Le comunico mi renuncia al puesto a partir del 1 de junio.', exVi: 'Tôi xin thông báo việc thôi giữ vị trí kể từ ngày 1 tháng Sáu.' },
+      { w: 'el importe', ipa: 'êl im-PÔR-tê', vi: 'số tiền (phải trả)', ex: 'El importe total asciende a 350 euros.', exVi: 'Tổng số tiền là 350 euro.' },
+      { w: 'la sede', ipa: 'la XÊ-đê', vi: 'trụ sở', ex: 'La entrevista tendrá lugar en nuestra sede de Madrid.', exVi: 'Buổi phỏng vấn sẽ diễn ra tại trụ sở của chúng tôi ở Madrid.' }
     ],
     exercises: [
-      { type: 'mc', q: 'Señora García, ¿___ usted un momento?', options: ['tiene', 'tienes', 'tenéis'], answer: 0,
-        explain: 'Usted chia động từ như ngôi thứ ba số ít: tiene.' },
+      { type: 'mc', q: 'Aunque ya ___ dos correos, no he recibido respuesta. (Người viết khẳng định mình đã gửi.)', options: ['he enviado', 'haya enviado', 'enviara'], answer: 0,
+        explain: 'Người nói khẳng định một sự thật đã xảy ra → aunque + indicativo: he enviado.' },
       { type: 'fill', q: 'Le ___ adjunto el certificado que nos solicitó.', answer: ['remito'], hint: 'remitir – presente, ngôi yo',
         explain: 'Remitir ở ngôi yo → remito. Le remito adjunto… = Tôi xin gửi kèm…' },
       { type: 'mc', q: 'Me interesa mucho el puesto; ___, no tengo experiencia en ventas.', options: ['sin embargo', 'por lo tanto', 'atentamente'], answer: 0,

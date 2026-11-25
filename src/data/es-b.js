@@ -3,7 +3,7 @@ addLevels('es', [
   {
     id: 'B1',
     title: 'Trung cấp 1',
-    desc: 'Kể về trải nghiệm, công việc, sức khoẻ và chuyện đã qua; so sánh, nêu ý kiến và nói về điều kiện thực tế.',
+    desc: 'Kể về trải nghiệm, công việc, sức khoẻ và chuyện đã qua; dùng por/para, cho lời khuyên lịch sự, so sánh, nêu ý kiến, nói về điều kiện và dự định với subjuntivo.',
     units: [
       // ───────────────────────── B1-1 ─────────────────────────
       {
@@ -12,16 +12,16 @@ addLevels('es', [
         title: 'Du lịch',
         goal: 'Kể về những chuyến đi và trải nghiệm đã có, hỏi ai đó đã làm gì chưa bằng pretérito perfecto.',
         vocab: [
-          { w: 'el pasaporte', ipa: 'el pa-xa-pór-tê', vi: 'hộ chiếu', ex: 'Todavía no he renovado el pasaporte.', exVi: 'Tôi vẫn chưa gia hạn hộ chiếu.' },
-          { w: 'el equipaje', ipa: 'el ê-ki-pa-khê', vi: 'hành lý', ex: '¿Has facturado ya el equipaje?', exVi: 'Bạn đã ký gửi hành lý chưa?' },
-          { w: 'el vuelo', ipa: 'el bu-ê-lô', vi: 'chuyến bay', ex: 'El vuelo ha llegado con retraso.', exVi: 'Chuyến bay đã đến trễ.' },
-          { w: 'el alojamiento', ipa: 'el a-lô-kha-mi-ên-tô', vi: 'chỗ ở (khi du lịch)', ex: 'Hemos reservado el alojamiento por internet.', exVi: 'Chúng tôi đã đặt chỗ ở qua mạng.' },
-          { w: 'la reserva', ipa: 'la rê-xéc-ba', vi: 'sự đặt chỗ, đặt phòng', ex: 'He hecho la reserva para dos noches.', exVi: 'Tôi đã đặt phòng cho hai đêm.' },
-          { w: 'facturar', ipa: 'phắc-tu-rár', vi: 'ký gửi (hành lý)', ex: 'Tenemos que facturar dos maletas.', exVi: 'Chúng tôi phải ký gửi hai va li.' },
-          { w: 'el destino', ipa: 'el đết-ti-nô', vi: 'điểm đến', ex: 'Este año hemos elegido un destino tranquilo.', exVi: 'Năm nay chúng tôi đã chọn một điểm đến yên tĩnh.' },
-          { w: 'recorrer', ipa: 'rê-cô-rrér', vi: 'đi khắp, đi một vòng', ex: 'Hemos recorrido todo el centro a pie.', exVi: 'Chúng tôi đã đi bộ khắp trung tâm.' },
-          { w: 'el recuerdo', ipa: 'el rê-cu-éc-đô', vi: 'quà lưu niệm; kỷ niệm', ex: 'He comprado un recuerdo para mi madre.', exVi: 'Tôi đã mua một món quà lưu niệm cho mẹ.' },
-          { w: 'alguna vez', ipa: 'an-gu-na bêth', vi: 'đã bao giờ, đã từng', ex: '¿Has estado alguna vez en Sevilla?', exVi: 'Bạn đã bao giờ đến Sevilla chưa?' }
+          { w: 'el pasaporte', ipa: 'êl pa-xa-PÔR-tê', vi: 'hộ chiếu', ex: 'Todavía no he renovado el pasaporte.', exVi: 'Tôi vẫn chưa gia hạn hộ chiếu.' },
+          { w: 'el equipaje', ipa: 'êl ê-ki-PA-khê', vi: 'hành lý', ex: '¿Has facturado ya el equipaje?', exVi: 'Bạn đã ký gửi hành lý chưa?' },
+          { w: 'el vuelo', ipa: 'êl BUÊ-lô', vi: 'chuyến bay', ex: 'El vuelo ha llegado con retraso.', exVi: 'Chuyến bay đã đến trễ.' },
+          { w: 'el alojamiento', ipa: 'êl a-lô-kha-mi-ÊN-tô', vi: 'chỗ ở (khi du lịch)', ex: 'Hemos reservado el alojamiento por internet.', exVi: 'Chúng tôi đã đặt chỗ ở qua mạng.' },
+          { w: 'la reserva', ipa: 'la rrê-XÊR-ba', vi: 'sự đặt chỗ, đặt phòng', ex: 'He hecho la reserva para dos noches.', exVi: 'Tôi đã đặt phòng cho hai đêm.' },
+          { w: 'facturar', ipa: 'phac-tu-RAR', vi: 'ký gửi (hành lý)', ex: 'Tenemos que facturar dos maletas.', exVi: 'Chúng tôi phải ký gửi hai va li.' },
+          { w: 'el destino', ipa: 'êl đês-TI-nô', vi: 'điểm đến', ex: 'Este año hemos elegido un destino tranquilo.', exVi: 'Năm nay chúng tôi đã chọn một điểm đến yên tĩnh.' },
+          { w: 'recorrer', ipa: 'rrê-cô-RRÊR', vi: 'đi khắp, đi một vòng', ex: 'Hemos recorrido todo el centro a pie.', exVi: 'Chúng tôi đã đi bộ khắp trung tâm.' },
+          { w: 'el recuerdo', ipa: 'êl rrê-QUÊR-đô', vi: 'quà lưu niệm; kỷ niệm', ex: 'He comprado un recuerdo para mi madre.', exVi: 'Tôi đã mua một món quà lưu niệm cho mẹ.' },
+          { w: 'alguna vez', ipa: 'al-GU-na bêθ', vi: 'đã bao giờ, đã từng', ex: '¿Has estado alguna vez en Sevilla?', exVi: 'Bạn đã bao giờ đến Sevilla chưa?' }
         ],
         grammar: {
           title: 'Pretérito perfecto: haber + participio',
@@ -75,16 +75,16 @@ addLevels('es', [
         title: 'Công việc & phỏng vấn',
         goal: 'Nói về kinh nghiệm làm việc, trả lời phỏng vấn và phân biệt pretérito perfecto với indefinido.',
         vocab: [
-          { w: 'la entrevista', ipa: 'la en-trê-bít-ta', vi: 'buổi phỏng vấn', ex: 'Ayer tuve una entrevista de trabajo.', exVi: 'Hôm qua tôi có một buổi phỏng vấn xin việc.' },
-          { w: 'el puesto', ipa: 'el pu-ết-tô', vi: 'vị trí, chức vụ', ex: 'He solicitado el puesto de contable.', exVi: 'Tôi đã ứng tuyển vị trí kế toán.' },
-          { w: 'la empresa', ipa: 'la em-prê-xa', vi: 'công ty', ex: 'Trabajé cinco años en una empresa alemana.', exVi: 'Tôi đã làm năm năm ở một công ty Đức.' },
-          { w: 'el currículum', ipa: 'el cu-rri-cu-lum', vi: 'sơ yếu lý lịch (CV)', ex: 'Esta semana he enviado el currículum a tres empresas.', exVi: 'Tuần này tôi đã gửi CV cho ba công ty.' },
-          { w: 'la experiencia', ipa: 'la ếch-pê-ri-ên-thi-a', vi: 'kinh nghiệm', ex: 'Tengo experiencia en ventas.', exVi: 'Tôi có kinh nghiệm bán hàng.' },
-          { w: 'el sueldo', ipa: 'el xu-ên-đô', vi: 'tiền lương', ex: 'El sueldo es bueno, pero el horario es largo.', exVi: 'Lương thì tốt, nhưng giờ làm dài.' },
-          { w: 'contratar', ipa: 'côn-tra-tár', vi: 'tuyển dụng, thuê', ex: 'La empresa contrató a diez personas el año pasado.', exVi: 'Năm ngoái công ty đã tuyển mười người.' },
-          { w: 'el jefe', ipa: 'el khê-phê', vi: 'sếp', ex: 'Mi jefe me ha felicitado hoy.', exVi: 'Hôm nay sếp đã khen tôi.' },
-          { w: 'la reunión', ipa: 'la rê-u-ni-ôn', vi: 'cuộc họp', ex: 'La reunión de esta mañana ha sido muy larga.', exVi: 'Cuộc họp sáng nay rất dài.' },
-          { w: 'el plazo', ipa: 'el pla-thô', vi: 'thời hạn', ex: 'El plazo terminó el viernes pasado.', exVi: 'Thời hạn đã kết thúc vào thứ Sáu tuần trước.' }
+          { w: 'la entrevista', ipa: 'la ên-trê-BIS-ta', vi: 'buổi phỏng vấn', ex: 'Ayer tuve una entrevista de trabajo.', exVi: 'Hôm qua tôi có một buổi phỏng vấn xin việc.' },
+          { w: 'el puesto', ipa: 'êl PUÊS-tô', vi: 'vị trí, chức vụ', ex: 'He solicitado el puesto de contable.', exVi: 'Tôi đã ứng tuyển vị trí kế toán.' },
+          { w: 'la empresa', ipa: 'la êm-PRÊ-xa', vi: 'công ty', ex: 'Trabajé cinco años en una empresa alemana.', exVi: 'Tôi đã làm năm năm ở một công ty Đức.' },
+          { w: 'el currículum', ipa: 'êl cu-RRI-cu-lum', vi: 'sơ yếu lý lịch (CV)', ex: 'Esta semana he enviado el currículum a tres empresas.', exVi: 'Tuần này tôi đã gửi CV cho ba công ty.' },
+          { w: 'la experiencia', ipa: 'la êcs-pê-ri-ÊN-θi-a', vi: 'kinh nghiệm', ex: 'Tengo experiencia en ventas.', exVi: 'Tôi có kinh nghiệm bán hàng.' },
+          { w: 'el sueldo', ipa: 'êl XUÊL-đô', vi: 'tiền lương', ex: 'El sueldo es bueno, pero el horario es largo.', exVi: 'Lương thì tốt, nhưng giờ làm dài.' },
+          { w: 'contratar', ipa: 'côn-tra-TAR', vi: 'tuyển dụng, thuê', ex: 'La empresa contrató a diez personas el año pasado.', exVi: 'Năm ngoái công ty đã tuyển mười người.' },
+          { w: 'el jefe', ipa: 'êl KHÊ-phê', vi: 'sếp', ex: 'Mi jefe me ha felicitado hoy.', exVi: 'Hôm nay sếp đã khen tôi.' },
+          { w: 'la reunión', ipa: 'la rrêu-ni-ÔN', vi: 'cuộc họp', ex: 'La reunión de esta mañana ha sido muy larga.', exVi: 'Cuộc họp sáng nay rất dài.' },
+          { w: 'el plazo', ipa: 'êl PLA-θô', vi: 'thời hạn', ex: 'El plazo terminó el viernes pasado.', exVi: 'Thời hạn đã kết thúc vào thứ Sáu tuần trước.' }
         ],
         grammar: {
           title: 'Pretérito perfecto hay pretérito indefinido?',
@@ -132,16 +132,16 @@ addLevels('es', [
         title: 'Sức khoẻ',
         goal: 'Mô tả chỗ đau, triệu chứng và đưa ra lời khuyên với doler, tener que, deber, hay que.',
         vocab: [
-          { w: 'la cabeza', ipa: 'la ca-bê-tha', vi: 'đầu', ex: 'Me duele la cabeza desde ayer.', exVi: 'Tôi bị đau đầu từ hôm qua.' },
-          { w: 'la garganta', ipa: 'la gar-gan-ta', vi: 'họng', ex: 'Le duele la garganta y no puede hablar.', exVi: 'Cô ấy đau họng và không nói được.' },
-          { w: 'la espalda', ipa: 'la ết-pan-đa', vi: 'lưng', ex: 'Me duele la espalda por estar tanto tiempo sentado.', exVi: 'Tôi đau lưng vì ngồi quá lâu.' },
-          { w: 'la fiebre', ipa: 'la phi-ê-brê', vi: 'cơn sốt', ex: 'El niño tiene fiebre.', exVi: 'Đứa bé bị sốt.' },
-          { w: 'la receta', ipa: 'la rê-thê-ta', vi: 'đơn thuốc', ex: 'El médico me ha dado una receta.', exVi: 'Bác sĩ đã kê cho tôi một đơn thuốc.' },
-          { w: 'el jarabe', ipa: 'el kha-ra-bê', vi: 'siro thuốc', ex: 'Tienes que tomar el jarabe tres veces al día.', exVi: 'Bạn phải uống siro ba lần một ngày.' },
-          { w: 'la tos', ipa: 'la tốt', vi: 'cơn ho, bệnh ho', ex: 'Tengo tos desde el lunes.', exVi: 'Tôi bị ho từ thứ Hai.' },
-          { w: 'descansar', ipa: 'đết-can-xár', vi: 'nghỉ ngơi', ex: 'Debes descansar unos días.', exVi: 'Bạn nên nghỉ ngơi vài ngày.' },
-          { w: 'la cita', ipa: 'la thi-ta', vi: 'lịch hẹn (khám bệnh)', ex: 'He pedido cita con el médico.', exVi: 'Tôi đã xin lịch hẹn với bác sĩ.' },
-          { w: 'estar resfriado', ipa: 'ết-tár rết-phri-a-đô', vi: 'bị cảm lạnh', ex: 'Estoy resfriado y me duele todo el cuerpo.', exVi: 'Tôi bị cảm lạnh và đau khắp người.' }
+          { w: 'la cabeza', ipa: 'la ca-BÊ-θa', vi: 'đầu', ex: 'Me duele la cabeza desde ayer.', exVi: 'Tôi bị đau đầu từ hôm qua.' },
+          { w: 'la garganta', ipa: 'la gar-GAN-ta', vi: 'họng', ex: 'Le duele la garganta y no puede hablar.', exVi: 'Cô ấy đau họng và không nói được.' },
+          { w: 'la espalda', ipa: 'la ês-PAL-đa', vi: 'lưng', ex: 'Me duele la espalda por estar tanto tiempo sentado.', exVi: 'Tôi đau lưng vì ngồi quá lâu.' },
+          { w: 'la fiebre', ipa: 'la phi-Ê-brê', vi: 'cơn sốt', ex: 'El niño tiene fiebre.', exVi: 'Đứa bé bị sốt.' },
+          { w: 'la receta', ipa: 'la rrê-θÊ-ta', vi: 'đơn thuốc', ex: 'El médico me ha dado una receta.', exVi: 'Bác sĩ đã kê cho tôi một đơn thuốc.' },
+          { w: 'el jarabe', ipa: 'êl kha-RA-bê', vi: 'siro thuốc', ex: 'Tienes que tomar el jarabe tres veces al día.', exVi: 'Bạn phải uống siro ba lần một ngày.' },
+          { w: 'la tos', ipa: 'la tôs', vi: 'cơn ho, bệnh ho', ex: 'Tengo tos desde el lunes.', exVi: 'Tôi bị ho từ thứ Hai.' },
+          { w: 'descansar', ipa: 'đês-can-XAR', vi: 'nghỉ ngơi', ex: 'Debes descansar unos días.', exVi: 'Bạn nên nghỉ ngơi vài ngày.' },
+          { w: 'el centro de salud', ipa: 'êl θÊN-trô đê xa-LUĐ', vi: 'trạm y tế, phòng khám công', ex: 'He pedido cita en el centro de salud.', exVi: 'Tôi đã đặt lịch hẹn ở trạm y tế.' },
+          { w: 'estar resfriado', ipa: 'ês-TAR rrês-phri-A-đô', vi: 'bị cảm lạnh', ex: 'Estoy resfriado y me duele todo el cuerpo.', exVi: 'Tôi bị cảm lạnh và đau khắp người.' }
         ],
         grammar: {
           title: 'Doler và cách nói bắt buộc: tener que / deber / hay que',
@@ -193,16 +193,16 @@ addLevels('es', [
         title: 'Kể chuyện',
         goal: 'Kể lại một câu chuyện trong quá khứ, phân biệt bối cảnh (imperfecto) và sự kiện (indefinido).',
         vocab: [
-          { w: 'de repente', ipa: 'đê rê-pên-tê', vi: 'đột nhiên', ex: 'De repente, se apagaron las luces.', exVi: 'Đột nhiên, đèn tắt hết.' },
-          { w: 'mientras', ipa: 'mi-ên-trát', vi: 'trong khi', ex: 'Mientras cenábamos, sonó el teléfono.', exVi: 'Trong khi chúng tôi đang ăn tối thì điện thoại reo.' },
-          { w: 'el bosque', ipa: 'el bốt-kê', vi: 'khu rừng', ex: 'Cuando era niño, jugaba en el bosque.', exVi: 'Hồi nhỏ, tôi hay chơi trong rừng.' },
-          { w: 'la infancia', ipa: 'la in-phan-thi-a', vi: 'tuổi thơ', ex: 'Mi infancia fue muy feliz.', exVi: 'Tuổi thơ của tôi rất hạnh phúc.' },
-          { w: 'soler', ipa: 'xô-lér', vi: 'thường hay (làm gì)', ex: 'De pequeño solía ir al pueblo de mis abuelos.', exVi: 'Hồi nhỏ tôi thường về làng của ông bà.' },
-          { w: 'ocurrir', ipa: 'ô-cu-rrír', vi: 'xảy ra', ex: '¿Qué ocurrió aquella noche?', exVi: 'Chuyện gì đã xảy ra đêm hôm đó?' },
-          { w: 'asustarse', ipa: 'a-xút-tár-xê', vi: 'hoảng sợ', ex: 'Me asusté mucho cuando oí el ruido.', exVi: 'Tôi rất hoảng sợ khi nghe thấy tiếng động.' },
-          { w: 'el ruido', ipa: 'el ru-i-đô', vi: 'tiếng động', ex: 'Oímos un ruido extraño en la cocina.', exVi: 'Chúng tôi nghe thấy một tiếng động lạ trong bếp.' },
-          { w: 'la oscuridad', ipa: 'la ốt-cu-ri-đát', vi: 'bóng tối', ex: 'No veíamos nada en la oscuridad.', exVi: 'Chúng tôi không nhìn thấy gì trong bóng tối.' },
-          { w: 'al final', ipa: 'an phi-nan', vi: 'cuối cùng', ex: 'Al final, todo salió bien.', exVi: 'Cuối cùng, mọi chuyện đều ổn.' }
+          { w: 'de repente', ipa: 'đê rrê-PÊN-tê', vi: 'đột nhiên', ex: 'De repente, se apagaron las luces.', exVi: 'Đột nhiên, đèn tắt hết.' },
+          { w: 'mientras', ipa: 'mi-ÊN-tras', vi: 'trong khi', ex: 'Mientras cenábamos, sonó el teléfono.', exVi: 'Trong khi chúng tôi đang ăn tối thì điện thoại reo.' },
+          { w: 'el bosque', ipa: 'êl BÔS-kê', vi: 'khu rừng', ex: 'Cuando era niño, jugaba en el bosque.', exVi: 'Hồi nhỏ, tôi hay chơi trong rừng.' },
+          { w: 'la infancia', ipa: 'la in-PHAN-θi-a', vi: 'tuổi thơ', ex: 'Mi infancia fue muy feliz.', exVi: 'Tuổi thơ của tôi rất hạnh phúc.' },
+          { w: 'soler', ipa: 'xô-LÊR', vi: 'thường hay (làm gì)', ex: 'De pequeño solía ir al pueblo de mis abuelos.', exVi: 'Hồi nhỏ tôi thường về làng của ông bà.' },
+          { w: 'ocurrir', ipa: 'ô-cu-RRIR', vi: 'xảy ra', ex: '¿Qué ocurrió aquella noche?', exVi: 'Chuyện gì đã xảy ra đêm hôm đó?' },
+          { w: 'asustarse', ipa: 'a-xus-TAR-xê', vi: 'hoảng sợ', ex: 'Me asusté mucho cuando oí el ruido.', exVi: 'Tôi rất hoảng sợ khi nghe thấy tiếng động.' },
+          { w: 'el ruido', ipa: 'êl RRUI-đô', vi: 'tiếng động', ex: 'Oímos un ruido extraño en la cocina.', exVi: 'Chúng tôi nghe thấy một tiếng động lạ trong bếp.' },
+          { w: 'la oscuridad', ipa: 'la ôs-cu-ri-ĐAĐ', vi: 'bóng tối', ex: 'No veíamos nada en la oscuridad.', exVi: 'Chúng tôi không nhìn thấy gì trong bóng tối.' },
+          { w: 'al final', ipa: 'al phi-NAL', vi: 'cuối cùng', ex: 'Al final, todo salió bien.', exVi: 'Cuối cùng, mọi chuyện đều ổn.' }
         ],
         grammar: {
           title: 'Pretérito imperfecto và pretérito indefinido',
@@ -251,16 +251,16 @@ addLevels('es', [
         title: 'Ý kiến & so sánh',
         goal: 'So sánh người, vật, nơi chốn và nêu ý kiến cá nhân với creo que, me parece que.',
         vocab: [
-          { w: 'la ventaja', ipa: 'la ben-ta-kha', vi: 'ưu điểm', ex: 'La principal ventaja del tren es la comodidad.', exVi: 'Ưu điểm chính của tàu hoả là sự thoải mái.' },
-          { w: 'el inconveniente', ipa: 'el in-côn-bê-ni-ên-tê', vi: 'nhược điểm, điều bất tiện', ex: 'El único inconveniente es el precio.', exVi: 'Nhược điểm duy nhất là giá cả.' },
-          { w: 'barato', ipa: 'ba-ra-tô', vi: 'rẻ', ex: 'El autobús es más barato que el tren.', exVi: 'Xe buýt rẻ hơn tàu hoả.' },
-          { w: 'caro', ipa: 'ca-rô', vi: 'đắt', ex: 'Este móvil es tan caro como el otro.', exVi: 'Chiếc điện thoại này đắt bằng chiếc kia.' },
-          { w: 'cómodo', ipa: 'cố-mô-đô', vi: 'thoải mái, tiện lợi', ex: 'Este sofá es el más cómodo de la tienda.', exVi: 'Chiếc sofa này thoải mái nhất cửa hàng.' },
-          { w: 'la ciudad', ipa: 'la thi-u-đát', vi: 'thành phố', ex: 'Madrid es la ciudad más grande de España.', exVi: 'Madrid là thành phố lớn nhất Tây Ban Nha.' },
-          { w: 'el campo', ipa: 'el cam-pô', vi: 'nông thôn', ex: 'La vida en el campo es más tranquila.', exVi: 'Cuộc sống ở nông thôn yên bình hơn.' },
-          { w: 'mejor', ipa: 'mê-khór', vi: 'tốt hơn', ex: 'Creo que esta opción es mejor.', exVi: 'Tôi nghĩ là lựa chọn này tốt hơn.' },
-          { w: 'peor', ipa: 'pê-ór', vi: 'tệ hơn', ex: 'Hoy el tráfico está peor que ayer.', exVi: 'Hôm nay giao thông tệ hơn hôm qua.' },
-          { w: 'estar de acuerdo', ipa: 'ết-tár đê a-cu-ér-đô', vi: 'đồng ý', ex: 'No estoy de acuerdo contigo.', exVi: 'Tôi không đồng ý với bạn.' }
+          { w: 'la ventaja', ipa: 'la bên-TA-kha', vi: 'ưu điểm', ex: 'La principal ventaja del tren es la comodidad.', exVi: 'Ưu điểm chính của tàu hoả là sự thoải mái.' },
+          { w: 'el inconveniente', ipa: 'êl in-côn-bê-ni-ÊN-tê', vi: 'nhược điểm, điều bất tiện', ex: 'El único inconveniente es el precio.', exVi: 'Nhược điểm duy nhất là giá cả.' },
+          { w: 'económico / económica', ipa: 'ê-cô-NÔ-mi-cô / ê-cô-NÔ-mi-ca', vi: 'tiết kiệm, giá phải chăng', ex: 'El autobús es más económico que el tren.', exVi: 'Đi xe buýt tiết kiệm hơn tàu hoả.' },
+          { w: 'ruidoso / ruidosa', ipa: 'rrui-ĐÔ-xô / rrui-ĐÔ-xa', vi: 'ồn ào', ex: 'El centro es más ruidoso que mi barrio.', exVi: 'Trung tâm ồn ào hơn khu tôi ở.' },
+          { w: 'cómodo', ipa: 'CÔ-mô-đô', vi: 'thoải mái, tiện lợi', ex: 'Este sofá es el más cómodo de la tienda.', exVi: 'Chiếc sofa này thoải mái nhất cửa hàng.' },
+          { w: 'la ciudad', ipa: 'la θi-u-ĐAĐ', vi: 'thành phố', ex: 'Madrid es la ciudad más grande de España.', exVi: 'Madrid là thành phố lớn nhất Tây Ban Nha.' },
+          { w: 'el campo', ipa: 'êl CAM-pô', vi: 'nông thôn', ex: 'La vida en el campo es más tranquila.', exVi: 'Cuộc sống ở nông thôn yên bình hơn.' },
+          { w: 'mejor', ipa: 'mê-KHÔR', vi: 'tốt hơn', ex: 'Creo que esta opción es mejor.', exVi: 'Tôi nghĩ là lựa chọn này tốt hơn.' },
+          { w: 'peor', ipa: 'pê-ÔR', vi: 'tệ hơn', ex: 'Hoy el tráfico está peor que ayer.', exVi: 'Hôm nay giao thông tệ hơn hôm qua.' },
+          { w: 'estar de acuerdo', ipa: 'ês-TAR đê a-QUÊR-đô', vi: 'đồng ý', ex: 'No estoy de acuerdo contigo.', exVi: 'Tôi không đồng ý với bạn.' }
         ],
         grammar: {
           title: 'So sánh và nêu ý kiến',
@@ -312,16 +312,16 @@ addLevels('es', [
         title: 'Điều kiện thực tế',
         goal: 'Nói về điều kiện có thể xảy ra với si + presente và dùng đại từ tân ngữ (lo, la, le, me lo, se lo...).',
         vocab: [
-          { w: 'prestar', ipa: 'prết-tár', vi: 'cho mượn', ex: 'Si quieres, te presto mi bicicleta.', exVi: 'Nếu bạn muốn, tôi cho bạn mượn xe đạp.' },
-          { w: 'devolver', ipa: 'đê-bôn-bér', vi: 'trả lại', ex: 'Te lo devuelvo mañana.', exVi: 'Mai tôi trả lại nó cho bạn.' },
-          { w: 'el paraguas', ipa: 'el pa-ra-gu-át', vi: 'cái ô', ex: 'Si llueve, llévate el paraguas.', exVi: 'Nếu trời mưa thì mang ô theo nhé.' },
-          { w: 'el regalo', ipa: 'el rê-ga-lô', vi: 'món quà', ex: 'Compré un regalo para Marta y se lo di ayer.', exVi: 'Tôi mua một món quà cho Marta và đã tặng cô ấy hôm qua.' },
-          { w: 'enviar', ipa: 'en-bi-ár', vi: 'gửi', ex: 'Si me das tu correo, te lo envío hoy.', exVi: 'Nếu bạn cho tôi email, hôm nay tôi gửi nó cho bạn.' },
-          { w: 'olvidar', ipa: 'ôn-bi-đár', vi: 'quên', ex: 'Si olvidas las llaves, llámame.', exVi: 'Nếu bạn quên chìa khoá thì gọi tôi.' },
-          { w: 'la llave', ipa: 'la gia-bê', vi: 'chìa khoá', ex: 'Si encuentro la llave, te la doy.', exVi: 'Nếu tôi tìm thấy chìa khoá, tôi sẽ đưa nó cho bạn.' },
-          { w: 'avisar', ipa: 'a-bi-xár', vi: 'báo (cho ai biết)', ex: 'Si llegas tarde, avísame.', exVi: 'Nếu bạn đến muộn thì báo cho tôi.' },
-          { w: 'funcionar', ipa: 'phun-thi-ô-nár', vi: 'hoạt động, chạy (máy móc)', ex: 'Si el ordenador no funciona, reinícialo.', exVi: 'Nếu máy tính không chạy thì khởi động lại nó.' },
-          { w: 'a tiempo', ipa: 'a ti-êm-pô', vi: 'kịp giờ', ex: 'Si salimos ahora, llegamos a tiempo.', exVi: 'Nếu bây giờ đi thì chúng ta đến kịp.' }
+          { w: 'prestar', ipa: 'prês-TAR', vi: 'cho mượn', ex: 'Si quieres, te presto mi bicicleta.', exVi: 'Nếu bạn muốn, tôi cho bạn mượn xe đạp.' },
+          { w: 'devolver', ipa: 'đê-bôl-BÊR', vi: 'trả lại', ex: 'Te lo devuelvo mañana.', exVi: 'Mai tôi trả lại nó cho bạn.' },
+          { w: 'el paraguas', ipa: 'êl pa-RA-goas', vi: 'cái ô', ex: 'Si llueve, llévate el paraguas.', exVi: 'Nếu trời mưa thì mang ô theo nhé.' },
+          { w: 'el regalo', ipa: 'êl rrê-GA-lô', vi: 'món quà', ex: 'Compré un regalo para Marta y se lo di ayer.', exVi: 'Tôi mua một món quà cho Marta và đã tặng cô ấy hôm qua.' },
+          { w: 'enviar', ipa: 'ên-bi-AR', vi: 'gửi', ex: 'Si me das tu correo, te lo envío hoy.', exVi: 'Nếu bạn cho tôi email, hôm nay tôi gửi nó cho bạn.' },
+          { w: 'olvidar', ipa: 'ôl-bi-ĐAR', vi: 'quên', ex: 'Si olvidas las llaves, llámame.', exVi: 'Nếu bạn quên chìa khoá thì gọi tôi.' },
+          { w: 'la llave', ipa: 'la GIA-bê', vi: 'chìa khoá', ex: 'Si encuentro la llave, te la doy.', exVi: 'Nếu tôi tìm thấy chìa khoá, tôi sẽ đưa nó cho bạn.' },
+          { w: 'avisar', ipa: 'a-bi-XAR', vi: 'báo (cho ai biết)', ex: 'Si llegas tarde, avísame.', exVi: 'Nếu bạn đến muộn thì báo cho tôi.' },
+          { w: 'funcionar', ipa: 'phun-θi-ô-NAR', vi: 'hoạt động, chạy (máy móc)', ex: 'Si el ordenador no funciona, reinícialo.', exVi: 'Nếu máy tính không chạy thì khởi động lại nó.' },
+          { w: 'a tiempo', ipa: 'a ti-ÊM-pô', vi: 'kịp giờ', ex: 'Si salimos ahora, llegamos a tiempo.', exVi: 'Nếu bây giờ đi thì chúng ta đến kịp.' }
         ],
         grammar: {
           title: 'Si + presente và đại từ tân ngữ',
@@ -344,7 +344,7 @@ addLevels('es', [
             { t: 'Si ves a Pedro, dale las llaves. — Vale, se las doy.', vi: 'Nếu gặp Pedro thì đưa chìa khoá cho anh ấy. — Được, tôi sẽ đưa cho anh ấy.' },
             { t: 'Si no funciona, devuélvelo a la tienda.', vi: 'Nếu nó không chạy thì trả lại cửa hàng.' }
           ],
-          tip: 'Không bao giờ nói "le lo" hay "les la" — đổi thành "se lo", "se la". Sau "si" trong câu điều kiện thực tế, không dùng thì tương lai: nói "Si llueve", không nói "Si lloverá".'
+          tip: 'Không bao giờ nói "le lo" hay "les la" — đổi thành "se lo", "se la". Sau "si" trong câu điều kiện thực tế, không dùng thì tương lai: nói "Si llueve", không nói "Si lloverá". 🌎 Mỹ Latinh: el celular (= el móvil); ở Mỹ Latinh le không thay cho lo: Lo vi ayer.'
         },
         dialogue: [
           { s: 'Tomás', t: 'Elena, ¿tienes el libro de historia? Lo necesito para el examen.', vi: 'Elena, cậu có quyển sách lịch sử không? Tớ cần nó để ôn thi.' },
@@ -370,7 +370,7 @@ addLevels('es', [
   {
     id: 'B2',
     title: 'Trung cấp 2',
-    desc: 'Bày tỏ mong muốn và cảm xúc, nói về giả định, đọc hiểu tin tức, thuật lại lời nói, bàn về vấn đề xã hội và viết email trang trọng.',
+    desc: 'Bày tỏ mong muốn, chúc mừng và tiếc nuối, nói về giả định và phỏng đoán, đọc hiểu tin tức, thuật lại lời nói, tả tính cách, bàn về vấn đề xã hội và viết email trang trọng.',
     units: [
       // ───────────────────────── B2-1 ─────────────────────────
       {
@@ -379,16 +379,16 @@ addLevels('es', [
         title: 'Mong muốn & cảm xúc',
         goal: 'Bày tỏ mong muốn, hy vọng và cảm xúc về người khác bằng presente de subjuntivo.',
         vocab: [
-          { w: 'ojalá', ipa: 'ô-kha-lá', vi: 'ước gì, mong là', ex: 'Ojalá haga buen tiempo mañana.', exVi: 'Mong là mai trời đẹp.' },
-          { w: 'esperar', ipa: 'ết-pê-rár', vi: 'hy vọng; chờ đợi', ex: 'Espero que te guste el regalo.', exVi: 'Mình mong là bạn thích món quà.' },
-          { w: 'alegrarse de', ipa: 'a-lê-grár-xê đê', vi: 'vui vì', ex: 'Me alegro de que estés mejor.', exVi: 'Tôi mừng vì bạn đã khá hơn.' },
-          { w: 'preocupar', ipa: 'prê-ô-cu-pár', vi: 'làm (ai) lo lắng', ex: 'Me preocupa que no duermas bien.', exVi: 'Tôi lo vì bạn ngủ không ngon.' },
-          { w: 'molestar', ipa: 'mô-lết-tár', vi: 'làm phiền, làm khó chịu', ex: 'Me molesta que la gente hable en el cine.', exVi: 'Tôi khó chịu khi người ta nói chuyện trong rạp phim.' },
-          { w: 'el deseo', ipa: 'el đê-xê-ô', vi: 'mong ước', ex: 'Mi mayor deseo es que mi familia esté bien.', exVi: 'Mong ước lớn nhất của tôi là gia đình được bình an.' },
-          { w: 'la tristeza', ipa: 'la trít-tê-tha', vi: 'nỗi buồn', ex: 'Siento tristeza cuando pienso en mi pueblo.', exVi: 'Tôi thấy buồn khi nghĩ về quê mình.' },
-          { w: 'sentir', ipa: 'xên-tír', vi: 'cảm thấy; lấy làm tiếc', ex: 'Siento mucho que no puedas venir.', exVi: 'Tôi rất tiếc vì bạn không thể đến.' },
-          { w: 'el éxito', ipa: 'el ếch-xi-tô', vi: 'sự thành công', ex: 'Te deseo mucho éxito en tu nuevo trabajo.', exVi: 'Chúc bạn thành công với công việc mới.' },
-          { w: 'tener miedo de', ipa: 'tê-nér mi-ê-đô đê', vi: 'sợ (rằng)', ex: 'Tengo miedo de que lleguemos tarde.', exVi: 'Tôi sợ là chúng ta sẽ đến muộn.' }
+          { w: 'ojalá', ipa: 'ô-kha-LA', vi: 'ước gì, mong là', ex: 'Ojalá haga buen tiempo mañana.', exVi: 'Mong là mai trời đẹp.' },
+          { w: 'esperar', ipa: 'ês-pê-RAR', vi: 'hy vọng; chờ đợi', ex: 'Espero que te guste el regalo.', exVi: 'Mình mong là bạn thích món quà.' },
+          { w: 'alegrarse de', ipa: 'a-lê-GRAR-xê đê', vi: 'vui vì', ex: 'Me alegro de que estés mejor.', exVi: 'Tôi mừng vì bạn đã khá hơn.' },
+          { w: 'preocupar', ipa: 'prê-ô-cu-PAR', vi: 'làm (ai) lo lắng', ex: 'Me preocupa que no duermas bien.', exVi: 'Tôi lo vì bạn ngủ không ngon.' },
+          { w: 'molestar', ipa: 'mô-lês-TAR', vi: 'làm phiền, làm khó chịu', ex: 'Me molesta que la gente hable en el cine.', exVi: 'Tôi khó chịu khi người ta nói chuyện trong rạp phim.' },
+          { w: 'el deseo', ipa: 'êl đê-XÊ-ô', vi: 'mong ước', ex: 'Mi mayor deseo es que mi familia esté bien.', exVi: 'Mong ước lớn nhất của tôi là gia đình được bình an.' },
+          { w: 'la tristeza', ipa: 'la tris-TÊ-θa', vi: 'nỗi buồn', ex: 'Siento tristeza cuando pienso en mi pueblo.', exVi: 'Tôi thấy buồn khi nghĩ về quê mình.' },
+          { w: 'sentir', ipa: 'xên-TIR', vi: 'cảm thấy; lấy làm tiếc', ex: 'Siento mucho que no puedas venir.', exVi: 'Tôi rất tiếc vì bạn không thể đến.' },
+          { w: 'el éxito', ipa: 'êl ÊC-xi-tô', vi: 'sự thành công', ex: 'Te deseo mucho éxito en tu nuevo trabajo.', exVi: 'Chúc bạn thành công với công việc mới.' },
+          { w: 'tener miedo de', ipa: 'tê-NÊR mi-Ê-đô đê', vi: 'sợ (rằng)', ex: 'Tengo miedo de que lleguemos tarde.', exVi: 'Tôi sợ là chúng ta sẽ đến muộn.' }
         ],
         grammar: {
           title: 'Presente de subjuntivo: quiero que, espero que, ojalá',
@@ -442,16 +442,16 @@ addLevels('es', [
         title: 'Giả định',
         goal: 'Nói về tình huống giả định, ước mơ và đưa lời khuyên với condicional và si + imperfecto de subjuntivo.',
         vocab: [
-          { w: 'la lotería', ipa: 'la lô-tê-rí-a', vi: 'xổ số', ex: 'Si me tocara la lotería, viajaría por todo el mundo.', exVi: 'Nếu trúng xổ số, tôi sẽ đi du lịch khắp thế giới.' },
-          { w: 'ahorrar', ipa: 'a-ô-rrár', vi: 'tiết kiệm', ex: 'Si ahorrara más, podría comprarme un piso.', exVi: 'Nếu tiết kiệm nhiều hơn, tôi có thể mua một căn hộ.' },
-          { w: 'mudarse', ipa: 'mu-đár-xê', vi: 'chuyển nhà', ex: 'Si pudiera, me mudaría a la costa.', exVi: 'Nếu có thể, tôi sẽ chuyển đến sống ở vùng biển.' },
-          { w: 'el sueño', ipa: 'el xuê-nhô', vi: 'giấc mơ, ước mơ', ex: 'Mi sueño sería abrir un restaurante.', exVi: 'Ước mơ của tôi là mở một nhà hàng.' },
-          { w: 'la oportunidad', ipa: 'la ô-pọc-tu-ni-đát', vi: 'cơ hội', ex: 'Si tuviera la oportunidad, estudiaría en el extranjero.', exVi: 'Nếu có cơ hội, tôi sẽ đi du học.' },
-          { w: 'el extranjero', ipa: 'el ếch-tran-khê-rô', vi: 'nước ngoài', ex: 'Me gustaría trabajar en el extranjero.', exVi: 'Tôi muốn làm việc ở nước ngoài.' },
-          { w: 'arriesgarse', ipa: 'a-rri-ết-gár-xê', vi: 'liều, chấp nhận mạo hiểm', ex: 'Yo no me arriesgaría tanto.', exVi: 'Tôi thì sẽ không liều đến thế.' },
-          { w: 'aconsejar', ipa: 'a-côn-xê-khár', vi: 'khuyên', ex: 'Te aconsejaría hablar con tu jefe.', exVi: 'Tôi khuyên bạn nên nói chuyện với sếp.' },
-          { w: 'en tu lugar', ipa: 'en tu lu-gár', vi: 'ở vào vị trí của bạn', ex: 'Yo, en tu lugar, aceptaría la oferta.', exVi: 'Nếu tôi là bạn, tôi sẽ nhận lời đề nghị.' },
-          { w: 'la decisión', ipa: 'la đê-thi-xi-ôn', vi: 'quyết định', ex: 'Si yo fuera tú, tomaría la decisión hoy.', exVi: 'Nếu tôi là bạn, tôi sẽ quyết định ngay hôm nay.' }
+          { w: 'la lotería', ipa: 'la lô-tê-RI-a', vi: 'xổ số', ex: 'Si me tocara la lotería, viajaría por todo el mundo.', exVi: 'Nếu trúng xổ số, tôi sẽ đi du lịch khắp thế giới.' },
+          { w: 'ahorrar', ipa: 'a-ô-RRAR', vi: 'tiết kiệm', ex: 'Si ahorrara más, podría comprarme un piso.', exVi: 'Nếu tiết kiệm nhiều hơn, tôi có thể mua một căn hộ.' },
+          { w: 'mudarse', ipa: 'mu-ĐAR-xê', vi: 'chuyển nhà', ex: 'Si pudiera, me mudaría a la costa.', exVi: 'Nếu có thể, tôi sẽ chuyển đến sống ở vùng biển.' },
+          { w: 'el sueño', ipa: 'êl XUÊ-nhô', vi: 'giấc mơ, ước mơ', ex: 'Mi sueño sería abrir un restaurante.', exVi: 'Ước mơ của tôi là mở một nhà hàng.' },
+          { w: 'la oportunidad', ipa: 'la ô-pôr-tu-ni-ĐAĐ', vi: 'cơ hội', ex: 'Si tuviera la oportunidad, estudiaría en el extranjero.', exVi: 'Nếu có cơ hội, tôi sẽ đi du học.' },
+          { w: 'el extranjero', ipa: 'êl êcs-tran-KHÊ-rô', vi: 'nước ngoài', ex: 'Me gustaría trabajar en el extranjero.', exVi: 'Tôi muốn làm việc ở nước ngoài.' },
+          { w: 'arriesgarse', ipa: 'a-rri-ês-GAR-xê', vi: 'liều, chấp nhận mạo hiểm', ex: 'Yo no me arriesgaría tanto.', exVi: 'Tôi thì sẽ không liều đến thế.' },
+          { w: 'aconsejar', ipa: 'a-côn-xê-KHAR', vi: 'khuyên', ex: 'Te aconsejaría hablar con tu jefe.', exVi: 'Tôi khuyên bạn nên nói chuyện với sếp.' },
+          { w: 'en tu lugar', ipa: 'ên tu lu-GAR', vi: 'ở vào vị trí của bạn', ex: 'Yo, en tu lugar, aceptaría la oferta.', exVi: 'Nếu tôi là bạn, tôi sẽ nhận lời đề nghị.' },
+          { w: 'la decisión', ipa: 'la đê-θi-xi-ÔN', vi: 'quyết định', ex: 'Si yo fuera tú, tomaría la decisión hoy.', exVi: 'Nếu tôi là bạn, tôi sẽ quyết định ngay hôm nay.' }
         ],
         grammar: {
           title: 'Condicional simple và si + imperfecto de subjuntivo',
@@ -503,16 +503,16 @@ addLevels('es', [
         title: 'Tin tức',
         goal: 'Đọc hiểu và thuật lại tin tức bằng câu bị động (ser + participio, se pasiva) và câu với se khái quát.',
         vocab: [
-          { w: 'la noticia', ipa: 'la nô-ti-thi-a', vi: 'tin tức, bản tin', ex: 'La noticia fue publicada ayer.', exVi: 'Tin này được đăng hôm qua.' },
-          { w: 'el periódico', ipa: 'el pê-ri-ố-đi-cô', vi: 'báo (tờ báo)', ex: 'Lo leí en el periódico de esta mañana.', exVi: 'Tôi đọc được điều đó trên báo sáng nay.' },
-          { w: 'el gobierno', ipa: 'el gô-bi-éc-nô', vi: 'chính phủ', ex: 'La medida fue anunciada por el gobierno.', exVi: 'Biện pháp này được chính phủ công bố.' },
-          { w: 'aprobar', ipa: 'a-prô-bár', vi: 'thông qua, phê duyệt', ex: 'Se aprobó el nuevo presupuesto.', exVi: 'Ngân sách mới đã được thông qua.' },
-          { w: 'detener', ipa: 'đê-tê-nér', vi: 'bắt giữ', ex: 'El ladrón fue detenido por la policía.', exVi: 'Tên trộm đã bị cảnh sát bắt giữ.' },
-          { w: 'el incendio', ipa: 'el in-thên-đi-ô', vi: 'vụ hoả hoạn', ex: 'El incendio fue controlado en pocas horas.', exVi: 'Vụ hoả hoạn đã được khống chế trong vài giờ.' },
-          { w: 'la encuesta', ipa: 'la en-cu-ết-ta', vi: 'cuộc khảo sát, thăm dò', ex: 'Se realizó una encuesta a mil personas.', exVi: 'Một cuộc khảo sát đã được thực hiện với một nghìn người.' },
-          { w: 'inaugurar', ipa: 'i-nao-gu-rár', vi: 'khánh thành', ex: 'El nuevo hospital fue inaugurado el lunes.', exVi: 'Bệnh viện mới được khánh thành hôm thứ Hai.' },
-          { w: 'el ciudadano', ipa: 'el thi-u-đa-đa-nô', vi: 'công dân, người dân', ex: 'Los ciudadanos fueron informados del cambio.', exVi: 'Người dân đã được thông báo về sự thay đổi.' },
-          { w: 'el titular', ipa: 'el ti-tu-lár', vi: 'tiêu đề (báo)', ex: 'El titular de hoy habla de la economía.', exVi: 'Tiêu đề hôm nay nói về kinh tế.' }
+          { w: 'la noticia', ipa: 'la nô-TI-θi-a', vi: 'tin tức, bản tin', ex: 'La noticia fue publicada ayer.', exVi: 'Tin này được đăng hôm qua.' },
+          { w: 'el periódico', ipa: 'êl pê-ri-Ô-đi-cô', vi: 'báo (tờ báo)', ex: 'Lo leí en el periódico de esta mañana.', exVi: 'Tôi đọc được điều đó trên báo sáng nay.' },
+          { w: 'el gobierno', ipa: 'êl gô-bi-ÊR-nô', vi: 'chính phủ', ex: 'La medida fue anunciada por el gobierno.', exVi: 'Biện pháp này được chính phủ công bố.' },
+          { w: 'aprobar', ipa: 'a-prô-BAR', vi: 'thông qua, phê duyệt', ex: 'Se aprobó el nuevo presupuesto.', exVi: 'Ngân sách mới đã được thông qua.' },
+          { w: 'detener', ipa: 'đê-tê-NÊR', vi: 'bắt giữ', ex: 'El ladrón fue detenido por la policía.', exVi: 'Tên trộm đã bị cảnh sát bắt giữ.' },
+          { w: 'el incendio', ipa: 'êl in-θÊN-đi-ô', vi: 'vụ hoả hoạn', ex: 'El incendio fue controlado en pocas horas.', exVi: 'Vụ hoả hoạn đã được khống chế trong vài giờ.' },
+          { w: 'la encuesta', ipa: 'la ên-QUÊS-ta', vi: 'cuộc khảo sát, thăm dò', ex: 'Se realizó una encuesta a mil personas.', exVi: 'Một cuộc khảo sát đã được thực hiện với một nghìn người.' },
+          { w: 'inaugurar', ipa: 'i-nau-gu-RAR', vi: 'khánh thành', ex: 'El nuevo hospital fue inaugurado el lunes.', exVi: 'Bệnh viện mới được khánh thành hôm thứ Hai.' },
+          { w: 'el ciudadano', ipa: 'êl θi-u-đa-ĐA-nô', vi: 'công dân, người dân', ex: 'Los ciudadanos fueron informados del cambio.', exVi: 'Người dân đã được thông báo về sự thay đổi.' },
+          { w: 'el titular', ipa: 'êl ti-tu-LAR', vi: 'tiêu đề (báo)', ex: 'El titular de hoy habla de la economía.', exVi: 'Tiêu đề hôm nay nói về kinh tế.' }
         ],
         grammar: {
           title: 'Câu bị động: ser + participio, se pasiva và se impersonal',
@@ -561,16 +561,16 @@ addLevels('es', [
         title: 'Kể lại lời nói',
         goal: 'Thuật lại lời nói, câu hỏi và yêu cầu của người khác bằng lời gián tiếp (estilo indirecto).',
         vocab: [
-          { w: 'decir', ipa: 'đê-thír', vi: 'nói', ex: 'Me dijo que estaba cansado.', exVi: 'Anh ấy nói với tôi là anh ấy mệt.' },
-          { w: 'contar', ipa: 'côn-tár', vi: 'kể', ex: 'Ana me contó que se iba a casar.', exVi: 'Ana kể với tôi là cô ấy sắp cưới.' },
-          { w: 'preguntar', ipa: 'prê-gun-tár', vi: 'hỏi', ex: 'Me preguntó si quería un café.', exVi: 'Anh ấy hỏi tôi có muốn uống cà phê không.' },
-          { w: 'explicar', ipa: 'ếch-pli-cár', vi: 'giải thích', ex: 'El profesor explicó que el examen sería en mayo.', exVi: 'Thầy giáo giải thích rằng kỳ thi sẽ vào tháng Năm.' },
-          { w: 'pedir', ipa: 'pê-đír', vi: 'yêu cầu, nhờ', ex: 'Mi madre me pidió que la llamara.', exVi: 'Mẹ tôi bảo tôi gọi điện cho bà.' },
-          { w: 'comentar', ipa: 'cô-men-tár', vi: 'nói qua, nhận xét', ex: 'Comentó que no le gustaba el hotel.', exVi: 'Cô ấy nói là cô ấy không thích khách sạn.' },
-          { w: 'asegurar', ipa: 'a-xê-gu-rár', vi: 'cam đoan, khẳng định', ex: 'Nos aseguró que vendría.', exVi: 'Anh ấy cam đoan với chúng tôi là sẽ đến.' },
-          { w: 'el mensaje', ipa: 'el men-xa-khê', vi: 'tin nhắn', ex: 'En el mensaje decía que llegaría tarde.', exVi: 'Trong tin nhắn có nói là anh ấy sẽ đến muộn.' },
-          { w: 'el rumor', ipa: 'el ru-mór', vi: 'tin đồn', ex: 'Corre el rumor de que la empresa va a cerrar.', exVi: 'Có tin đồn là công ty sắp đóng cửa.' },
-          { w: 'según', ipa: 'xê-gún', vi: 'theo (lời ai)', ex: 'Según Pedro, la fiesta es el sábado.', exVi: 'Theo Pedro, bữa tiệc vào thứ Bảy.' }
+          { w: 'decir', ipa: 'đê-θIR', vi: 'nói', ex: 'Me dijo que estaba cansado.', exVi: 'Anh ấy nói với tôi là anh ấy mệt.' },
+          { w: 'contar', ipa: 'côn-TAR', vi: 'kể', ex: 'Ana me contó que se iba a casar.', exVi: 'Ana kể với tôi là cô ấy sắp cưới.' },
+          { w: 'preguntar', ipa: 'prê-gun-TAR', vi: 'hỏi', ex: 'Me preguntó si quería un café.', exVi: 'Anh ấy hỏi tôi có muốn uống cà phê không.' },
+          { w: 'explicar', ipa: 'êcs-pli-CAR', vi: 'giải thích', ex: 'El profesor explicó que el examen sería en mayo.', exVi: 'Thầy giáo giải thích rằng kỳ thi sẽ vào tháng Năm.' },
+          { w: 'pedir', ipa: 'pê-ĐIR', vi: 'yêu cầu, nhờ', ex: 'Mi madre me pidió que la llamara.', exVi: 'Mẹ tôi bảo tôi gọi điện cho bà.' },
+          { w: 'comentar', ipa: 'cô-mên-TAR', vi: 'nói qua, nhận xét', ex: 'Comentó que no le gustaba el hotel.', exVi: 'Cô ấy nói là cô ấy không thích khách sạn.' },
+          { w: 'asegurar', ipa: 'a-xê-gu-RAR', vi: 'cam đoan, khẳng định', ex: 'Nos aseguró que vendría.', exVi: 'Anh ấy cam đoan với chúng tôi là sẽ đến.' },
+          { w: 'el mensaje', ipa: 'êl mên-XA-khê', vi: 'tin nhắn', ex: 'En el mensaje decía que llegaría tarde.', exVi: 'Trong tin nhắn có nói là anh ấy sẽ đến muộn.' },
+          { w: 'el rumor', ipa: 'êl rru-MÔR', vi: 'tin đồn', ex: 'Corre el rumor de que la empresa va a cerrar.', exVi: 'Có tin đồn là công ty sắp đóng cửa.' },
+          { w: 'según', ipa: 'xê-GUN', vi: 'theo (lời ai)', ex: 'Según Pedro, la fiesta es el sábado.', exVi: 'Theo Pedro, bữa tiệc vào thứ Bảy.' }
         ],
         grammar: {
           title: 'Estilo indirecto: thuật lại lời nói',
@@ -622,16 +622,16 @@ addLevels('es', [
         title: 'Môi trường & xã hội',
         goal: 'Bàn về các vấn đề môi trường, xã hội và nối ý bằng mệnh đề quan hệ (que, quien, donde, el que, cuyo).',
         vocab: [
-          { w: 'el medio ambiente', ipa: 'el mê-đi-ô am-bi-ên-tê', vi: 'môi trường', ex: 'Tenemos que proteger el medio ambiente.', exVi: 'Chúng ta phải bảo vệ môi trường.' },
-          { w: 'la contaminación', ipa: 'la côn-ta-mi-na-thi-ôn', vi: 'sự ô nhiễm', ex: 'La contaminación que hay en las ciudades es preocupante.', exVi: 'Tình trạng ô nhiễm ở các thành phố thật đáng lo.' },
-          { w: 'el reciclaje', ipa: 'el rê-thi-cla-khê', vi: 'việc tái chế', ex: 'El reciclaje es un hábito que todos deberíamos tener.', exVi: 'Tái chế là thói quen mà tất cả chúng ta nên có.' },
-          { w: 'los residuos', ipa: 'lốt rê-xi-đu-ốt', vi: 'rác thải', ex: 'Los residuos que producimos terminan en el mar.', exVi: 'Rác thải chúng ta tạo ra rốt cuộc trôi ra biển.' },
-          { w: 'la sequía', ipa: 'la xê-ki-a', vi: 'hạn hán', ex: 'La sequía afecta a muchas regiones del sur.', exVi: 'Hạn hán ảnh hưởng đến nhiều vùng ở miền nam.' },
-          { w: 'el cambio climático', ipa: 'el cam-bi-ô cli-ma-ti-cô', vi: 'biến đổi khí hậu', ex: 'El cambio climático es un problema cuyas consecuencias ya vemos.', exVi: 'Biến đổi khí hậu là vấn đề mà hậu quả của nó ta đã thấy rõ.' },
-          { w: 'la desigualdad', ipa: 'la đê-xi-gu-an-đát', vi: 'sự bất bình đẳng', ex: 'La desigualdad es un tema del que se habla mucho.', exVi: 'Bất bình đẳng là chủ đề được bàn đến nhiều.' },
-          { w: 'la energía renovable', ipa: 'la ê-nẹc-khí-a rê-nô-ba-blê', vi: 'năng lượng tái tạo', ex: 'España es un país que apuesta por la energía renovable.', exVi: 'Tây Ban Nha là quốc gia đầu tư mạnh vào năng lượng tái tạo.' },
-          { w: 'el voluntario', ipa: 'el bô-lun-ta-ri-ô', vi: 'tình nguyện viên', ex: 'Los voluntarios con quienes trabajé eran muy jóvenes.', exVi: 'Những tình nguyện viên tôi từng làm cùng đều rất trẻ.' },
-          { w: 'malgastar', ipa: 'man-gát-tár', vi: 'lãng phí', ex: 'No malgastes el agua, que es un bien escaso.', exVi: 'Đừng lãng phí nước, vì đó là tài nguyên khan hiếm.' }
+          { w: 'el medio ambiente', ipa: 'êl MÊ-đi-ô am-bi-ÊN-tê', vi: 'môi trường', ex: 'Tenemos que proteger el medio ambiente.', exVi: 'Chúng ta phải bảo vệ môi trường.' },
+          { w: 'la contaminación', ipa: 'la côn-ta-mi-na-θi-ÔN', vi: 'sự ô nhiễm', ex: 'La contaminación que hay en las ciudades es preocupante.', exVi: 'Tình trạng ô nhiễm ở các thành phố thật đáng lo.' },
+          { w: 'el reciclaje', ipa: 'êl rrê-θi-CLA-khê', vi: 'việc tái chế', ex: 'El reciclaje es un hábito que todos deberíamos tener.', exVi: 'Tái chế là thói quen mà tất cả chúng ta nên có.' },
+          { w: 'los residuos', ipa: 'lôs rrê-XI-đuôs', vi: 'rác thải', ex: 'Los residuos que producimos terminan en el mar.', exVi: 'Rác thải chúng ta tạo ra rốt cuộc trôi ra biển.' },
+          { w: 'la sequía', ipa: 'la xê-KI-a', vi: 'hạn hán', ex: 'La sequía afecta a muchas regiones del sur.', exVi: 'Hạn hán ảnh hưởng đến nhiều vùng ở miền nam.' },
+          { w: 'el cambio climático', ipa: 'êl CAM-bi-ô cli-MA-ti-cô', vi: 'biến đổi khí hậu', ex: 'El cambio climático es un problema cuyas consecuencias ya vemos.', exVi: 'Biến đổi khí hậu là vấn đề mà hậu quả của nó ta đã thấy rõ.' },
+          { w: 'la desigualdad', ipa: 'la đê-xi-goal-ĐAĐ', vi: 'sự bất bình đẳng', ex: 'La desigualdad es un tema del que se habla mucho.', exVi: 'Bất bình đẳng là chủ đề được bàn đến nhiều.' },
+          { w: 'la energía renovable', ipa: 'la ê-nêr-KHI-a rrê-nô-BA-blê', vi: 'năng lượng tái tạo', ex: 'España es un país que apuesta por la energía renovable.', exVi: 'Tây Ban Nha là quốc gia đầu tư mạnh vào năng lượng tái tạo.' },
+          { w: 'el voluntario', ipa: 'êl bô-lun-TA-ri-ô', vi: 'tình nguyện viên', ex: 'Los voluntarios con quienes trabajé eran muy jóvenes.', exVi: 'Những tình nguyện viên tôi từng làm cùng đều rất trẻ.' },
+          { w: 'malgastar', ipa: 'mal-gas-TAR', vi: 'lãng phí', ex: 'No malgastes el agua, que es un bien escaso.', exVi: 'Đừng lãng phí nước, vì đó là tài nguyên khan hiếm.' }
         ],
         grammar: {
           title: 'Mệnh đề quan hệ: que, quien, donde, el que, cuyo',
@@ -682,41 +682,46 @@ addLevels('es', [
         id: 'es-b2-6',
         icon: '✉️',
         title: 'Giao tiếp trang trọng & email',
-        goal: 'Giao tiếp lịch sự với usted/ustedes, viết email trang trọng và dùng từ nối sin embargo, por lo tanto, aunque.',
+        goal: 'Viết email trang trọng đúng cấu trúc, nối ý bằng sin embargo, no obstante, por lo tanto, ya que… và dùng aunque với indicativo hoặc subjuntivo.',
         vocab: [
-          { w: 'estimado / estimada', ipa: 'ết-ti-ma-đô / ết-ti-ma-đa', vi: 'kính gửi (mở đầu thư)', ex: 'Estimada señora López:', exVi: 'Kính gửi bà López,' },
-          { w: 'adjuntar', ipa: 'ađ-khun-tár', vi: 'đính kèm', ex: 'Le adjunto el documento solicitado.', exVi: 'Tôi xin gửi kèm tài liệu ông/bà yêu cầu.' },
-          { w: 'el archivo adjunto', ipa: 'el ar-chi-bô ađ-khun-tô', vi: 'tệp đính kèm', ex: 'Encontrará los detalles en el archivo adjunto.', exVi: 'Ông/bà sẽ thấy chi tiết trong tệp đính kèm.' },
-          { w: 'la solicitud', ipa: 'la xô-li-thi-tút', vi: 'đơn, yêu cầu', ex: 'Le escribo en relación con mi solicitud.', exVi: 'Tôi viết thư liên quan đến đơn của tôi.' },
-          { w: 'agradecer', ipa: 'a-gra-đê-thér', vi: 'cảm ơn, biết ơn', ex: 'Le agradezco de antemano su atención.', exVi: 'Tôi xin cảm ơn trước sự quan tâm của ông/bà.' },
-          { w: 'quedar a la espera de', ipa: 'kê-đár a la ết-pê-ra đê', vi: 'chờ (hồi âm)', ex: 'Quedo a la espera de su respuesta.', exVi: 'Tôi mong nhận được hồi âm của ông/bà.' },
-          { w: 'sin embargo', ipa: 'xin em-bár-gô', vi: 'tuy nhiên', ex: 'El producto llegó a tiempo; sin embargo, estaba dañado.', exVi: 'Sản phẩm đến đúng hạn; tuy nhiên, nó bị hỏng.' },
-          { w: 'por lo tanto', ipa: 'pọc lô tan-tô', vi: 'vì vậy, do đó', ex: 'No recibimos el pago; por lo tanto, el pedido está cancelado.', exVi: 'Chúng tôi không nhận được tiền; do đó, đơn hàng bị huỷ.' },
-          { w: 'aunque', ipa: 'aun-kê', vi: 'mặc dù', ex: 'Aunque he enviado varios correos, no he recibido respuesta.', exVi: 'Mặc dù tôi đã gửi vài email, tôi vẫn chưa nhận được hồi âm.' },
-          { w: 'atentamente', ipa: 'a-tên-ta-mên-tê', vi: 'trân trọng (cuối thư)', ex: 'Atentamente, Laura Gómez.', exVi: 'Trân trọng, Laura Gómez.' }
+          { w: 'estimado / estimada', ipa: 'ês-ti-MA-đô / ês-ti-MA-đa', vi: 'kính gửi (mở đầu thư)', ex: 'Estimada señora López:', exVi: 'Kính gửi bà López,' },
+          { w: 'adjuntar', ipa: 'ađ-khun-TAR', vi: 'đính kèm', ex: 'Le adjunto el documento solicitado.', exVi: 'Tôi xin gửi kèm tài liệu ông/bà yêu cầu.' },
+          { w: 'el archivo adjunto', ipa: 'êl ar-CHI-bô ađ-KHUN-tô', vi: 'tệp đính kèm', ex: 'Encontrará los detalles en el archivo adjunto.', exVi: 'Ông/bà sẽ thấy chi tiết trong tệp đính kèm.' },
+          { w: 'la solicitud', ipa: 'la xô-li-θi-TUĐ', vi: 'đơn, yêu cầu', ex: 'Le escribo en relación con mi solicitud.', exVi: 'Tôi viết thư liên quan đến đơn của tôi.' },
+          { w: 'agradecer', ipa: 'a-gra-đê-θÊR', vi: 'cảm ơn, biết ơn', ex: 'Le agradezco de antemano su atención.', exVi: 'Tôi xin cảm ơn trước sự quan tâm của ông/bà.' },
+          { w: 'quedar a la espera de', ipa: 'kê-ĐAR a la ês-PÊ-ra đê', vi: 'chờ (hồi âm)', ex: 'Quedo a la espera de su respuesta.', exVi: 'Tôi mong nhận được hồi âm của ông/bà.' },
+          { w: 'sin embargo', ipa: 'xin êm-BAR-gô', vi: 'tuy nhiên', ex: 'El producto llegó a tiempo; sin embargo, estaba dañado.', exVi: 'Sản phẩm đến đúng hạn; tuy nhiên, nó bị hỏng.' },
+          { w: 'por lo tanto', ipa: 'pôr lô TAN-tô', vi: 'vì vậy, do đó', ex: 'No recibimos el pago; por lo tanto, el pedido está cancelado.', exVi: 'Chúng tôi không nhận được tiền; do đó, đơn hàng bị huỷ.' },
+          { w: 'aunque', ipa: 'AUN-kê', vi: 'mặc dù', ex: 'Aunque he enviado varios correos, no he recibido respuesta.', exVi: 'Mặc dù tôi đã gửi vài email, tôi vẫn chưa nhận được hồi âm.' },
+          { w: 'atentamente', ipa: 'a-tên-ta-MÊN-tê', vi: 'trân trọng (cuối thư)', ex: 'Atentamente, Laura Gómez.', exVi: 'Trân trọng, Laura Gómez.' }
         ],
         grammar: {
-          title: 'Usted/ustedes, email trang trọng và từ nối',
+          title: 'Email trang trọng, từ nối và aunque + indicativo / subjuntivo',
           explain: [
-            'Usted (ông/bà/anh/chị — lịch sự) chia động từ như él/ella; ustedes chia như ellos. Đi kèm là su/sus (của ông/bà), le/les (cho ông/bà), lo/la (ông/bà — tân ngữ trực tiếp): ¿Ha recibido usted su paquete? Le envío la factura.',
-            'Cấu trúc email trang trọng: lời chào (Estimado señor García: / Estimada señora López:), lý do viết (Le escribo para... / En relación con...), nội dung, câu kết (Quedo a la espera de su respuesta. / Le agradezco de antemano su atención.) và lời chào cuối (Atentamente / Un cordial saludo).',
-            'Từ nối: sin embargo (tuy nhiên) diễn tả sự đối lập, thường đứng sau dấu chấm phẩy hoặc dấu chấm và có dấu phẩy theo sau; por lo tanto (vì vậy) chỉ kết quả; aunque (mặc dù) + thì chỉ định khi nói về sự thật đã biết.'
+            'Cấu trúc email trang trọng: lời chào (Estimado señor García: / Estimada señora López: / Estimados señores:), lý do viết (Le escribo para... / En relación con... / Me pongo en contacto con ustedes para...), nội dung, câu kết (Quedo a la espera de su respuesta. / Le agradezco de antemano su atención.) và lời chào cuối (Atentamente / Un cordial saludo). Khi đã xưng usted thì giữ su, le suốt thư.',
+            'Từ nối theo chức năng: thêm ý – además, asimismo; đối lập – sin embargo, no obstante; kết quả – por lo tanto, por consiguiente, así que; nguyên nhân – ya que, puesto que, debido a (+ danh từ); mục đích – con el fin de + nguyên mẫu, para que + subjuntivo. Sin embargo, no obstante, por lo tanto thường đứng sau dấu chấm hoặc chấm phẩy và có dấu phẩy theo sau.',
+            'Aunque + INDICATIVO: người nói khẳng định một sự thật mà mình biết và cho người nghe biết: Aunque he enviado dos correos, no he recibido respuesta (tôi thật sự đã gửi). Aunque + SUBJUNTIVO: (1) điều chưa biết có xảy ra hay không: Aunque llueva mañana, el evento se celebrará (dù mai có mưa); (2) sự thật cả hai đã biết nhưng người nói coi là không quan trọng: Aunque sea caro, lo compraremos (đắt thì đắt, vẫn mua).',
+            'Aunque + imperfecto de subjuntivo diễn tả giả định khó xảy ra hoặc trái thực tế: Aunque tuviera tiempo, no iría a la reunión. A pesar de que dùng giống hệt aunque (trang trọng hơn); a pesar de đi với danh từ hoặc nguyên mẫu: A pesar del retraso, el pedido llegó completo.'
           ],
           table: [
-            ['Phần', 'Công thức trang trọng', 'Nghĩa'],
-            ['Mở đầu', 'Estimado señor García:', 'Kính gửi ông García,'],
+            ['Chức năng', 'Mẫu câu', 'Nghĩa'],
+            ['Mở đầu thư', 'Estimado señor García:', 'Kính gửi ông García,'],
             ['Lý do viết', 'Le escribo para solicitar información sobre...', 'Tôi viết thư để xin thông tin về...'],
-            ['Đính kèm', 'Le adjunto mi currículum.', 'Tôi xin gửi kèm CV.'],
-            ['Kết thư', 'Quedo a la espera de su respuesta.', 'Tôi mong nhận được hồi âm của ông/bà.'],
-            ['Chào cuối', 'Atentamente / Un cordial saludo', 'Trân trọng']
+            ['Kết thư', 'Quedo a la espera de su respuesta. Atentamente,', 'Tôi mong nhận được hồi âm. Trân trọng,'],
+            ['Thêm ý', 'Además, / Asimismo, ...', 'Ngoài ra, ...'],
+            ['Đối lập', '...; sin embargo, / no obstante, ...', '...; tuy nhiên, ...'],
+            ['Kết quả', '...; por lo tanto, / por consiguiente, ...', '...; vì vậy, ...'],
+            ['Aunque + indicativo', 'Aunque el pedido llegó tarde, estaba completo.', 'Mặc dù hàng đến muộn (thật), nhưng đủ.'],
+            ['Aunque + subjuntivo', 'Aunque el pedido llegue tarde, lo aceptaremos.', 'Dù hàng có đến muộn, chúng tôi vẫn nhận.']
           ],
           examples: [
             { t: 'Estimados señores: les escribo para presentar una reclamación.', vi: 'Kính gửi quý ông bà: tôi viết thư này để gửi một khiếu nại.' },
-            { t: '¿Podría usted enviarme el contrato antes del viernes?', vi: 'Ông/bà có thể gửi tôi hợp đồng trước thứ Sáu được không?' },
             { t: 'El hotel era caro; sin embargo, el servicio fue excelente.', vi: 'Khách sạn đắt; tuy nhiên, dịch vụ rất tuyệt.' },
-            { t: 'La oficina estará cerrada el lunes; por lo tanto, le responderemos el martes.', vi: 'Văn phòng sẽ đóng cửa thứ Hai; vì vậy, chúng tôi sẽ trả lời ông/bà vào thứ Ba.' }
+            { t: 'La oficina estará cerrada el lunes; por lo tanto, le responderemos el martes.', vi: 'Văn phòng sẽ đóng cửa thứ Hai; vì vậy, chúng tôi sẽ trả lời ông/bà vào thứ Ba.' },
+            { t: 'Aunque no reciba respuesta, volveré a escribirles la semana que viene.', vi: 'Dù có không nhận được hồi âm, tuần sau tôi sẽ viết lại cho quý vị.' },
+            { t: 'Le envío el informe hoy, ya que el plazo termina mañana.', vi: 'Tôi gửi ông/bà bản báo cáo hôm nay, vì hạn chót là ngày mai.' }
           ],
-          tip: 'Trong thư tiếng Tây Ban Nha, lời chào mở đầu kết thúc bằng dấu hai chấm (Estimada señora López:), không dùng dấu phẩy như tiếng Anh. Khi đã xưng usted, hãy giữ nhất quán: dùng su, le — không chuyển sang tu, te.'
+          tip: 'Đừng dịch "mặc dù" một cách máy móc: hỏi xem điều đó đã chắc chắn chưa. "Aunque llueve" = trời đang mưa thật; "Aunque llueva" = dù (có) mưa. Trong thư tiếng Tây Ban Nha, lời chào mở đầu kết thúc bằng dấu hai chấm (Estimada señora López:), không dùng dấu phẩy như tiếng Anh.'
         },
         dialogue: [
           { s: 'Recepcionista', t: 'Hotel Miramar, buenos días. ¿En qué puedo ayudarle?', vi: 'Khách sạn Miramar xin chào. Tôi có thể giúp gì cho ông?' },
@@ -728,7 +733,7 @@ addLevels('es', [
           { s: 'Recepcionista', t: 'Por supuesto. Se la enviamos hoy mismo. Muchas gracias por su paciencia.', vi: 'Tất nhiên ạ. Chúng tôi sẽ gửi cho ông ngay hôm nay. Cảm ơn ông rất nhiều vì đã kiên nhẫn.' }
         ],
         exercises: [
-          { type: 'mc', q: 'Señor López, ¿___ usted el documento?', options: ['recibiste', 'recibió', 'recibieron'], answer: 1, explain: 'Usted chia như él/ella: recibió.' },
+          { type: 'mc', q: 'No sabemos si el envío llegará a tiempo. Aunque ___ tarde, lo aceptaremos.', options: ['llega', 'llegue', 'llegó'], answer: 1, explain: 'Chưa biết hàng có đến muộn hay không → aunque + subjuntivo: llegue.' },
           { type: 'mc', q: 'Lời chào mở đầu đúng cho một email trang trọng là:', options: ['Estimada señora Pérez:', '¡Hola, señora Pérez!', 'Querida Pérez,'], answer: 0, explain: 'Thư trang trọng: Estimado/a + señor/a + họ, kết thúc bằng dấu hai chấm.' },
           { type: 'fill', q: 'Le ___ mi currículum en este correo. (yo, adjuntar)', answer: ['adjunto'], hint: 'presente, ngôi yo', explain: 'Công thức cố định: Le adjunto...' },
           { type: 'fill', q: 'El hotel estaba lleno; ___ embargo, nos dieron una habitación.', answer: ['sin'], hint: 'tuy nhiên', explain: 'Sin embargo = tuy nhiên, diễn tả sự đối lập.' },
