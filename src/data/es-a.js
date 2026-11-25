@@ -3,7 +3,7 @@ addLevels('es', [
   {
     id: 'A1',
     title: 'Sơ cấp 1',
-    desc: 'Chào hỏi, giới thiệu bản thân và gia đình, nói về đồ vật, thói quen hằng ngày và gọi món bằng những câu đơn giản.',
+    desc: 'Chào hỏi, giới thiệu bản thân và gia đình, tả người và cảm xúc, nói về đồ vật, thói quen, thời tiết, nghề nghiệp và gọi món bằng những câu đơn giản.',
     units: [
       // ───────────────────────── A1-1 ─────────────────────────
       {
@@ -12,24 +12,25 @@ addLevels('es', [
         title: 'Chào hỏi & giới thiệu',
         goal: 'Chào hỏi theo từng buổi, nói tên mình, hỏi tên người khác và giới thiệu ai đó.',
         vocab: [
-          { w: 'hola', ipa: 'ô-la', vi: 'xin chào', ex: '¡Hola! Me llamo Lan.', exVi: 'Xin chào! Tôi tên là Lan.' },
-          { w: 'buenos días', ipa: 'bu-ê-nốt đi-át', vi: 'chào buổi sáng', ex: 'Buenos días, señora García.', exVi: 'Chào buổi sáng, bà García.' },
-          { w: 'buenas tardes', ipa: 'bu-ê-nát tác-đết', vi: 'chào buổi chiều', ex: 'Buenas tardes, ¿qué tal?', exVi: 'Chào buổi chiều, bạn khoẻ không?' },
-          { w: 'buenas noches', ipa: 'bu-ê-nát nô-chết', vi: 'chào buổi tối; chúc ngủ ngon', ex: 'Buenas noches, mamá.', exVi: 'Chúc mẹ ngủ ngon.' },
-          { w: 'adiós', ipa: 'a-đi-ốt', vi: 'tạm biệt', ex: 'Adiós, Carlos.', exVi: 'Tạm biệt Carlos.' },
-          { w: 'hasta luego', ipa: 'át-ta lu-ê-gô', vi: 'hẹn gặp lại', ex: '¡Hasta luego, Ana!', exVi: 'Hẹn gặp lại nhé, Ana!' },
-          { w: 'gracias', ipa: 'gra-thi-át', vi: 'cảm ơn', ex: 'Muy bien, gracias.', exVi: 'Rất khoẻ, cảm ơn.' },
-          { w: 'por favor', ipa: 'por pha-bór', vi: 'làm ơn, xin vui lòng', ex: 'Tu nombre, por favor.', exVi: 'Cho mình xin tên bạn nhé.' },
-          { w: 'encantado / encantada', ipa: 'en-can-ta-đô / en-can-ta-đa', vi: 'rất vui được gặp (nam / nữ nói)', ex: 'Soy Pedro. Encantado.', exVi: 'Tôi là Pedro. Rất vui được gặp bạn.' },
+          { w: 'hola', ipa: 'Ô-la', vi: 'xin chào', ex: '¡Hola! Me llamo Lan.', exVi: 'Xin chào! Tôi tên là Lan.' },
+          { w: 'buenos días', ipa: 'BUÊ-nôs ĐI-as', vi: 'chào buổi sáng', ex: 'Buenos días, señora García.', exVi: 'Chào buổi sáng, bà García.' },
+          { w: 'buenas tardes', ipa: 'BUÊ-nas TAR-đês', vi: 'chào buổi chiều', ex: 'Buenas tardes, ¿qué tal?', exVi: 'Chào buổi chiều, bạn khoẻ không?' },
+          { w: 'buenas noches', ipa: 'BUÊ-nas NÔ-chês', vi: 'chào buổi tối; chúc ngủ ngon', ex: 'Buenas noches, mamá.', exVi: 'Chúc mẹ ngủ ngon.' },
+          { w: 'adiós', ipa: 'a-đi-ÔS', vi: 'tạm biệt', ex: 'Adiós, Carlos.', exVi: 'Tạm biệt Carlos.' },
+          { w: 'hasta luego', ipa: 'AS-ta LUÊ-gô', vi: 'hẹn gặp lại', ex: '¡Hasta luego, Ana!', exVi: 'Hẹn gặp lại nhé, Ana!' },
+          { w: 'gracias', ipa: 'GRA-θi-as', vi: 'cảm ơn', ex: 'Muy bien, gracias.', exVi: 'Rất khoẻ, cảm ơn.' },
+          { w: 'por favor', ipa: 'pôr pha-BÔR', vi: 'làm ơn, xin vui lòng', ex: 'Tu nombre, por favor.', exVi: 'Cho mình xin tên bạn nhé.' },
+          { w: 'encantado / encantada', ipa: 'ên-can-TA-đô / ên-can-TA-đa', vi: 'rất vui được gặp (nam / nữ nói)', ex: 'Soy Pedro. Encantado.', exVi: 'Tôi là Pedro. Rất vui được gặp bạn.' },
           { w: '¿Qué tal?', ipa: 'kê tal', vi: 'Khoẻ không? / Thế nào rồi?', ex: 'Hola, Marta. ¿Qué tal?', exVi: 'Chào Marta. Bạn khoẻ không?' }
         ],
         grammar: {
           title: 'Đại từ nhân xưng + ser, llamarse',
           explain: [
-            'Đại từ nhân xưng: yo (tôi), tú (bạn), él (anh ấy), ella (cô ấy), usted (ông/bà – lịch sự), nosotros/nosotras (chúng tôi), vosotros/vosotras (các bạn), ellos/ellas (họ), ustedes (quý vị). Dạng -as dùng khi cả nhóm đều là nữ.',
+            'Đại từ nhân xưng: yo (tôi), tú (bạn), él (anh ấy), ella (cô ấy), usted (ông/bà – lịch sự), nosotros/nosotras (chúng tôi), vosotros/vosotras (các bạn – thân mật), ellos/ellas (họ), ustedes (các ông/các bà/các anh chị – lịch sự). Dạng -as dùng khi cả nhóm đều là nữ.',
             'Động từ ser (là) dùng để nói mình là ai, làm nghề gì: Soy Lan (Tôi là Lan), Ella es profesora (Cô ấy là giáo viên). Ser là động từ bất quy tắc, cần học thuộc bảng chia.',
             'Để nói tên, người Tây Ban Nha thường dùng llamarse (được gọi là): Me llamo Lan = Tôi tên là Lan. Hỏi tên: ¿Cómo te llamas? (thân mật) hoặc ¿Cómo se llama usted? (lịch sự).',
-            'Usted và ustedes tuy có nghĩa "bạn/các bạn" nhưng chia động từ giống él/ella và ellos/ellas.'
+            'Usted và ustedes tuy có nghĩa "bạn/các bạn" nhưng chia động từ giống él/ella và ellos/ellas. Ở Tây Ban Nha: nói với một nhóm bạn bè, người thân → vosotros (¿Sois estudiantes?); với một nhóm cần lịch sự → ustedes (¿Son ustedes estudiantes?).',
+            '🌎 Mỹ Latinh (và quần đảo Canarias): không dùng vosotros. Ustedes dùng cho MỌI nhóm người, kể cả bạn bè và trẻ con: ¿Ustedes son amigos? Khoá học này theo chuẩn Tây Ban Nha nên vẫn dạy vosotros, nhưng bạn sẽ hiểu được cả hai.'
           ],
           table: [
             ['Đại từ', 'ser', 'llamarse'],
@@ -47,7 +48,7 @@ addLevels('es', [
             { t: 'Ella es María. Es profesora.', vi: 'Cô ấy là María. Cô ấy là giáo viên.' },
             { t: 'Nosotros somos amigos.', vi: 'Chúng tôi là bạn bè.' }
           ],
-          tip: 'Tiếng Tây Ban Nha thường bỏ đại từ chủ ngữ vì đuôi động từ đã cho biết ai đang nói: "Soy Lan" tự nhiên hơn "Yo soy Lan". Nhớ viết ngược dấu ¿ và ¡ ở đầu câu hỏi và câu cảm thán.'
+          tip: 'Tiếng Tây Ban Nha thường bỏ đại từ chủ ngữ vì đuôi động từ đã cho biết ai đang nói: "Soy Lan" tự nhiên hơn "Yo soy Lan". Nhớ viết ngược dấu ¿ và ¡ ở đầu câu hỏi và câu cảm thán. Cách đọc gợi ý dưới mỗi từ: âm tiết VIẾT HOA là trọng âm, đọc mạnh và dài hơn (GRA-θi-as, a-đi-ÔS) — tiếng Tây Ban Nha không có thanh điệu nên đừng đọc thành dấu sắc; s cuối đọc rõ như x xì hơi, không thành t (adiós ≠ "a-đi-ốt"); l cuối giữ là l, cong lưỡi chạm lợi, không thành n (español ≠ "ét-pa-nhôn"); θ = đặt đầu lưỡi giữa hai hàm răng rồi thổi hơi (như th trong tiếng Anh "think", không phải th tiếng Việt); rr = r rung đầu lưỡi (cả r đầu từ như rojo → RRÔ-khô); kh = j hoặc g trước e, i; gi = ll, y; đ = d mềm.'
         },
         dialogue: [
           { s: 'Carlos', t: '¡Hola! Buenos días. Me llamo Carlos. ¿Cómo te llamas?', vi: 'Xin chào! Chào buổi sáng. Mình tên là Carlos. Bạn tên là gì?' },
@@ -75,23 +76,24 @@ addLevels('es', [
         id: 'es-a1-2',
         icon: '🔢',
         title: 'Số đếm, tuổi & quốc tịch',
-        goal: 'Đếm từ 0 đến 30, nói tuổi, nói mình đến từ đâu và hỏi lại người khác.',
+        goal: 'Đếm từ 0 đến 100, nói tuổi, nói mình đến từ đâu và hỏi lại người khác.',
         vocab: [
-          { w: 'uno', ipa: 'u-nô', vi: 'một (số 1)', ex: 'Tengo un hermano, solo uno.', exVi: 'Tôi có một người anh, chỉ một thôi.' },
-          { w: 'dos', ipa: 'đốt', vi: 'hai', ex: 'Tengo dos gatos.', exVi: 'Tôi có hai con mèo.' },
-          { w: 'tres', ipa: 'trết', vi: 'ba', ex: 'Somos tres amigos.', exVi: 'Chúng tôi là ba người bạn.' },
-          { w: 'cinco', ipa: 'thin-cô', vi: 'năm (số 5)', ex: 'Mi hijo tiene cinco años.', exVi: 'Con trai tôi năm tuổi.' },
-          { w: 'diez', ipa: 'đi-éth', vi: 'mười', ex: 'Tiene diez años.', exVi: 'Cậu bé mười tuổi.' },
-          { w: 'veinte', ipa: 'bêin-tê', vi: 'hai mươi', ex: 'Tengo veinte años.', exVi: 'Tôi hai mươi tuổi.' },
-          { w: 'el año', ipa: 'el a-nhô', vi: 'năm; tuổi (khi nói tuổi)', ex: '¿Cuántos años tienes?', exVi: 'Bạn bao nhiêu tuổi?' },
-          { w: 'el país', ipa: 'el pa-ít', vi: 'đất nước', ex: 'Vietnam es un país bonito.', exVi: 'Việt Nam là một đất nước đẹp.' },
-          { w: 'español / española', ipa: 'ét-pa-nhôn / ét-pa-nhô-la', vi: 'người / thuộc Tây Ban Nha', ex: 'Ana es española.', exVi: 'Ana là người Tây Ban Nha.' },
-          { w: 'vietnamita', ipa: 'bi-ết-na-mi-ta', vi: 'người / thuộc Việt Nam', ex: 'Soy vietnamita, de Hanói.', exVi: 'Tôi là người Việt Nam, đến từ Hà Nội.' }
+          { w: 'diez', ipa: 'đi-êθ', vi: 'mười (10)', ex: 'Mi hermano tiene diez años.', exVi: 'Em trai tôi mười tuổi.' },
+          { w: 'veinte', ipa: 'BÊIN-tê', vi: 'hai mươi (20)', ex: 'Tengo veinte años.', exVi: 'Tôi hai mươi tuổi.' },
+          { w: 'treinta', ipa: 'TRÊIN-ta', vi: 'ba mươi (30)', ex: 'La profesora tiene treinta y dos años.', exVi: 'Cô giáo ba mươi hai tuổi.' },
+          { w: 'cuarenta', ipa: 'coa-RÊN-ta', vi: 'bốn mươi (40)', ex: 'Mi madre tiene cuarenta y cinco años.', exVi: 'Mẹ tôi bốn mươi lăm tuổi.' },
+          { w: 'cincuenta', ipa: 'θin-QUÊN-ta', vi: 'năm mươi (50)', ex: 'Mi padre tiene cincuenta años.', exVi: 'Bố tôi năm mươi tuổi.' },
+          { w: 'cien', ipa: 'θi-ên', vi: 'một trăm (100)', ex: 'Mi bisabuela tiene casi cien años.', exVi: 'Cụ bà của tôi gần một trăm tuổi.' },
+          { w: 'el año', ipa: 'êl A-nhô', vi: 'năm; tuổi (khi nói tuổi)', ex: '¿Cuántos años tienes?', exVi: 'Bạn bao nhiêu tuổi?' },
+          { w: 'el país', ipa: 'êl pa-IS', vi: 'đất nước', ex: 'Vietnam es un país bonito.', exVi: 'Việt Nam là một đất nước đẹp.' },
+          { w: 'español / española', ipa: 'ês-pa-NHÔL / ês-pa-NHÔ-la', vi: 'người / thuộc Tây Ban Nha', ex: 'Ana es española.', exVi: 'Ana là người Tây Ban Nha.' },
+          { w: 'vietnamita', ipa: 'bi-êt-na-MI-ta', vi: 'người / thuộc Việt Nam', ex: 'Soy vietnamita, de Hanói.', exVi: 'Tôi là người Việt Nam, đến từ Hà Nội.' }
         ],
         grammar: {
           title: 'Tener để nói tuổi; câu hỏi ¿Cómo? ¿De dónde? ¿Cuántos?',
           explain: [
-            'Số 0–10: cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez. Số 11–20: once, doce, trece, catorce, quince, dieciséis, diecisiete, dieciocho, diecinueve, veinte. Từ 21: veintiuno, veintidós, veintitrés… 30 là treinta.',
+            'Số 0–10: cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez. Số 11–20: once, doce, trece, catorce, quince, dieciséis, diecisiete, dieciocho, diecinueve, veinte. Từ 21 đến 29 viết liền một từ: veintiuno, veintidós, veintitrés…',
+            'Các số tròn chục: treinta (30), cuarenta (40), cincuenta (50), sesenta (60), setenta (70), ochenta (80), noventa (90), cien (100). Từ 31 trở đi ghép chục + y + đơn vị, viết rời: treinta y uno (31), cuarenta y cinco (45), noventa y nueve (99). Chỉ cần thuộc 10 số tròn chục là đếm được tới 100.',
             'Người Tây Ban Nha nói tuổi bằng động từ tener (có), không dùng ser: Tengo veinte años = Tôi có hai mươi năm → Tôi 20 tuổi. Hỏi: ¿Cuántos años tienes? (Bạn bao nhiêu tuổi?).',
             'Hỏi quê quán: ¿De dónde eres? → Soy de Vietnam (Tôi đến từ Việt Nam). Nói quốc tịch: ser + tính từ quốc tịch, đổi theo giống: Él es español / Ella es española. Tính từ đuôi -a như vietnamita giữ nguyên cho cả nam và nữ.',
             'Từ để hỏi luôn có dấu: ¿Cómo? (thế nào), ¿De dónde? (từ đâu), ¿Cuántos/Cuántas? (bao nhiêu – đổi giống theo danh từ: ¿Cuántos años? ¿Cuántas hermanas?).'
@@ -112,7 +114,7 @@ addLevels('es', [
             { t: 'Pedro tiene treinta años y es español.', vi: 'Pedro ba mươi tuổi và là người Tây Ban Nha.' },
             { t: '¿Cómo se llama tu amiga?', vi: 'Bạn của bạn tên là gì?' }
           ],
-          tip: 'Lỗi rất hay gặp: "Soy 20 años" ✗ → "Tengo 20 años" ✓. Tên quốc tịch và ngôn ngữ viết thường: español, vietnamita. Ở Tây Ban Nha, c (trước e, i) và z đọc gần như "th" trong tiếng Anh "think": cinco, diez.'
+          tip: 'Lỗi rất hay gặp: "Soy 20 años" ✗ → "Tengo 20 años" ✓. Tên quốc tịch và ngôn ngữ viết thường: español, vietnamita. Ở Tây Ban Nha, c (trước e, i) và z là âm θ: đặt đầu lưỡi giữa hai hàm răng rồi thổi hơi (như th trong tiếng Anh "think", KHÔNG phải "th" tiếng Việt): cinco, diez. 🌎 Mỹ Latinh (và Canarias, một phần Andalucía) đọc các chữ này như s (seseo): "sinco", "dies" — cả hai cách đều đúng.'
         },
         dialogue: [
           { s: 'Ana', t: 'Hola, Minh. ¿De dónde eres?', vi: 'Chào Minh. Bạn từ đâu đến?' },
@@ -128,7 +130,7 @@ addLevels('es', [
           { type: 'mc', q: '¿De dónde ___ usted?', options: ['eres', 'es', 'son'], answer: 1, explain: 'Usted chia như él/ella → es.' },
           { type: 'fill', q: 'Ana es de Madrid. Es ___.', answer: ['española'], hint: 'quốc tịch, giống cái', explain: 'Ana là nữ nên dùng española.' },
           { type: 'order', vi: 'Bạn từ đâu đến?', words: ['eres?', 'dónde', '¿De'], answer: '¿De dónde eres?' },
-          { type: 'mc', q: 'Số 15 là:', options: ['cinco', 'quince', 'cincuenta'], answer: 1, explain: 'quince = 15; cinco = 5; cincuenta = 50.' },
+          { type: 'mc', q: 'Số 45 là:', options: ['cuarenta y cinco', 'cincuenta y cuatro', 'catorce y cinco'], answer: 0, explain: 'Chục + y + đơn vị: cuarenta (40) y cinco (5) = 45. Cincuenta y cuatro = 54.' },
           { type: 'fill', q: 'Nosotros ___ dieciocho años.', answer: ['tenemos'], hint: 'tener', explain: 'Nosotros → tenemos.' },
           { type: 'order', vi: 'Tôi hai mươi tuổi.', words: ['años', 'veinte', 'Tengo'], answer: 'Tengo veinte años' }
         ]
@@ -141,16 +143,16 @@ addLevels('es', [
         title: 'Gia đình',
         goal: 'Giới thiệu các thành viên trong gia đình, dùng danh từ số ít/số nhiều và tính từ sở hữu.',
         vocab: [
-          { w: 'la familia', ipa: 'la pha-mi-li-a', vi: 'gia đình', ex: 'Mi familia es grande.', exVi: 'Gia đình tôi đông người.' },
-          { w: 'el padre', ipa: 'el pa-đrê', vi: 'bố', ex: 'Mi padre se llama Juan.', exVi: 'Bố tôi tên là Juan.' },
-          { w: 'la madre', ipa: 'la ma-đrê', vi: 'mẹ', ex: 'Mi madre es médica.', exVi: 'Mẹ tôi là bác sĩ.' },
-          { w: 'el hermano', ipa: 'el ẹc-ma-nô', vi: 'anh trai / em trai', ex: 'Tengo un hermano.', exVi: 'Tôi có một anh trai.' },
-          { w: 'la hermana', ipa: 'la ẹc-ma-na', vi: 'chị gái / em gái', ex: 'Mi hermana tiene doce años.', exVi: 'Em gái tôi mười hai tuổi.' },
-          { w: 'el hijo', ipa: 'el i-khô', vi: 'con trai', ex: 'Su hijo es estudiante.', exVi: 'Con trai cô ấy là sinh viên.' },
-          { w: 'la hija', ipa: 'la i-kha', vi: 'con gái', ex: 'Tienen una hija.', exVi: 'Họ có một cô con gái.' },
-          { w: 'el abuelo', ipa: 'el a-bu-ê-lô', vi: 'ông', ex: 'Mi abuelo tiene setenta años.', exVi: 'Ông tôi bảy mươi tuổi.' },
-          { w: 'la abuela', ipa: 'la a-bu-ê-la', vi: 'bà', ex: 'Mi abuela es de Sevilla.', exVi: 'Bà tôi quê ở Sevilla.' },
-          { w: 'el esposo / la esposa', ipa: 'el ét-pô-xô / la ét-pô-xa', vi: 'chồng / vợ', ex: 'Su esposa es profesora.', exVi: 'Vợ anh ấy là giáo viên.' }
+          { w: 'la familia', ipa: 'la pha-MI-li-a', vi: 'gia đình', ex: 'Mi familia es grande.', exVi: 'Gia đình tôi đông người.' },
+          { w: 'el padre', ipa: 'êl PA-đrê', vi: 'bố', ex: 'Mi padre se llama Juan.', exVi: 'Bố tôi tên là Juan.' },
+          { w: 'la madre', ipa: 'la MA-đrê', vi: 'mẹ', ex: 'Mi madre es médica.', exVi: 'Mẹ tôi là bác sĩ.' },
+          { w: 'el hermano', ipa: 'êl êr-MA-nô', vi: 'anh trai / em trai', ex: 'Tengo un hermano.', exVi: 'Tôi có một anh trai.' },
+          { w: 'la hermana', ipa: 'la êr-MA-na', vi: 'chị gái / em gái', ex: 'Mi hermana tiene doce años.', exVi: 'Em gái tôi mười hai tuổi.' },
+          { w: 'el hijo', ipa: 'êl I-khô', vi: 'con trai', ex: 'Su hijo es estudiante.', exVi: 'Con trai cô ấy là sinh viên.' },
+          { w: 'la hija', ipa: 'la I-kha', vi: 'con gái', ex: 'Tienen una hija.', exVi: 'Họ có một cô con gái.' },
+          { w: 'el abuelo', ipa: 'êl a-BUÊ-lô', vi: 'ông', ex: 'Mi abuelo tiene setenta años.', exVi: 'Ông tôi bảy mươi tuổi.' },
+          { w: 'la abuela', ipa: 'la a-BUÊ-la', vi: 'bà', ex: 'Mi abuela es de Sevilla.', exVi: 'Bà tôi quê ở Sevilla.' },
+          { w: 'el esposo / la esposa', ipa: 'êl ês-PÔ-xô / la ês-PÔ-xa', vi: 'chồng / vợ', ex: 'Su esposa es profesora.', exVi: 'Vợ anh ấy là giáo viên.' }
         ],
         grammar: {
           title: 'Giống & số của danh từ, tính từ sở hữu (mi, tu, su…)',
@@ -206,16 +208,16 @@ addLevels('es', [
         title: 'Đồ vật & màu sắc',
         goal: 'Gọi tên đồ vật quanh mình, miêu tả màu sắc và chỉ vật bằng este/ese.',
         vocab: [
-          { w: 'el libro', ipa: 'el li-brô', vi: 'quyển sách', ex: 'El libro es rojo.', exVi: 'Quyển sách màu đỏ.' },
-          { w: 'la mesa', ipa: 'la mê-xa', vi: 'cái bàn', ex: 'La mesa es blanca.', exVi: 'Cái bàn màu trắng.' },
-          { w: 'la silla', ipa: 'la xi-gia', vi: 'cái ghế', ex: 'Esta silla es negra.', exVi: 'Cái ghế này màu đen.' },
-          { w: 'el bolígrafo', ipa: 'el bô-li-gra-phô', vi: 'cây bút bi', ex: '¿Tienes un bolígrafo azul?', exVi: 'Bạn có bút bi xanh không?' },
-          { w: 'la mochila', ipa: 'la mô-chi-la', vi: 'cái ba lô', ex: 'Mi mochila es negra.', exVi: 'Ba lô của tôi màu đen.' },
-          { w: 'el coche', ipa: 'el cô-chê', vi: 'xe ô tô', ex: 'Ese coche es rojo.', exVi: 'Chiếc ô tô đó màu đỏ.' },
-          { w: 'rojo / roja', ipa: 'rô-khô / rô-kha', vi: 'màu đỏ', ex: 'Tengo una mochila roja.', exVi: 'Tôi có một cái ba lô màu đỏ.' },
-          { w: 'azul', ipa: 'a-thun', vi: 'màu xanh dương', ex: 'El cielo es azul.', exVi: 'Bầu trời màu xanh.' },
-          { w: 'blanco / blanca', ipa: 'blan-cô / blan-ca', vi: 'màu trắng', ex: 'La casa es blanca.', exVi: 'Ngôi nhà màu trắng.' },
-          { w: 'negro / negra', ipa: 'nê-grô / nê-gra', vi: 'màu đen', ex: 'Tengo un gato negro.', exVi: 'Tôi có một con mèo đen.' }
+          { w: 'el libro', ipa: 'êl LI-brô', vi: 'quyển sách', ex: 'El libro es rojo.', exVi: 'Quyển sách màu đỏ.' },
+          { w: 'la mesa', ipa: 'la MÊ-xa', vi: 'cái bàn', ex: 'La mesa es blanca.', exVi: 'Cái bàn màu trắng.' },
+          { w: 'la silla', ipa: 'la XI-gia', vi: 'cái ghế', ex: 'Esta silla es negra.', exVi: 'Cái ghế này màu đen.' },
+          { w: 'el bolígrafo', ipa: 'êl bô-LI-gra-phô', vi: 'cây bút bi', ex: '¿Tienes un bolígrafo azul?', exVi: 'Bạn có bút bi xanh không?' },
+          { w: 'la mochila', ipa: 'la mô-CHI-la', vi: 'cái ba lô', ex: 'Mi mochila es negra.', exVi: 'Ba lô của tôi màu đen.' },
+          { w: 'el coche', ipa: 'êl CÔ-chê', vi: 'xe ô tô', ex: 'Ese coche es rojo.', exVi: 'Chiếc ô tô đó màu đỏ.' },
+          { w: 'rojo / roja', ipa: 'RRÔ-khô / RRÔ-kha', vi: 'màu đỏ', ex: 'Tengo una mochila roja.', exVi: 'Tôi có một cái ba lô màu đỏ.' },
+          { w: 'azul', ipa: 'a-θUL', vi: 'màu xanh dương', ex: 'El cielo es azul.', exVi: 'Bầu trời màu xanh.' },
+          { w: 'blanco / blanca', ipa: 'BLAN-cô / BLAN-ca', vi: 'màu trắng', ex: 'La casa es blanca.', exVi: 'Ngôi nhà màu trắng.' },
+          { w: 'negro / negra', ipa: 'NÊ-grô / NÊ-gra', vi: 'màu đen', ex: 'Tengo un gato negro.', exVi: 'Tôi có một con mèo đen.' }
         ],
         grammar: {
           title: 'Mạo từ el/la/un/una, hoà hợp tính từ, este/ese',
@@ -240,7 +242,7 @@ addLevels('es', [
             { t: 'Ese coche es azul.', vi: 'Chiếc ô tô đó màu xanh dương.' },
             { t: 'Tengo unos bolígrafos verdes.', vi: 'Tôi có vài cây bút bi màu xanh lá.' }
           ],
-          tip: 'Giống tiếng Việt, tính từ đứng sau danh từ (xe đỏ = coche rojo) — nhưng đừng quên đổi đuôi theo danh từ: "la casa blanco" ✗ → "la casa blanca" ✓. Màu khác: verde (xanh lá), amarillo (vàng), gris (xám), marrón (nâu).'
+          tip: 'Giống tiếng Việt, tính từ đứng sau danh từ (xe đỏ = coche rojo) — nhưng đừng quên đổi đuôi theo danh từ: "la casa blanco" ✗ → "la casa blanca" ✓. Màu khác: verde (xanh lá), amarillo (vàng), gris (xám), marrón (nâu). 🌎 Mỹ Latinh: el carro / el auto (= el coche), la computadora (= el ordenador).'
         },
         dialogue: [
           { s: 'Elena', t: 'Tomás, ¿qué es esto?', vi: 'Tomás ơi, đây là cái gì?' },
@@ -269,16 +271,16 @@ addLevels('es', [
         title: 'Thói quen hằng ngày',
         goal: 'Kể về một ngày bình thường của mình bằng thì hiện tại và động từ phản thân.',
         vocab: [
-          { w: 'levantarse', ipa: 'lê-ban-tar-xê', vi: 'thức dậy', ex: 'Me levanto temprano.', exVi: 'Tôi dậy sớm.' },
-          { w: 'ducharse', ipa: 'đu-char-xê', vi: 'tắm (vòi sen)', ex: 'Me ducho por la mañana.', exVi: 'Tôi tắm vào buổi sáng.' },
-          { w: 'desayunar', ipa: 'đê-xa-giu-nar', vi: 'ăn sáng', ex: 'Desayuno en casa.', exVi: 'Tôi ăn sáng ở nhà.' },
-          { w: 'trabajar', ipa: 'tra-ba-khar', vi: 'làm việc', ex: 'Mi padre trabaja en un banco.', exVi: 'Bố tôi làm việc ở ngân hàng.' },
-          { w: 'estudiar', ipa: 'ét-tu-đi-ar', vi: 'học', ex: 'Estudio español.', exVi: 'Tôi học tiếng Tây Ban Nha.' },
-          { w: 'comer', ipa: 'cô-mer', vi: 'ăn; ăn trưa', ex: 'Comemos a las dos.', exVi: 'Chúng tôi ăn trưa lúc hai giờ.' },
-          { w: 'beber', ipa: 'bê-ber', vi: 'uống', ex: 'Bebo mucha agua.', exVi: 'Tôi uống nhiều nước.' },
-          { w: 'leer', ipa: 'lê-er', vi: 'đọc', ex: 'Leo un libro por la noche.', exVi: 'Tôi đọc sách vào buổi tối.' },
-          { w: 'vivir', ipa: 'bi-bir', vi: 'sống', ex: 'Vivo en Hanói.', exVi: 'Tôi sống ở Hà Nội.' },
-          { w: 'cenar', ipa: 'thê-nar', vi: 'ăn tối', ex: 'Cenamos en familia.', exVi: 'Chúng tôi ăn tối cùng gia đình.' }
+          { w: 'levantarse', ipa: 'lê-ban-TAR-xê', vi: 'thức dậy', ex: 'Me levanto temprano.', exVi: 'Tôi dậy sớm.' },
+          { w: 'ducharse', ipa: 'đu-CHAR-xê', vi: 'tắm (vòi sen)', ex: 'Me ducho por la mañana.', exVi: 'Tôi tắm vào buổi sáng.' },
+          { w: 'desayunar', ipa: 'đê-xa-giu-NAR', vi: 'ăn sáng', ex: 'Desayuno en casa.', exVi: 'Tôi ăn sáng ở nhà.' },
+          { w: 'trabajar', ipa: 'tra-ba-KHAR', vi: 'làm việc', ex: 'Mi padre trabaja en un banco.', exVi: 'Bố tôi làm việc ở ngân hàng.' },
+          { w: 'estudiar', ipa: 'ês-tu-đi-AR', vi: 'học', ex: 'Estudio español.', exVi: 'Tôi học tiếng Tây Ban Nha.' },
+          { w: 'comer', ipa: 'cô-MÊR', vi: 'ăn; ăn trưa', ex: 'Comemos a las dos.', exVi: 'Chúng tôi ăn trưa lúc hai giờ.' },
+          { w: 'beber', ipa: 'bê-BÊR', vi: 'uống', ex: 'Bebo mucha agua.', exVi: 'Tôi uống nhiều nước.' },
+          { w: 'leer', ipa: 'lê-ÊR', vi: 'đọc', ex: 'Leo un libro por la noche.', exVi: 'Tôi đọc sách vào buổi tối.' },
+          { w: 'vivir', ipa: 'bi-BIR', vi: 'sống', ex: 'Vivo en Hanói.', exVi: 'Tôi sống ở Hà Nội.' },
+          { w: 'cenar', ipa: 'θê-NAR', vi: 'ăn tối', ex: 'Cenamos en familia.', exVi: 'Chúng tôi ăn tối cùng gia đình.' }
         ],
         grammar: {
           title: 'Thì hiện tại: động từ -ar / -er / -ir; động từ phản thân',
@@ -334,16 +336,16 @@ addLevels('es', [
         title: 'Đồ ăn & thức uống',
         goal: 'Nói mình thích/không thích món gì và gọi món lịch sự ở quán.',
         vocab: [
-          { w: 'el agua', ipa: 'el a-gua', vi: 'nước', ex: 'Quisiera un vaso de agua.', exVi: 'Tôi muốn một cốc nước.' },
-          { w: 'el café', ipa: 'el ca-phê', vi: 'cà phê', ex: 'Me gusta el café con leche.', exVi: 'Tôi thích cà phê sữa.' },
-          { w: 'la leche', ipa: 'la lê-chê', vi: 'sữa', ex: 'Mi hijo bebe leche.', exVi: 'Con trai tôi uống sữa.' },
-          { w: 'el pan', ipa: 'el pan', vi: 'bánh mì', ex: 'Desayuno pan con tomate.', exVi: 'Tôi ăn sáng bánh mì với cà chua.' },
-          { w: 'la carne', ipa: 'la car-nê', vi: 'thịt', ex: 'No me gusta la carne.', exVi: 'Tôi không thích thịt.' },
-          { w: 'el pescado', ipa: 'el pét-ca-đô', vi: 'cá (món ăn)', ex: 'Nos gusta el pescado.', exVi: 'Chúng tôi thích món cá.' },
-          { w: 'el arroz', ipa: 'el a-rốth', vi: 'cơm, gạo', ex: 'En Vietnam comemos arroz.', exVi: 'Ở Việt Nam chúng tôi ăn cơm.' },
-          { w: 'la fruta', ipa: 'la phru-ta', vi: 'trái cây', ex: 'Me gustan las frutas tropicales.', exVi: 'Tôi thích trái cây nhiệt đới.' },
-          { w: 'la cerveza', ipa: 'la thẹc-bê-tha', vi: 'bia', ex: 'Una cerveza, por favor.', exVi: 'Cho một cốc bia.' },
-          { w: 'la cuenta', ipa: 'la cu-ên-ta', vi: 'hoá đơn (tính tiền)', ex: 'La cuenta, por favor.', exVi: 'Cho tôi tính tiền.' }
+          { w: 'el agua', ipa: 'êl A-goa', vi: 'nước', ex: 'Quisiera un vaso de agua.', exVi: 'Tôi muốn một cốc nước.' },
+          { w: 'el café', ipa: 'êl ca-PHÊ', vi: 'cà phê', ex: 'Me gusta el café con leche.', exVi: 'Tôi thích cà phê sữa.' },
+          { w: 'la leche', ipa: 'la LÊ-chê', vi: 'sữa', ex: 'Mi hijo bebe leche.', exVi: 'Con trai tôi uống sữa.' },
+          { w: 'el pan', ipa: 'êl pan', vi: 'bánh mì', ex: 'Desayuno pan con tomate.', exVi: 'Tôi ăn sáng bánh mì với cà chua.' },
+          { w: 'la carne', ipa: 'la CAR-nê', vi: 'thịt', ex: 'No me gusta la carne.', exVi: 'Tôi không thích thịt.' },
+          { w: 'el pescado', ipa: 'êl pês-CA-đô', vi: 'cá (món ăn)', ex: 'Nos gusta el pescado.', exVi: 'Chúng tôi thích món cá.' },
+          { w: 'el arroz', ipa: 'êl a-RRÔθ', vi: 'cơm, gạo', ex: 'En Vietnam comemos arroz.', exVi: 'Ở Việt Nam chúng tôi ăn cơm.' },
+          { w: 'la fruta', ipa: 'la PHRU-ta', vi: 'trái cây', ex: 'Me gustan las frutas tropicales.', exVi: 'Tôi thích trái cây nhiệt đới.' },
+          { w: 'la cerveza', ipa: 'la θêr-BÊ-θa', vi: 'bia', ex: 'Una cerveza, por favor.', exVi: 'Cho một cốc bia.' },
+          { w: 'la cuenta', ipa: 'la QUÊN-ta', vi: 'hoá đơn (tính tiền)', ex: 'La cuenta, por favor.', exVi: 'Cho tôi tính tiền.' }
         ],
         grammar: {
           title: 'Gustar (thích) và quisiera (tôi muốn – lịch sự)',
@@ -369,7 +371,7 @@ addLevels('es', [
             { t: '¿Te gusta la cerveza?', vi: 'Bạn có thích bia không?' },
             { t: 'Quisiera un vaso de agua, por favor.', vi: 'Làm ơn cho tôi một cốc nước.' }
           ],
-          tip: 'Lỗi kinh điển: "Yo gusto el café" ✗ → "Me gusta el café" ✓. Muốn nhấn mạnh "tôi", thêm a mí: "A mí me gusta el té". Lưu ý: el agua là danh từ giống cái nhưng dùng el vì bắt đầu bằng âm "a" có trọng âm.'
+          tip: 'Lỗi kinh điển: "Yo gusto el café" ✗ → "Me gusta el café" ✓. Muốn nhấn mạnh "tôi", thêm a mí: "A mí me gusta el té". Lưu ý: el agua là danh từ giống cái nhưng dùng el vì bắt đầu bằng âm "a" có trọng âm. 🌎 Mỹ Latinh: el jugo (= el zumo), la papa (= la patata), el mesero (= el camarero).'
         },
         dialogue: [
           { s: 'Camarero', t: 'Buenas tardes. ¿Qué quieren tomar?', vi: 'Chào buổi chiều. Quý khách muốn dùng gì ạ?' },
@@ -396,7 +398,7 @@ addLevels('es', [
   {
     id: 'A2',
     title: 'Sơ cấp 2',
-    desc: 'Hẹn giờ, mua sắm, hỏi và chỉ đường, kể lại chuyện đã xảy ra, nói về sở thích và kế hoạch tương lai.',
+    desc: 'Hẹn giờ, gọi điện và mời, mua sắm và so sánh, hỏi đường, xin phép, kể chuyện đã xảy ra và ngày xưa, nói về sở thích, cơ thể và kế hoạch tương lai.',
     units: [
       // ───────────────────────── A2-1 ─────────────────────────
       {
@@ -405,16 +407,16 @@ addLevels('es', [
         title: 'Thời gian & lịch hẹn',
         goal: 'Hỏi và nói giờ, nói thứ, ngày tháng và sắp xếp một cuộc hẹn.',
         vocab: [
-          { w: 'la hora', ipa: 'la ô-ra', vi: 'giờ', ex: '¿Qué hora es?', exVi: 'Mấy giờ rồi?' },
-          { w: 'el día', ipa: 'el đi-a', vi: 'ngày', ex: '¿Qué día es hoy?', exVi: 'Hôm nay là thứ mấy?' },
-          { w: 'la semana', ipa: 'la xê-ma-na', vi: 'tuần', ex: 'Trabajo cinco días a la semana.', exVi: 'Tôi làm việc năm ngày một tuần.' },
-          { w: 'el mes', ipa: 'el mết', vi: 'tháng', ex: 'Mayo es mi mes favorito.', exVi: 'Tháng Năm là tháng tôi thích nhất.' },
-          { w: 'el lunes', ipa: 'el lu-nết', vi: 'thứ Hai', ex: 'El lunes tengo clase.', exVi: 'Thứ Hai tôi có lớp.' },
-          { w: 'el fin de semana', ipa: 'el phin đê xê-ma-na', vi: 'cuối tuần', ex: '¿Qué haces el fin de semana?', exVi: 'Cuối tuần bạn làm gì?' },
+          { w: 'la hora', ipa: 'la Ô-ra', vi: 'giờ', ex: '¿Qué hora es?', exVi: 'Mấy giờ rồi?' },
+          { w: 'el día', ipa: 'êl ĐI-a', vi: 'ngày', ex: '¿Qué día es hoy?', exVi: 'Hôm nay là thứ mấy?' },
+          { w: 'la semana', ipa: 'la xê-MA-na', vi: 'tuần', ex: 'Trabajo cinco días a la semana.', exVi: 'Tôi làm việc năm ngày một tuần.' },
+          { w: 'el mes', ipa: 'êl mês', vi: 'tháng', ex: 'Mayo es mi mes favorito.', exVi: 'Tháng Năm là tháng tôi thích nhất.' },
+          { w: 'el lunes', ipa: 'êl LU-nês', vi: 'thứ Hai', ex: 'El lunes tengo clase.', exVi: 'Thứ Hai tôi có lớp.' },
+          { w: 'el fin de semana', ipa: 'êl phin đê xê-MA-na', vi: 'cuối tuần', ex: '¿Qué haces el fin de semana?', exVi: 'Cuối tuần bạn làm gì?' },
           { w: 'hoy', ipa: 'ôi', vi: 'hôm nay', ex: 'Hoy es viernes.', exVi: 'Hôm nay là thứ Sáu.' },
-          { w: 'mañana', ipa: 'ma-nha-na', vi: 'ngày mai', ex: 'Mañana es sábado.', exVi: 'Ngày mai là thứ Bảy.' },
-          { w: 'la cita', ipa: 'la thi-ta', vi: 'cuộc hẹn', ex: 'Tengo una cita con el médico.', exVi: 'Tôi có hẹn với bác sĩ.' },
-          { w: 'temprano', ipa: 'tem-pra-nô', vi: 'sớm', ex: 'A las seis es muy temprano.', exVi: 'Sáu giờ thì sớm quá.' }
+          { w: 'mañana', ipa: 'ma-NHA-na', vi: 'ngày mai', ex: 'Mañana es sábado.', exVi: 'Ngày mai là thứ Bảy.' },
+          { w: 'la cita', ipa: 'la θI-ta', vi: 'cuộc hẹn', ex: 'Tengo una cita con el médico.', exVi: 'Tôi có hẹn với bác sĩ.' },
+          { w: 'temprano', ipa: 'têm-PRA-nô', vi: 'sớm', ex: 'A las seis es muy temprano.', exVi: 'Sáu giờ thì sớm quá.' }
         ],
         grammar: {
           title: 'Nói giờ (Es la una / Son las…) và ngày tháng',
@@ -470,16 +472,16 @@ addLevels('es', [
         title: 'Mua sắm',
         goal: 'Hỏi giá, hỏi cỡ, thử đồ và phân biệt ser với estar khi miêu tả.',
         vocab: [
-          { w: 'la tienda', ipa: 'la ti-ên-đa', vi: 'cửa hàng', ex: 'La tienda está cerrada.', exVi: 'Cửa hàng đóng cửa rồi.' },
-          { w: 'la camisa', ipa: 'la ca-mi-xa', vi: 'áo sơ mi', ex: 'Busco una camisa blanca.', exVi: 'Tôi đang tìm một chiếc sơ mi trắng.' },
-          { w: 'los pantalones', ipa: 'lốt pan-ta-lô-nết', vi: 'quần dài', ex: 'Estos pantalones son muy cómodos.', exVi: 'Chiếc quần này rất thoải mái.' },
-          { w: 'los zapatos', ipa: 'lốt tha-pa-tốt', vi: 'đôi giày', ex: '¿Cuánto cuestan los zapatos?', exVi: 'Đôi giày giá bao nhiêu?' },
-          { w: 'el vestido', ipa: 'el bết-ti-đô', vi: 'váy liền', ex: 'Este vestido es precioso.', exVi: 'Chiếc váy này đẹp tuyệt.' },
-          { w: 'la talla', ipa: 'la ta-gia', vi: 'cỡ (quần áo)', ex: '¿Qué talla usa usted?', exVi: 'Ông/bà mặc cỡ nào?' },
-          { w: 'caro / cara', ipa: 'ca-rô / ca-ra', vi: 'đắt', ex: 'Esta camisa es muy cara.', exVi: 'Chiếc sơ mi này đắt quá.' },
-          { w: 'barato / barata', ipa: 'ba-ra-tô / ba-ra-ta', vi: 'rẻ', ex: 'Los zapatos son baratos.', exVi: 'Đôi giày rẻ.' },
-          { w: 'el euro', ipa: 'el êu-rô', vi: 'đồng euro', ex: 'Cuesta veinte euros.', exVi: 'Nó giá hai mươi euro.' },
-          { w: 'el probador', ipa: 'el prô-ba-đor', vi: 'phòng thử đồ', ex: '¿Dónde está el probador?', exVi: 'Phòng thử đồ ở đâu?' }
+          { w: 'la tienda', ipa: 'la ti-ÊN-đa', vi: 'cửa hàng', ex: 'La tienda está cerrada.', exVi: 'Cửa hàng đóng cửa rồi.' },
+          { w: 'la camisa', ipa: 'la ca-MI-xa', vi: 'áo sơ mi', ex: 'Busco una camisa blanca.', exVi: 'Tôi đang tìm một chiếc sơ mi trắng.' },
+          { w: 'los pantalones', ipa: 'lôs pan-ta-LÔ-nês', vi: 'quần dài', ex: 'Estos pantalones son muy cómodos.', exVi: 'Chiếc quần này rất thoải mái.' },
+          { w: 'los zapatos', ipa: 'lôs θa-PA-tôs', vi: 'đôi giày', ex: '¿Cuánto cuestan los zapatos?', exVi: 'Đôi giày giá bao nhiêu?' },
+          { w: 'el vestido', ipa: 'êl bês-TI-đô', vi: 'váy liền', ex: 'Este vestido es precioso.', exVi: 'Chiếc váy này đẹp tuyệt.' },
+          { w: 'la talla', ipa: 'la TA-gia', vi: 'cỡ (quần áo)', ex: '¿Qué talla usa usted?', exVi: 'Ông/bà mặc cỡ nào?' },
+          { w: 'caro / cara', ipa: 'CA-rô / CA-ra', vi: 'đắt', ex: 'Esta camisa es muy cara.', exVi: 'Chiếc sơ mi này đắt quá.' },
+          { w: 'barato / barata', ipa: 'ba-RA-tô / ba-RA-ta', vi: 'rẻ', ex: 'Los zapatos son baratos.', exVi: 'Đôi giày rẻ.' },
+          { w: 'el euro', ipa: 'êl ÊU-rô', vi: 'đồng euro', ex: 'Cuesta veinte euros.', exVi: 'Nó giá hai mươi euro.' },
+          { w: 'el probador', ipa: 'êl prô-ba-ĐÔR', vi: 'phòng thử đồ', ex: '¿Dónde está el probador?', exVi: 'Phòng thử đồ ở đâu?' }
         ],
         grammar: {
           title: 'Ser và estar; hỏi giá ¿Cuánto cuesta?',
@@ -537,16 +539,16 @@ addLevels('es', [
         title: 'Nhà cửa & chỉ đường',
         goal: 'Miêu tả nhà ở, nói vật ở đâu, hỏi đường và chỉ đường đơn giản.',
         vocab: [
-          { w: 'la casa', ipa: 'la ca-xa', vi: 'ngôi nhà', ex: 'Mi casa tiene tres dormitorios.', exVi: 'Nhà tôi có ba phòng ngủ.' },
-          { w: 'la cocina', ipa: 'la cô-thi-na', vi: 'nhà bếp', ex: 'La cocina es pequeña.', exVi: 'Nhà bếp nhỏ.' },
-          { w: 'el baño', ipa: 'el ba-nhô', vi: 'phòng tắm, nhà vệ sinh', ex: '¿Dónde está el baño?', exVi: 'Nhà vệ sinh ở đâu?' },
-          { w: 'el dormitorio', ipa: 'el đor-mi-tô-ri-ô', vi: 'phòng ngủ', ex: 'Mi dormitorio está al lado del baño.', exVi: 'Phòng ngủ của tôi ở cạnh phòng tắm.' },
-          { w: 'la calle', ipa: 'la ca-giê', vi: 'con phố', ex: 'Vivo en la calle Mayor.', exVi: 'Tôi sống ở phố Mayor.' },
-          { w: 'la plaza', ipa: 'la pla-tha', vi: 'quảng trường', ex: 'Hay una fuente en la plaza.', exVi: 'Có một đài phun nước ở quảng trường.' },
-          { w: 'el banco', ipa: 'el ban-cô', vi: 'ngân hàng', ex: 'El banco está enfrente del hotel.', exVi: 'Ngân hàng ở đối diện khách sạn.' },
-          { w: 'la estación', ipa: 'la ét-ta-thi-ôn', vi: 'nhà ga', ex: 'La estación está cerca.', exVi: 'Nhà ga ở gần đây.' },
-          { w: 'a la derecha', ipa: 'a la đê-rê-cha', vi: 'bên phải', ex: 'Gira a la derecha.', exVi: 'Rẽ phải.' },
-          { w: 'a la izquierda', ipa: 'a la ith-ki-ẹc-đa', vi: 'bên trái', ex: 'El baño está a la izquierda.', exVi: 'Nhà vệ sinh ở bên trái.' }
+          { w: 'la casa', ipa: 'la CA-xa', vi: 'ngôi nhà', ex: 'Mi casa tiene tres dormitorios.', exVi: 'Nhà tôi có ba phòng ngủ.' },
+          { w: 'la cocina', ipa: 'la cô-θI-na', vi: 'nhà bếp', ex: 'La cocina es pequeña.', exVi: 'Nhà bếp nhỏ.' },
+          { w: 'el baño', ipa: 'êl BA-nhô', vi: 'phòng tắm, nhà vệ sinh', ex: '¿Dónde está el baño?', exVi: 'Nhà vệ sinh ở đâu?' },
+          { w: 'el dormitorio', ipa: 'êl đôr-mi-TÔ-ri-ô', vi: 'phòng ngủ', ex: 'Mi dormitorio está al lado del baño.', exVi: 'Phòng ngủ của tôi ở cạnh phòng tắm.' },
+          { w: 'la calle', ipa: 'la CA-giê', vi: 'con phố', ex: 'Vivo en la calle Mayor.', exVi: 'Tôi sống ở phố Mayor.' },
+          { w: 'la plaza', ipa: 'la PLA-θa', vi: 'quảng trường', ex: 'Hay una fuente en la plaza.', exVi: 'Có một đài phun nước ở quảng trường.' },
+          { w: 'el banco', ipa: 'êl BAN-cô', vi: 'ngân hàng', ex: 'El banco está enfrente del hotel.', exVi: 'Ngân hàng ở đối diện khách sạn.' },
+          { w: 'la estación', ipa: 'la ês-ta-θi-ÔN', vi: 'nhà ga', ex: 'La estación está cerca.', exVi: 'Nhà ga ở gần đây.' },
+          { w: 'a la derecha', ipa: 'a la đê-RÊ-cha', vi: 'bên phải', ex: 'Gira a la derecha.', exVi: 'Rẽ phải.' },
+          { w: 'a la izquierda', ipa: 'a la iθ-ki-ÊR-đa', vi: 'bên trái', ex: 'El baño está a la izquierda.', exVi: 'Nhà vệ sinh ở bên trái.' }
         ],
         grammar: {
           title: 'Hay và estar + giới từ nơi chốn; mệnh lệnh với tú',
@@ -572,7 +574,7 @@ addLevels('es', [
             { t: 'Cruza la plaza; el banco está enfrente.', vi: 'Băng qua quảng trường; ngân hàng ở phía đối diện.' },
             { t: 'Toma la segunda calle a la izquierda.', vi: 'Đi vào con phố thứ hai bên trái.' }
           ],
-          tip: 'Không dùng hay với el / la: "Hay el banco en la plaza" ✗ → "El banco está en la plaza" ✓. Và de + el luôn gộp thành del: "al lado del banco" (không viết "al lado de el banco").'
+          tip: 'Không dùng hay với el / la: "Hay el banco en la plaza" ✗ → "El banco está en la plaza" ✓. Và de + el luôn gộp thành del: "al lado del banco" (không viết "al lado de el banco"). 🌎 Mỹ Latinh: el departamento (= el piso, căn hộ), el cuarto / la recámara (= el dormitorio).'
         },
         dialogue: [
           { s: 'Huy', t: 'Perdona, ¿hay un banco cerca de aquí?', vi: 'Xin lỗi, gần đây có ngân hàng nào không ạ?' },
@@ -603,16 +605,16 @@ addLevels('es', [
         title: 'Cuối tuần vừa rồi',
         goal: 'Kể lại những việc đã làm cuối tuần trước bằng thì quá khứ pretérito indefinido.',
         vocab: [
-          { w: 'ayer', ipa: 'a-giêr', vi: 'hôm qua', ex: 'Ayer trabajé mucho.', exVi: 'Hôm qua tôi làm việc rất nhiều.' },
-          { w: 'anoche', ipa: 'a-nô-chê', vi: 'tối qua', ex: 'Anoche cené con mi familia.', exVi: 'Tối qua tôi ăn tối với gia đình.' },
-          { w: 'el sábado pasado', ipa: 'el xa-ba-đô pa-xa-đô', vi: 'thứ Bảy tuần trước', ex: 'El sábado pasado fui al cine.', exVi: 'Thứ Bảy tuần trước tôi đi xem phim.' },
-          { w: 'visitar', ipa: 'bi-xi-tar', vi: 'thăm, tham quan', ex: 'Visité a mis abuelos.', exVi: 'Tôi đã đi thăm ông bà.' },
-          { w: 'viajar', ipa: 'bi-a-khar', vi: 'đi du lịch', ex: 'Viajamos a Granada.', exVi: 'Chúng tôi đã đi Granada.' },
-          { w: 'la playa', ipa: 'la pla-gia', vi: 'bãi biển', ex: 'Fuimos a la playa.', exVi: 'Chúng tôi đã đi biển.' },
-          { w: 'el museo', ipa: 'el mu-xê-ô', vi: 'bảo tàng', ex: 'Visitaron el museo del Prado.', exVi: 'Họ đã tham quan bảo tàng Prado.' },
-          { w: 'la película', ipa: 'la pê-li-cu-la', vi: 'bộ phim', ex: 'La película fue muy buena.', exVi: 'Bộ phim rất hay.' },
-          { w: 'salir', ipa: 'xa-lir', vi: 'đi ra ngoài, đi chơi', ex: 'Salí con mis amigos.', exVi: 'Tôi đã đi chơi với bạn bè.' },
-          { w: 'divertido / divertida', ipa: 'đi-bẹc-ti-đô / đi-bẹc-ti-đa', vi: 'vui, thú vị', ex: 'Fue un día muy divertido.', exVi: 'Đó là một ngày rất vui.' }
+          { w: 'ayer', ipa: 'a-GIÊR', vi: 'hôm qua', ex: 'Ayer trabajé mucho.', exVi: 'Hôm qua tôi làm việc rất nhiều.' },
+          { w: 'anoche', ipa: 'a-NÔ-chê', vi: 'tối qua', ex: 'Anoche cené con mi familia.', exVi: 'Tối qua tôi ăn tối với gia đình.' },
+          { w: 'el sábado pasado', ipa: 'êl XA-ba-đô pa-XA-đô', vi: 'thứ Bảy tuần trước', ex: 'El sábado pasado fui al cine.', exVi: 'Thứ Bảy tuần trước tôi đi xem phim.' },
+          { w: 'visitar', ipa: 'bi-xi-TAR', vi: 'thăm, tham quan', ex: 'Visité a mis abuelos.', exVi: 'Tôi đã đi thăm ông bà.' },
+          { w: 'viajar', ipa: 'bi-a-KHAR', vi: 'đi du lịch', ex: 'Viajamos a Granada.', exVi: 'Chúng tôi đã đi Granada.' },
+          { w: 'la playa', ipa: 'la PLA-gia', vi: 'bãi biển', ex: 'Fuimos a la playa.', exVi: 'Chúng tôi đã đi biển.' },
+          { w: 'el museo', ipa: 'êl mu-XÊ-ô', vi: 'bảo tàng', ex: 'Visitaron el museo del Prado.', exVi: 'Họ đã tham quan bảo tàng Prado.' },
+          { w: 'la película', ipa: 'la pê-LI-cu-la', vi: 'bộ phim', ex: 'La película fue muy buena.', exVi: 'Bộ phim rất hay.' },
+          { w: 'salir', ipa: 'xa-LIR', vi: 'đi ra ngoài, đi chơi', ex: 'Salí con mis amigos.', exVi: 'Tôi đã đi chơi với bạn bè.' },
+          { w: 'divertido / divertida', ipa: 'đi-bêr-TI-đô / đi-bêr-TI-đa', vi: 'vui, thú vị', ex: 'Fue un día muy divertido.', exVi: 'Đó là một ngày rất vui.' }
         ],
         grammar: {
           title: 'Thì quá khứ pretérito indefinido',
@@ -668,16 +670,16 @@ addLevels('es', [
         title: 'Sở thích & thể thao',
         goal: 'Nói về sở thích của mình và người khác, mức độ thường xuyên khi chơi thể thao.',
         vocab: [
-          { w: 'el fútbol', ipa: 'el phút-bôn', vi: 'bóng đá', ex: 'Me encanta el fútbol.', exVi: 'Tôi mê bóng đá.' },
-          { w: 'el baloncesto', ipa: 'el ba-lôn-thết-tô', vi: 'bóng rổ', ex: 'Juego al baloncesto los martes.', exVi: 'Tôi chơi bóng rổ vào các ngày thứ Ba.' },
-          { w: 'nadar', ipa: 'na-đar', vi: 'bơi', ex: 'Nado en la piscina.', exVi: 'Tôi bơi ở bể bơi.' },
-          { w: 'correr', ipa: 'cô-rrer', vi: 'chạy', ex: 'Corro por el parque.', exVi: 'Tôi chạy bộ trong công viên.' },
-          { w: 'bailar', ipa: 'bai-lar', vi: 'nhảy, khiêu vũ', ex: 'A mi hermana le encanta bailar.', exVi: 'Em gái tôi rất thích nhảy.' },
-          { w: 'la música', ipa: 'la mu-xi-ca', vi: 'âm nhạc', ex: 'Me gusta la música latina.', exVi: 'Tôi thích nhạc Latin.' },
-          { w: 'el tiempo libre', ipa: 'el ti-em-pô li-brê', vi: 'thời gian rảnh', ex: '¿Qué haces en tu tiempo libre?', exVi: 'Bạn làm gì lúc rảnh?' },
-          { w: 'siempre', ipa: 'xi-em-prê', vi: 'luôn luôn', ex: 'Siempre corro por la mañana.', exVi: 'Tôi luôn chạy bộ vào buổi sáng.' },
-          { w: 'a menudo', ipa: 'a mê-nu-đô', vi: 'thường xuyên', ex: 'Vamos a menudo al cine.', exVi: 'Chúng tôi thường đi xem phim.' },
-          { w: 'nunca', ipa: 'nun-ca', vi: 'không bao giờ', ex: 'Nunca bebo café por la noche.', exVi: 'Tôi không bao giờ uống cà phê buổi tối.' }
+          { w: 'el fútbol', ipa: 'êl PHUT-bôl', vi: 'bóng đá', ex: 'Me encanta el fútbol.', exVi: 'Tôi mê bóng đá.' },
+          { w: 'el baloncesto', ipa: 'êl ba-lôn-θÊS-tô', vi: 'bóng rổ', ex: 'Juego al baloncesto los martes.', exVi: 'Tôi chơi bóng rổ vào các ngày thứ Ba.' },
+          { w: 'nadar', ipa: 'na-ĐAR', vi: 'bơi', ex: 'Nado en la piscina.', exVi: 'Tôi bơi ở bể bơi.' },
+          { w: 'correr', ipa: 'cô-RRÊR', vi: 'chạy', ex: 'Corro por el parque.', exVi: 'Tôi chạy bộ trong công viên.' },
+          { w: 'bailar', ipa: 'bai-LAR', vi: 'nhảy, khiêu vũ', ex: 'A mi hermana le encanta bailar.', exVi: 'Em gái tôi rất thích nhảy.' },
+          { w: 'la música', ipa: 'la MU-xi-ca', vi: 'âm nhạc', ex: 'Me gusta la música latina.', exVi: 'Tôi thích nhạc Latin.' },
+          { w: 'el tiempo libre', ipa: 'êl ti-ÊM-pô LI-brê', vi: 'thời gian rảnh', ex: '¿Qué haces en tu tiempo libre?', exVi: 'Bạn làm gì lúc rảnh?' },
+          { w: 'siempre', ipa: 'xi-ÊM-prê', vi: 'luôn luôn', ex: 'Siempre corro por la mañana.', exVi: 'Tôi luôn chạy bộ vào buổi sáng.' },
+          { w: 'a menudo', ipa: 'a mê-NU-đô', vi: 'thường xuyên', ex: 'Vamos a menudo al cine.', exVi: 'Chúng tôi thường đi xem phim.' },
+          { w: 'nunca', ipa: 'NUN-ca', vi: 'không bao giờ', ex: 'Nunca bebo café por la noche.', exVi: 'Tôi không bao giờ uống cà phê buổi tối.' }
         ],
         grammar: {
           title: 'Gustar / encantar với nhiều chủ ngữ; trạng từ tần suất',
@@ -733,16 +735,16 @@ addLevels('es', [
         title: 'Kế hoạch tương lai',
         goal: 'Nói về dự định, kế hoạch du lịch và đưa ra dự đoán đơn giản về tương lai.',
         vocab: [
-          { w: 'el plan', ipa: 'el plan', vi: 'kế hoạch', ex: '¿Tienes planes para el sábado?', exVi: 'Bạn có kế hoạch gì cho thứ Bảy không?' },
-          { w: 'las vacaciones', ipa: 'lát ba-ca-thi-ô-nết', vi: 'kỳ nghỉ', ex: 'Voy a pasar las vacaciones en Vietnam.', exVi: 'Tôi sẽ nghỉ hè ở Việt Nam.' },
-          { w: 'el viaje', ipa: 'el bi-a-khê', vi: 'chuyến đi', ex: 'El viaje va a ser largo.', exVi: 'Chuyến đi sẽ dài đấy.' },
-          { w: 'el billete', ipa: 'el bi-giê-tê', vi: 'vé (tàu, máy bay)', ex: 'Ya tengo el billete de avión.', exVi: 'Tôi đã có vé máy bay rồi.' },
-          { w: 'el hotel', ipa: 'el ô-ten', vi: 'khách sạn', ex: 'El hotel está cerca de la playa.', exVi: 'Khách sạn ở gần bãi biển.' },
-          { w: 'reservar', ipa: 'rê-xẹc-bar', vi: 'đặt trước', ex: 'Voy a reservar una habitación.', exVi: 'Tôi sẽ đặt một phòng.' },
-          { w: 'el verano', ipa: 'el bê-ra-nô', vi: 'mùa hè', ex: 'Este verano viajaré a Sevilla.', exVi: 'Hè này tôi sẽ đi Sevilla.' },
-          { w: 'la próxima semana', ipa: 'la prốc-xi-ma xê-ma-na', vi: 'tuần sau', ex: 'La próxima semana empiezo un curso.', exVi: 'Tuần sau tôi bắt đầu một khoá học.' },
-          { w: 'el año que viene', ipa: 'el a-nhô kê bi-ê-nê', vi: 'năm sau', ex: 'El año que viene estudiaré en España.', exVi: 'Năm sau tôi sẽ học ở Tây Ban Nha.' },
-          { w: 'pronto', ipa: 'prôn-tô', vi: 'sớm, chẳng bao lâu nữa', ex: '¡Hasta pronto!', exVi: 'Hẹn sớm gặp lại!' }
+          { w: 'el plan', ipa: 'êl plan', vi: 'kế hoạch', ex: '¿Tienes planes para el sábado?', exVi: 'Bạn có kế hoạch gì cho thứ Bảy không?' },
+          { w: 'las vacaciones', ipa: 'las ba-ca-θi-Ô-nês', vi: 'kỳ nghỉ', ex: 'Voy a pasar las vacaciones en Vietnam.', exVi: 'Tôi sẽ nghỉ hè ở Việt Nam.' },
+          { w: 'el viaje', ipa: 'êl bi-A-khê', vi: 'chuyến đi', ex: 'El viaje va a ser largo.', exVi: 'Chuyến đi sẽ dài đấy.' },
+          { w: 'el billete', ipa: 'êl bi-GIÊ-tê', vi: 'vé (tàu, máy bay)', ex: 'Ya tengo el billete de avión.', exVi: 'Tôi đã có vé máy bay rồi.' },
+          { w: 'el hotel', ipa: 'êl ô-TÊL', vi: 'khách sạn', ex: 'El hotel está cerca de la playa.', exVi: 'Khách sạn ở gần bãi biển.' },
+          { w: 'reservar', ipa: 'rrê-xêr-BAR', vi: 'đặt trước', ex: 'Voy a reservar una habitación.', exVi: 'Tôi sẽ đặt một phòng.' },
+          { w: 'la agencia de viajes', ipa: 'la a-KHÊN-θi-a đê bi-A-khês', vi: 'công ty du lịch, đại lý vé', ex: 'Mañana iré a una agencia de viajes para reservar el hotel.', exVi: 'Ngày mai tôi sẽ đến một đại lý du lịch để đặt khách sạn.' },
+          { w: 'la próxima semana', ipa: 'la PRÔC-xi-ma xê-MA-na', vi: 'tuần sau', ex: 'La próxima semana empiezo un curso.', exVi: 'Tuần sau tôi bắt đầu một khoá học.' },
+          { w: 'el año que viene', ipa: 'êl A-nhô kê bi-Ê-nê', vi: 'năm sau', ex: 'El año que viene estudiaré en España.', exVi: 'Năm sau tôi sẽ học ở Tây Ban Nha.' },
+          { w: 'pronto', ipa: 'PRÔN-tô', vi: 'sớm, chẳng bao lâu nữa', ex: '¡Hasta pronto!', exVi: 'Hẹn sớm gặp lại!' }
         ],
         grammar: {
           title: 'Ir a + nguyên mẫu; thì tương lai đơn (futuro simple)',
@@ -768,7 +770,7 @@ addLevels('es', [
             { t: 'El año que viene estudiaré en España.', vi: 'Năm sau tôi sẽ học ở Tây Ban Nha.' },
             { t: 'Mañana hará calor.', vi: 'Ngày mai trời sẽ nóng.' }
           ],
-          tip: 'Lỗi hay gặp: "Voy viajar" ✗ → "Voy a viajar" ✓. Futuro có dấu ở mọi ngôi trừ nosotros: viajaré, viajarás, viajará, viajaremos, viajaréis, viajarán.'
+          tip: 'Lỗi hay gặp: "Voy viajar" ✗ → "Voy a viajar" ✓. Futuro có dấu ở mọi ngôi trừ nosotros: viajaré, viajarás, viajará, viajaremos, viajaréis, viajarán. 🌎 Mỹ Latinh: el boleto / el pasaje (= el billete).'
         },
         dialogue: [
           { s: 'Andrea', t: '¿Qué vas a hacer en las vacaciones de verano?', vi: 'Kỳ nghỉ hè này bạn định làm gì?' },
