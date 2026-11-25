@@ -17,6 +17,7 @@ import Lesson from './pages/Lesson.jsx';
 import Review from './pages/Review.jsx';
 import WordBank from './pages/WordBank.jsx';
 import Pronunciation from './pages/Pronunciation.jsx';
+import LevelTest, { PlacementTest } from './pages/LevelTest.jsx';
 
 const FONT = "'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', "
   + "'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif";
@@ -153,6 +154,8 @@ function Page({ route }) {
   if (kind === 'review') return <Review key={lang} lang={lang} />;
   if (kind === 'words') return <WordBank key={lang} lang={lang} />;
   if (kind === 'pron') return <Pronunciation key={lang} lang={lang} drill={uid} />;
+  if (kind === 'placement') return <PlacementTest key={lang} lang={lang} />;
+  if (kind === 'level' && uid) return <LevelTest key={uid} lang={lang} levelId={uid} />;
   return <Roadmap lang={lang} />;
 }
 

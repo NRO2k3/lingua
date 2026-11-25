@@ -1,5 +1,5 @@
 import { Badge, Breadcrumb, Button, Card, Col, Divider, Flex, Progress, Row, Segmented, Tag, Typography } from 'antd';
-import { BookOutlined, CaretRightFilled, CheckCircleFilled, HistoryOutlined, PlayCircleFilled, SoundOutlined } from '@ant-design/icons';
+import { BookOutlined, CaretRightFilled, CheckCircleFilled, CompassOutlined, HistoryOutlined, PlayCircleFilled, SoundOutlined, TrophyFilled, TrophyOutlined } from '@ant-design/icons';
 import { COURSES, LEVEL_NAME } from '../lib/courses.js';
 import { isDone, langProgress, nextUnit, srsDue, srsKeys, update, useProgress } from '../lib/store.js';
 import { pct } from '../lib/utils.js';
@@ -72,10 +72,13 @@ export default function Roadmap({ lang }) {
           </Flex>
           <Divider style={{ margin: '16px 0 12px' }} />
           <Flex vertical gap={8}>
-            <Text strong>{level ? 'Trình độ của bạn' : 'Bạn đang ở trình độ nào? Chọn để bắt đầu đúng chỗ'}</Text>
+            <Flex align="center" justify="space-between" gap={8} wrap>
+              <Text strong>{level ? 'Trình độ của bạn' : 'Bạn đang ở trình độ nào? Chọn để bắt đầu đúng chỗ'}</Text>
+              <Button type={level ? 'default' : 'primary'} ghost={!level} icon={<CompassOutlined />} href={`#/c/${lang}/placement`}>Kiểm tra xếp lớp</Button>
+            </Flex>
             <Segmented block className="level-pick" value={level || null} onChange={pickLevel}
               options={c.levels.map(l => ({ value: l.id, label: <div className="level-opt"><b>{l.id}</b><span>{LEVEL_NAME[l.id]}</span></div> }))} />
-            <Text type="secondary" style={{ fontSize: 13 }}>Bạn có thể mở bất kỳ bài nào. Trình độ chọn ở đây quyết định nút “Học tiếp” đưa bạn tới đâu.</Text>
+            <Text type="secondary" style={{ fontSize: 13 }}>Bạn có thể mở bất kỳ bài nào. Trình độ chọn ở đây quyết định nút “Học tiếp” đưa bạn tới đâu. Chưa chắc? Làm bài kiểm tra xếp lớp để được gợi ý.</Text>
           </Flex>
         </Card>
 
@@ -94,15 +97,22 @@ export default function Roadmap({ lang }) {
 
         {c.levels.map(level => {
           const ids = level.units.map(u => u.id), done = ids.filter(id => isDone(p, id)).length;
+          const passed = p.levelTests?.[lang]?.[level.id];
           return (
             <section key={level.id} id={'lv-' + level.id} className="level-section">
               <Flex align="center" gap={8} wrap>
                 <Title level={4} style={{ margin: 0 }}>{LEVEL_NAME[level.id]}</Title>
                 <Tag bordered={false}>{level.id}</Tag>
                 {done === ids.length && <Tag color="success" bordered={false}>Hoàn thành</Tag>}
+                {passed && <Tag icon={<TrophyFilled />} color="gold" bordered={false}>Đã vượt cấp · {passed.best}%</Tag>}
               </Flex>
               <Text type="secondary" style={{ display: 'block', margin: '4px 0 8px' }}>{level.desc}</Text>
-              <Progress percent={pct(done, ids.length)} size="small" format={() => `${done}/${ids.length}`} style={{ maxWidth: 320 }} />
+              <Flex align="center" justify="space-between" gap={12} wrap>
+                <Progress percent={pct(done, ids.length)} size="small" format={() => `${done}/${ids.length}`} style={{ flex: '1 1 200px', maxWidth: 320, margin: 0 }} />
+                <Button icon={<TrophyOutlined />} href={`#/c/${lang}/level/${level.id}`} className="level-test-btn">
+                  {passed ? 'Làm lại bài cuối cấp' : 'Kiểm tra cuối cấp'}
+                </Button>
+              </Flex>
               <Stagger>
                 <Row gutter={[12, 12]} style={{ marginTop: 8 }}>
                   {level.units.map(u => {

@@ -23,6 +23,10 @@ Mỗi ngôn ngữ có 4 cấp độ × 6 bài = 24 bài. Mỗi bài gồm 6 bư�
 trọng âm (Anh); bảng chữ cái, r/rr, j/g, c/z, ll/y, ñ, h câm, trọng âm, -s cuối (Tây Ban Nha). Mỗi phần có thẻ nghe, mẹo cho người Việt,
 nói thử bằng micro, và bài luyện nghe chọn đáp án. Dữ liệu ở `src/data/pron/`.
 
+**Kiểm tra xếp lớp** (`#/c/<lang>/placement`): khoảng 28 câu đi từ cấp thấp lên cao, tự dừng khi sai nhiều ở một cấp,
+rồi gợi ý trình độ nên bắt đầu. **Kiểm tra cuối cấp** (`#/c/<lang>/level/<cấp>`): 25 câu tổng hợp 6 bài của cấp
+(từ vựng, nghe, ngữ pháp, đọc hiểu); đạt 80% được huy hiệu "Đã vượt cấp" trên lộ trình.
+
 **Kho từ vựng** theo cấp độ cho mỗi ngôn ngữ: tìm theo từ / nghĩa / pinyin, thêm vào ôn tập, học thẻ nhanh.
 Dữ liệu ở `src/data/bank/*.json`, tạo bằng `python3 scripts/build-bank.py` từ `sources/`.
 
@@ -58,7 +62,7 @@ npm run build
 src/
   main.jsx                 điểm khởi động React
   App.jsx                  khung app, điều hướng, theme Ant Design
-  pages/                   Home, Roadmap, Lesson, SpeakStep, Pronunciation
+  pages/                   Home, Roadmap, Lesson, SpeakStep, Pronunciation, LevelTest (xếp lớp + cuối cấp)
   components/common.jsx    component dùng chung
   lib/
     store.js               tiến độ, XP, ôn tập (localStorage)
