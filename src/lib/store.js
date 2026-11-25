@@ -9,7 +9,8 @@ export const SRS_DAYS = [1, 2, 4, 7, 15, 30];  // khoảng cách ôn (ngày)
 
 const defaults = () => ({
   units: {}, xp: 0, streak: { last: null, count: 0 }, srs: {}, level: {}, spoken: {},
-  theme: null, lastLang: null, daily: { date: null, xp: 0 }
+  theme: null, lastLang: null, daily: { date: null, xp: 0 },
+  levelTests: {}                               // bài kiểm tra cuối cấp đã đạt: { [lang]: { [levelId]: { best, date } } }
 });
 
 const isObj = x => x && typeof x === 'object' && !Array.isArray(x);
