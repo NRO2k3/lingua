@@ -24,6 +24,8 @@ Dữ liệu ở `src/data/bank/*.json`, tạo bằng `python3 scripts/build-bank
 
 Từ vựng của bài đã đạt được đưa vào **Ôn tập** (lặp lại ngắt quãng: 1 → 2 → 4 → 7 → 15 → 30 ngày).
 Tiến độ, XP, chuỗi ngày học lưu trong `localStorage` của trình duyệt.
+Trang **Thống kê** (`#/stats`) cho xem điểm 7/30 ngày, chuỗi ngày dài nhất, số bài xong theo cấp độ, mức ghi nhớ
+từ vựng, độ chính xác theo dạng bài và các câu sai gần đây.
 
 Phát âm và nhận dạng giọng nói dùng Web Speech API của trình duyệt. Luyện nói cần **Chrome hoặc Edge**,
 quyền dùng micro và kết nối mạng. Firefox chưa hỗ trợ.
@@ -54,7 +56,7 @@ npm run build
 src/
   main.jsx                 điểm khởi động React
   App.jsx                  khung app, điều hướng, theme Ant Design
-  pages/                   Home, Roadmap, Lesson, SpeakStep
+  pages/                   Home, Roadmap, Lesson, SpeakStep, Stats
   components/common.jsx    component dùng chung
   lib/
     store.js               tiến độ, XP, ôn tập (localStorage)

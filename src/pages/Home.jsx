@@ -1,6 +1,6 @@
 import { Badge, Button, Card, Col, Flex, Progress, Row, Steps, Tag, Tooltip, Typography } from 'antd';
 import {
-  AudioOutlined, BookOutlined, BulbOutlined, FireFilled, HistoryOutlined, MessageOutlined, PlayCircleFilled, ReadOutlined, TrophyOutlined
+  AudioOutlined, BarChartOutlined, BookOutlined, BulbOutlined, FireFilled, HistoryOutlined, MessageOutlined, PlayCircleFilled, ReadOutlined, TrophyOutlined
 } from '@ant-design/icons';
 import { COURSES, LANGS, LANG_UI, LEVEL_NAME, allUnits } from '../lib/courses.js';
 import { DAILY_GOAL, dailyXp, langProgress, nextUnit, srsDue, srsKeys, streakNow, useProgress } from '../lib/store.js';
@@ -83,6 +83,7 @@ function TodayCard() {
           {due ? `Ôn ${due} từ sắp quên` : 'Chưa có từ cần ôn'}
         </Button>
       </Badge>
+      <Button type="link" block icon={<BarChartOutlined />} href="#/stats" style={{ marginTop: 8 }}>Xem bạn đã tiến bộ thế nào</Button>
     </Card>
   );
 }

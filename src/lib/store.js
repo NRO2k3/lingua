@@ -1,15 +1,19 @@
 import { useSyncExternalStore } from 'react';
-import { allUnits } from './courses.js';
+import { COURSES, allUnits } from './courses.js';
+import { rightText } from './quiz.js';
 import { dayStr, today, pct } from './utils.js';
 
 const KEY = 'lingua-progress-v1';
 export const PASS = 0.7;                       // điểm tối thiểu để tính là hoàn thành bài
 export const DAILY_GOAL = 50;                  // điểm mục tiêu mỗi ngày
 export const SRS_DAYS = [1, 2, 4, 7, 15, 30];  // khoảng cách ôn (ngày)
+const HISTORY_DAYS = 120;                      // số ngày giữ nhật ký điểm
+const MAX_ANSWERS = 300;                       // số câu trả lời gần nhất được lưu
 
 const defaults = () => ({
   units: {}, xp: 0, streak: { last: null, count: 0 }, srs: {}, level: {}, spoken: {},
-  theme: null, lastLang: null, daily: { date: null, xp: 0 }
+  theme: null, lastLang: null, daily: { date: null, xp: 0 },
+  history: {}, bestStreak: 0, answers: []
 });
 
 const isObj = x => x && typeof x === 'object' && !Array.isArray(x);
@@ -24,11 +28,14 @@ function load() {
     const v = raw[k], dv = d[k];
     if (v === undefined) continue;
     if (isObj(dv)) d[k] = isObj(v) ? { ...dv, ...v } : dv;
+    else if (Array.isArray(dv)) d[k] = Array.isArray(v) ? v.filter(isObj) : dv;
     else if (typeof dv === 'number') d[k] = Number.isFinite(v) ? v : dv;
     else d[k] = typeof v === 'string' ? v : dv;
   }
   if (!Number.isFinite(d.streak.count)) d.streak.count = 0;
   if (!Number.isFinite(d.daily.xp)) d.daily.xp = 0;
+  // Dữ liệu từ trước khi có nhật ký: lấy điểm của ngày gần nhất trong `daily`
+  if (d.daily.date && d.daily.xp > 0 && !(d.daily.date in d.history)) d.history[d.daily.date] = d.daily.xp;
   return d;
 }
 
@@ -75,9 +82,26 @@ export function addXp(d, n) {
   d.daily.xp += n;
   const s = d.streak;
   if (s.last !== today()) { s.count = s.last === dayStr(-1) ? s.count + 1 : 1; s.last = today(); }
+  d.bestStreak = Math.max(d.bestStreak, s.count);
+  d.history[today()] = (d.history[today()] || 0) + n;
+  const days = Object.keys(d.history).sort();
+  days.slice(0, Math.max(0, days.length - HISTORY_DAYS)).forEach(k => { delete d.history[k]; });
+}
+
+// Ghi một câu trả lời để thống kê độ chính xác. type: mc | fill | order | listen | read | speak;
+// q: câu hỏi (object như trong quiz.js) hoặc câu cần nói (chuỗi)
+export function logAnswer({ lang, uid, type, ok, q }) {
+  const text = typeof q === 'string' ? q : type === 'listen' ? q.say : type === 'order' ? q.vi : q.q;
+  let right = null;
+  try { right = typeof q === 'string' ? null : rightText(q, !!COURSES[lang]?.noSpace); } catch { /* câu hỏi thiếu đáp án */ }
+  update(d => {
+    d.answers.push({ date: today(), lang, uid, type, ok: !!ok, q: String(text ?? ''), a: right });
+    if (d.answers.length > MAX_ANSWERS) d.answers.splice(0, d.answers.length - MAX_ANSWERS);
+  });
 }
 
 export const streakNow = p => (p.streak.last === today() || p.streak.last === dayStr(-1)) ? p.streak.count : 0;
+export const bestStreak = p => Math.max(p.bestStreak, p.streak.count);
 export const dailyXp = p => p.daily.date === today() ? p.daily.xp : 0;
 
 export const isDone = (p, id) => !!(p.units[id] && p.units[id].done);
